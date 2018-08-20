@@ -1,0 +1,36 @@
+PODS:
+  - IQKeyboardManager (6.1.1)
+  - Masonry (1.1.0)
+  - "MBProgressHUD+DK (1.1.1)"
+  - MJRefresh (3.1.15.3)
+  - ReactiveObjC (3.1.0)
+  - SDAutoLayout (2.2.1)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - Masonry
+  - "MBProgressHUD+DK"
+  - MJRefresh
+  - ReactiveObjC
+  - SDAutoLayout
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManager
+    - Masonry
+    - "MBProgressHUD+DK"
+    - MJRefresh
+    - ReactiveObjC
+    - SDAutoLayout
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  "MBProgressHUD+DK": 9394614f7106e640784d044bc19512c1167e9e97
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
+
+PODFILE CHECKSUM: 0b62fcf65bd9373dcbe80e4ca58a7e6cbcfb72d6
+
+COCOAPODS: 1.5.0
