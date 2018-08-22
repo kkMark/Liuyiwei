@@ -60,7 +60,20 @@
     [self.view addSubview:okBtn];
     
     // 服务协议
-    
+    if (!self.isReset) {
+        
+        NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:@"点击注册表示同意《六医卫网络服务协议》"];
+        [attStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attStr.length)];
+        [attStr addAttribute:NSForegroundColorAttributeName value:kMainColor range:NSMakeRange(8, attStr.length - 8)];
+        
+        UIButton *agreementBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        agreementBtn.frame = CGRectMake(0, CGRectGetMaxY(okBtn.frame) + 15, ScreenWidth, 15);
+        agreementBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+        [agreementBtn setTitle:@"点击注册表示同意《六医卫网络服务协议》" forState:UIControlStateNormal];
+        [agreementBtn setTitleColor:kMainTextColor forState:UIControlStateNormal];
+        agreementBtn.titleLabel.attributedText = attStr;
+        [self.view addSubview:agreementBtn];
+    }
 }
 
 - (void)goViewController {

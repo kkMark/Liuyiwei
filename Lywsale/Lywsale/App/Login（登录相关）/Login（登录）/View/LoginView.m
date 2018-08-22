@@ -24,10 +24,7 @@
 @implementation LoginView
 
 - (void)setupSubviews {
-    
-    NSLog(@"%.2f", ScreenWidth);
-    NSLog(@"%.2f", ScreenHeight);
-    
+
     int spacing = 0;
     if (ScreenWidth == 320 && ScreenHeight == 480) {
         spacing = 20;

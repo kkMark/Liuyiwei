@@ -23,7 +23,8 @@
 
     [super viewDidLoad];
 
-    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.writeInfoView.dataSources = @[@"姓名", @"我是", @"邀请码", @"工作证"];
 }
 
 
@@ -32,9 +33,19 @@
     
     if (!writeInfoView) {
         
-        writeInfoView = [[WriteInfoView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight) style:UITableViewStylePlain];
+        writeInfoView = [[WriteInfoView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - 80) style:UITableViewStyleGrouped];
         writeInfoView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:writeInfoView];
+        
+        UIButton *okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        okBtn.backgroundColor = kMainColor;
+        okBtn.frame = CGRectMake(15, self.writeInfoView.maxY + 15, ScreenWidth - 30, 40);
+        okBtn.layer.cornerRadius = okBtn.height / 2;
+        okBtn.layer.masksToBounds = YES;
+        okBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
+        [okBtn setTitle:@"确认加入" forState:UIControlStateNormal];
+        [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.view addSubview:okBtn];
     }
     
     return writeInfoView;

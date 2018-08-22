@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23AE4D2129B42E00BC2CAC /* RootViewController.m */; };
+		0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */; };
+		0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F556212D3F1500E357EB /* WriteInfoTypeCell.m */; };
+		0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F559212D3F3B00E357EB /* WriteInfoCertificateCell.m */; };
+		0C37F55E212D4A9000E357EB /* TipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F55D212D4A9000E357EB /* TipCell.m */; };
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
@@ -54,6 +58,14 @@
 /* Begin PBXFileReference section */
 		0C23AE4D2129B42E00BC2CAC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0C23AE4E2129B42E00BC2CAC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0C37F552212D3EEB00E357EB /* WriteInfoTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoTextFieldCell.h; sourceTree = "<group>"; };
+		0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoTextFieldCell.m; sourceTree = "<group>"; };
+		0C37F555212D3F1500E357EB /* WriteInfoTypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoTypeCell.h; sourceTree = "<group>"; };
+		0C37F556212D3F1500E357EB /* WriteInfoTypeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoTypeCell.m; sourceTree = "<group>"; };
+		0C37F558212D3F3B00E357EB /* WriteInfoCertificateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoCertificateCell.h; sourceTree = "<group>"; };
+		0C37F559212D3F3B00E357EB /* WriteInfoCertificateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoCertificateCell.m; sourceTree = "<group>"; };
+		0C37F55C212D4A9000E357EB /* TipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipCell.h; sourceTree = "<group>"; };
+		0C37F55D212D4A9000E357EB /* TipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipCell.m; sourceTree = "<group>"; };
 		0C3D896C212AB51600D02FE0 /* WriteInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoView.h; sourceTree = "<group>"; };
 		0C3D896D212AB51600D02FE0 /* WriteInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoView.m; sourceTree = "<group>"; };
 		0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewModel.h; sourceTree = "<group>"; };
@@ -160,6 +172,15 @@
 				0C23AE4D2129B42E00BC2CAC /* RootViewController.m */,
 			);
 			path = RootController;
+			sourceTree = "<group>";
+		};
+		0C37F55B212D4A9000E357EB /* TipCell（提示Cell） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F55C212D4A9000E357EB /* TipCell.h */,
+				0C37F55D212D4A9000E357EB /* TipCell.m */,
+			);
+			path = "TipCell（提示Cell）";
 			sourceTree = "<group>";
 		};
 		0C3D8967212AAC0700D02FE0 /* HomePage（首页） */ = {
@@ -603,6 +624,12 @@
 		0CE1EC1D2128891000A373D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C37F558212D3F3B00E357EB /* WriteInfoCertificateCell.h */,
+				0C37F559212D3F3B00E357EB /* WriteInfoCertificateCell.m */,
+				0C37F552212D3EEB00E357EB /* WriteInfoTextFieldCell.h */,
+				0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */,
+				0C37F555212D3F1500E357EB /* WriteInfoTypeCell.h */,
+				0C37F556212D3F1500E357EB /* WriteInfoTypeCell.m */,
 				0C3D896C212AB51600D02FE0 /* WriteInfoView.h */,
 				0C3D896D212AB51600D02FE0 /* WriteInfoView.m */,
 			);
@@ -623,6 +650,7 @@
 			children = (
 				0CE1EC482129143100A373D7 /* CustomTextField */,
 				0CE1EC3B212901ED00A373D7 /* SearchView（搜索框） */,
+				0C37F55B212D4A9000E357EB /* TipCell（提示Cell） */,
 			);
 			path = "Public（公用）";
 			sourceTree = "<group>";
@@ -778,6 +806,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CE1EC27212889E800A373D7 /* AddTypeView.m in Sources */,
+				0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */,
 				0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */,
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
@@ -794,8 +823,10 @@
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
+				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
+				0C37F55E212D4A9000E357EB /* TipCell.m in Sources */,
 				0CE1EC4121290FBD00A373D7 /* ApplyViewController.m in Sources */,
 				0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
@@ -815,6 +846,7 @@
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
 				0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,
+				0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
