@@ -12,6 +12,8 @@
 		0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F556212D3F1500E357EB /* WriteInfoTypeCell.m */; };
 		0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F559212D3F3B00E357EB /* WriteInfoCertificateCell.m */; };
 		0C37F55E212D4A9000E357EB /* TipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F55D212D4A9000E357EB /* TipCell.m */; };
+		0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F584212D527F00E357EB /* PersonalViewController.m */; };
+		0C37F588212D528E00E357EB /* PersonalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F587212D528E00E357EB /* PersonalView.m */; };
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
@@ -66,6 +68,10 @@
 		0C37F559212D3F3B00E357EB /* WriteInfoCertificateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoCertificateCell.m; sourceTree = "<group>"; };
 		0C37F55C212D4A9000E357EB /* TipCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipCell.h; sourceTree = "<group>"; };
 		0C37F55D212D4A9000E357EB /* TipCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipCell.m; sourceTree = "<group>"; };
+		0C37F583212D527F00E357EB /* PersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		0C37F584212D527F00E357EB /* PersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		0C37F586212D528E00E357EB /* PersonalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalView.h; sourceTree = "<group>"; };
+		0C37F587212D528E00E357EB /* PersonalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalView.m; sourceTree = "<group>"; };
 		0C3D896C212AB51600D02FE0 /* WriteInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoView.h; sourceTree = "<group>"; };
 		0C3D896D212AB51600D02FE0 /* WriteInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoView.m; sourceTree = "<group>"; };
 		0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewModel.h; sourceTree = "<group>"; };
@@ -181,6 +187,297 @@
 				0C37F55D212D4A9000E357EB /* TipCell.m */,
 			);
 			path = "TipCell（提示Cell）";
+			sourceTree = "<group>";
+		};
+		0C37F55F212D51AF00E357EB /* Personal（个人中心相关） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F56F212D526900E357EB /* Personal（个人中心） */,
+				0C37F56A212D526900E357EB /* Archives（档案） */,
+				0C37F57E212D526900E357EB /* Bank（银行卡） */,
+				0C37F579212D526900E357EB /* Conversion（切换身份） */,
+				0C37F560212D526800E357EB /* Footprint（足迹） */,
+				0C37F565212D526800E357EB /* Help（帮助） */,
+				0C37F574212D526900E357EB /* More（更多） */,
+			);
+			path = "Personal（个人中心相关）";
+			sourceTree = "<group>";
+		};
+		0C37F560212D526800E357EB /* Footprint（足迹） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F561212D526800E357EB /* ViewModel */,
+				0C37F562212D526800E357EB /* Model */,
+				0C37F563212D526800E357EB /* View */,
+				0C37F564212D526800E357EB /* ViewController */,
+			);
+			path = "Footprint（足迹）";
+			sourceTree = "<group>";
+		};
+		0C37F561212D526800E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F562212D526800E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F563212D526800E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F564212D526800E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F565212D526800E357EB /* Help（帮助） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F566212D526800E357EB /* ViewModel */,
+				0C37F567212D526800E357EB /* Model */,
+				0C37F568212D526800E357EB /* View */,
+				0C37F569212D526800E357EB /* ViewController */,
+			);
+			path = "Help（帮助）";
+			sourceTree = "<group>";
+		};
+		0C37F566212D526800E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F567212D526800E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F568212D526800E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F569212D526800E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F56A212D526900E357EB /* Archives（档案） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F56B212D526900E357EB /* ViewModel */,
+				0C37F56C212D526900E357EB /* Model */,
+				0C37F56D212D526900E357EB /* View */,
+				0C37F56E212D526900E357EB /* ViewController */,
+			);
+			path = "Archives（档案）";
+			sourceTree = "<group>";
+		};
+		0C37F56B212D526900E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F56C212D526900E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F56D212D526900E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F56E212D526900E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F56F212D526900E357EB /* Personal（个人中心） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F570212D526900E357EB /* ViewModel */,
+				0C37F571212D526900E357EB /* Model */,
+				0C37F572212D526900E357EB /* View */,
+				0C37F573212D526900E357EB /* ViewController */,
+			);
+			path = "Personal（个人中心）";
+			sourceTree = "<group>";
+		};
+		0C37F570212D526900E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F571212D526900E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F572212D526900E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F586212D528E00E357EB /* PersonalView.h */,
+				0C37F587212D528E00E357EB /* PersonalView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F573212D526900E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F583212D527F00E357EB /* PersonalViewController.h */,
+				0C37F584212D527F00E357EB /* PersonalViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F574212D526900E357EB /* More（更多） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F575212D526900E357EB /* ViewModel */,
+				0C37F576212D526900E357EB /* Model */,
+				0C37F577212D526900E357EB /* View */,
+				0C37F578212D526900E357EB /* ViewController */,
+			);
+			path = "More（更多）";
+			sourceTree = "<group>";
+		};
+		0C37F575212D526900E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F576212D526900E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F577212D526900E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F578212D526900E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F579212D526900E357EB /* Conversion（切换身份） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F57A212D526900E357EB /* ViewModel */,
+				0C37F57B212D526900E357EB /* Model */,
+				0C37F57C212D526900E357EB /* View */,
+				0C37F57D212D526900E357EB /* ViewController */,
+			);
+			path = "Conversion（切换身份）";
+			sourceTree = "<group>";
+		};
+		0C37F57A212D526900E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F57B212D526900E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F57C212D526900E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F57D212D526900E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F57E212D526900E357EB /* Bank（银行卡） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F57F212D526900E357EB /* ViewModel */,
+				0C37F580212D526900E357EB /* Model */,
+				0C37F581212D526900E357EB /* View */,
+				0C37F582212D526900E357EB /* ViewController */,
+			);
+			path = "Bank（银行卡）";
+			sourceTree = "<group>";
+		};
+		0C37F57F212D526900E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F580212D526900E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F581212D526900E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F582212D526900E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		0C3D8967212AAC0700D02FE0 /* HomePage（首页） */ = {
@@ -347,6 +644,7 @@
 				0CC6B11121281811004EC6FC /* Login（登录相关） */,
 				0CE1EC05212887F900A373D7 /* Certification（认证相关） */,
 				0C9BBB8F212A519000A09A02 /* Home（首页相关） */,
+				0C37F55F212D51AF00E357EB /* Personal（个人中心相关） */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -829,9 +1127,11 @@
 				0C37F55E212D4A9000E357EB /* TipCell.m in Sources */,
 				0CE1EC4121290FBD00A373D7 /* ApplyViewController.m in Sources */,
 				0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */,
+				0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
+				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
 				0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */,
 				0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */,
