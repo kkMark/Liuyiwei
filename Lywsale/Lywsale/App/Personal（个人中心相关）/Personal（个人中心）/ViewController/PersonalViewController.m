@@ -32,6 +32,13 @@
         
         personalView = [[PersonalView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight) style:UITableViewStyleGrouped];
         [self.view addSubview:personalView];
+        
+        @weakify(self);
+        [personalView setGoViewController:^(UIViewController *vc) {
+            
+            @strongify(self);
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return personalView;

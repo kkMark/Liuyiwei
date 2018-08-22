@@ -26,7 +26,7 @@
     NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
 
     // 控制器名字
-    NSArray *viewControllerNames = @[@"LoginViewController", @"LoginViewController", @"LoginViewController", @"PersonalViewController"];
+    NSArray *viewControllerNames = @[@"PersonalViewController", @"PersonalViewController", @"PersonalViewController", @"PersonalViewController"];
     
     // 标题
     NSArray *titles = @[@"主页", @"工作", @"知识", @"我的"];

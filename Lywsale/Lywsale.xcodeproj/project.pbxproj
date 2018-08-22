@@ -14,6 +14,9 @@
 		0C37F55E212D4A9000E357EB /* TipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F55D212D4A9000E357EB /* TipCell.m */; };
 		0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F584212D527F00E357EB /* PersonalViewController.m */; };
 		0C37F588212D528E00E357EB /* PersonalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F587212D528E00E357EB /* PersonalView.m */; };
+		0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F58A212D60C500E357EB /* FootprintViewController.m */; };
+		0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F58D212D612A00E357EB /* FootprintHeaderView.m */; };
+		0C37F594212D687C00E357EB /* FootprintTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F593212D687C00E357EB /* FootprintTaskView.m */; };
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
@@ -72,6 +75,12 @@
 		0C37F584212D527F00E357EB /* PersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
 		0C37F586212D528E00E357EB /* PersonalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalView.h; sourceTree = "<group>"; };
 		0C37F587212D528E00E357EB /* PersonalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalView.m; sourceTree = "<group>"; };
+		0C37F589212D60C500E357EB /* FootprintViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintViewController.h; sourceTree = "<group>"; };
+		0C37F58A212D60C500E357EB /* FootprintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintViewController.m; sourceTree = "<group>"; };
+		0C37F58C212D612A00E357EB /* FootprintHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintHeaderView.h; sourceTree = "<group>"; };
+		0C37F58D212D612A00E357EB /* FootprintHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintHeaderView.m; sourceTree = "<group>"; };
+		0C37F592212D687C00E357EB /* FootprintTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintTaskView.h; sourceTree = "<group>"; };
+		0C37F593212D687C00E357EB /* FootprintTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintTaskView.m; sourceTree = "<group>"; };
 		0C3D896C212AB51600D02FE0 /* WriteInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoView.h; sourceTree = "<group>"; };
 		0C3D896D212AB51600D02FE0 /* WriteInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoView.m; sourceTree = "<group>"; };
 		0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewModel.h; sourceTree = "<group>"; };
@@ -193,10 +202,10 @@
 			isa = PBXGroup;
 			children = (
 				0C37F56F212D526900E357EB /* Personal（个人中心） */,
+				0C37F560212D526800E357EB /* Footprint（足迹） */,
 				0C37F56A212D526900E357EB /* Archives（档案） */,
 				0C37F57E212D526900E357EB /* Bank（银行卡） */,
 				0C37F579212D526900E357EB /* Conversion（切换身份） */,
-				0C37F560212D526800E357EB /* Footprint（足迹） */,
 				0C37F565212D526800E357EB /* Help（帮助） */,
 				0C37F574212D526900E357EB /* More（更多） */,
 			);
@@ -231,6 +240,10 @@
 		0C37F563212D526800E357EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C37F58C212D612A00E357EB /* FootprintHeaderView.h */,
+				0C37F58D212D612A00E357EB /* FootprintHeaderView.m */,
+				0C37F592212D687C00E357EB /* FootprintTaskView.h */,
+				0C37F593212D687C00E357EB /* FootprintTaskView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +251,8 @@
 		0C37F564212D526800E357EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0C37F589212D60C500E357EB /* FootprintViewController.h */,
+				0C37F58A212D60C500E357EB /* FootprintViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1135,12 +1150,15 @@
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
 				0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */,
 				0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */,
+				0C37F594212D687C00E357EB /* FootprintTaskView.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
+				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,
 				0CE1EC302128F3EC00A373D7 /* SelectTypeView.m in Sources */,
+				0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */,
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,

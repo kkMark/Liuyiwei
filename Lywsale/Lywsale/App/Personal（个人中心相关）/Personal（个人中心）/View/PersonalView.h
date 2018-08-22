@@ -10,4 +10,6 @@
 
 @interface PersonalView : BaseTableView
 
+@property (nonatomic, strong) void (^goViewController)(UIViewController *vc);
+
 @end
