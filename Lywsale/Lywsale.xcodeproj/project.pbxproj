@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23AE4D2129B42E00BC2CAC /* RootViewController.m */; };
+		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
+		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
+		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
 		0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */; };
 		0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B119212818CD004EC6FC /* LoginViewController.m */; };
 		0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11C212818DE004EC6FC /* LoginView.m */; };
@@ -51,6 +54,12 @@
 /* Begin PBXFileReference section */
 		0C23AE4D2129B42E00BC2CAC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0C23AE4E2129B42E00BC2CAC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0C3D896C212AB51600D02FE0 /* WriteInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoView.h; sourceTree = "<group>"; };
+		0C3D896D212AB51600D02FE0 /* WriteInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoView.m; sourceTree = "<group>"; };
+		0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewModel.h; sourceTree = "<group>"; };
+		0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoViewModel.m; sourceTree = "<group>"; };
+		0C3D8972212AB52C00D02FE0 /* WriteInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoModel.h; sourceTree = "<group>"; };
+		0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoModel.m; sourceTree = "<group>"; };
 		0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveOrRegisteredViewController.h; sourceTree = "<group>"; };
 		0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveOrRegisteredViewController.m; sourceTree = "<group>"; };
 		0CC6B118212818CD004EC6FC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -153,11 +162,51 @@
 			path = RootController;
 			sourceTree = "<group>";
 		};
-		0C9BBB8F212A519000A09A02 /* Home（首页） */ = {
+		0C3D8967212AAC0700D02FE0 /* HomePage（首页） */ = {
+			isa = PBXGroup;
+			children = (
+				0C3D8968212AAC2D00D02FE0 /* ViewModel */,
+				0C3D896A212AAC2D00D02FE0 /* Model */,
+				0C3D8969212AAC2D00D02FE0 /* View */,
+				0C3D896B212AAC2D00D02FE0 /* ViewController */,
+			);
+			path = "HomePage（首页）";
+			sourceTree = "<group>";
+		};
+		0C3D8968212AAC2D00D02FE0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Home（首页）";
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C3D8969212AAC2D00D02FE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C3D896A212AAC2D00D02FE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C3D896B212AAC2D00D02FE0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C9BBB8F212A519000A09A02 /* Home（首页相关） */ = {
+			isa = PBXGroup;
+			children = (
+				0C3D8967212AAC0700D02FE0 /* HomePage（首页） */,
+			);
+			path = "Home（首页相关）";
 			sourceTree = "<group>";
 		};
 		0CC6B11121281811004EC6FC /* Login（登录相关） */ = {
@@ -276,7 +325,7 @@
 				0C23AE4C2129B42E00BC2CAC /* RootController */,
 				0CC6B11121281811004EC6FC /* Login（登录相关） */,
 				0CE1EC05212887F900A373D7 /* Certification（认证相关） */,
-				0C9BBB8F212A519000A09A02 /* Home（首页） */,
+				0C9BBB8F212A519000A09A02 /* Home（首页相关） */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -536,6 +585,8 @@
 		0CE1EC1B2128891000A373D7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */,
+				0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -543,6 +594,8 @@
 		0CE1EC1C2128891000A373D7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C3D8972212AB52C00D02FE0 /* WriteInfoModel.h */,
+				0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -550,6 +603,8 @@
 		0CE1EC1D2128891000A373D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C3D896C212AB51600D02FE0 /* WriteInfoView.h */,
+				0C3D896D212AB51600D02FE0 /* WriteInfoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -727,9 +782,11 @@
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
+				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
+				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
 				0CE1EC2A2128F3D700A373D7 /* SelectTypeViewModel.m in Sources */,
@@ -756,6 +813,7 @@
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
+				0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
