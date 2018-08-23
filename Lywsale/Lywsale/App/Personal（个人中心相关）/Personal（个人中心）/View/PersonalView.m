@@ -139,6 +139,9 @@
     else if ([title containsString:@"银行卡"]) {
         vcName = @"MyCardViewController";
     }
+    else if ([title containsString:@"帮助"]) {
+        vcName = @"HelpViewController";
+    }
     
     if (self.goViewController && vcName.length > 0) {
         

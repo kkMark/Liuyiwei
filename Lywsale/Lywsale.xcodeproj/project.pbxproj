@@ -30,6 +30,10 @@
 		0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5CF212E904700E357EB /* AddCardCell.m */; };
 		0C37F5DB212E904700E357EB /* AddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5D0212E904700E357EB /* AddCardView.m */; };
 		0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5D3212E904700E357EB /* AddCardViewController.m */; };
+		0C37F5F1212E9A9800E357EB /* HelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5ED212E9A9800E357EB /* HelpView.m */; };
+		0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F0212E9A9800E357EB /* HelpViewController.m */; };
+		0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F4212E9BB200E357EB /* FeedbackViewController.m */; };
+		0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F7212E9C0200E357EB /* FeedbackView.m */; };
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
@@ -120,6 +124,14 @@
 		0C37F5D0212E904700E357EB /* AddCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardView.m; sourceTree = "<group>"; };
 		0C37F5D2212E904700E357EB /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
 		0C37F5D3212E904700E357EB /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
+		0C37F5EC212E9A9800E357EB /* HelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpView.h; sourceTree = "<group>"; };
+		0C37F5ED212E9A9800E357EB /* HelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpView.m; sourceTree = "<group>"; };
+		0C37F5EF212E9A9800E357EB /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		0C37F5F0212E9A9800E357EB /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		0C37F5F3212E9BB200E357EB /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		0C37F5F4212E9BB200E357EB /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
+		0C37F5F6212E9C0200E357EB /* FeedbackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackView.h; sourceTree = "<group>"; };
+		0C37F5F7212E9C0200E357EB /* FeedbackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackView.m; sourceTree = "<group>"; };
 		0C3D896C212AB51600D02FE0 /* WriteInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoView.h; sourceTree = "<group>"; };
 		0C3D896D212AB51600D02FE0 /* WriteInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoView.m; sourceTree = "<group>"; };
 		0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewModel.h; sourceTree = "<group>"; };
@@ -242,10 +254,9 @@
 			children = (
 				0C37F56F212D526900E357EB /* Personal（个人中心） */,
 				0C37F59B212E60D700E357EB /* Archives（档案相关） */,
-				0C37F560212D526800E357EB /* Footprint（足迹） */,
 				0C37F57E212D526900E357EB /* Bank（银行卡相关） */,
-				0C37F579212D526900E357EB /* Conversion（切换身份） */,
-				0C37F565212D526800E357EB /* Help（帮助） */,
+				0C37F565212D526800E357EB /* Help（帮助相关） */,
+				0C37F560212D526800E357EB /* Footprint（足迹） */,
 				0C37F574212D526900E357EB /* More（更多） */,
 			);
 			path = "Personal（个人中心相关）";
@@ -296,43 +307,13 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		0C37F565212D526800E357EB /* Help（帮助） */ = {
+		0C37F565212D526800E357EB /* Help（帮助相关） */ = {
 			isa = PBXGroup;
 			children = (
-				0C37F566212D526800E357EB /* ViewModel */,
-				0C37F567212D526800E357EB /* Model */,
-				0C37F568212D526800E357EB /* View */,
-				0C37F569212D526800E357EB /* ViewController */,
+				0C37F5E3212E9A9800E357EB /* Feedback（反馈） */,
+				0C37F5E8212E9A9800E357EB /* Help（帮助） */,
 			);
-			path = "Help（帮助）";
-			sourceTree = "<group>";
-		};
-		0C37F566212D526800E357EB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C37F567212D526800E357EB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0C37F568212D526800E357EB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0C37F569212D526800E357EB /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
+			path = "Help（帮助相关）";
 			sourceTree = "<group>";
 		};
 		0C37F56F212D526900E357EB /* Personal（个人中心） */ = {
@@ -411,45 +392,6 @@
 			sourceTree = "<group>";
 		};
 		0C37F578212D526900E357EB /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		0C37F579212D526900E357EB /* Conversion（切换身份） */ = {
-			isa = PBXGroup;
-			children = (
-				0C37F57A212D526900E357EB /* ViewModel */,
-				0C37F57B212D526900E357EB /* Model */,
-				0C37F57C212D526900E357EB /* View */,
-				0C37F57D212D526900E357EB /* ViewController */,
-			);
-			path = "Conversion（切换身份）";
-			sourceTree = "<group>";
-		};
-		0C37F57A212D526900E357EB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C37F57B212D526900E357EB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0C37F57C212D526900E357EB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0C37F57D212D526900E357EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -676,6 +618,92 @@
 			children = (
 				0C37F5D2212E904700E357EB /* AddCardViewController.h */,
 				0C37F5D3212E904700E357EB /* AddCardViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F5E3212E9A9800E357EB /* Feedback（反馈） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5E4212E9A9800E357EB /* ViewModel */,
+				0C37F5E5212E9A9800E357EB /* Model */,
+				0C37F5E6212E9A9800E357EB /* View */,
+				0C37F5E7212E9A9800E357EB /* ViewController */,
+			);
+			path = "Feedback（反馈）";
+			sourceTree = "<group>";
+		};
+		0C37F5E4212E9A9800E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F5E5212E9A9800E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F5E6212E9A9800E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5F6212E9C0200E357EB /* FeedbackView.h */,
+				0C37F5F7212E9C0200E357EB /* FeedbackView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F5E7212E9A9800E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5F3212E9BB200E357EB /* FeedbackViewController.h */,
+				0C37F5F4212E9BB200E357EB /* FeedbackViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F5E8212E9A9800E357EB /* Help（帮助） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5E9212E9A9800E357EB /* ViewModel */,
+				0C37F5EA212E9A9800E357EB /* Model */,
+				0C37F5EB212E9A9800E357EB /* View */,
+				0C37F5EE212E9A9800E357EB /* ViewController */,
+			);
+			path = "Help（帮助）";
+			sourceTree = "<group>";
+		};
+		0C37F5E9212E9A9800E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F5EA212E9A9800E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F5EB212E9A9800E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5EC212E9A9800E357EB /* HelpView.h */,
+				0C37F5ED212E9A9800E357EB /* HelpView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F5EE212E9A9800E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5EF212E9A9800E357EB /* HelpViewController.h */,
+				0C37F5F0212E9A9800E357EB /* HelpViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1312,6 +1340,7 @@
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
+				0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
@@ -1320,15 +1349,18 @@
 				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
+				0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */,
 				0CE1EC2A2128F3D700A373D7 /* SelectTypeViewModel.m in Sources */,
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
 				0C37F5D9212E904700E357EB /* PickerListView.m in Sources */,
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
+				0C37F5F1212E9A9800E357EB /* HelpView.m in Sources */,
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
 				0C37F5D6212E904700E357EB /* MyCardView.m in Sources */,
 				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
+				0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */,
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
 				0C37F55E212D4A9000E357EB /* TipCell.m in Sources */,
