@@ -13,6 +13,7 @@
 #import <Masonry/Masonry.h>
 #import <MJRefresh/MJRefresh.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <UIImageView+WebCache.h>
 
 // 类别
 #import "UIView+Category.h"

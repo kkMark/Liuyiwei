@@ -17,6 +17,19 @@
 		0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F58A212D60C500E357EB /* FootprintViewController.m */; };
 		0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F58D212D612A00E357EB /* FootprintHeaderView.m */; };
 		0C37F594212D687C00E357EB /* FootprintTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F593212D687C00E357EB /* FootprintTaskView.m */; };
+		0C37F5A5212E60D700E357EB /* ArchivesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5A0212E60D700E357EB /* ArchivesView.m */; };
+		0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5A4212E60D700E357EB /* ArchivesViewController.m */; };
+		0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5B2212E615100E357EB /* BindingMobileViewController.m */; };
+		0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5B8212E67C400E357EB /* ModifyPasswordViewController.m */; };
+		0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5BD212E904700E357EB /* MyCardViewModel.m */; };
+		0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5BF212E904700E357EB /* MyCardModel.m */; };
+		0C37F5D6212E904700E357EB /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5C4212E904700E357EB /* MyCardView.m */; };
+		0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5C5212E904700E357EB /* MyCardCell.m */; };
+		0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5C8212E904700E357EB /* MyCardViewController.m */; };
+		0C37F5D9212E904700E357EB /* PickerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5CB212E904700E357EB /* PickerListView.m */; };
+		0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5CF212E904700E357EB /* AddCardCell.m */; };
+		0C37F5DB212E904700E357EB /* AddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5D0212E904700E357EB /* AddCardView.m */; };
+		0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5D3212E904700E357EB /* AddCardViewController.m */; };
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
@@ -81,6 +94,32 @@
 		0C37F58D212D612A00E357EB /* FootprintHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintHeaderView.m; sourceTree = "<group>"; };
 		0C37F592212D687C00E357EB /* FootprintTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintTaskView.h; sourceTree = "<group>"; };
 		0C37F593212D687C00E357EB /* FootprintTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintTaskView.m; sourceTree = "<group>"; };
+		0C37F5A0212E60D700E357EB /* ArchivesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivesView.m; sourceTree = "<group>"; };
+		0C37F5A1212E60D700E357EB /* ArchivesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivesView.h; sourceTree = "<group>"; };
+		0C37F5A3212E60D700E357EB /* ArchivesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivesViewController.h; sourceTree = "<group>"; };
+		0C37F5A4212E60D700E357EB /* ArchivesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivesViewController.m; sourceTree = "<group>"; };
+		0C37F5B1212E615100E357EB /* BindingMobileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindingMobileViewController.h; sourceTree = "<group>"; };
+		0C37F5B2212E615100E357EB /* BindingMobileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingMobileViewController.m; sourceTree = "<group>"; };
+		0C37F5B7212E67C400E357EB /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
+		0C37F5B8212E67C400E357EB /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
+		0C37F5BC212E904700E357EB /* MyCardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardViewModel.h; sourceTree = "<group>"; };
+		0C37F5BD212E904700E357EB /* MyCardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardViewModel.m; sourceTree = "<group>"; };
+		0C37F5BF212E904700E357EB /* MyCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardModel.m; sourceTree = "<group>"; };
+		0C37F5C0212E904700E357EB /* MyCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardModel.h; sourceTree = "<group>"; };
+		0C37F5C2212E904700E357EB /* MyCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardView.h; sourceTree = "<group>"; };
+		0C37F5C3212E904700E357EB /* MyCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardCell.h; sourceTree = "<group>"; };
+		0C37F5C4212E904700E357EB /* MyCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardView.m; sourceTree = "<group>"; };
+		0C37F5C5212E904700E357EB /* MyCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardCell.m; sourceTree = "<group>"; };
+		0C37F5C7212E904700E357EB /* MyCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardViewController.h; sourceTree = "<group>"; };
+		0C37F5C8212E904700E357EB /* MyCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardViewController.m; sourceTree = "<group>"; };
+		0C37F5CB212E904700E357EB /* PickerListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerListView.m; sourceTree = "<group>"; };
+		0C37F5CC212E904700E357EB /* AddCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardCell.h; sourceTree = "<group>"; };
+		0C37F5CD212E904700E357EB /* AddCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardView.h; sourceTree = "<group>"; };
+		0C37F5CE212E904700E357EB /* PickerListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerListView.h; sourceTree = "<group>"; };
+		0C37F5CF212E904700E357EB /* AddCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardCell.m; sourceTree = "<group>"; };
+		0C37F5D0212E904700E357EB /* AddCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardView.m; sourceTree = "<group>"; };
+		0C37F5D2212E904700E357EB /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
+		0C37F5D3212E904700E357EB /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		0C3D896C212AB51600D02FE0 /* WriteInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoView.h; sourceTree = "<group>"; };
 		0C3D896D212AB51600D02FE0 /* WriteInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoView.m; sourceTree = "<group>"; };
 		0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewModel.h; sourceTree = "<group>"; };
@@ -202,9 +241,9 @@
 			isa = PBXGroup;
 			children = (
 				0C37F56F212D526900E357EB /* Personal（个人中心） */,
+				0C37F59B212E60D700E357EB /* Archives（档案相关） */,
 				0C37F560212D526800E357EB /* Footprint（足迹） */,
-				0C37F56A212D526900E357EB /* Archives（档案） */,
-				0C37F57E212D526900E357EB /* Bank（银行卡） */,
+				0C37F57E212D526900E357EB /* Bank（银行卡相关） */,
 				0C37F579212D526900E357EB /* Conversion（切换身份） */,
 				0C37F565212D526800E357EB /* Help（帮助） */,
 				0C37F574212D526900E357EB /* More（更多） */,
@@ -290,45 +329,6 @@
 			sourceTree = "<group>";
 		};
 		0C37F569212D526800E357EB /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		0C37F56A212D526900E357EB /* Archives（档案） */ = {
-			isa = PBXGroup;
-			children = (
-				0C37F56B212D526900E357EB /* ViewModel */,
-				0C37F56C212D526900E357EB /* Model */,
-				0C37F56D212D526900E357EB /* View */,
-				0C37F56E212D526900E357EB /* ViewController */,
-			);
-			path = "Archives（档案）";
-			sourceTree = "<group>";
-		};
-		0C37F56B212D526900E357EB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C37F56C212D526900E357EB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0C37F56D212D526900E357EB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0C37F56E212D526900E357EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -456,41 +456,226 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		0C37F57E212D526900E357EB /* Bank（银行卡） */ = {
+		0C37F57E212D526900E357EB /* Bank（银行卡相关） */ = {
 			isa = PBXGroup;
 			children = (
-				0C37F57F212D526900E357EB /* ViewModel */,
-				0C37F580212D526900E357EB /* Model */,
-				0C37F581212D526900E357EB /* View */,
-				0C37F582212D526900E357EB /* ViewController */,
+				0C37F5C9212E904700E357EB /* AddCard（添加银行卡） */,
+				0C37F5BA212E904700E357EB /* MyCard（我的银行卡） */,
 			);
-			path = "Bank（银行卡）";
+			path = "Bank（银行卡相关）";
 			sourceTree = "<group>";
 		};
-		0C37F57F212D526900E357EB /* ViewModel */ = {
+		0C37F59B212E60D700E357EB /* Archives（档案相关） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F59C212E60D700E357EB /* Archives（档案） */,
+				0C37F5A7212E611B00E357EB /* BinDing（绑定手机） */,
+				0C37F5AC212E611B00E357EB /* ModifyPassword（修改密码） */,
+			);
+			path = "Archives（档案相关）";
+			sourceTree = "<group>";
+		};
+		0C37F59C212E60D700E357EB /* Archives（档案） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F59D212E60D700E357EB /* ViewModel */,
+				0C37F59E212E60D700E357EB /* Model */,
+				0C37F59F212E60D700E357EB /* View */,
+				0C37F5A2212E60D700E357EB /* ViewController */,
+			);
+			path = "Archives（档案）";
+			sourceTree = "<group>";
+		};
+		0C37F59D212E60D700E357EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0C37F580212D526900E357EB /* Model */ = {
+		0C37F59E212E60D700E357EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		0C37F581212D526900E357EB /* View */ = {
+		0C37F59F212E60D700E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5A1212E60D700E357EB /* ArchivesView.h */,
+				0C37F5A0212E60D700E357EB /* ArchivesView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F5A2212E60D700E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5A3212E60D700E357EB /* ArchivesViewController.h */,
+				0C37F5A4212E60D700E357EB /* ArchivesViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F5A7212E611B00E357EB /* BinDing（绑定手机） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5A8212E611B00E357EB /* ViewModel */,
+				0C37F5A9212E611B00E357EB /* Model */,
+				0C37F5AA212E611B00E357EB /* View */,
+				0C37F5AB212E611B00E357EB /* ViewController */,
+			);
+			path = "BinDing（绑定手机）";
+			sourceTree = "<group>";
+		};
+		0C37F5A8212E611B00E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F5A9212E611B00E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F5AA212E611B00E357EB /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		0C37F582212D526900E357EB /* ViewController */ = {
+		0C37F5AB212E611B00E357EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0C37F5B1212E615100E357EB /* BindingMobileViewController.h */,
+				0C37F5B2212E615100E357EB /* BindingMobileViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F5AC212E611B00E357EB /* ModifyPassword（修改密码） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5AD212E611B00E357EB /* ViewModel */,
+				0C37F5AE212E611B00E357EB /* Model */,
+				0C37F5AF212E611B00E357EB /* View */,
+				0C37F5B0212E611B00E357EB /* ViewController */,
+			);
+			path = "ModifyPassword（修改密码）";
+			sourceTree = "<group>";
+		};
+		0C37F5AD212E611B00E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F5AE212E611B00E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F5AF212E611B00E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F5B0212E611B00E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5B7212E67C400E357EB /* ModifyPasswordViewController.h */,
+				0C37F5B8212E67C400E357EB /* ModifyPasswordViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F5BA212E904700E357EB /* MyCard（我的银行卡） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5BB212E904700E357EB /* ViewModel */,
+				0C37F5BE212E904700E357EB /* Model */,
+				0C37F5C1212E904700E357EB /* View */,
+				0C37F5C6212E904700E357EB /* ViewController */,
+			);
+			path = "MyCard（我的银行卡）";
+			sourceTree = "<group>";
+		};
+		0C37F5BB212E904700E357EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5BC212E904700E357EB /* MyCardViewModel.h */,
+				0C37F5BD212E904700E357EB /* MyCardViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C37F5BE212E904700E357EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5BF212E904700E357EB /* MyCardModel.m */,
+				0C37F5C0212E904700E357EB /* MyCardModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C37F5C1212E904700E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5C2212E904700E357EB /* MyCardView.h */,
+				0C37F5C3212E904700E357EB /* MyCardCell.h */,
+				0C37F5C4212E904700E357EB /* MyCardView.m */,
+				0C37F5C5212E904700E357EB /* MyCardCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F5C6212E904700E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5C7212E904700E357EB /* MyCardViewController.h */,
+				0C37F5C8212E904700E357EB /* MyCardViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C37F5C9212E904700E357EB /* AddCard（添加银行卡） */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5CA212E904700E357EB /* View */,
+				0C37F5D1212E904700E357EB /* ViewController */,
+			);
+			path = "AddCard（添加银行卡）";
+			sourceTree = "<group>";
+		};
+		0C37F5CA212E904700E357EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5CC212E904700E357EB /* AddCardCell.h */,
+				0C37F5CF212E904700E357EB /* AddCardCell.m */,
+				0C37F5CD212E904700E357EB /* AddCardView.h */,
+				0C37F5D0212E904700E357EB /* AddCardView.m */,
+				0C37F5CE212E904700E357EB /* PickerListView.h */,
+				0C37F5CB212E904700E357EB /* PickerListView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C37F5D1212E904700E357EB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C37F5D2212E904700E357EB /* AddCardViewController.h */,
+				0C37F5D3212E904700E357EB /* AddCardViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1120,32 +1305,41 @@
 			files = (
 				0CE1EC27212889E800A373D7 /* AddTypeView.m in Sources */,
 				0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */,
+				0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */,
+				0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */,
 				0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */,
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
+				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
+				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
 				0CE1EC2A2128F3D700A373D7 /* SelectTypeViewModel.m in Sources */,
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
+				0C37F5D9212E904700E357EB /* PickerListView.m in Sources */,
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
+				0C37F5D6212E904700E357EB /* MyCardView.m in Sources */,
 				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
+				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
 				0C37F55E212D4A9000E357EB /* TipCell.m in Sources */,
 				0CE1EC4121290FBD00A373D7 /* ApplyViewController.m in Sources */,
 				0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */,
 				0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */,
+				0C37F5A5212E60D700E357EB /* ArchivesView.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
+				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
 				0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */,
@@ -1155,6 +1349,7 @@
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
+				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
 				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,
 				0CE1EC302128F3EC00A373D7 /* SelectTypeView.m in Sources */,
@@ -1162,7 +1357,10 @@
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
+				0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */,
+				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,
 				0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */,
+				0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,
 				0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */,
 			);
@@ -1305,6 +1503,7 @@
 			baseConfigurationReference = E3C58AA252108754216FE46E /* Pods-Lywsale.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
@@ -1325,6 +1524,7 @@
 			baseConfigurationReference = 3FC6A3317F8728887B35A61A /* Pods-Lywsale.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";

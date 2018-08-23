@@ -30,7 +30,7 @@
     [self.view addSubview:footprintHeaderView];
     
     [footprintHeaderView setSelectIndex:^(NSInteger index) {
-        NSLog(@"%zd", index);
+        NSLog(@"%ld", (long)index);
     }];
 }
 

@@ -21,8 +21,7 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-
-    self.title = @"个人中心";
+    
     self.personalView.dataSources = @[@"我的足迹", @"我的银行卡", @"我的档案", @"帮助反馈", @"切换为店员", @"更多"];
 }
 

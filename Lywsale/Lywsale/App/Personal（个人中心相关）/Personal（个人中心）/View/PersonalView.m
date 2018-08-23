@@ -42,7 +42,6 @@
         self.nameLabel.textColor = kMainTextColor;
         [headerView addSubview:self.nameLabel];
         
-#warning 写着玩
         for (int i = 0; i < 5; i++) {
             
             UILabel *xxLabel = [[UILabel alloc] initWithFrame:self.nameLabel.frame];
@@ -54,7 +53,7 @@
         }
         
         // 线
-        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.headImgView.maxY + 15, ScreenWidth, 0.5)];
+        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.headImgView.maxY + 15, ScreenWidth, 0.3)];
         lineView.backgroundColor = kLineColor;
         [headerView addSubview:lineView];
         
@@ -83,16 +82,19 @@
             bgBtn.height = typeNameLabel.maxY + 15;
             if (i != 0) {
                 
-                UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 0.5, bgBtn.height - 20)];
+                UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 10, 0.3, bgBtn.height - 20)];
                 lineView.backgroundColor = kLineColor;
                 [bgBtn addSubview:lineView];
             }
         }
         
-        // 底部线条
-        UIView *bottomlineView = [[UILabel alloc] initWithFrame:CGRectMake(0, bgBtn.maxY, ScreenWidth, 0.5)];
-        bottomlineView.backgroundColor = kLineColor;
-        [headerView addSubview:bottomlineView];
+        for (int i = 0; i < 2; i++) {
+            
+            // 底部线条
+            UIView *bottomlineView = [[UILabel alloc] initWithFrame:CGRectMake(0, bgBtn.maxY * i, ScreenWidth, 0.3)];
+            bottomlineView.backgroundColor = kLineColor;
+            [headerView addSubview:bottomlineView];
+        }
         
         headerView.height = self.headImgView.maxY + self.headImgView.x + bgBtn.height;
     }
@@ -111,6 +113,13 @@
     return self;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return cell;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 10;
 }
@@ -121,8 +130,14 @@
     
     NSString *title = self.dataSources[indexPath.row];
     NSString *vcName;
-    if ([title isEqualToString:@"我的足迹"]) {
+    if ([title containsString:@"足迹"]) {
         vcName = @"FootprintViewController";
+    }
+    else if ([title containsString:@"档案"]) {
+        vcName = @"ArchivesViewController";
+    }
+    else if ([title containsString:@"银行卡"]) {
+        vcName = @"MyCardViewController";
     }
     
     if (self.goViewController && vcName.length > 0) {

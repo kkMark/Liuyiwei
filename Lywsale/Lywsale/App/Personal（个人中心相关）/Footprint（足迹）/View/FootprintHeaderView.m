@@ -51,7 +51,7 @@
     }
     
     // 底部线条
-    UIView *bottomlineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.viewHeight, ScreenWidth, 0.5)];
+    UIView *bottomlineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.viewHeight, ScreenWidth, 0.3)];
     bottomlineView.backgroundColor = kLineColor;
     [self addSubview:bottomlineView];
 }

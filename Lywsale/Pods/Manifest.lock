@@ -5,6 +5,9 @@ PODS:
   - MJRefresh (3.1.15.3)
   - ReactiveObjC (3.1.0)
   - SDAutoLayout (2.2.1)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
   - IQKeyboardManager
@@ -13,6 +16,7 @@ DEPENDENCIES:
   - MJRefresh
   - ReactiveObjC
   - SDAutoLayout
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -22,6 +26,7 @@ SPEC REPOS:
     - MJRefresh
     - ReactiveObjC
     - SDAutoLayout
+    - SDWebImage
 
 SPEC CHECKSUMS:
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
@@ -30,7 +35,8 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 0b62fcf65bd9373dcbe80e4ca58a7e6cbcfb72d6
+PODFILE CHECKSUM: 024553806aeec42b7697b6e25f5acdc3375b8a86
 
 COCOAPODS: 1.5.0

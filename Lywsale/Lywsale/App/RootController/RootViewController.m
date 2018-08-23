@@ -32,10 +32,10 @@
     NSArray *titles = @[@"主页", @"工作", @"知识", @"我的"];
     
     // 图标
-    NSArray *imgs = @[@"", @"", @"", @""];
+    NSArray *imgs = @[@"tabbar_home", @"tabbar_home", @"tabbar_patients", @"tabbar_me"];
     
     // 选中图片
-    NSArray *selectImgs = @[@"", @"", @"", @""];
+    NSArray *selectImgs = @[@"tabbar_home_select", @"tabbar_home_select", @"tabbar_patients", @"tabbar_me_select"];
     
     for (int i = 0; i < viewControllerNames.count; i++) {
         
@@ -43,6 +43,7 @@
         nav.tabBarItem.image = [[UIImage imageNamed:imgs[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         nav.tabBarItem.selectedImage = [[UIImage imageNamed:selectImgs[i]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         nav.tabBarItem.title = titles[i];
+        nav.title = titles[i];
         [viewControllers addObject:nav];
     }
     
