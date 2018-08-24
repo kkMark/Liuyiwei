@@ -35,7 +35,7 @@
     
     if (!addTypeView) {
         
-        addTypeView = [[AddTypeView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.userTypeView.height) style:UITableViewStyleGrouped];
+        addTypeView = [[AddTypeView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight) style:UITableViewStyleGrouped];
         addTypeView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:addTypeView];
         

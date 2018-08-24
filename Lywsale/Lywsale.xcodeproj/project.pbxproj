@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23AE4D2129B42E00BC2CAC /* RootViewController.m */; };
+		0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CA3F212FFD23001A78A0 /* MoreViewController.m */; };
+		0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CA42212FFD36001A78A0 /* MoreView.m */; };
 		0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */; };
 		0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F556212D3F1500E357EB /* WriteInfoTypeCell.m */; };
 		0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F559212D3F3B00E357EB /* WriteInfoCertificateCell.m */; };
@@ -16,7 +18,6 @@
 		0C37F588212D528E00E357EB /* PersonalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F587212D528E00E357EB /* PersonalView.m */; };
 		0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F58A212D60C500E357EB /* FootprintViewController.m */; };
 		0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F58D212D612A00E357EB /* FootprintHeaderView.m */; };
-		0C37F594212D687C00E357EB /* FootprintTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F593212D687C00E357EB /* FootprintTaskView.m */; };
 		0C37F5A5212E60D700E357EB /* ArchivesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5A0212E60D700E357EB /* ArchivesView.m */; };
 		0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5A4212E60D700E357EB /* ArchivesViewController.m */; };
 		0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5B2212E615100E357EB /* BindingMobileViewController.m */; };
@@ -37,6 +38,7 @@
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
+		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
 		0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */; };
 		0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B119212818CD004EC6FC /* LoginViewController.m */; };
 		0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11C212818DE004EC6FC /* LoginView.m */; };
@@ -81,6 +83,10 @@
 /* Begin PBXFileReference section */
 		0C23AE4D2129B42E00BC2CAC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0C23AE4E2129B42E00BC2CAC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0C29CA3E212FFD23001A78A0 /* MoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		0C29CA3F212FFD23001A78A0 /* MoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		0C29CA41212FFD36001A78A0 /* MoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreView.h; sourceTree = "<group>"; };
+		0C29CA42212FFD36001A78A0 /* MoreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreView.m; sourceTree = "<group>"; };
 		0C37F552212D3EEB00E357EB /* WriteInfoTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoTextFieldCell.h; sourceTree = "<group>"; };
 		0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoTextFieldCell.m; sourceTree = "<group>"; };
 		0C37F555212D3F1500E357EB /* WriteInfoTypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoTypeCell.h; sourceTree = "<group>"; };
@@ -97,8 +103,6 @@
 		0C37F58A212D60C500E357EB /* FootprintViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintViewController.m; sourceTree = "<group>"; };
 		0C37F58C212D612A00E357EB /* FootprintHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintHeaderView.h; sourceTree = "<group>"; };
 		0C37F58D212D612A00E357EB /* FootprintHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintHeaderView.m; sourceTree = "<group>"; };
-		0C37F592212D687C00E357EB /* FootprintTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintTaskView.h; sourceTree = "<group>"; };
-		0C37F593212D687C00E357EB /* FootprintTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintTaskView.m; sourceTree = "<group>"; };
 		0C37F5A0212E60D700E357EB /* ArchivesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivesView.m; sourceTree = "<group>"; };
 		0C37F5A1212E60D700E357EB /* ArchivesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivesView.h; sourceTree = "<group>"; };
 		0C37F5A3212E60D700E357EB /* ArchivesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivesViewController.h; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 		0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoModel.m; sourceTree = "<group>"; };
 		0C534EA7212EA676001C2A7A /* KTextFeildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTextFeildView.h; sourceTree = "<group>"; };
 		0C534EA8212EA676001C2A7A /* KTextFeildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTextFeildView.m; sourceTree = "<group>"; };
+		0C6B36E921300B0E0081DB1C /* WebHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebHelpViewController.h; sourceTree = "<group>"; };
+		0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebHelpViewController.m; sourceTree = "<group>"; };
 		0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveOrRegisteredViewController.h; sourceTree = "<group>"; };
 		0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveOrRegisteredViewController.m; sourceTree = "<group>"; };
 		0CC6B118212818CD004EC6FC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -256,16 +262,16 @@
 			isa = PBXGroup;
 			children = (
 				0C37F56F212D526900E357EB /* Personal（个人中心） */,
+				0C37F560212D526800E357EB /* Footprint（足迹相关） */,
 				0C37F59B212E60D700E357EB /* Archives（档案相关） */,
 				0C37F57E212D526900E357EB /* Bank（银行卡相关） */,
 				0C37F565212D526800E357EB /* Help（帮助相关） */,
-				0C37F560212D526800E357EB /* Footprint（足迹） */,
 				0C37F574212D526900E357EB /* More（更多） */,
 			);
 			path = "Personal（个人中心相关）";
 			sourceTree = "<group>";
 		};
-		0C37F560212D526800E357EB /* Footprint（足迹） */ = {
+		0C37F560212D526800E357EB /* Footprint（足迹相关） */ = {
 			isa = PBXGroup;
 			children = (
 				0C37F561212D526800E357EB /* ViewModel */,
@@ -273,7 +279,7 @@
 				0C37F563212D526800E357EB /* View */,
 				0C37F564212D526800E357EB /* ViewController */,
 			);
-			path = "Footprint（足迹）";
+			path = "Footprint（足迹相关）";
 			sourceTree = "<group>";
 		};
 		0C37F561212D526800E357EB /* ViewModel */ = {
@@ -295,8 +301,6 @@
 			children = (
 				0C37F58C212D612A00E357EB /* FootprintHeaderView.h */,
 				0C37F58D212D612A00E357EB /* FootprintHeaderView.m */,
-				0C37F592212D687C00E357EB /* FootprintTaskView.h */,
-				0C37F593212D687C00E357EB /* FootprintTaskView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +394,8 @@
 		0C37F577212D526900E357EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C29CA41212FFD36001A78A0 /* MoreView.h */,
+				0C29CA42212FFD36001A78A0 /* MoreView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +403,8 @@
 		0C37F578212D526900E357EB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0C29CA3E212FFD23001A78A0 /* MoreViewController.h */,
+				0C29CA3F212FFD23001A78A0 /* MoreViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -752,6 +760,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		0C6B36E821300ADD0081DB1C /* WebHelp（帮助相关） */ = {
+			isa = PBXGroup;
+			children = (
+				0C6B36E921300B0E0081DB1C /* WebHelpViewController.h */,
+				0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */,
+			);
+			path = "WebHelp（帮助相关）";
+			sourceTree = "<group>";
+		};
 		0C9BBB8F212A519000A09A02 /* Home（首页相关） */ = {
 			isa = PBXGroup;
 			children = (
@@ -872,6 +889,7 @@
 		0CDDB546212733D300D42F76 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0C6B36E821300ADD0081DB1C /* WebHelp（帮助相关） */,
 				0CDDB547212733E000D42F76 /* AppDelegate */,
 				0C23AE4C2129B42E00BC2CAC /* RootController */,
 				0CC6B11121281811004EC6FC /* Login（登录相关） */,
@@ -1367,6 +1385,7 @@
 				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
 				0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */,
+				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
 				0C37F55E212D4A9000E357EB /* TipCell.m in Sources */,
@@ -1379,14 +1398,15 @@
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
+				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
 				0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */,
 				0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */,
-				0C37F594212D687C00E357EB /* FootprintTaskView.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
+				0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */,
 				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
 				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "RetrieveOrRegisteredViewController.h"
 #import "AddTypeViewController.h"
+#import "WebHelpViewController.h"
 #import "CustomTextField.h"
 
 @interface RetrieveOrRegisteredViewController ()
@@ -73,6 +74,13 @@
         [agreementBtn setTitleColor:kMainTextColor forState:UIControlStateNormal];
         agreementBtn.titleLabel.attributedText = attStr;
         [self.view addSubview:agreementBtn];
+        
+        [[agreementBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+            WebHelpViewController *vc = [WebHelpViewController new];
+            vc.title = @"服务协议";
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
 }
 

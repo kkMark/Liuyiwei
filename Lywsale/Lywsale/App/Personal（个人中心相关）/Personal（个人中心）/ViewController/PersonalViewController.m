@@ -22,6 +22,7 @@
 
     [super viewDidLoad];
     
+    self.navigationItem.title = @"个人中心";
     self.personalView.dataSources = @[@"我的足迹", @"我的银行卡", @"我的档案", @"帮助反馈", @"切换为店员", @"更多"];
 }
 
@@ -33,10 +34,18 @@
         [self.view addSubview:personalView];
         
         @weakify(self);
+        // 前往控制器
         [personalView setGoViewController:^(UIViewController *vc) {
             
             @strongify(self);
             [self.navigationController pushViewController:vc animated:YES];
+        }];
+        
+        // 切换
+        [personalView setConversionBlock:^{
+           
+            @strongify(self);
+            [self alertWithTitle:@"温馨提示" msg:@"确定后，由药店模式切换为店员模式" isShowCancel:YES complete:nil];
         }];
     }
     

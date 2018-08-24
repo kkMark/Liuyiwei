@@ -142,6 +142,12 @@
     else if ([title containsString:@"帮助"]) {
         vcName = @"HelpViewController";
     }
+    else if ([title containsString:@"更多"]) {
+        vcName = @"MoreViewController";
+    }
+    else if ([title containsString:@"切换"] && self.conversionBlock) {
+        return self.conversionBlock();
+    }
     
     if (self.goViewController && vcName.length > 0) {
         
