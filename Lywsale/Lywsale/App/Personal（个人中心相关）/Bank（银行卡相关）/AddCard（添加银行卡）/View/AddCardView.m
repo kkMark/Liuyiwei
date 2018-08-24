@@ -7,27 +7,27 @@
 //
 
 #import "AddCardView.h"
-#import "PickerListView.h"
+#import "SelectPriceView.h"
 
 @interface AddCardView ()
 
-@property (nonatomic, strong) PickerListView *pickerListView;
+@property (nonatomic, strong) SelectPriceView *selectPriceView;
 
 @end
 
 @implementation AddCardView
-@synthesize pickerListView;
+@synthesize selectPriceView;
 
-- (PickerListView *)pickerListView {
+- (SelectPriceView *)selectPriceView {
     
-    if (!pickerListView) {
+    if (!selectPriceView) {
         
-        pickerListView = [[PickerListView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
-        pickerListView.dataSource = self.bankList;
-        [self addSubview:pickerListView];
+        selectPriceView = [[SelectPriceView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
+        selectPriceView.priceArr = self.bankList;
+        [self addSubview:selectPriceView];
         
         @weakify(self);
-        [pickerListView setDidTextStringBlock:^(NSString *textString) {
+        [selectPriceView setDidTextStringBlock:^(NSString *textString) {
             
             @strongify(self);
             AddCardCell *cell = [self cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
@@ -35,7 +35,7 @@
         }];
     }
     
-    return pickerListView;
+    return selectPriceView;
 }
 
 #pragma mark - tableView
@@ -87,9 +87,8 @@
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     if (indexPath.row == 1) {
         
-        [self endEditing:YES];
-        self.pickerListView.hidden = NO;
-        self.pickerListView.isShowList = !self.pickerListView.isShowList;
+        self.selectPriceView.hidden = NO;
+        self.selectPriceView.isShowList = YES;
     }
 }
 

@@ -1,17 +1,17 @@
 //
-//  PickerListView.h
+//  SelectPriceView.h
 //  GanLuXiangBan
 //
-//  Created by M on 2018/6/3.
+//  Created by M on 2018/6/26.
 //  Copyright © 2018年 黄锡凯. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface PickerListView : UIView <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SelectPriceView : UIView <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (nonatomic, strong) UIPickerView *pickerView;
-@property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) NSArray *priceArr;
 @property (nonatomic, assign) BOOL isShowList;
 
 #pragma mark - Block
