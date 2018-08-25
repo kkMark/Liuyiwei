@@ -20,6 +20,7 @@
 #import "UILabel+Category.h"
 #import "UIColor+category.h"
 #import "Toast+UIView.h"
+#import "UINavigationController+Category.h"
 
 // Macro
 #import "AppMacro.h"

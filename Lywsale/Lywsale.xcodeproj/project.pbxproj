@@ -42,6 +42,7 @@
 		0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36ED2130EF030081DB1C /* FootprintView.m */; };
 		0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F02130EFCA0081DB1C /* FootprintCell.m */; };
 		0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */; };
+		0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */; };
 		0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */; };
 		0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B119212818CD004EC6FC /* LoginViewController.m */; };
 		0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11C212818DE004EC6FC /* LoginView.m */; };
@@ -154,6 +155,8 @@
 		0C6B36F02130EFCA0081DB1C /* FootprintCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCell.m; sourceTree = "<group>"; };
 		0C6B36F22130F8EC0081DB1C /* FootprintCourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintCourseCell.h; sourceTree = "<group>"; };
 		0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCourseCell.m; sourceTree = "<group>"; };
+		0C6B36F5213107C30081DB1C /* UINavigationController+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Category.h"; sourceTree = "<group>"; };
+		0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Category.m"; sourceTree = "<group>"; };
 		0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveOrRegisteredViewController.h; sourceTree = "<group>"; };
 		0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveOrRegisteredViewController.m; sourceTree = "<group>"; };
 		0CC6B118212818CD004EC6FC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -964,6 +967,8 @@
 				0CDDB560212734DB00D42F76 /* UILabel+Category.m */,
 				0CDDB563212734DB00D42F76 /* UIView+Category.h */,
 				0CDDB55E212734DB00D42F76 /* UIView+Category.m */,
+				0C6B36F5213107C30081DB1C /* UINavigationController+Category.h */,
+				0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */,
 			);
 			path = "Category（类别）";
 			sourceTree = "<group>";
@@ -1382,6 +1387,7 @@
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
+				0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */,
 				0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,

@@ -40,26 +40,6 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = self;
-        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-    }
-}
-
-#pragma mark - 导航条
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    
-    if (self.navigationController.viewControllers.count == 1) {
-        return NO;
-    }
-    
-    return YES;
-}
-
 // 设置返回按钮
 - (void)setBackBtn {
     
