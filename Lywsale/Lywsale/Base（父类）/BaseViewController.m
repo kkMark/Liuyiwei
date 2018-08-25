@@ -38,6 +38,11 @@
     if (self.navigationController.viewControllers.count != 1) {
         [self setBackBtn];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
     
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.delegate = self;
