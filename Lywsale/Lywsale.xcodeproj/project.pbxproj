@@ -39,6 +39,9 @@
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
 		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
+		0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36ED2130EF030081DB1C /* FootprintView.m */; };
+		0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F02130EFCA0081DB1C /* FootprintCell.m */; };
+		0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */; };
 		0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */; };
 		0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B119212818CD004EC6FC /* LoginViewController.m */; };
 		0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11C212818DE004EC6FC /* LoginView.m */; };
@@ -145,6 +148,12 @@
 		0C534EA8212EA676001C2A7A /* KTextFeildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTextFeildView.m; sourceTree = "<group>"; };
 		0C6B36E921300B0E0081DB1C /* WebHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebHelpViewController.h; sourceTree = "<group>"; };
 		0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebHelpViewController.m; sourceTree = "<group>"; };
+		0C6B36EC2130EF030081DB1C /* FootprintView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintView.h; sourceTree = "<group>"; };
+		0C6B36ED2130EF030081DB1C /* FootprintView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintView.m; sourceTree = "<group>"; };
+		0C6B36EF2130EFCA0081DB1C /* FootprintCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintCell.h; sourceTree = "<group>"; };
+		0C6B36F02130EFCA0081DB1C /* FootprintCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCell.m; sourceTree = "<group>"; };
+		0C6B36F22130F8EC0081DB1C /* FootprintCourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintCourseCell.h; sourceTree = "<group>"; };
+		0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCourseCell.m; sourceTree = "<group>"; };
 		0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveOrRegisteredViewController.h; sourceTree = "<group>"; };
 		0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveOrRegisteredViewController.m; sourceTree = "<group>"; };
 		0CC6B118212818CD004EC6FC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -301,6 +310,12 @@
 			children = (
 				0C37F58C212D612A00E357EB /* FootprintHeaderView.h */,
 				0C37F58D212D612A00E357EB /* FootprintHeaderView.m */,
+				0C6B36EF2130EFCA0081DB1C /* FootprintCell.h */,
+				0C6B36F02130EFCA0081DB1C /* FootprintCell.m */,
+				0C6B36F22130F8EC0081DB1C /* FootprintCourseCell.h */,
+				0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */,
+				0C6B36EC2130EF030081DB1C /* FootprintView.h */,
+				0C6B36ED2130EF030081DB1C /* FootprintView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1364,7 +1379,9 @@
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
+				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
+				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
 				0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
@@ -1385,6 +1402,7 @@
 				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
 				0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */,
+				0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */,
 				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
