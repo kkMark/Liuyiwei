@@ -26,6 +26,7 @@
         headerImgView.image = [UIImage imageNamed:@"TestHeadImg"];
         headerImgView.layer.cornerRadius = headerImgView.height / 2;
         headerImgView.layer.masksToBounds = YES;
+        headerImgView.contentMode = UIViewContentModeScaleAspectFill;
     }
     
     return headerImgView;

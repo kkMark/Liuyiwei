@@ -33,6 +33,7 @@
         self.headImgView.layer.cornerRadius = self.headImgView.height / 2;
         self.headImgView.layer.masksToBounds = YES;
         self.headImgView.image = [UIImage imageNamed:@"TestHeadImg"];
+        self.headImgView.contentMode = UIViewContentModeScaleAspectFill;
         [headerView addSubview:self.headImgView];
         
         // 昵称
@@ -42,15 +43,12 @@
         self.nameLabel.textColor = kMainTextColor;
         [headerView addSubview:self.nameLabel];
         
-        for (int i = 0; i < 5; i++) {
-            
-            UILabel *xxLabel = [[UILabel alloc] initWithFrame:self.nameLabel.frame];
-            xxLabel.y = self.nameLabel.maxY + 5;
-            xxLabel.text = @"★★★★★";
-            xxLabel.font = [UIFont boldSystemFontOfSize:16];
-            xxLabel.textColor = kMainColor;
-            [headerView addSubview:xxLabel];
-        }
+        UILabel *xxLabel = [[UILabel alloc] initWithFrame:self.nameLabel.frame];
+        xxLabel.y = self.nameLabel.maxY + 5;
+        xxLabel.text = @"★★★★★";
+        xxLabel.font = [UIFont boldSystemFontOfSize:16];
+        xxLabel.textColor = kMainColor;
+        [headerView addSubview:xxLabel];
         
         // 线
         UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.headImgView.maxY + 15, ScreenWidth, 0.3)];

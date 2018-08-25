@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23AE4D2129B42E00BC2CAC /* RootViewController.m */; };
+		0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25101321312B9500DDF4BB /* HomePageViewController.m */; };
+		0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25101621312C7600DDF4BB /* HomePageMenuView.m */; };
 		0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CA3F212FFD23001A78A0 /* MoreViewController.m */; };
 		0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CA42212FFD36001A78A0 /* MoreView.m */; };
 		0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */; };
@@ -87,6 +89,10 @@
 /* Begin PBXFileReference section */
 		0C23AE4D2129B42E00BC2CAC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0C23AE4E2129B42E00BC2CAC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		0C25101221312B9500DDF4BB /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		0C25101321312B9500DDF4BB /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		0C25101521312C7600DDF4BB /* HomePageMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageMenuView.h; sourceTree = "<group>"; };
+		0C25101621312C7600DDF4BB /* HomePageMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageMenuView.m; sourceTree = "<group>"; };
 		0C29CA3E212FFD23001A78A0 /* MoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
 		0C29CA3F212FFD23001A78A0 /* MoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		0C29CA41212FFD36001A78A0 /* MoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreView.h; sourceTree = "<group>"; };
@@ -760,6 +766,8 @@
 		0C3D8969212AAC2D00D02FE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C25101521312C7600DDF4BB /* HomePageMenuView.h */,
+				0C25101621312C7600DDF4BB /* HomePageMenuView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -774,6 +782,8 @@
 		0C3D896B212AAC2D00D02FE0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0C25101221312B9500DDF4BB /* HomePageViewController.h */,
+				0C25101321312B9500DDF4BB /* HomePageViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1401,6 +1411,7 @@
 				0CE1EC2A2128F3D700A373D7 /* SelectTypeViewModel.m in Sources */,
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
+				0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */,
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
 				0C37F5F1212E9A9800E357EB /* HelpView.m in Sources */,
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
@@ -1430,6 +1441,7 @@
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
+				0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */,
 				0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */,
 				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
