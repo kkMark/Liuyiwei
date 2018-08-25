@@ -38,7 +38,7 @@
         
         // 昵称
         self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headImgView.maxX + 15, 25, ScreenWidth - (self.headImgView.maxX + 30), 15)];
-        self.nameLabel.text = @"用户昵称";
+        self.nameLabel.text = GetUserDefault(UserName);
         self.nameLabel.font = [UIFont boldSystemFontOfSize:14];
         self.nameLabel.textColor = kMainTextColor;
         [headerView addSubview:self.nameLabel];

@@ -31,7 +31,7 @@
     
     // 用户昵称
     self.nicknameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headImgView.maxX + 15, self.headImgView.y + 15, 100, 20)];
-    self.nicknameLabel.text = @"用户昵称";
+    self.nicknameLabel.text = GetUserDefault(UserName);
     self.nicknameLabel.font = [UIFont boldSystemFontOfSize:14];
     self.nicknameLabel.textColor = kMainTextColor;
     [self addSubview:self.nicknameLabel];
@@ -53,14 +53,15 @@
     menuBgView.backgroundColor = kMainColor;
     [self insertSubview:menuBgView atIndex:0];
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, menuBgView.height - 1, 80, 1)];
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, menuBgView.height - 2, 80, 2)];
     lineView.backgroundColor = [UIColor whiteColor];
     [menuBgView addSubview:lineView];
     
     for (int i = 0; i < 2; i++) {
         
         UIButton *menuTitleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        menuTitleBtn.frame = CGRectMake(0, 0, 80, menuBgView.height - 1);
+        menuTitleBtn.tag = i + 100;
+        menuTitleBtn.frame = CGRectMake(0, 0, 80, menuBgView.height - 2);
         menuTitleBtn.x = menuBgView.centerX - (i == 0 ? menuTitleBtn.width : 0);
         menuTitleBtn.titleLabel.font = i == 0 ? [UIFont boldSystemFontOfSize:14] : [UIFont systemFontOfSize:14];
         [menuTitleBtn setTitle:i == 0 ? @"数据看板" : @"任务看板" forState:UIControlStateNormal];
@@ -69,6 +70,22 @@
         
         // 默认线条在数据看版下
         if (i == 0) lineView.x = menuTitleBtn.x;
+        
+        // 点击事件
+        [[menuTitleBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+           
+            [UIView animateWithDuration:0.25 animations:^{
+                
+                UIButton *tempBtn = [self viewWithTag:!i + 100];
+                tempBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+                [tempBtn setTitleColor:kMainTextColor forState:UIControlStateNormal];
+                
+                menuTitleBtn.titleLabel.font = i == 0 ? [UIFont boldSystemFontOfSize:14] : [UIFont systemFontOfSize:14];
+                [menuTitleBtn setTitleColor:i == 0 ? [UIColor whiteColor] : kMainTextColor forState:UIControlStateNormal];
+                
+                lineView.x = menuTitleBtn.x;
+            }];
+        }];
     }
 }
 

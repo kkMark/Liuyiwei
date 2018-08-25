@@ -9,7 +9,9 @@
 #ifndef UserDefaultsMacro_h
 #define UserDefaultsMacro_h
 
-/// 用户昵称
+// 用户昵称
 #define UserName    @"userName"
+// 用户ID
+#define UserID      @"userId"
 
 #endif /* UserDefaultsMacro_h */

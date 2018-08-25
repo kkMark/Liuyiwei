@@ -11,5 +11,6 @@
 @interface HomePageMenuView : BaseView
 
 @property (nonatomic, assign) float headerHeight;
-    
+@property (nonatomic, strong) void (^selectIndex)(NSInteger index);
+
 @end
