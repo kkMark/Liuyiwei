@@ -53,6 +53,8 @@
     menuBgView.backgroundColor = kMainColor;
     [self insertSubview:menuBgView atIndex:0];
     
+    self.headerHeight = menuBgView.maxY;
+    
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, menuBgView.height - 2, 80, 2)];
     lineView.backgroundColor = [UIColor whiteColor];
     [menuBgView addSubview:lineView];
@@ -80,8 +82,8 @@
                 tempBtn.titleLabel.font = [UIFont systemFontOfSize:14];
                 [tempBtn setTitleColor:kMainTextColor forState:UIControlStateNormal];
                 
-                menuTitleBtn.titleLabel.font = i == 0 ? [UIFont boldSystemFontOfSize:14] : [UIFont systemFontOfSize:14];
-                [menuTitleBtn setTitleColor:i == 0 ? [UIColor whiteColor] : kMainTextColor forState:UIControlStateNormal];
+                menuTitleBtn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+                [menuTitleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
                 
                 lineView.x = menuTitleBtn.x;
             }];

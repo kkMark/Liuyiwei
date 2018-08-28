@@ -1,4 +1,5 @@
 PODS:
+  - DKViewPage (1.0.7)
   - IQKeyboardManager (6.1.1)
   - Masonry (1.1.0)
   - "MBProgressHUD+DK (1.1.1)"
@@ -10,6 +11,7 @@ PODS:
   - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
+  - DKViewPage
   - IQKeyboardManager
   - Masonry
   - "MBProgressHUD+DK"
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - DKViewPage
     - IQKeyboardManager
     - Masonry
     - "MBProgressHUD+DK"
@@ -29,6 +32,7 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
+  DKViewPage: 18c64bcdcb4ed7c93ec1057bb089607533d37276
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   "MBProgressHUD+DK": 9394614f7106e640784d044bc19512c1167e9e97
@@ -37,6 +41,6 @@ SPEC CHECKSUMS:
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 024553806aeec42b7697b6e25f5acdc3375b8a86
+PODFILE CHECKSUM: 21d219c8c811ef027d1c9633686daee783dd7f14
 
 COCOAPODS: 1.5.0

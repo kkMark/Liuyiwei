@@ -16,5 +16,6 @@ target 'Lywsale' do
   pod 'IQKeyboardManager'
   pod 'MBProgressHUD+DK'
   pod 'SDWebImage'
+  pod 'DKViewPage'
 
 end

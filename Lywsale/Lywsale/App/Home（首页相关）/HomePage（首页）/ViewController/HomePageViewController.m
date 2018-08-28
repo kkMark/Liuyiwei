@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import "HomePageMenuView.h"
+#import <DKViewPage.h>
 
 @interface HomePageViewController ()
 
@@ -33,6 +34,7 @@
     
     HomePageMenuView *menuView = [[HomePageMenuView alloc] initWithFrame:CGRectMake(0, self.statusBarHeight, ScreenWidth, 0)];
     menuView.height = menuView.headerHeight;
+    menuView.userInteractionEnabled = YES;
     [self.view addSubview:menuView];
 }
 
