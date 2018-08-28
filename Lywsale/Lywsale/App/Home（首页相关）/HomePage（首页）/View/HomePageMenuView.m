@@ -14,6 +14,8 @@
 @property (nonatomic, strong) UIImageView *headImgView;
 /// 昵称
 @property (nonatomic, strong) UILabel *nicknameLabel;
+/// 线条
+@property (nonatomic, strong) UIView *lineView;
 
 @end
 
@@ -43,7 +45,7 @@
     xxLabel.font = [UIFont boldSystemFontOfSize:16];
     xxLabel.textColor = kMainColor;
     [self addSubview:xxLabel];
-    
+
     [self initMenu];
 }
 
@@ -55,9 +57,9 @@
     
     self.headerHeight = menuBgView.maxY;
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, menuBgView.height - 2, 80, 2)];
-    lineView.backgroundColor = [UIColor whiteColor];
-    [menuBgView addSubview:lineView];
+    self.lineView = [[UIView alloc] initWithFrame:CGRectMake(0, menuBgView.height - 2, 80, 2)];
+    self.lineView.backgroundColor = [UIColor whiteColor];
+    [menuBgView addSubview:self.lineView];
     
     for (int i = 0; i < 2; i++) {
         
@@ -71,24 +73,33 @@
         [menuBgView addSubview:menuTitleBtn];
         
         // 默认线条在数据看版下
-        if (i == 0) lineView.x = menuTitleBtn.x;
+        if (i == 0) self.lineView.x = menuTitleBtn.x;
         
         // 点击事件
         [[menuTitleBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-           
-            [UIView animateWithDuration:0.25 animations:^{
-                
-                UIButton *tempBtn = [self viewWithTag:!i + 100];
-                tempBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-                [tempBtn setTitleColor:kMainTextColor forState:UIControlStateNormal];
-                
-                menuTitleBtn.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-                [menuTitleBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-                
-                lineView.x = menuTitleBtn.x;
-            }];
+
+            [self setIndex:i];
+            if (self.selectIndex) {
+                self.selectIndex(i);
+            }
         }];
     }
+}
+
+- (void)setIndex:(NSInteger)index {
+    
+    _index = index;
+    [UIView animateWithDuration:0.25 animations:^{
+        
+        for (int i = 0; i < 2; i++) {
+            
+            UIButton *tempBtn = [self viewWithTag:i + 100];
+            tempBtn.titleLabel.font = index == i ? [UIFont boldSystemFontOfSize:14] : [UIFont systemFontOfSize:14];
+            [tempBtn setTitleColor:index == i ? [UIColor whiteColor] : kMainTextColor forState:UIControlStateNormal];
+        }
+        
+        self.lineView.x = ScreenWidth / 2 - (80 * !index);
+    }];
 }
 
 

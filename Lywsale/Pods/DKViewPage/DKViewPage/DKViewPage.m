@@ -219,6 +219,13 @@ NSString *const DKTitleButtonDidRepeatClickNotification = @"DKTitleButtonDidRepe
 {
     [self.titlesView removeFromSuperview];
     
+    UIView *bgView = [[UIView alloc] init];
+    bgView.frame = DKViewPageShareManager.titleViewFrame;
+    bgView.dk_x = 0;
+    bgView.dk_width = [UIScreen mainScreen].bounds.size.width;
+    bgView.backgroundColor = DKViewPageShareManager.titleViewBackgroundColor;
+    [self addSubview:bgView];
+    
     // 标题栏
     UIView *titlesView = [[UIView alloc] init];
     titlesView.backgroundColor = DKViewPageShareManager.titleViewBackgroundColor;

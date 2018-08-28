@@ -25,7 +25,10 @@ typedef enum : NSUInteger {
 /// 是否加载 默认YES
 @property (nonatomic, assign) BOOL isLoading;
 
-/// 获取请求Url
+/** 获取当前控制器 */
+- (UIViewController *)getCurrentViewController;
+
+/** 获取请求Url */
 - (NSString *)getRequestUrl:(NSArray *)parArr;
 
 /**

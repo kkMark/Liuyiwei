@@ -36,9 +36,9 @@
 #define IsHigherIOS(version)    [[[UIDevice currentDevice]systemVersion]floatValue] > version
 
 // App信息
-#define App_Name                ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"])
-#define App_Version             ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
-#define App_BundleID            ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
+#define App_Name        ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"])
+#define App_Version     ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
+#define App_BundleID    ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
 
 // UserDefaults
 #define GetUserDefault(key)         [[NSUserDefaults standardUserDefaults] objectForKey:(key)]
