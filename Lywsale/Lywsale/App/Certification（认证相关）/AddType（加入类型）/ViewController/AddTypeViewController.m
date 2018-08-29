@@ -121,11 +121,11 @@
             userTypeBtn.centerY = userTypeView.height  / 2;
         }
         
-        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.5)];
+        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.3)];
         lineView.backgroundColor = kLineColor;
         [userTypeView addSubview:lineView];
         
-        UIView *cenLineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0.5, userTypeView.height)];
+        UIView *cenLineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0.3, userTypeView.height)];
         cenLineView.centerX = userTypeView.centerX;
         cenLineView.backgroundColor = kLineColor;
         [userTypeView addSubview:cenLineView];

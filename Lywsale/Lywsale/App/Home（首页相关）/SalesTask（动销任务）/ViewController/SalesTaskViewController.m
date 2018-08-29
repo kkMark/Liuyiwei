@@ -1,0 +1,47 @@
+//
+//  SalesTaskViewController.m
+//  Lywsale
+//
+//  Created by M on 2018/8/28.
+//  Copyright © 2018年 黄锡凯. All rights reserved.
+//
+
+#import "SalesTaskViewController.h"
+#import "SalesTaskView.h"
+
+@interface SalesTaskViewController ()
+
+@property (nonatomic, strong) SalesTaskView *salesTaskView;
+
+@end
+
+@implementation SalesTaskViewController
+@synthesize salesTaskView;
+
+- (void)viewDidLoad {
+
+    [super viewDidLoad];
+
+    self.salesTaskView.dataSources = @[@"", @"", @""];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    self.salesTaskView.height = self.view.height;
+}
+
+#pragma mark - lazy
+- (SalesTaskView *)salesTaskView {
+    
+    if (!salesTaskView) {
+        
+        salesTaskView = [[SalesTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+        salesTaskView.backgroundColor = kPageBgColor;
+        [self.view addSubview:salesTaskView];
+    }
+    
+    return salesTaskView;
+}
+
+@end

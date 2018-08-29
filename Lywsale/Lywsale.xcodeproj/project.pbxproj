@@ -50,6 +50,14 @@
 		0C8404852135340A00305197 /* DataPanelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404842135340A00305197 /* DataPanelCell.m */; };
 		0C84048821353CFC00305197 /* HomePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84048721353CFC00305197 /* HomePageView.m */; };
 		0C84048B21353F6500305197 /* TaskPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84048A21353F6500305197 /* TaskPanelView.m */; };
+		0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049C21354B8E00305197 /* SalesTaskViewController.m */; };
+		0C8404A021354BA200305197 /* SalesTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049F21354BA200305197 /* SalesTaskView.m */; };
+		0C8404A321354BB200305197 /* DailyTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404A221354BB200305197 /* DailyTaskViewController.m */; };
+		0C8404A621354BC100305197 /* DailyTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404A521354BC100305197 /* DailyTaskView.m */; };
+		0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404A821354BD400305197 /* LearningTaskViewController.m */; };
+		0C8404AC21354BE100305197 /* LearningTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AB21354BE100305197 /* LearningTaskView.m */; };
+		0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AE21354CCA00305197 /* SalesTaskCell.m */; };
+		0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404B1213634AF00305197 /* DailyTaskCell.m */; };
 		0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */; };
 		0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B119212818CD004EC6FC /* LoginViewController.m */; };
 		0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11C212818DE004EC6FC /* LoginView.m */; };
@@ -178,6 +186,22 @@
 		0C84048721353CFC00305197 /* HomePageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageView.m; sourceTree = "<group>"; };
 		0C84048921353F6500305197 /* TaskPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskPanelView.h; sourceTree = "<group>"; };
 		0C84048A21353F6500305197 /* TaskPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskPanelView.m; sourceTree = "<group>"; };
+		0C84049B21354B8E00305197 /* SalesTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewController.h; sourceTree = "<group>"; };
+		0C84049C21354B8E00305197 /* SalesTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskViewController.m; sourceTree = "<group>"; };
+		0C84049E21354BA200305197 /* SalesTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskView.h; sourceTree = "<group>"; };
+		0C84049F21354BA200305197 /* SalesTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskView.m; sourceTree = "<group>"; };
+		0C8404A121354BB200305197 /* DailyTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskViewController.h; sourceTree = "<group>"; };
+		0C8404A221354BB200305197 /* DailyTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskViewController.m; sourceTree = "<group>"; };
+		0C8404A421354BC100305197 /* DailyTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskView.h; sourceTree = "<group>"; };
+		0C8404A521354BC100305197 /* DailyTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskView.m; sourceTree = "<group>"; };
+		0C8404A721354BD400305197 /* LearningTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningTaskViewController.h; sourceTree = "<group>"; };
+		0C8404A821354BD400305197 /* LearningTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningTaskViewController.m; sourceTree = "<group>"; };
+		0C8404AA21354BE100305197 /* LearningTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningTaskView.h; sourceTree = "<group>"; };
+		0C8404AB21354BE100305197 /* LearningTaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningTaskView.m; sourceTree = "<group>"; };
+		0C8404AD21354CCA00305197 /* SalesTaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskCell.h; sourceTree = "<group>"; };
+		0C8404AE21354CCA00305197 /* SalesTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskCell.m; sourceTree = "<group>"; };
+		0C8404B0213634AF00305197 /* DailyTaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskCell.h; sourceTree = "<group>"; };
+		0C8404B1213634AF00305197 /* DailyTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskCell.m; sourceTree = "<group>"; };
 		0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveOrRegisteredViewController.h; sourceTree = "<group>"; };
 		0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveOrRegisteredViewController.m; sourceTree = "<group>"; };
 		0CC6B118212818CD004EC6FC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -884,12 +908,148 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0C84048C21354B7C00305197 /* DailyTask（日常任务） */ = {
+			isa = PBXGroup;
+			children = (
+				0C84048D21354B7C00305197 /* ViewModel */,
+				0C84048E21354B7C00305197 /* Model */,
+				0C84048F21354B7C00305197 /* View */,
+				0C84049021354B7C00305197 /* ViewController */,
+			);
+			path = "DailyTask（日常任务）";
+			sourceTree = "<group>";
+		};
+		0C84048D21354B7C00305197 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C84048E21354B7C00305197 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C84048F21354B7C00305197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C8404B0213634AF00305197 /* DailyTaskCell.h */,
+				0C8404B1213634AF00305197 /* DailyTaskCell.m */,
+				0C8404A421354BC100305197 /* DailyTaskView.h */,
+				0C8404A521354BC100305197 /* DailyTaskView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C84049021354B7C00305197 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C8404A121354BB200305197 /* DailyTaskViewController.h */,
+				0C8404A221354BB200305197 /* DailyTaskViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C84049121354B7C00305197 /* SalesTask（动销任务） */ = {
+			isa = PBXGroup;
+			children = (
+				0C84049221354B7C00305197 /* ViewModel */,
+				0C84049321354B7C00305197 /* Model */,
+				0C84049421354B7C00305197 /* View */,
+				0C84049521354B7C00305197 /* ViewController */,
+			);
+			path = "SalesTask（动销任务）";
+			sourceTree = "<group>";
+		};
+		0C84049221354B7C00305197 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C84049321354B7C00305197 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C84049421354B7C00305197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C8404AD21354CCA00305197 /* SalesTaskCell.h */,
+				0C8404AE21354CCA00305197 /* SalesTaskCell.m */,
+				0C84049E21354BA200305197 /* SalesTaskView.h */,
+				0C84049F21354BA200305197 /* SalesTaskView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C84049521354B7C00305197 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C84049B21354B8E00305197 /* SalesTaskViewController.h */,
+				0C84049C21354B8E00305197 /* SalesTaskViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C84049621354B7D00305197 /* LearningTask（学习任务） */ = {
+			isa = PBXGroup;
+			children = (
+				0C84049721354B7D00305197 /* ViewModel */,
+				0C84049821354B7D00305197 /* Model */,
+				0C84049921354B7D00305197 /* View */,
+				0C84049A21354B7D00305197 /* ViewController */,
+			);
+			path = "LearningTask（学习任务）";
+			sourceTree = "<group>";
+		};
+		0C84049721354B7D00305197 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C84049821354B7D00305197 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C84049921354B7D00305197 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C8404AA21354BE100305197 /* LearningTaskView.h */,
+				0C8404AB21354BE100305197 /* LearningTaskView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C84049A21354B7D00305197 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C8404A721354BD400305197 /* LearningTaskViewController.h */,
+				0C8404A821354BD400305197 /* LearningTaskViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0C9BBB8F212A519000A09A02 /* Home（首页相关） */ = {
 			isa = PBXGroup;
 			children = (
 				0C3D8967212AAC0700D02FE0 /* HomePage（首页） */,
 				0C84046B2135282000305197 /* DataPanel（数据面板） */,
 				0C8404702135282000305197 /* TaskPanel（任务面板） */,
+				0C84049121354B7C00305197 /* SalesTask（动销任务） */,
+				0C84048C21354B7C00305197 /* DailyTask（日常任务） */,
+				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
 			);
 			path = "Home（首页相关）";
 			sourceTree = "<group>";
@@ -1481,13 +1641,16 @@
 				0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */,
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
+				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
+				0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
 				0C84048821353CFC00305197 /* HomePageView.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
 				0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */,
+				0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */,
 				0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
@@ -1520,6 +1683,7 @@
 				0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */,
 				0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */,
 				0C37F5A5212E60D700E357EB /* ArchivesView.m in Sources */,
+				0C8404A021354BA200305197 /* SalesTaskView.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
@@ -1536,17 +1700,21 @@
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
 				0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */,
 				0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */,
+				0C8404A321354BB200305197 /* DailyTaskViewController.m in Sources */,
 				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
 				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,
 				0CE1EC302128F3EC00A373D7 /* SelectTypeView.m in Sources */,
 				0C84048B21353F6500305197 /* TaskPanelView.m in Sources */,
+				0C8404A621354BC100305197 /* DailyTaskView.m in Sources */,
+				0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */,
 				0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */,
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
 				0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */,
 				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,
+				0C8404AC21354BE100305197 /* LearningTaskView.m in Sources */,
 				0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */,
 				0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,

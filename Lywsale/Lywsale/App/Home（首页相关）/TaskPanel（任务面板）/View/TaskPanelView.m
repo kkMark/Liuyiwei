@@ -28,7 +28,7 @@
     if (!viewPage) {
         
         NSArray *titles = @[@"动销任务", @"日常任务", @"学习任务"];
-        NSArray *vcNames = @[@"UIViewController", @"UIViewController", @"UIViewController"];
+        NSArray *vcNames = @[@"SalesTaskViewController", @"DailyTaskViewController", @"LearningTaskViewController"];
         NSMutableArray *options = [NSMutableArray array];
         for (int i = 0; i < titles.count; i++) {
             

@@ -85,7 +85,7 @@
         [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [nextView addSubview:okBtn];
         
-        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.5)];
+        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.3)];
         lineView.backgroundColor = kLineColor;
         [nextView addSubview:lineView];
         

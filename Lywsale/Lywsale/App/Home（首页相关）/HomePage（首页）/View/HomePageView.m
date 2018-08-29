@@ -78,8 +78,6 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
     NSInteger tempIndex = scrollView.contentOffset.x / ScreenWidth;
-    NSLog(@"tempIndex = %zd", tempIndex);
-    NSLog(@"index = %zd", self.index);
     
     if ((tempIndex != self.index) && self.moveBlock) {
         self.index = tempIndex;
