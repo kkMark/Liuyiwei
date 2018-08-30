@@ -19,6 +19,8 @@ typedef void(^ActionSheetCompleteBlock)(NSInteger index);
 @property (nonatomic, assign) CGFloat statusBarHeight;
 
 #pragma mark - Block
+/// 返回控制器
+@property (nonatomic, copy) void (^goViewControllerBlock)(UIViewController *vc);
 /// 提示框回调
 @property (nonatomic, copy) ActionSheetCompleteBlock complete;
 

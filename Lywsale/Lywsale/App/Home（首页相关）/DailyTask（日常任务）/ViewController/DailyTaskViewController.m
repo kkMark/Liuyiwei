@@ -22,6 +22,7 @@
 
     [super viewDidLoad];
 
+    self.title = @"日常任务";
     self.dailyTaskView.dataSources = @[@"", @"", @""];
 }
 
@@ -38,7 +39,15 @@
         
         dailyTaskView = [[DailyTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         dailyTaskView.backgroundColor = kPageBgColor;
+        dailyTaskView.isLookAll = [self.isLookAll boolValue];
         [self.view addSubview:dailyTaskView];
+        
+        @weakify(self);
+        [dailyTaskView setGoViewControllerBlock:^(UIViewController *vc) {
+            
+            @strongify(self);
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return dailyTaskView;

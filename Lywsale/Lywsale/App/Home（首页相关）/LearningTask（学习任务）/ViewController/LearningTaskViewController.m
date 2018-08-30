@@ -21,7 +21,8 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-
+    
+    self.title = @"学习任务";
     self.learningTaskView.dataSources = @[@"", @"", @""];
 }
 
@@ -38,7 +39,15 @@
         
         learningTaskView = [[LearningTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         learningTaskView.backgroundColor = kPageBgColor;
+        learningTaskView.isLookAll = [self.isLookAll boolValue];
         [self.view addSubview:learningTaskView];
+        
+        @weakify(self);
+        [learningTaskView setGoViewControllerBlock:^(UIViewController *vc) {
+            
+            @strongify(self);
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return learningTaskView;

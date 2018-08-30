@@ -10,4 +10,7 @@
 
 @interface LearningTaskViewController : BaseViewController
 
+/// 是否查看全部
+@property (nonatomic, strong) NSNumber *isLookAll;
+
 @end

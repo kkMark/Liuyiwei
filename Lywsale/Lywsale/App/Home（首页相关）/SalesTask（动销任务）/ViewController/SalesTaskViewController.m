@@ -22,6 +22,7 @@
 
     [super viewDidLoad];
 
+    self.title = @"动销任务";
     self.salesTaskView.dataSources = @[@"", @"", @""];
 }
 
@@ -38,7 +39,15 @@
         
         salesTaskView = [[SalesTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         salesTaskView.backgroundColor = kPageBgColor;
+        salesTaskView.isLookAll = [self.isLookAll boolValue];
         [self.view addSubview:salesTaskView];
+        
+        @weakify(self);
+        [salesTaskView setGoViewControllerBlock:^(UIViewController *vc) {
+            
+            @strongify(self);
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return salesTaskView;
