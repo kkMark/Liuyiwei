@@ -32,21 +32,21 @@
 
 - (void)setupSubviews {
     
-    float height = 45;
-    self.numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, height)];
+    float height = 40;
+    self.numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, 50, height)];
     self.numberLabel.text = @"药师销售月榜";
     self.numberLabel.font = [UIFont systemFontOfSize:14];
     self.numberLabel.textColor = kMainTextColor;
     self.numberLabel.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.numberLabel];
 
-    self.headerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.numberLabel.maxX, 0, height, height)];
+    self.headerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(self.numberLabel.maxX, 5, height, height)];
     self.headerImgView.image = [UIImage imageNamed:@"TestHeadImg"];
     self.headerImgView.layer.cornerRadius = self.headerImgView.height / 2;
     self.headerImgView.layer.masksToBounds = YES;
     [self.contentView addSubview:self.headerImgView];
     
-    self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headerImgView.maxX + 10, 0, ScreenWidth / 3, height)];
+    self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headerImgView.maxX + 10, 5, ScreenWidth / 3, height)];
     self.nameLabel.text = @"刘药师";
     self.nameLabel.font = [UIFont systemFontOfSize:14];
     self.nameLabel.textColor = kMainTextColor;
@@ -57,7 +57,7 @@
     self.countLabel.font = [UIFont boldSystemFontOfSize:14];
     self.countLabel.textColor = kMainColor;
     self.countLabel.textAlignment = NSTextAlignmentRight;
-    [self.contentView addSubview:self.countLabel];
+    self.accessoryView = self.countLabel;
 }
 
 - (void)setIndex:(NSInteger)index {

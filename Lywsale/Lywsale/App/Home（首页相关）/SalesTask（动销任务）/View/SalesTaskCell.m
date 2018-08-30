@@ -50,7 +50,7 @@
     bgView.backgroundColor = [UIColor whiteColor];
     bgView.layer.cornerRadius = 5;
     bgView.layer.masksToBounds = YES;
-    bgView.layer.borderWidth = 0.3;
+    bgView.layer.borderWidth = 1;
     bgView.layer.borderColor = kLineColor.CGColor;
     [self.contentView addSubview:bgView];
     
@@ -63,7 +63,7 @@
     self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 20)];
     self.timeLabel.centerY = self.iconImgView.centerY;
     self.timeLabel.text = @"2018-05-18 18:11";
-    self.timeLabel.font = [UIFont systemFontOfSize:9];
+    self.timeLabel.font = [UIFont systemFontOfSize:12];
     self.timeLabel.textColor = [UIColor lightGrayColor];
     self.timeLabel.width = [self.timeLabel getTextWidth];
     self.timeLabel.x = bgView.width - self.timeLabel.width - 10;

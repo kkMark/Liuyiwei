@@ -36,6 +36,7 @@
 		0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F0212E9A9800E357EB /* HelpViewController.m */; };
 		0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F4212E9BB200E357EB /* FeedbackViewController.m */; };
 		0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F7212E9C0200E357EB /* FeedbackView.m */; };
+		0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C399F402137D57C00B5DA6D /* LearningTaskCell.m */; };
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
@@ -158,6 +159,8 @@
 		0C37F5F4212E9BB200E357EB /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		0C37F5F6212E9C0200E357EB /* FeedbackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackView.h; sourceTree = "<group>"; };
 		0C37F5F7212E9C0200E357EB /* FeedbackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackView.m; sourceTree = "<group>"; };
+		0C399F3F2137D57C00B5DA6D /* LearningTaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningTaskCell.h; sourceTree = "<group>"; };
+		0C399F402137D57C00B5DA6D /* LearningTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningTaskCell.m; sourceTree = "<group>"; };
 		0C3D896C212AB51600D02FE0 /* WriteInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoView.h; sourceTree = "<group>"; };
 		0C3D896D212AB51600D02FE0 /* WriteInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoView.m; sourceTree = "<group>"; };
 		0C3D896F212AB52300D02FE0 /* WriteInfoViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewModel.h; sourceTree = "<group>"; };
@@ -1026,6 +1029,8 @@
 		0C84049921354B7D00305197 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C399F3F2137D57C00B5DA6D /* LearningTaskCell.h */,
+				0C399F402137D57C00B5DA6D /* LearningTaskCell.m */,
 				0C8404AA21354BE100305197 /* LearningTaskView.h */,
 				0C8404AB21354BE100305197 /* LearningTaskView.m */,
 			);
@@ -1166,9 +1171,9 @@
 		0CDDB546212733D300D42F76 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				0C6B36E821300ADD0081DB1C /* WebHelp（帮助相关） */,
 				0CDDB547212733E000D42F76 /* AppDelegate */,
 				0C23AE4C2129B42E00BC2CAC /* RootController */,
+				0C6B36E821300ADD0081DB1C /* WebHelp（帮助相关） */,
 				0CC6B11121281811004EC6FC /* Login（登录相关） */,
 				0CE1EC05212887F900A373D7 /* Certification（认证相关） */,
 				0C9BBB8F212A519000A09A02 /* Home（首页相关） */,
@@ -1643,6 +1648,7 @@
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
+				0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */,

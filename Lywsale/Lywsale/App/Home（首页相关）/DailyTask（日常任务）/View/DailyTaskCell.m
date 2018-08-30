@@ -10,10 +10,10 @@
 
 @interface DailyTaskCell ()
 
-/// 图标
-@property (nonatomic, strong) UIImageView *iconImgView;
 /// 标题
-@property (nonatomic, strong) UILabel *titleLabel;
+@property (nonatomic, strong) UILabel *nameLabel;
+/// 类型
+@property (nonatomic, strong) UILabel *typeLabel;
 /// 时间
 @property (nonatomic, strong) UILabel *timeLabel;
 /// 执行方式
@@ -47,36 +47,41 @@
     bgView.backgroundColor = [UIColor whiteColor];
     bgView.layer.cornerRadius = 5;
     bgView.layer.masksToBounds = YES;
-    bgView.layer.borderWidth = 0.3;
+    bgView.layer.borderWidth = 1;
     bgView.layer.borderColor = kLineColor.CGColor;
     [self.contentView addSubview:bgView];
     
-    // 图标
-    self.iconImgView = [[UIImageView alloc] initWithFrame:CGRectMake(spacing, spacing, 20, 18)];
-    self.iconImgView.image = [UIImage imageNamed:@"TestTaskImg"];
-    [bgView addSubview:self.iconImgView];
+    // 标题
+    self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(spacing, spacing, 0, 20)];
+    self.nameLabel.text = @"某小姐";
+    self.nameLabel.font = [UIFont boldSystemFontOfSize:14];
+    self.nameLabel.textColor = kMainTextColor;
+    self.nameLabel.width = [self.nameLabel getTextWidth];
+    self.nameLabel.height = [self.nameLabel getTextHeight];
+    [bgView addSubview:self.nameLabel];
+    
+    // 类型
+    self.typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.nameLabel.maxX + 5, 0, 0, 20)];
+    self.typeLabel.text = @"购药回访";
+    self.typeLabel.font = [UIFont systemFontOfSize:10];
+    self.typeLabel.textColor = kMainColor;
+    self.typeLabel.width = [self.typeLabel getTextWidth];
+    self.typeLabel.height = [self.typeLabel getTextHeight];
+    self.typeLabel.y = self.nameLabel.maxY - self.typeLabel.height;
+    [bgView addSubview:self.typeLabel];
     
     // 时间
     self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 20)];
-    self.timeLabel.centerY = self.iconImgView.centerY;
+    self.timeLabel.centerY = self.nameLabel.centerY;
     self.timeLabel.text = @"2018-05-18 18:11";
-    self.timeLabel.font = [UIFont systemFontOfSize:9];
+    self.timeLabel.font = [UIFont systemFontOfSize:12];
     self.timeLabel.textColor = [UIColor lightGrayColor];
     self.timeLabel.width = [self.timeLabel getTextWidth];
     self.timeLabel.x = bgView.width - self.timeLabel.width - 10;
     [bgView addSubview:self.timeLabel];
     
-    // 标题
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.iconImgView.maxX + 10, 0, 0, 20)];
-    self.titleLabel.centerY = self.iconImgView.centerY;
-    self.titleLabel.text = @"博路定动销任务";
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    self.titleLabel.textColor = kMainTextColor;
-    self.titleLabel.width = bgView.width - self.titleLabel.x - self.timeLabel.width;
-    [bgView addSubview:self.titleLabel];
-    
     // 分割线
-    UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.iconImgView.maxY + spacing, ScreenWidth, 0.3)];
+    UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.nameLabel.maxY + spacing, ScreenWidth, 0.3)];
     lineView.backgroundColor = kLineColor;
     [bgView addSubview:lineView];
     

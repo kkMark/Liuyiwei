@@ -19,7 +19,7 @@
 /** 页面背景色 */
 #define kPageBgColor [UIColor colorWithHexString:@"0xF5F5F5"]
 /** 线条的颜色 */
-#define kLineColor [UIColor colorWithRed:0.783922 green:0.780392 blue:0.8 alpha:1]
+#define kLineColor [[UIColor lightGrayColor] colorWithAlphaComponent:0.7]
 
 /*** 日志 ***/
 #ifdef DEBUG
