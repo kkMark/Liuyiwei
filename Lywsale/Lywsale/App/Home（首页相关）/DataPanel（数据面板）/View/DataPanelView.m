@@ -174,10 +174,10 @@
         if (indexPath.row == 0) {
             
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (cell == nil) {
                 
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 
                 UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth, 50)];
                 titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:18];
