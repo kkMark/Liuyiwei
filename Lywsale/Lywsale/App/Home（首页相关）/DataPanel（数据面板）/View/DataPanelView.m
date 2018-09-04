@@ -7,8 +7,9 @@
 //
 
 #import "DataPanelView.h"
-#import "DataPanelCell.h"
+#import "RankingCell.h"
 #import "TaskTypeCell.h"
+#import "MyRankingCell.h"
 
 @interface DataPanelView ()
 
@@ -73,7 +74,7 @@
             UILabel *numberLabel = [[UILabel alloc] init];
             numberLabel.frame = numberTitleLabel.frame;
             numberLabel.text = @"15000.00";
-            numberLabel.font = kNumerFont(22);
+            numberLabel.font = kNumberFont(22);
             numberLabel.textColor = kMainTextColor;
             numberLabel.y = numberTitleLabel.maxY + 10;
             numberLabel.height = [numberLabel getTextHeight];
@@ -99,7 +100,7 @@
             
             UILabel *typeNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, titleLabel.maxY + 13, bgBtn.width, 15)];
             typeNameLabel.text = @"300";
-            typeNameLabel.font = kNumerFont(22);
+            typeNameLabel.font = kNumberFont(22);
             typeNameLabel.textColor = kMainTextColor;
             typeNameLabel.textAlignment = NSTextAlignmentCenter;
             [bgBtn addSubview:typeNameLabel];
@@ -121,8 +122,9 @@
         
         self.tableHeaderView = self.headerView;
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self registerClass:[MyRankingCell class] forCellReuseIdentifier:@"MyRankingCell"];
         [self registerClass:[TaskTypeCell class] forCellReuseIdentifier:@"TaskTypeCell"];
-        [self registerClass:[DataPanelCell class] forCellReuseIdentifier:@"DataPanelCell"];
+        [self registerClass:[RankingCell class] forCellReuseIdentifier:@"RankingCell"];
     }
     
     return self;
@@ -146,12 +148,39 @@
     
     if (indexPath.section == 0) {
         
+        // 任务类型
         TaskTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskTypeCell"];
         return cell;
     }
+    else if (indexPath.section == 1) {
+        
+        // 标题
+        if (indexPath.row == 0) {
+            
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+            if (cell == nil) {
+                
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+                
+                UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth, 50)];
+                titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:18];
+                titleLabel.text = @"药师销售月榜";
+                titleLabel.textColor = kMainTextColor;
+                [cell addSubview:titleLabel];
+            }
+            
+            return cell;
+        }
+        else if (indexPath.row == 1) {
+         
+            // 我的排名
+            MyRankingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyRankingCell"];
+            return cell;
+        }
+    }
     
-    DataPanelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataPanelCell"];
-    cell.index = indexPath.row;
+    RankingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RankingCell"];
+    cell.index = indexPath.row - 1;
     return cell;
 }
 
@@ -165,8 +194,14 @@
     if (indexPath.section == 0) {
         return 95;
     }
+    else if (indexPath.section == 1) {
+        
+        if (indexPath.row == 0) {
+            return 50;
+        }
+    }
     
-    return 55;
+    return 65;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -174,7 +209,19 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    if (section == 1) {
+        return 20;
+    }
+    
     return CGFLOAT_MIN;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 20)];
+    footerView.backgroundColor = [UIColor whiteColor];
+    return footerView;
 }
 
 @end

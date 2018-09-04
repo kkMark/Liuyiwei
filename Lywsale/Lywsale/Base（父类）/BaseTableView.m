@@ -75,7 +75,7 @@
     // 状态栏高度
     self.statusBarHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     
-    self.tableFooterView = [UIView new];
+    self.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
     self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
     self.backgroundColor = kPageBgColor;
     self.rowHeight = 45;
@@ -112,7 +112,6 @@
     }
     
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.text = self.dataSources[indexPath.row];
     return cell;
 }
 
