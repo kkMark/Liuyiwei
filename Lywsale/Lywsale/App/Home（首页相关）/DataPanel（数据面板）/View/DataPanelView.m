@@ -174,6 +174,7 @@
         if (indexPath.row == 0) {
             
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             if (cell == nil) {
                 
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
