@@ -75,6 +75,11 @@
     self.countLabel.textColor = kMainTextColor;
     self.countLabel.textAlignment = NSTextAlignmentRight;
     [bgView addSubview:self.countLabel];
+    
+    // 线条
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, bgView.height - 0.5, bgView.width, 0.5)];
+    lineView.backgroundColor = [UIColor colorWithHexString:@"0xD3DFF5"];
+    [bgView addSubview:lineView];
 }
 
 - (void)setIndex:(NSInteger)index {

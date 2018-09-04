@@ -50,11 +50,10 @@
     
     if (!menuView) {
         
-        menuView = [[HomePageMenuView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 135)];
+        menuView = [[HomePageMenuView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.statusBarHeight + 115)];
         menuView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:menuView];
-    }
-    
+    }    
     return menuView;
 }
 

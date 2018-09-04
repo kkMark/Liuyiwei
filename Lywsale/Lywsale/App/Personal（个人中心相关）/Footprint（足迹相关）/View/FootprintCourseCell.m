@@ -39,7 +39,7 @@
     [self.contentView addSubview:imgView];
     
     // 学习进度
-    self.progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 75, 35)];
+    self.progressView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 35)];
     self.progressView.x = ScreenWidth - 15 - self.progressView.width;
     self.progressView.centerY = imgView.centerY;
     [self.contentView addSubview:self.progressView];

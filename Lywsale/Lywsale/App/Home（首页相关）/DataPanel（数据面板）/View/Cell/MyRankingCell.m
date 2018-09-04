@@ -76,7 +76,7 @@
     [bgView addSubview:self.headImgView];
     
     // 用户昵称
-    self.nicknameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headImgView.maxX + 15, 0, 100, 20)];
+    self.nicknameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headImgView.maxX + 15, 0, 80, 20)];
     self.nicknameLabel.centerY = self.headImgView.centerY;
     self.nicknameLabel.text = GetUserDefault(UserName);
     self.nicknameLabel.font = [UIFont systemFontOfSize:15];
@@ -85,7 +85,7 @@
     
     // 分数
     self.numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 20)];
-    self.numberLabel.x = bgView.width - self.numberLabel.width - 37;
+    self.numberLabel.x = bgView.width - self.numberLabel.width - 20;
     self.numberLabel.centerY = self.headImgView.centerY;
     self.numberLabel.text = @"25000";
     self.numberLabel.font = kNumberFont(18);

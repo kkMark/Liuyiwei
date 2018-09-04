@@ -53,13 +53,29 @@
         
         // 圆
         UIView *salesLabel = [[UIView alloc] init];
-        salesLabel.frame = CGRectMake(56.5, self.timeLabel.maxY + 22, 136, 136);
+        salesLabel.frame = CGRectMake(30, self.timeLabel.maxY + 22, 136, 136);
         salesLabel.layer.cornerRadius = salesLabel.height / 2;
         salesLabel.layer.masksToBounds = YES;
         salesLabel.layer.borderWidth = 8;
         salesLabel.layer.borderColor = [UIColor colorWithHexString:@"0xE8E8EE"].CGColor;
         [headerView addSubview:salesLabel];
         
+        // 完成百分比
+        UILabel *completionLabel = [[UILabel alloc] init];
+        completionLabel.frame = CGRectMake(0, 0, salesLabel.width, 60);
+        completionLabel.text = @"47%";
+        completionLabel.font = [UIFont systemFontOfSize:14];
+        completionLabel.textColor = [UIColor colorWithHexString:@"0xF6733E"];
+        completionLabel.textAlignment = NSTextAlignmentCenter;
+        completionLabel.centerX = salesLabel.width / 2;
+        completionLabel.centerY = salesLabel.height / 2;
+        [salesLabel addSubview:completionLabel];
+        
+        attStr = [[NSMutableAttributedString alloc] initWithString:completionLabel.text];
+        [attStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:39] range:NSMakeRange(0, 2)];
+        completionLabel.attributedText = attStr;
+        
+        // 完成目标
         float y = self.timeLabel.maxY + 30;
         for (int i = 0; i < 2; i++) {
             

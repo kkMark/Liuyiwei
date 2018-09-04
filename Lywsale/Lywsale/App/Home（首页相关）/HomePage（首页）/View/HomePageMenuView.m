@@ -33,7 +33,7 @@
     gl.locations = @[@(0.0),@(1.0f)];
     [self.layer addSublayer:gl];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 35, ScreenWidth, 0)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.statusBarHeight + 15, ScreenWidth, 0)];
     titleLabel.text = @"首页";
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
     titleLabel.textColor = [UIColor whiteColor];
@@ -63,7 +63,8 @@
     [self addSubview:self.signInBtn];
     
     // 用户昵称
-    self.nicknameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headImgView.maxX + 19, titleLabel.maxY + 25, 100, 20)];
+    self.nicknameLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.headImgView.maxX + 19, 0, 80, 20)];
+    self.nicknameLabel.centerY = self.headImgView.centerY - 10;
     self.nicknameLabel.text = GetUserDefault(UserName);
     self.nicknameLabel.font = [UIFont systemFontOfSize:15];
     self.nicknameLabel.textColor = [UIColor whiteColor];

@@ -847,6 +847,19 @@
 			path = "WebHelp（帮助相关）";
 			sourceTree = "<group>";
 		};
+		0C7AEA96213E6BA000138A31 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0C7AEA90213E584D00138A31 /* MyRankingCell.h */,
+				0C7AEA91213E584D00138A31 /* MyRankingCell.m */,
+				0C7AEA93213E610800138A31 /* RankingCell.h */,
+				0C7AEA94213E610800138A31 /* RankingCell.m */,
+				0C523976213E37E30083260A /* TaskTypeCell.h */,
+				0C523977213E37E30083260A /* TaskTypeCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		0C84046B2135282000305197 /* DataPanel（数据面板） */ = {
 			isa = PBXGroup;
 			children = (
@@ -874,12 +887,7 @@
 		0C84046E2135282000305197 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0C7AEA93213E610800138A31 /* RankingCell.h */,
-				0C7AEA94213E610800138A31 /* RankingCell.m */,
-				0C7AEA90213E584D00138A31 /* MyRankingCell.h */,
-				0C7AEA91213E584D00138A31 /* MyRankingCell.m */,
-				0C523976213E37E30083260A /* TaskTypeCell.h */,
-				0C523977213E37E30083260A /* TaskTypeCell.m */,
+				0C7AEA96213E6BA000138A31 /* Cell */,
 				0C84047B213528CC00305197 /* DataPanelView.h */,
 				0C84047C213528CC00305197 /* DataPanelView.m */,
 			);
