@@ -51,6 +51,8 @@
 		0C7AEA92213E584D00138A31 /* MyRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA91213E584D00138A31 /* MyRankingCell.m */; };
 		0C7AEA95213E610800138A31 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA94213E610800138A31 /* RankingCell.m */; };
 		0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */; };
+		0C7AEA9E213E8CAA00138A31 /* RViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA9D213E8CAA00138A31 /* RViewModel.m */; };
+		0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */; };
 		0C84047D213528CC00305197 /* DataPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84047C213528CC00305197 /* DataPanelView.m */; };
 		0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049C21354B8E00305197 /* SalesTaskViewController.m */; };
 		0C8404A021354BA200305197 /* SalesTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049F21354BA200305197 /* SalesTaskView.m */; };
@@ -190,6 +192,10 @@
 		0C7AEA94213E610800138A31 /* RankingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankingCell.m; sourceTree = "<group>"; };
 		0C7AEA97213E78CE00138A31 /* PersonalHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalHeaderView.h; sourceTree = "<group>"; };
 		0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalHeaderView.m; sourceTree = "<group>"; };
+		0C7AEA9C213E8CAA00138A31 /* RViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RViewModel.h; sourceTree = "<group>"; };
+		0C7AEA9D213E8CAA00138A31 /* RViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RViewModel.m; sourceTree = "<group>"; };
+		0C7AEA9F213E8E5300138A31 /* HomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
+		0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
 		0C84047B213528CC00305197 /* DataPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPanelView.h; sourceTree = "<group>"; };
 		0C84047C213528CC00305197 /* DataPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPanelView.m; sourceTree = "<group>"; };
 		0C84049B21354B8E00305197 /* SalesTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewController.h; sourceTree = "<group>"; };
@@ -806,6 +812,8 @@
 		0C3D8968212AAC2D00D02FE0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0C7AEA9F213E8E5300138A31 /* HomePageViewModel.h */,
+				0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -858,6 +866,24 @@
 				0C523977213E37E30083260A /* TaskTypeCell.m */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0C7AEA9A213E8C8B00138A31 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */,
+				0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C7AEA9B213E8C9400138A31 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C7AEA9C213E8CAA00138A31 /* RViewModel.h */,
+				0C7AEA9D213E8CAA00138A31 /* RViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0C84048C21354B7C00305197 /* DailyTask（日常任务） */ = {
@@ -1065,8 +1091,8 @@
 		0CC6B12B212828D1004EC6FC /* RetrieveOrRegistered（找回或注册） */ = {
 			isa = PBXGroup;
 			children = (
-				0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */,
-				0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */,
+				0C7AEA9B213E8C9400138A31 /* ViewModel */,
+				0C7AEA9A213E8C8B00138A31 /* ViewController */,
 			);
 			path = "RetrieveOrRegistered（找回或注册）";
 			sourceTree = "<group>";
@@ -1623,6 +1649,7 @@
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
 				0C37F5F1212E9A9800E357EB /* HelpView.m in Sources */,
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
+				0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */,
 				0C37F5D6212E904700E357EB /* MyCardView.m in Sources */,
 				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
@@ -1640,6 +1667,7 @@
 				0C8404A021354BA200305197 /* SalesTaskView.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
+				0C7AEA9E213E8CAA00138A31 /* RViewModel.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,

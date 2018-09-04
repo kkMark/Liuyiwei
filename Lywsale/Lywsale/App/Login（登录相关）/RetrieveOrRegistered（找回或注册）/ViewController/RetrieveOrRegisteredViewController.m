@@ -22,7 +22,6 @@
     [super viewDidLoad];
     [self setBackBtn];
     [self setupSubviews];
-    
 }
 
 - (void)setupSubviews {

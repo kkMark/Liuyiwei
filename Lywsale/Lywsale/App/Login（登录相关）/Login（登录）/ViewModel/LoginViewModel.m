@@ -10,10 +10,13 @@
 
 @implementation LoginViewModel
 
-- (void)loginWithAccount:(NSString *)account password:(NSString *)password success:(RequestSuccess)success failure:(RequestFailure)failure {
-    
-    self.urlString = [self getRequestUrl:@[]];
-    self.parameters = @{};
+- (void)loginWithAccount:(NSString *)account
+                password:(NSString *)password
+                 success:(RequestSuccess)success
+                 failure:(RequestFailure)failure
+{
+    self.urlString = [self getRequestUrl:@[@"members", @"login"]];
+    self.parameters = @{ @"memberMob" : account, @"memberPass" : password };
     [self requestMode:PostMode success:success failure:failure];
 }
 
