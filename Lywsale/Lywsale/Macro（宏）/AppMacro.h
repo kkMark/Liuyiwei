@@ -20,6 +20,8 @@
 #define kPageBgColor [UIColor colorWithHexString:@"0xF5F5F5"]
 /** 线条的颜色 */
 #define kLineColor [[UIColor lightGrayColor] colorWithAlphaComponent:0.7]
+/** 数字样式 */
+#define kNumerFont(s) [UIFont fontWithName:@"DIN-Medium" size:(double)s];
 
 /*** 日志 ***/
 #ifdef DEBUG

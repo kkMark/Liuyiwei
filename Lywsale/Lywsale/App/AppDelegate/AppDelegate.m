@@ -28,7 +28,7 @@
 #endif
     
     // 设置导航条颜色
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     // 判断用户是否登录
     NSString *userId = GetUserDefault(UserID);

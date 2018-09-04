@@ -7,8 +7,8 @@
 //
 
 #import "DataPanelView.h"
-#import "DataPanelTitleCell.h"
 #import "DataPanelCell.h"
+#import "TaskTypeCell.h"
 
 @interface DataPanelView ()
 
@@ -28,71 +28,86 @@
         headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
         headerView.backgroundColor = [UIColor whiteColor];
         
-        self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 50)];
-        self.timeLabel.text = @"本月还剩16日";
-        self.timeLabel.font = [UIFont systemFontOfSize:14];
-        self.timeLabel.textColor = [UIColor redColor];
-        self.timeLabel.textAlignment = NSTextAlignmentCenter;
+        // 标题
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 18, 70, 0)];
+        titleLabel.text = @"5月数据";
+        titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:18];
+        titleLabel.textColor = kMainTextColor;
+        titleLabel.height = [titleLabel getTextHeight];
+        [headerView addSubview:titleLabel];
+        
+        // 时间
+        self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth / 2, titleLabel.height)];
+        self.timeLabel.centerY = titleLabel.centerY;
+        self.timeLabel.x = ScreenWidth - self.timeLabel.width - 15;
+        self.timeLabel.text = @"本月还剩 16 日";
+        self.timeLabel.font = [UIFont systemFontOfSize:16];
+        self.timeLabel.textColor = titleLabel.textColor;
+        self.timeLabel.textAlignment = NSTextAlignmentRight;
         [headerView addSubview:self.timeLabel];
         
-        UILabel *salesLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, self.timeLabel.maxY, 80, 80)];
-        salesLabel.backgroundColor = kMainColor;
+        NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:self.timeLabel.text];
+        [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithHexString:@"0xF6733E"] range:NSMakeRange(self.timeLabel.text.length - 4, 2)];
+        self.timeLabel.attributedText = attStr;
+        
+        // 圆
+        UIView *salesLabel = [[UIView alloc] init];
+        salesLabel.frame = CGRectMake(56.5, self.timeLabel.maxY + 22, 136, 136);
         salesLabel.layer.cornerRadius = salesLabel.height / 2;
         salesLabel.layer.masksToBounds = YES;
+        salesLabel.layer.borderWidth = 8;
+        salesLabel.layer.borderColor = [UIColor colorWithHexString:@"0xE8E8EE"].CGColor;
         [headerView addSubview:salesLabel];
-
+        
+        float y = self.timeLabel.maxY + 30;
         for (int i = 0; i < 2; i++) {
             
-            UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(salesLabel.maxX + 30, 0, 0, 30)];
-            numberLabel.y = salesLabel.centerY - (i == 0 ? numberLabel.height : 0);
-            numberLabel.width = ScreenWidth - numberLabel.x;
-            numberLabel.text = i == 0 ? @"目标：15000元" : @"达成：7500元";
-            numberLabel.font = [UIFont boldSystemFontOfSize:18];
+            UILabel *numberTitleLabel = [[UILabel alloc] init];
+            numberTitleLabel.frame = CGRectMake(ScreenWidth - 140, y, 140, 0);
+            numberTitleLabel.text = i == 0 ? @"目标（元）" : @"达成（元）";
+            numberTitleLabel.font = [UIFont systemFontOfSize:14];
+            numberTitleLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
+            numberTitleLabel.height = [numberTitleLabel getTextHeight];
+            [headerView addSubview:numberTitleLabel];
+            
+            UILabel *numberLabel = [[UILabel alloc] init];
+            numberLabel.frame = numberTitleLabel.frame;
+            numberLabel.text = @"15000.00";
+            numberLabel.font = kNumerFont(22);
             numberLabel.textColor = kMainTextColor;
+            numberLabel.y = numberTitleLabel.maxY + 10;
+            numberLabel.height = [numberLabel getTextHeight];
             [headerView addSubview:numberLabel];
             
-            NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:numberLabel.text];
-            [attStr addAttribute:NSForegroundColorAttributeName value:kMainColor range:NSMakeRange(0, 3)];
-            numberLabel.attributedText = attStr;
+            y = numberLabel.maxY + 25;
         }
-        
-        // 线
-        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, salesLabel.maxY + 30, ScreenWidth, 0.3)];
-        lineView.backgroundColor = kLineColor;
-        [headerView addSubview:lineView];
         
         NSArray *titles = @[@"订单数", @"客单价", @"可用金额"];
         UIButton *bgBtn;
         for (int i = 0; i < 3; i++) {
             
             bgBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            bgBtn.frame = CGRectMake(ScreenWidth / 3 * i, lineView.maxY, ScreenWidth / 3, 0);
+            bgBtn.frame = CGRectMake(ScreenWidth / 3 * i, salesLabel.maxY, ScreenWidth / 3, 0);
             [headerView addSubview:bgBtn];
             
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, bgBtn.width, 15)];
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 24, bgBtn.width, 15)];
             titleLabel.text = titles[i];
             titleLabel.font = [UIFont boldSystemFontOfSize:14];
-            titleLabel.textColor = kMainColor;
+            titleLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
             titleLabel.textAlignment = NSTextAlignmentCenter;
             [bgBtn addSubview:titleLabel];
             
-            UILabel *typeNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, titleLabel.maxY + 10, bgBtn.width, 15)];
+            UILabel *typeNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, titleLabel.maxY + 13, bgBtn.width, 15)];
             typeNameLabel.text = @"300";
-            typeNameLabel.font = [UIFont boldSystemFontOfSize:14];
+            typeNameLabel.font = kNumerFont(22);
             typeNameLabel.textColor = kMainTextColor;
             typeNameLabel.textAlignment = NSTextAlignmentCenter;
             [bgBtn addSubview:typeNameLabel];
             
-            bgBtn.height = typeNameLabel.maxY + 15;
+            bgBtn.height = typeNameLabel.maxY + 18;
         }
         
         headerView.height = bgBtn.maxY;
-        for (int i = 0; i < 2; i++) {
-            
-            UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, (headerView.height - 0.3) * i, ScreenWidth, 0.3)];
-            lineView.backgroundColor = kLineColor;
-            [headerView addSubview:lineView];
-        }
     }
     
     return headerView;
@@ -105,7 +120,8 @@
     if (self = [super initWithFrame:frame style:style]) {
         
         self.tableHeaderView = self.headerView;
-        [self registerClass:[DataPanelTitleCell class] forCellReuseIdentifier:@"DataPanelTitleCell"];
+        self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self registerClass:[TaskTypeCell class] forCellReuseIdentifier:@"TaskTypeCell"];
         [self registerClass:[DataPanelCell class] forCellReuseIdentifier:@"DataPanelCell"];
     }
     
@@ -114,25 +130,28 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return 1;
+    }
+    
     return self.dataSources.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         
-        DataPanelTitleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataPanelTitleCell"];
-        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, ScreenWidth);
+        TaskTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskTypeCell"];
         return cell;
     }
     
     DataPanelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataPanelCell"];
     cell.index = indexPath.row;
-    cell.separatorInset = UIEdgeInsetsMake(0, ScreenWidth, 0, 0);
     return cell;
 }
 
@@ -142,11 +161,16 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return indexPath.row == 0 ? 45 : 55;
+    
+    if (indexPath.section == 0) {
+        return 95;
+    }
+    
+    return 55;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 10;
+    return 5;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
