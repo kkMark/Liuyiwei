@@ -13,7 +13,7 @@
 
 /*** 常用 ***/
 /** app主色调 */
-#define kMainColor [UIColor colorWithHexString:@"0x4671f3"]
+#define kMainColor [UIColor colorWithHexString:@"0x5167F1"]
 /** app文字主色调 */
 #define kMainTextColor [UIColor colorWithHexString:@"0x333333"]
 /** 页面背景色 */

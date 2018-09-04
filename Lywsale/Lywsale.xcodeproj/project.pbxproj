@@ -50,6 +50,7 @@
 		0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */; };
 		0C7AEA92213E584D00138A31 /* MyRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA91213E584D00138A31 /* MyRankingCell.m */; };
 		0C7AEA95213E610800138A31 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA94213E610800138A31 /* RankingCell.m */; };
+		0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */; };
 		0C84047D213528CC00305197 /* DataPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84047C213528CC00305197 /* DataPanelView.m */; };
 		0C84048821353CFC00305197 /* HomePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84048721353CFC00305197 /* HomePageView.m */; };
 		0C84048B21353F6500305197 /* TaskPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84048A21353F6500305197 /* TaskPanelView.m */; };
@@ -189,6 +190,8 @@
 		0C7AEA91213E584D00138A31 /* MyRankingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRankingCell.m; sourceTree = "<group>"; };
 		0C7AEA93213E610800138A31 /* RankingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankingCell.h; sourceTree = "<group>"; };
 		0C7AEA94213E610800138A31 /* RankingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankingCell.m; sourceTree = "<group>"; };
+		0C7AEA97213E78CE00138A31 /* PersonalHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalHeaderView.h; sourceTree = "<group>"; };
+		0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalHeaderView.m; sourceTree = "<group>"; };
 		0C84047B213528CC00305197 /* DataPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPanelView.h; sourceTree = "<group>"; };
 		0C84047C213528CC00305197 /* DataPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPanelView.m; sourceTree = "<group>"; };
 		0C84048621353CFC00305197 /* HomePageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageView.h; sourceTree = "<group>"; };
@@ -423,6 +426,8 @@
 		0C37F572212D526900E357EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C7AEA97213E78CE00138A31 /* PersonalHeaderView.h */,
+				0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */,
 				0C37F586212D528E00E357EB /* PersonalView.h */,
 				0C37F587212D528E00E357EB /* PersonalView.m */,
 			);
@@ -1679,6 +1684,7 @@
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
+				0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */,
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
