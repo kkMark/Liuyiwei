@@ -10,7 +10,5 @@
 
 @interface LearningTaskView : BaseTableView
 
-/// 是否查看全部
-@property (nonatomic, assign) BOOL isLookAll;
 
 @end

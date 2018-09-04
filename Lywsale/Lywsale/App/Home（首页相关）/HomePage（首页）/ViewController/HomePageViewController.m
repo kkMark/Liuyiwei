@@ -9,17 +9,26 @@
 #import "HomePageViewController.h"
 #import "HomePageMenuView.h"
 #import "HomePageView.h"
+#import "DataPanelView.h"
 
 @interface HomePageViewController ()
 
-@property (nonatomic, strong) HomePageView *homePageView;
+@property (nonatomic, strong) DataPanelView *dataPanelView;
 @property (nonatomic, strong) HomePageMenuView *menuView;
 
 @end
 
 @implementation HomePageViewController
 @synthesize menuView;
-@synthesize homePageView;
+@synthesize dataPanelView;
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    self.dataPanelView.dataSources = @[@"", @"", @"", @"", @""];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     
@@ -36,13 +45,6 @@
     }
 }
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self.homePageView setBackgroundColor:kPageBgColor];
-}
-
 #pragma mark - lazy
 - (HomePageMenuView *)menuView {
     
@@ -50,34 +52,23 @@
         
         menuView = [[HomePageMenuView alloc] initWithFrame:CGRectMake(0, self.statusBarHeight, ScreenWidth, 0)];
         menuView.height = menuView.headerHeight;
+        menuView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:menuView];
-        
-        @weakify(self);
-        [menuView setSelectIndex:^(NSInteger index) {
-            @strongify(self);
-            self.homePageView.index = index;
-        }];
     }
     
     return menuView;
 }
 
-- (HomePageView *)homePageView {
+- (DataPanelView *)dataPanelView {
     
-    if (!homePageView) {
+    if (!dataPanelView) {
         
         float height = ScreenHeight - self.tabBarHeight - self.menuView.maxY;
-        homePageView = [[HomePageView alloc] initWithFrame:CGRectMake(0, self.menuView.maxY, ScreenWidth, height)];
-        [self.view addSubview:homePageView];
-        
-        @weakify(self);
-        [homePageView setMoveBlock:^(NSInteger index) {
-            @strongify(self);
-            self.menuView.index = index;
-        }];
+        dataPanelView = [[DataPanelView alloc] initWithFrame:CGRectMake(0, self.menuView.maxY, ScreenWidth, height) style:UITableViewStyleGrouped];
+        [self.view addSubview:dataPanelView];
     }
     
-    return homePageView;
+    return dataPanelView;
 }
 
 @end

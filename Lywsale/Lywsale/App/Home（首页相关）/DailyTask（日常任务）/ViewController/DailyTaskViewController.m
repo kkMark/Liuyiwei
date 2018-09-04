@@ -39,7 +39,6 @@
         
         dailyTaskView = [[DailyTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         dailyTaskView.backgroundColor = kPageBgColor;
-        dailyTaskView.isLookAll = [self.isLookAll boolValue];
         [self.view addSubview:dailyTaskView];
         
         @weakify(self);

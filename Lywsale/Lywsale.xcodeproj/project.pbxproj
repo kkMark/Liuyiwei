@@ -40,6 +40,7 @@
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
+		0C523971213E19B20083260A /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C523970213E19B20083260A /* UIImage+Category.m */; };
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
 		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
 		0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36ED2130EF030081DB1C /* FootprintView.m */; };
@@ -167,6 +168,8 @@
 		0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoViewModel.m; sourceTree = "<group>"; };
 		0C3D8972212AB52C00D02FE0 /* WriteInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoModel.h; sourceTree = "<group>"; };
 		0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoModel.m; sourceTree = "<group>"; };
+		0C52396F213E19B20083260A /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
+		0C523970213E19B20083260A /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		0C534EA7212EA676001C2A7A /* KTextFeildView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTextFeildView.h; sourceTree = "<group>"; };
 		0C534EA8212EA676001C2A7A /* KTextFeildView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTextFeildView.m; sourceTree = "<group>"; };
 		0C6B36E921300B0E0081DB1C /* WebHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebHelpViewController.h; sourceTree = "<group>"; };
@@ -1231,6 +1234,8 @@
 				0CDDB560212734DB00D42F76 /* UILabel+Category.m */,
 				0CDDB563212734DB00D42F76 /* UIView+Category.h */,
 				0CDDB55E212734DB00D42F76 /* UIView+Category.m */,
+				0C52396F213E19B20083260A /* UIImage+Category.h */,
+				0C523970213E19B20083260A /* UIImage+Category.m */,
 				0C6B36F5213107C30081DB1C /* UINavigationController+Category.h */,
 				0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */,
 			);
@@ -1717,6 +1722,7 @@
 				0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */,
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
+				0C523971213E19B20083260A /* UIImage+Category.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
 				0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */,
 				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,

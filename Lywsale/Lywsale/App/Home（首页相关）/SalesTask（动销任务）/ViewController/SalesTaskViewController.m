@@ -39,7 +39,6 @@
         
         salesTaskView = [[SalesTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         salesTaskView.backgroundColor = kPageBgColor;
-        salesTaskView.isLookAll = [self.isLookAll boolValue];
         [self.view addSubview:salesTaskView];
         
         @weakify(self);

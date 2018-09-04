@@ -39,7 +39,6 @@
         
         learningTaskView = [[LearningTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         learningTaskView.backgroundColor = kPageBgColor;
-        learningTaskView.isLookAll = [self.isLookAll boolValue];
         [self.view addSubview:learningTaskView];
         
         @weakify(self);
