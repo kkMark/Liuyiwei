@@ -8,7 +8,6 @@
 
 #import "HomePageViewController.h"
 #import "HomePageMenuView.h"
-#import "HomePageView.h"
 #import "DataPanelView.h"
 
 @interface HomePageViewController ()

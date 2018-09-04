@@ -52,8 +52,6 @@
 		0C7AEA95213E610800138A31 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA94213E610800138A31 /* RankingCell.m */; };
 		0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */; };
 		0C84047D213528CC00305197 /* DataPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84047C213528CC00305197 /* DataPanelView.m */; };
-		0C84048821353CFC00305197 /* HomePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84048721353CFC00305197 /* HomePageView.m */; };
-		0C84048B21353F6500305197 /* TaskPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84048A21353F6500305197 /* TaskPanelView.m */; };
 		0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049C21354B8E00305197 /* SalesTaskViewController.m */; };
 		0C8404A021354BA200305197 /* SalesTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049F21354BA200305197 /* SalesTaskView.m */; };
 		0C8404A321354BB200305197 /* DailyTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404A221354BB200305197 /* DailyTaskViewController.m */; };
@@ -194,10 +192,6 @@
 		0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalHeaderView.m; sourceTree = "<group>"; };
 		0C84047B213528CC00305197 /* DataPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPanelView.h; sourceTree = "<group>"; };
 		0C84047C213528CC00305197 /* DataPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPanelView.m; sourceTree = "<group>"; };
-		0C84048621353CFC00305197 /* HomePageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageView.h; sourceTree = "<group>"; };
-		0C84048721353CFC00305197 /* HomePageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageView.m; sourceTree = "<group>"; };
-		0C84048921353F6500305197 /* TaskPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskPanelView.h; sourceTree = "<group>"; };
-		0C84048A21353F6500305197 /* TaskPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskPanelView.m; sourceTree = "<group>"; };
 		0C84049B21354B8E00305197 /* SalesTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewController.h; sourceTree = "<group>"; };
 		0C84049C21354B8E00305197 /* SalesTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskViewController.m; sourceTree = "<group>"; };
 		0C84049E21354BA200305197 /* SalesTaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskView.h; sourceTree = "<group>"; };
@@ -819,10 +813,11 @@
 		0C3D8969212AAC2D00D02FE0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C7AEA96213E6BA000138A31 /* Cell */,
+				0C84047B213528CC00305197 /* DataPanelView.h */,
+				0C84047C213528CC00305197 /* DataPanelView.m */,
 				0C25101521312C7600DDF4BB /* HomePageMenuView.h */,
 				0C25101621312C7600DDF4BB /* HomePageMenuView.m */,
-				0C84048621353CFC00305197 /* HomePageView.h */,
-				0C84048721353CFC00305197 /* HomePageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -863,73 +858,6 @@
 				0C523977213E37E30083260A /* TaskTypeCell.m */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		0C84046B2135282000305197 /* DataPanel（数据面板） */ = {
-			isa = PBXGroup;
-			children = (
-				0C84046C2135282000305197 /* ViewModel */,
-				0C84046D2135282000305197 /* Model */,
-				0C84046E2135282000305197 /* View */,
-			);
-			path = "DataPanel（数据面板）";
-			sourceTree = "<group>";
-		};
-		0C84046C2135282000305197 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C84046D2135282000305197 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0C84046E2135282000305197 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0C7AEA96213E6BA000138A31 /* Cell */,
-				0C84047B213528CC00305197 /* DataPanelView.h */,
-				0C84047C213528CC00305197 /* DataPanelView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0C8404702135282000305197 /* TaskPanel（任务面板） */ = {
-			isa = PBXGroup;
-			children = (
-				0C8404712135282000305197 /* ViewModel */,
-				0C8404722135282000305197 /* Model */,
-				0C8404732135282000305197 /* View */,
-			);
-			path = "TaskPanel（任务面板）";
-			sourceTree = "<group>";
-		};
-		0C8404712135282000305197 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C8404722135282000305197 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0C8404732135282000305197 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0C84048921353F6500305197 /* TaskPanelView.h */,
-				0C84048A21353F6500305197 /* TaskPanelView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		0C84048C21354B7C00305197 /* DailyTask（日常任务） */ = {
@@ -1071,8 +999,6 @@
 			isa = PBXGroup;
 			children = (
 				0C3D8967212AAC0700D02FE0 /* HomePage（首页） */,
-				0C84046B2135282000305197 /* DataPanel（数据面板） */,
-				0C8404702135282000305197 /* TaskPanel（任务面板） */,
 				0C84049121354B7C00305197 /* SalesTask（动销任务） */,
 				0C84048C21354B7C00305197 /* DailyTask（日常任务） */,
 				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
@@ -1676,7 +1602,6 @@
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
-				0C84048821353CFC00305197 /* HomePageView.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
 				0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */,
 				0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */,
@@ -1735,7 +1660,6 @@
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
 				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,
 				0CE1EC302128F3EC00A373D7 /* SelectTypeView.m in Sources */,
-				0C84048B21353F6500305197 /* TaskPanelView.m in Sources */,
 				0C8404A621354BC100305197 /* DailyTaskView.m in Sources */,
 				0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */,
 				0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */,
