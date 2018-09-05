@@ -113,15 +113,11 @@
         [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
     
             NSString *vcName = @"RegisteredViewController";
-            if (i == 0) {
-                
-                self.goViewController([NSClassFromString(vcName) new]);
-            }
-            else {
-                
+            if (i == 1) {
                 vcName = @"RetrieveViewController";
-                self.goViewController([[UINavigationController alloc] initWithRootViewController:[NSClassFromString(vcName) new]]);
             }
+            
+            self.goViewController([[UINavigationController alloc] initWithRootViewController:[NSClassFromString(vcName) new]]);
         }];
     }
 }
