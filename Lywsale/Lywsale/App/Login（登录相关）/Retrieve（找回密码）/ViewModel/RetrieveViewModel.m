@@ -1,14 +1,14 @@
 //
-//  RViewModel.m
+//  RetrieveViewModel.m
 //  Lywsale
 //
-//  Created by M on 2018/9/4.
+//  Created by M on 2018/9/5.
 //  Copyright © 2018年 黄锡凯. All rights reserved.
 //
 
-#import "RViewModel.h"
+#import "RetrieveViewModel.h"
 
-@implementation RViewModel
+@implementation RetrieveViewModel
 
 - (void)forgetPasswordAccount:(NSString *)account
                      password:(NSString *)password

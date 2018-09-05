@@ -51,7 +51,6 @@
 		0C7AEA92213E584D00138A31 /* MyRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA91213E584D00138A31 /* MyRankingCell.m */; };
 		0C7AEA95213E610800138A31 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA94213E610800138A31 /* RankingCell.m */; };
 		0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */; };
-		0C7AEA9E213E8CAA00138A31 /* RViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA9D213E8CAA00138A31 /* RViewModel.m */; };
 		0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */; };
 		0C84047D213528CC00305197 /* DataPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84047C213528CC00305197 /* DataPanelView.m */; };
 		0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049C21354B8E00305197 /* SalesTaskViewController.m */; };
@@ -62,7 +61,6 @@
 		0C8404AC21354BE100305197 /* LearningTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AB21354BE100305197 /* LearningTaskView.m */; };
 		0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AE21354CCA00305197 /* SalesTaskCell.m */; };
 		0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404B1213634AF00305197 /* DailyTaskCell.m */; };
-		0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */; };
 		0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B119212818CD004EC6FC /* LoginViewController.m */; };
 		0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11C212818DE004EC6FC /* LoginView.m */; };
 		0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11F212818EE004EC6FC /* LoginModel.m */; };
@@ -100,6 +98,10 @@
 		0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1EC532129A53D00A373D7 /* UploadInfoAddressCell.m */; };
 		0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1EC562129AC5200A373D7 /* WriteInfoViewController.m */; };
 		0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE62AE4212FB5D600DFC1A4 /* SelectPriceView.m */; };
+		0CEFA0F7213FC4F40072EAB9 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA0F6213FC4F40072EAB9 /* RegisteredViewController.m */; };
+		0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA0F9213FC5080072EAB9 /* RegisteredView.m */; };
+		0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA0FF213FD1CD0072EAB9 /* RetrieveViewController.m */; };
+		0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */; };
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
 /* End PBXBuildFile section */
 
@@ -192,8 +194,6 @@
 		0C7AEA94213E610800138A31 /* RankingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RankingCell.m; sourceTree = "<group>"; };
 		0C7AEA97213E78CE00138A31 /* PersonalHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonalHeaderView.h; sourceTree = "<group>"; };
 		0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalHeaderView.m; sourceTree = "<group>"; };
-		0C7AEA9C213E8CAA00138A31 /* RViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RViewModel.h; sourceTree = "<group>"; };
-		0C7AEA9D213E8CAA00138A31 /* RViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RViewModel.m; sourceTree = "<group>"; };
 		0C7AEA9F213E8E5300138A31 /* HomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
 		0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
 		0C84047B213528CC00305197 /* DataPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPanelView.h; sourceTree = "<group>"; };
@@ -214,8 +214,6 @@
 		0C8404AE21354CCA00305197 /* SalesTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskCell.m; sourceTree = "<group>"; };
 		0C8404B0213634AF00305197 /* DailyTaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskCell.h; sourceTree = "<group>"; };
 		0C8404B1213634AF00305197 /* DailyTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskCell.m; sourceTree = "<group>"; };
-		0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveOrRegisteredViewController.h; sourceTree = "<group>"; };
-		0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveOrRegisteredViewController.m; sourceTree = "<group>"; };
 		0CC6B118212818CD004EC6FC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0CC6B119212818CD004EC6FC /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0CC6B11B212818DE004EC6FC /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
@@ -292,6 +290,14 @@
 		0CE1EC562129AC5200A373D7 /* WriteInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoViewController.m; sourceTree = "<group>"; };
 		0CE62AE4212FB5D600DFC1A4 /* SelectPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPriceView.m; sourceTree = "<group>"; };
 		0CE62AE5212FB5D600DFC1A4 /* SelectPriceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPriceView.h; sourceTree = "<group>"; };
+		0CEFA0F5213FC4F40072EAB9 /* RegisteredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewController.h; sourceTree = "<group>"; };
+		0CEFA0F6213FC4F40072EAB9 /* RegisteredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewController.m; sourceTree = "<group>"; };
+		0CEFA0F8213FC5080072EAB9 /* RegisteredView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredView.h; sourceTree = "<group>"; };
+		0CEFA0F9213FC5080072EAB9 /* RegisteredView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteredView.m; sourceTree = "<group>"; };
+		0CEFA0FE213FD1CD0072EAB9 /* RetrieveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveViewController.h; sourceTree = "<group>"; };
+		0CEFA0FF213FD1CD0072EAB9 /* RetrieveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveViewController.m; sourceTree = "<group>"; };
+		0CEFA101213FD4940072EAB9 /* RetrieveViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveViewModel.h; sourceTree = "<group>"; };
+		0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveViewModel.m; sourceTree = "<group>"; };
 		3FC6A3317F8728887B35A61A /* Pods-Lywsale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.release.xcconfig"; sourceTree = "<group>"; };
 		7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lywsale.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C58AA252108754216FE46E /* Pods-Lywsale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.debug.xcconfig"; sourceTree = "<group>"; };
@@ -868,24 +874,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		0C7AEA9A213E8C8B00138A31 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				0CBB16A22128298200CCABE2 /* RetrieveOrRegisteredViewController.h */,
-				0CBB16A32128298200CCABE2 /* RetrieveOrRegisteredViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		0C7AEA9B213E8C9400138A31 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				0C7AEA9C213E8CAA00138A31 /* RViewModel.h */,
-				0C7AEA9D213E8CAA00138A31 /* RViewModel.m */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		0C84048C21354B7C00305197 /* DailyTask（日常任务） */ = {
 			isa = PBXGroup;
 			children = (
@@ -1035,7 +1023,8 @@
 		0CC6B11121281811004EC6FC /* Login（登录相关） */ = {
 			isa = PBXGroup;
 			children = (
-				0CC6B12B212828D1004EC6FC /* RetrieveOrRegistered（找回或注册） */,
+				0CEFA0FB213FD1A80072EAB9 /* Retrieve（找回密码） */,
+				0CEFA0F1213FC4CD0072EAB9 /* Registered（注册） */,
 				0CC6B1122128184D004EC6FC /* Login（登录） */,
 			);
 			path = "Login（登录相关）";
@@ -1086,15 +1075,6 @@
 				0CC6B119212818CD004EC6FC /* LoginViewController.m */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		0CC6B12B212828D1004EC6FC /* RetrieveOrRegistered（找回或注册） */ = {
-			isa = PBXGroup;
-			children = (
-				0C7AEA9B213E8C9400138A31 /* ViewModel */,
-				0C7AEA9A213E8C8B00138A31 /* ViewController */,
-			);
-			path = "RetrieveOrRegistered（找回或注册）";
 			sourceTree = "<group>";
 		};
 		0CDDB5232127338600D42F76 = {
@@ -1481,6 +1461,68 @@
 			path = CustomTextField;
 			sourceTree = "<group>";
 		};
+		0CEFA0F1213FC4CD0072EAB9 /* Registered（注册） */ = {
+			isa = PBXGroup;
+			children = (
+				0CEFA0F4213FC4E00072EAB9 /* ViewModel */,
+				0CEFA0F3213FC4DC0072EAB9 /* View */,
+				0CEFA0F2213FC4D70072EAB9 /* ViewController */,
+			);
+			path = "Registered（注册）";
+			sourceTree = "<group>";
+		};
+		0CEFA0F2213FC4D70072EAB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0CEFA0F5213FC4F40072EAB9 /* RegisteredViewController.h */,
+				0CEFA0F6213FC4F40072EAB9 /* RegisteredViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0CEFA0F3213FC4DC0072EAB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CEFA0F8213FC5080072EAB9 /* RegisteredView.h */,
+				0CEFA0F9213FC5080072EAB9 /* RegisteredView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CEFA0F4213FC4E00072EAB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0CEFA0FB213FD1A80072EAB9 /* Retrieve（找回密码） */ = {
+			isa = PBXGroup;
+			children = (
+				0CEFA0FD213FD1BE0072EAB9 /* ViewModel */,
+				0CEFA0FC213FD1B50072EAB9 /* ViewController */,
+			);
+			path = "Retrieve（找回密码）";
+			sourceTree = "<group>";
+		};
+		0CEFA0FC213FD1B50072EAB9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0CEFA0FE213FD1CD0072EAB9 /* RetrieveViewController.h */,
+				0CEFA0FF213FD1CD0072EAB9 /* RetrieveViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0CEFA0FD213FD1BE0072EAB9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CEFA101213FD4940072EAB9 /* RetrieveViewModel.h */,
+				0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		4F2AA32469F7011E0C8F49D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1627,6 +1669,7 @@
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */,
+				0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
 				0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */,
@@ -1667,23 +1710,24 @@
 				0C8404A021354BA200305197 /* SalesTaskView.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
-				0C7AEA9E213E8CAA00138A31 /* RViewModel.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
 				0C84047D213528CC00305197 /* DataPanelView.m in Sources */,
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
+				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
 				0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */,
-				0CBB16A42128298200CCABE2 /* RetrieveOrRegisteredViewController.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
 				0C523978213E37E30083260A /* TaskTypeCell.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
+				0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
 				0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */,
 				0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */,
 				0C8404A321354BB200305197 /* DailyTaskViewController.m in Sources */,
+				0CEFA0F7213FC4F40072EAB9 /* RegisteredViewController.m in Sources */,
 				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
 				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,

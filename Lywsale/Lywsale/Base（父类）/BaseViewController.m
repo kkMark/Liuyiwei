@@ -23,7 +23,7 @@
 
     [super viewDidLoad];
 
-    self.view.backgroundColor = kPageBgColor;
+    self.view.backgroundColor = [UIColor whiteColor];
     [self setNavigationItem];
     
     // 导航栏高度
@@ -45,7 +45,7 @@
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 30, 30);
-    [backBtn setImage:[UIImage imageNamed:@"back_nor"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"back_one"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * left = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = left;

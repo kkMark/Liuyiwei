@@ -40,7 +40,7 @@
             make.centerY.equalTo(self);
             make.left.equalTo(@10);
             make.height.equalTo(@20);
-            make.width.equalTo(@(self.imgView.image.size.width / self.imgView.image.size.height * 20));
+            make.width.equalTo(@20);
         }];
         
         // 验证码按钮
