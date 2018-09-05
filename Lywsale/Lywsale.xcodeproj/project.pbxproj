@@ -1195,6 +1195,7 @@
 		0CE1EC05212887F900A373D7 /* Certification（认证相关） */ = {
 			isa = PBXGroup;
 			children = (
+				0CEFA104213FDC190072EAB9 /* RComplete（注册完成） */,
 				0CE1EC102128891000A373D7 /* AddType（加入类型） */,
 				0CE1EC152128891000A373D7 /* SelectType（选择类型） */,
 				0CE1EC062128891000A373D7 /* Apply（申请） */,
@@ -1521,6 +1522,13 @@
 				0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0CEFA104213FDC190072EAB9 /* RComplete（注册完成） */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "RComplete（注册完成）";
 			sourceTree = "<group>";
 		};
 		4F2AA32469F7011E0C8F49D1 /* Pods */ = {

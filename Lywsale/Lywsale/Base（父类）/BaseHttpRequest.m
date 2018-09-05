@@ -58,9 +58,9 @@
 /** 获取IP地址 */
 - (NSString *)getRequestUrl:(NSArray *)parArr {
     
-    NSString *tempStr = @"";
+    NSString *tempStr = @"http://api.k780.com";
     for (int i = 0; i < parArr.count; i++) {
-        tempStr = [NSString stringWithFormat:@"%@/%@",tempStr,parArr[i]];
+        tempStr = [NSString stringWithFormat:@"%@/%@", tempStr, parArr[i]];
     }
     
     return tempStr;
@@ -82,6 +82,8 @@
         request.HTTPBody = jsonData;
         request.timeoutInterval = 15;
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:@"36406" forHTTPHeaderField:@"AppKey"];
+        [request setValue:@"bb6d0cce003791740c3c81ac7f236e90" forHTTPHeaderField:@"Sign"];
         
         NSURLSession *session = [NSURLSession sharedSession];
         [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -92,6 +94,7 @@
                 else {
                     
                     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                    NSLog(@"%@", dict);
                     if (success) success(dict);
                 }
             });

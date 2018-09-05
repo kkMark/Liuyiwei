@@ -45,9 +45,17 @@
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     backBtn.frame = CGRectMake(0, 0, 30, 30);
-    [backBtn setImage:[UIImage imageNamed:@"back_one"] forState:UIControlStateNormal];
+//    [backBtn setImage:[UIImage imageNamed:@"back_one"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem * left = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    
+    UIImage *img = [UIImage imageNamed:@"back_one"];
+    UIImageView *backImgView = [[UIImageView alloc] initWithFrame:CGRectMake(-10, 0, 0, 0)];
+    backImgView.size = img.size;
+    backImgView.centerY = backBtn.height / 2;
+    backImgView.image = img;
+    [backBtn addSubview:backImgView];
+    
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     self.navigationItem.leftBarButtonItem = left;
 }
 
