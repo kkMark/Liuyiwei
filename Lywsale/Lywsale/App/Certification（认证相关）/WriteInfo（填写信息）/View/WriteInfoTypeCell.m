@@ -24,7 +24,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 45, 45)];
     titleLabel.text = @"我是";
-    titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    titleLabel.font = [UIFont systemFontOfSize:14];
     titleLabel.textColor = kMainTextColor;
     [self.contentView addSubview:titleLabel];
 

@@ -31,6 +31,17 @@
 }
 
 
+#pragma mark - tableview
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    
+    if (self = [super initWithFrame:frame style:style]) {
+        
+        self.separatorInset = UIEdgeInsetsMake(0, 20, 0, 0);
+    }
+    
+    return self;
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.dictDataSource count];
@@ -45,6 +56,7 @@
     SelectTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
         cell = [[SelectTypeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     }
     
     cell.userType = self.userType;

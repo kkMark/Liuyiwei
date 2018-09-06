@@ -13,13 +13,13 @@
 @interface ApplyViewController ()
 
 @property (nonatomic, strong) ApplyView *applyView;
-@property (nonatomic, strong) UIView *nextView;
+@property (nonatomic, strong) UIButton *okBtn;
 
 @end
 
 @implementation ApplyViewController
 @synthesize applyView;
-@synthesize nextView;
+@synthesize okBtn;
 
 - (void)viewDidLoad {
 
@@ -52,50 +52,35 @@
     
     if (!applyView) {
         
-        applyView = [[ApplyView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.nextView.height) style:UITableViewStyleGrouped];
+        applyView = [[ApplyView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.okBtn.height) style:UITableViewStyleGrouped];
         [self.view addSubview:applyView];
     }
     
     return applyView;
 }
 
-- (UIView *)nextView {
+- (UIButton *)okBtn {
     
-    if (!nextView) {
+    if (!okBtn) {
         
-        nextView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - self.navHeight - 115, ScreenWidth, 115)];
-        nextView.backgroundColor = [UIColor whiteColor];
-        [self.view addSubview:nextView];
-        
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, ScreenWidth - 30, 30)];
-        titleLabel.text = @"*请确保信息填写正确，我们会尽快与您进行电话沟通确认";
-        titleLabel.font = [UIFont systemFontOfSize:12];
-        titleLabel.textColor = kMainColor;
-        titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.numberOfLines = 0;
-        [nextView addSubview:titleLabel];
-        
-        UIButton *okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        // 确定按钮
+        okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         okBtn.backgroundColor = kMainColor;
-        okBtn.frame = CGRectMake(15, CGRectGetMaxY(titleLabel.frame) + 10, ScreenWidth - 30, 40);
-        okBtn.layer.cornerRadius = okBtn.height / 2;
-        okBtn.layer.masksToBounds = YES;
+        okBtn.frame = CGRectMake(0, ScreenHeight - self.navHeight - 40, ScreenWidth, 40);
         okBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
         [okBtn setTitle:@"下一步" forState:UIControlStateNormal];
         [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [nextView addSubview:okBtn];
-        
-        UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.3)];
-        lineView.backgroundColor = kLineColor;
-        [nextView addSubview:lineView];
+        [self.view addSubview:okBtn];
         
         if ([self.title isEqualToString:@"填写信息"]) {
             [okBtn setTitle:@"提交审核" forState:UIControlStateNormal];
         }
         
+        @weakify(self);
         [[okBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-           
-            if ([okBtn.titleLabel.text isEqualToString:@"下一步"]) {
+            
+            @strongify(self);
+            if ([self.okBtn.titleLabel.text isEqualToString:@"下一步"]) {
                 
                 UploadInfoViewController *vc = [UploadInfoViewController new];
                 vc.userType = self.userType;
@@ -104,7 +89,7 @@
         }];
     }
     
-    return nextView;
+    return okBtn;
 }
 
 @end

@@ -12,12 +12,13 @@
 @interface WriteInfoViewController ()
 
 @property (nonatomic, strong) WriteInfoView *writeInfoView;
-
+@property (nonatomic, strong) UIButton *okBtn;
 
 @end
 
 @implementation WriteInfoViewController
 @synthesize writeInfoView;
+@synthesize okBtn;
 
 - (void)viewDidLoad {
 
@@ -33,22 +34,28 @@
     
     if (!writeInfoView) {
         
-        writeInfoView = [[WriteInfoView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - 80) style:UITableViewStyleGrouped];
-        writeInfoView.backgroundColor = [UIColor whiteColor];
+        writeInfoView = [[WriteInfoView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.okBtn.height) style:UITableViewStyleGrouped];
         [self.view addSubview:writeInfoView];
+    }
+    
+    return writeInfoView;
+}
+
+- (UIButton *)okBtn {
+    
+    if (!okBtn) {
         
-        UIButton *okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        // 确定按钮
+        okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         okBtn.backgroundColor = kMainColor;
-        okBtn.frame = CGRectMake(15, self.writeInfoView.maxY + 15, ScreenWidth - 30, 40);
-        okBtn.layer.cornerRadius = okBtn.height / 2;
-        okBtn.layer.masksToBounds = YES;
+        okBtn.frame = CGRectMake(0, ScreenHeight - self.navHeight - 40, ScreenWidth, 40);
         okBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
-        [okBtn setTitle:@"确认加入" forState:UIControlStateNormal];
+        [okBtn setTitle:@"确定加入" forState:UIControlStateNormal];
         [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.view addSubview:okBtn];
     }
     
-    return writeInfoView;
+    return okBtn;
 }
 
 @end

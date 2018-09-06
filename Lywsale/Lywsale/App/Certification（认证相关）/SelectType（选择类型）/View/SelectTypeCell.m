@@ -36,8 +36,8 @@
         UILabel *tempLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, ScreenWidth - 40, 20)];
         tempLabel.y = 15 + tempLabel.height * i;
         tempLabel.text = titles[i];
-        tempLabel.font = i == 0 ? [UIFont boldSystemFontOfSize:14] : [UIFont systemFontOfSize:14];
-        tempLabel.textColor = kMainTextColor;
+        tempLabel.font = [UIFont systemFontOfSize:14];
+        tempLabel.textColor = i == 0 ? kMainTextColor : [UIColor colorWithHexString:@"0x666666"];
         [self.contentView addSubview:tempLabel];
         
         if (i == 0) {
@@ -77,8 +77,13 @@
     if (isAddNewType) {
         
         self.titleLabel.text = [NSString stringWithFormat:@"新增您的%@", typeString];
-        self.nameLabel.text = [NSString stringWithFormat:@"没有找到%@？点击这里添加", typeString];
+        self.nameLabel.text = [NSString stringWithFormat:@"没有找到%@？点击 这里新增", typeString];
         self.addressLabel.text = @"";
+        
+        NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:self.nameLabel.text];
+        [attStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14] range:NSMakeRange(0, attStr.length)];
+        [attStr addAttribute:NSForegroundColorAttributeName value:kMainColor range:NSMakeRange(attStr.length - 4, 4)];
+        self.nameLabel.attributedText = attStr;
     }
 }
 

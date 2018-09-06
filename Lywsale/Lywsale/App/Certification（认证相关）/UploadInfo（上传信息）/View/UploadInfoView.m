@@ -8,42 +8,30 @@
 
 #import "UploadInfoView.h"
 #import "UploadInfoCell.h"
-#import "UploadInfoAddressCell.h"
+
+@interface UploadInfoView ()
+
+@property (nonatomic, assign) float cellHeight;
+
+@end
 
 @implementation UploadInfoView
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 1 && self.userType == PharmacyType) {
-        
-        UploadInfoAddressCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
-        if (cell == nil) {
-            cell = [[UploadInfoAddressCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"AddressCell"];
-        }
-        
-        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, ScreenWidth);
-        return cell;
+    UploadInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if (cell == nil) {
+        cell = [[UploadInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    else {
-        
-        UploadInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-        if (cell == nil) {
-            cell = [[UploadInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-        }
-        
-        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, ScreenWidth);
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-    }
+    
+    cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, ScreenWidth);
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.cellHeight = cell.cellHeight;
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (indexPath.row == 1 && self.userType == PharmacyType) {
-        return 160;
-    }
-    
-    return (ScreenWidth - 60) / 2 + 65;
+    return self.cellHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

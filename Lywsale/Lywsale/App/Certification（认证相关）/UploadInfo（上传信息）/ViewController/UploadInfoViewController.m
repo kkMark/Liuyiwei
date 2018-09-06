@@ -14,13 +14,13 @@
 @interface UploadInfoViewController ()
 
 @property (nonatomic, strong) UploadInfoView *uploadInfoView;
-@property (nonatomic, strong) UIView *nextView;
+@property (nonatomic, strong) UIButton *okBtn;
 
 @end
 
 @implementation UploadInfoViewController
 @synthesize uploadInfoView;
-@synthesize nextView;
+@synthesize okBtn;
 
 - (void)viewDidLoad {
 
@@ -35,15 +35,14 @@
     }
     
     self.title = title;
-    self.uploadInfoView.dataSources = @[@"", @""];
+    self.uploadInfoView.dataSources = @[@""];
 }
 
 - (UploadInfoView *)uploadInfoView {
     
     if (!uploadInfoView) {
         
-        uploadInfoView = [[UploadInfoView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.nextView.height) style:UITableViewStylePlain];
-        uploadInfoView.backgroundColor = [UIColor whiteColor];
+        uploadInfoView = [[UploadInfoView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.okBtn.height) style:UITableViewStylePlain];
         uploadInfoView.userType = self.userType;
         [self.view addSubview:uploadInfoView];
     }
@@ -51,31 +50,28 @@
     return uploadInfoView;
 }
 
-- (UIView *)nextView {
+- (UIButton *)okBtn {
     
-    if (!nextView) {
+    if (!okBtn) {
         
-        nextView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenHeight - self.navHeight - 80, ScreenWidth, 80)];
-        nextView.backgroundColor = [UIColor whiteColor];
-        [self.view addSubview:nextView];
-        
-        UIButton *okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        // 确定按钮
+        okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         okBtn.backgroundColor = kMainColor;
-        okBtn.frame = CGRectMake(15, 0, ScreenWidth - 30, 40);
-        okBtn.centerY = nextView.height / 2;
-        okBtn.layer.cornerRadius = okBtn.height / 2;
-        okBtn.layer.masksToBounds = YES;
+        okBtn.frame = CGRectMake(0, ScreenHeight - self.navHeight - 40, ScreenWidth, 40);
         okBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
         [okBtn setTitle:@"下一步" forState:UIControlStateNormal];
         [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [nextView addSubview:okBtn];
+        [self.view addSubview:okBtn];
         
         if (self.userType == PharmaceuticalType) {
             [okBtn setTitle:@"提交审核" forState:UIControlStateNormal];
         }
-
+        
+        @weakify(self);
         [[okBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             
+            @strongify(self);
+
             // 药店
             if (self.userType == PharmacyType) {
                 
@@ -85,7 +81,7 @@
             }
             // 连锁店
             else if (self.userType == ChainType) {
-             
+                
                 ApplyViewController *vc = [ApplyViewController new];
                 vc.title = @"填写信息";
                 [self.navigationController pushViewController:vc animated:YES];
@@ -97,7 +93,7 @@
         }];
     }
     
-    return nextView;
+    return okBtn;
 }
 
 @end

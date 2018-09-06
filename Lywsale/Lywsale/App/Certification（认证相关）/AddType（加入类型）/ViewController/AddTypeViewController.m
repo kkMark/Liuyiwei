@@ -13,12 +13,14 @@
 
 @property (nonatomic, strong) AddTypeView *addTypeView;
 @property (nonatomic, strong) UIView *userTypeView;
+@property (nonatomic, strong) UIButton *okBtn;
 
 @end
 
 @implementation AddTypeViewController
 @synthesize addTypeView;
 @synthesize userTypeView;
+@synthesize okBtn;
 
 - (void)viewDidLoad {
     
@@ -35,20 +37,45 @@
     
     if (!addTypeView) {
         
-        addTypeView = [[AddTypeView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight) style:UITableViewStyleGrouped];
-        addTypeView.backgroundColor = [UIColor whiteColor];
+        addTypeView = [[AddTypeView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.okBtn.height) style:UITableViewStyleGrouped];
+        addTypeView.backgroundColor = kPageBgColor;
         [self.view addSubview:addTypeView];
         
         @weakify(self);
         [self.addTypeView setGoViewController:^(UIViewController *vc) {
            
             @strongify(self);
-            vc.title = [self.title stringByReplacingOccurrencesOfString:@"加入" withString:@"选择"];
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }
     
     return addTypeView;
+}
+
+- (UIButton *)okBtn {
+    
+    if (!okBtn) {
+        
+        // 确定按钮
+        okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        okBtn.backgroundColor = kMainColor;
+        okBtn.frame = CGRectMake(0, ScreenHeight - self.navHeight - 40, ScreenWidth, 40);
+        okBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
+        [okBtn setTitle:@"下一步" forState:UIControlStateNormal];
+        [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.view addSubview:okBtn];
+        
+        @weakify(self);
+        [[okBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+            @strongify(self);
+            UIViewController *vc = [NSClassFromString(@"SelectTypeViewController") new];
+            vc.title = [self.title stringByReplacingOccurrencesOfString:@"加入" withString:@"选择"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
+    }
+    
+    return okBtn;
 }
 
 - (UIView *)userTypeView {

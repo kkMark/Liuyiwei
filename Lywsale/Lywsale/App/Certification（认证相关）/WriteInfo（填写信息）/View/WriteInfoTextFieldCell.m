@@ -30,7 +30,7 @@
 - (void)setupSubviews {
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 45, 45)];
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    self.titleLabel.font = [UIFont systemFontOfSize:14];
     self.titleLabel.textColor = kMainTextColor;
     [self.contentView addSubview:self.titleLabel];
     

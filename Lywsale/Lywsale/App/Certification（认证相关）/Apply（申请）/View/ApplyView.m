@@ -16,6 +16,7 @@
     ApplyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
         cell = [[ApplyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     }
 
     if ([self.dataSources[indexPath.row] isEqualToString:@"请选择所在省市区"] ||

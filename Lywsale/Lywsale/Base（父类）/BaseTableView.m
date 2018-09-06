@@ -81,7 +81,8 @@
     self.rowHeight = 45;
     self.dataSource = self;
     self.delegate = self;
-    self.separatorInset = UIEdgeInsetsMake(0, ScreenWidth == 320 ? 15 : 20, 0, 0);
+    self.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.separatorColor = [UIColor colorWithHexString:@"0xd1d1d1"];
 }
 
 #pragma mark - set

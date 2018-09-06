@@ -10,4 +10,6 @@
 
 @interface WriteInfoCertificateCell : UITableViewCell
 
+@property (nonatomic, assign) float cellHeight;
+
 @end

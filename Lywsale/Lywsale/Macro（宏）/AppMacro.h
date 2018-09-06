@@ -17,7 +17,7 @@
 /** app文字主色调 */
 #define kMainTextColor [UIColor colorWithHexString:@"0x333333"]
 /** 页面背景色 */
-#define kPageBgColor [UIColor colorWithHexString:@"0xF5F5F5"]
+#define kPageBgColor [UIColor colorWithHexString:@"0xF8F8F8"]
 /** 线条的颜色 */
 #define kLineColor [[UIColor lightGrayColor] colorWithAlphaComponent:0.7]
 /** 数字样式 */

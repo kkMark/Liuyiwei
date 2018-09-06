@@ -95,7 +95,6 @@
 		0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1EC4A21291A3400A373D7 /* UploadInfoViewController.m */; };
 		0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1EC4D2129573800A373D7 /* UploadInfoView.m */; };
 		0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1EC502129574B00A373D7 /* UploadInfoCell.m */; };
-		0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1EC532129A53D00A373D7 /* UploadInfoAddressCell.m */; };
 		0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE1EC562129AC5200A373D7 /* WriteInfoViewController.m */; };
 		0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE62AE4212FB5D600DFC1A4 /* SelectPriceView.m */; };
 		0CEFA0F7213FC4F40072EAB9 /* RegisteredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA0F6213FC4F40072EAB9 /* RegisteredViewController.m */; };
@@ -284,8 +283,6 @@
 		0CE1EC4D2129573800A373D7 /* UploadInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadInfoView.m; sourceTree = "<group>"; };
 		0CE1EC4F2129574B00A373D7 /* UploadInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadInfoCell.h; sourceTree = "<group>"; };
 		0CE1EC502129574B00A373D7 /* UploadInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadInfoCell.m; sourceTree = "<group>"; };
-		0CE1EC522129A53D00A373D7 /* UploadInfoAddressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadInfoAddressCell.h; sourceTree = "<group>"; };
-		0CE1EC532129A53D00A373D7 /* UploadInfoAddressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadInfoAddressCell.m; sourceTree = "<group>"; };
 		0CE1EC552129AC5200A373D7 /* WriteInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoViewController.h; sourceTree = "<group>"; };
 		0CE1EC562129AC5200A373D7 /* WriteInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoViewController.m; sourceTree = "<group>"; };
 		0CE62AE4212FB5D600DFC1A4 /* SelectPriceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPriceView.m; sourceTree = "<group>"; };
@@ -1278,8 +1275,6 @@
 		0CE1EC0E2128891000A373D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CE1EC522129A53D00A373D7 /* UploadInfoAddressCell.h */,
-				0CE1EC532129A53D00A373D7 /* UploadInfoAddressCell.m */,
 				0CE1EC4F2129574B00A373D7 /* UploadInfoCell.h */,
 				0CE1EC502129574B00A373D7 /* UploadInfoCell.m */,
 				0CE1EC4C2129573800A373D7 /* UploadInfoView.h */,
@@ -1725,7 +1720,6 @@
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
 				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
-				0CE1EC542129A53D00A373D7 /* UploadInfoAddressCell.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
 				0C523978213E37E30083260A /* TaskTypeCell.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,

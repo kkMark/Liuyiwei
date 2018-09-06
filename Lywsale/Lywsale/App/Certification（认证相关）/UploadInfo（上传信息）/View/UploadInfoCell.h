@@ -10,4 +10,6 @@
 
 @interface UploadInfoCell : UITableViewCell
 
+@property (nonatomic, assign) float cellHeight;
+
 @end
