@@ -10,4 +10,6 @@
 
 @interface TaskTypeCell : UITableViewCell
 
+@property (nonatomic, strong) void (^goViewControllerBlock)(UIViewController *vc);
+
 @end

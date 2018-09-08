@@ -63,6 +63,14 @@
         float height = ScreenHeight - self.tabBarHeight - self.menuView.maxY;
         dataPanelView = [[DataPanelView alloc] initWithFrame:CGRectMake(0, self.menuView.maxY, ScreenWidth, height) style:UITableViewStyleGrouped];
         [self.view addSubview:dataPanelView];
+        
+        @weakify(self);
+        [self.dataPanelView setGoViewControllerBlock:^(UIViewController *vc) {
+            
+            @strongify(self);
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return dataPanelView;

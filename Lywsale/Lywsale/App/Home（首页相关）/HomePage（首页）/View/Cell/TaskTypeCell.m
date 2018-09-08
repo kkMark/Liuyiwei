@@ -43,6 +43,15 @@
         titleLabel.textColor = kMainTextColor;
         titleLabel.textAlignment = NSTextAlignmentCenter;
         [iconBtn addSubview:titleLabel];
+        
+        [[iconBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+           
+            NSString *vcName = @"SalesTaskViewController";
+            
+            if (self.goViewControllerBlock) {
+                self.goViewControllerBlock([NSClassFromString(vcName) new]);
+            }
+        }];
     }
 }
 

@@ -166,6 +166,9 @@
         
         // 任务类型
         TaskTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskTypeCell"];
+        [cell setGoViewControllerBlock:^(UIViewController *vc) {
+            self.goViewControllerBlock(vc);
+        }];
         return cell;
     }
     else if (indexPath.section == 1) {
