@@ -7,31 +7,58 @@
 //
 
 #import "BuyViewController.h"
+#import "BuyView.h"
 
 @interface BuyViewController ()
+
+@property (nonatomic, strong) BuyView *buyView;
+@property (nonatomic, strong) UIButton *addBuyBtn;
 
 @end
 
 @implementation BuyViewController
+@synthesize buyView;
+@synthesize addBuyBtn;
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    self.buyView.dataSources = @[@"", @"", @""];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (BuyView *)buyView {
+    
+    if (!buyView) {
+    
+        buyView = [[BuyView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.view.height - self.addBuyBtn.height) style:UITableViewStyleGrouped];
+        buyView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self.view addSubview:buyView];
+    }
+    
+    return buyView;
 }
-*/
+
+- (UIButton *)addBuyBtn {
+    
+    if (!addBuyBtn) {
+        
+        addBuyBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        addBuyBtn.frame = CGRectMake(0, self.view.height - 45, ScreenWidth , 45);
+        addBuyBtn.backgroundColor = kMainColor;
+        addBuyBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+        [addBuyBtn setTitle:@"新增购买" forState:UIControlStateNormal];
+        [addBuyBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.view addSubview:addBuyBtn];
+    }
+    
+    return addBuyBtn;
+}
 
 @end

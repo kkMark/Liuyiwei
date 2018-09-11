@@ -8,6 +8,7 @@
 
 #import "DailyTaskView.h"
 #import "DailyTaskCell.h"
+#import "ReceptionViewController.h"
 
 @interface DailyTaskView ()
 
@@ -51,6 +52,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    if (self.goViewControllerBlock) {
+        
+        ReceptionViewController *vc = [ReceptionViewController new];
+        self.goViewControllerBlock(vc);
+    }
 }
 
 @end

@@ -7,31 +7,40 @@
 //
 
 #import "CustomerInfoViewController.h"
+#import "CustomerInfoView.h"
 
 @interface CustomerInfoViewController ()
+
+@property (nonatomic, strong) CustomerInfoView *customerInfoView;
 
 @end
 
 @implementation CustomerInfoViewController
+@synthesize customerInfoView;
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+
+    self.customerInfoView.dataSources = @[@"病种：", @"性别：", @"年龄：", @"权益：", @"积分：", @"顾客价值：", @"促销偏好：", @"最近一次消费：", @"购买次数：", @"客户价："];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CustomerInfoView *)customerInfoView {
+    
+    if (!customerInfoView) {
+        
+        customerInfoView = [[CustomerInfoView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.view.height + 45) style:UITableViewStyleGrouped];
+        customerInfoView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self.view addSubview:customerInfoView];
+    }
+    
+    return customerInfoView;
 }
-*/
 
 @end

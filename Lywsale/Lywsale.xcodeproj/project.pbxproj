@@ -56,6 +56,12 @@
 		0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0221476E580032B57A /* CustomerInfoViewController.m */; };
 		0C804A0621476E620032B57A /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0521476E620032B57A /* BuyViewController.m */; };
 		0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0821476E6B0032B57A /* MaintenanceViewController.m */; };
+		0C804A0C214796040032B57A /* CustomerInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0B214796040032B57A /* CustomerInfoView.m */; };
+		0C804A0F2147A14C0032B57A /* BuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0E2147A14C0032B57A /* BuyView.m */; };
+		0C804A122147A1670032B57A /* BuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A112147A1660032B57A /* BuyCell.m */; };
+		0C804A152147BBDE0032B57A /* MaintenanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A142147BBDE0032B57A /* MaintenanceView.m */; };
+		0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A172147BC360032B57A /* MaintenanceCell.m */; };
+		0C804A1B2147C4900032B57A /* ReceptionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A1A2147C4900032B57A /* ReceptionHeaderView.m */; };
 		0C84047D213528CC00305197 /* DataPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84047C213528CC00305197 /* DataPanelView.m */; };
 		0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049C21354B8E00305197 /* SalesTaskViewController.m */; };
 		0C8404A021354BA200305197 /* SalesTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049F21354BA200305197 /* SalesTaskView.m */; };
@@ -208,6 +214,18 @@
 		0C804A0521476E620032B57A /* BuyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
 		0C804A0721476E6B0032B57A /* MaintenanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaintenanceViewController.h; sourceTree = "<group>"; };
 		0C804A0821476E6B0032B57A /* MaintenanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaintenanceViewController.m; sourceTree = "<group>"; };
+		0C804A0A214796040032B57A /* CustomerInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerInfoView.h; sourceTree = "<group>"; };
+		0C804A0B214796040032B57A /* CustomerInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerInfoView.m; sourceTree = "<group>"; };
+		0C804A0D2147A14C0032B57A /* BuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyView.h; sourceTree = "<group>"; };
+		0C804A0E2147A14C0032B57A /* BuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyView.m; sourceTree = "<group>"; };
+		0C804A102147A1660032B57A /* BuyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyCell.h; sourceTree = "<group>"; };
+		0C804A112147A1660032B57A /* BuyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyCell.m; sourceTree = "<group>"; };
+		0C804A132147BBDE0032B57A /* MaintenanceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaintenanceView.h; sourceTree = "<group>"; };
+		0C804A142147BBDE0032B57A /* MaintenanceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaintenanceView.m; sourceTree = "<group>"; };
+		0C804A162147BC360032B57A /* MaintenanceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaintenanceCell.h; sourceTree = "<group>"; };
+		0C804A172147BC360032B57A /* MaintenanceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaintenanceCell.m; sourceTree = "<group>"; };
+		0C804A192147C4900032B57A /* ReceptionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionHeaderView.h; sourceTree = "<group>"; };
+		0C804A1A2147C4900032B57A /* ReceptionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionHeaderView.m; sourceTree = "<group>"; };
 		0C84047B213528CC00305197 /* DataPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPanelView.h; sourceTree = "<group>"; };
 		0C84047C213528CC00305197 /* DataPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPanelView.m; sourceTree = "<group>"; };
 		0C84049B21354B8E00305197 /* SalesTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewController.h; sourceTree = "<group>"; };
@@ -925,6 +943,10 @@
 		0C8049ED21476E320032B57A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C804A162147BC360032B57A /* MaintenanceCell.h */,
+				0C804A172147BC360032B57A /* MaintenanceCell.m */,
+				0C804A132147BBDE0032B57A /* MaintenanceView.h */,
+				0C804A142147BBDE0032B57A /* MaintenanceView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -966,6 +988,10 @@
 		0C8049F221476E320032B57A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C804A102147A1660032B57A /* BuyCell.h */,
+				0C804A112147A1660032B57A /* BuyCell.m */,
+				0C804A0D2147A14C0032B57A /* BuyView.h */,
+				0C804A0E2147A14C0032B57A /* BuyView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1007,6 +1033,8 @@
 		0C8049F721476E320032B57A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C804A0A214796040032B57A /* CustomerInfoView.h */,
+				0C804A0B214796040032B57A /* CustomerInfoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1048,6 +1076,8 @@
 		0C8049FC21476E320032B57A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C804A192147C4900032B57A /* ReceptionHeaderView.h */,
+				0C804A1A2147C4900032B57A /* ReceptionHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1862,6 +1892,7 @@
 				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
 				0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */,
+				0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
@@ -1882,9 +1913,12 @@
 				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
+				0C804A0F2147A14C0032B57A /* BuyView.m in Sources */,
 				0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */,
+				0C804A0C214796040032B57A /* CustomerInfoView.m in Sources */,
 				0CE1EC2A2128F3D700A373D7 /* SelectTypeViewModel.m in Sources */,
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
+				0C804A122147A1670032B57A /* BuyCell.m in Sources */,
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
 				0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */,
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
@@ -1910,6 +1944,7 @@
 				0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
+				0C804A1B2147C4900032B57A /* ReceptionHeaderView.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
@@ -1934,6 +1969,7 @@
 				0C8404A621354BC100305197 /* DailyTaskView.m in Sources */,
 				0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */,
 				0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */,
+				0C804A152147BBDE0032B57A /* MaintenanceView.m in Sources */,
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
 				0C523971213E19B20083260A /* UIImage+Category.m in Sources */,
