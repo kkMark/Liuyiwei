@@ -47,9 +47,15 @@
         [[iconBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
            
             NSString *vcName = @"SalesTaskViewController";
+            if (i == 1) {
+                vcName = @"DailyTaskViewController";
+            }
             
             if (self.goViewControllerBlock) {
-                self.goViewControllerBlock([NSClassFromString(vcName) new]);
+                
+                UIViewController *vc = [NSClassFromString(vcName) new];
+                vc.hidesBottomBarWhenPushed = YES;
+                self.goViewControllerBlock(vc);
             }
         }];
     }

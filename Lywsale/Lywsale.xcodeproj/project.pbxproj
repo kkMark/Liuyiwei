@@ -52,6 +52,10 @@
 		0C7AEA95213E610800138A31 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA94213E610800138A31 /* RankingCell.m */; };
 		0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */; };
 		0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */; };
+		0C804A0021476E4F0032B57A /* ReceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8049FF21476E4F0032B57A /* ReceptionViewController.m */; };
+		0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0221476E580032B57A /* CustomerInfoViewController.m */; };
+		0C804A0621476E620032B57A /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0521476E620032B57A /* BuyViewController.m */; };
+		0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0821476E6B0032B57A /* MaintenanceViewController.m */; };
 		0C84047D213528CC00305197 /* DataPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84047C213528CC00305197 /* DataPanelView.m */; };
 		0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049C21354B8E00305197 /* SalesTaskViewController.m */; };
 		0C8404A021354BA200305197 /* SalesTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84049F21354BA200305197 /* SalesTaskView.m */; };
@@ -196,6 +200,14 @@
 		0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalHeaderView.m; sourceTree = "<group>"; };
 		0C7AEA9F213E8E5300138A31 /* HomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
 		0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
+		0C8049FE21476E4F0032B57A /* ReceptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionViewController.h; sourceTree = "<group>"; };
+		0C8049FF21476E4F0032B57A /* ReceptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionViewController.m; sourceTree = "<group>"; };
+		0C804A0121476E580032B57A /* CustomerInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerInfoViewController.h; sourceTree = "<group>"; };
+		0C804A0221476E580032B57A /* CustomerInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerInfoViewController.m; sourceTree = "<group>"; };
+		0C804A0421476E620032B57A /* BuyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuyViewController.h; sourceTree = "<group>"; };
+		0C804A0521476E620032B57A /* BuyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuyViewController.m; sourceTree = "<group>"; };
+		0C804A0721476E6B0032B57A /* MaintenanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaintenanceViewController.h; sourceTree = "<group>"; };
+		0C804A0821476E6B0032B57A /* MaintenanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaintenanceViewController.m; sourceTree = "<group>"; };
 		0C84047B213528CC00305197 /* DataPanelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataPanelView.h; sourceTree = "<group>"; };
 		0C84047C213528CC00305197 /* DataPanelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataPanelView.m; sourceTree = "<group>"; };
 		0C84049B21354B8E00305197 /* SalesTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewController.h; sourceTree = "<group>"; };
@@ -874,6 +886,181 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		0C8049E921476E320032B57A /* Reception（接待相关） */ = {
+			isa = PBXGroup;
+			children = (
+				0C8049F921476E320032B57A /* Reception（接待） */,
+				0C8049F421476E320032B57A /* CustomerInfo（客户信息） */,
+				0C8049EF21476E320032B57A /* Buy（购买历史） */,
+				0C8049EA21476E320032B57A /* Maintenance（维护历史） */,
+			);
+			path = "Reception（接待相关）";
+			sourceTree = "<group>";
+		};
+		0C8049EA21476E320032B57A /* Maintenance（维护历史） */ = {
+			isa = PBXGroup;
+			children = (
+				0C8049EB21476E320032B57A /* ViewModel */,
+				0C8049EC21476E320032B57A /* Model */,
+				0C8049ED21476E320032B57A /* View */,
+				0C8049EE21476E320032B57A /* ViewController */,
+			);
+			path = "Maintenance（维护历史）";
+			sourceTree = "<group>";
+		};
+		0C8049EB21476E320032B57A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C8049EC21476E320032B57A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C8049ED21476E320032B57A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C8049EE21476E320032B57A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C804A0721476E6B0032B57A /* MaintenanceViewController.h */,
+				0C804A0821476E6B0032B57A /* MaintenanceViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C8049EF21476E320032B57A /* Buy（购买历史） */ = {
+			isa = PBXGroup;
+			children = (
+				0C8049F021476E320032B57A /* ViewModel */,
+				0C8049F121476E320032B57A /* Model */,
+				0C8049F221476E320032B57A /* View */,
+				0C8049F321476E320032B57A /* ViewController */,
+			);
+			path = "Buy（购买历史）";
+			sourceTree = "<group>";
+		};
+		0C8049F021476E320032B57A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C8049F121476E320032B57A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C8049F221476E320032B57A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C8049F321476E320032B57A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C804A0421476E620032B57A /* BuyViewController.h */,
+				0C804A0521476E620032B57A /* BuyViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C8049F421476E320032B57A /* CustomerInfo（客户信息） */ = {
+			isa = PBXGroup;
+			children = (
+				0C8049F521476E320032B57A /* ViewModel */,
+				0C8049F621476E320032B57A /* Model */,
+				0C8049F721476E320032B57A /* View */,
+				0C8049F821476E320032B57A /* ViewController */,
+			);
+			path = "CustomerInfo（客户信息）";
+			sourceTree = "<group>";
+		};
+		0C8049F521476E320032B57A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C8049F621476E320032B57A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C8049F721476E320032B57A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C8049F821476E320032B57A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C804A0121476E580032B57A /* CustomerInfoViewController.h */,
+				0C804A0221476E580032B57A /* CustomerInfoViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C8049F921476E320032B57A /* Reception（接待） */ = {
+			isa = PBXGroup;
+			children = (
+				0C8049FA21476E320032B57A /* ViewModel */,
+				0C8049FB21476E320032B57A /* Model */,
+				0C8049FC21476E320032B57A /* View */,
+				0C8049FD21476E320032B57A /* ViewController */,
+			);
+			path = "Reception（接待）";
+			sourceTree = "<group>";
+		};
+		0C8049FA21476E320032B57A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C8049FB21476E320032B57A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C8049FC21476E320032B57A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C8049FD21476E320032B57A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C8049FE21476E4F0032B57A /* ReceptionViewController.h */,
+				0C8049FF21476E4F0032B57A /* ReceptionViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0C84048C21354B7C00305197 /* DailyTask（日常任务） */ = {
 			isa = PBXGroup;
 			children = (
@@ -1016,6 +1203,7 @@
 				0C84049121354B7C00305197 /* SalesTask（动销任务） */,
 				0C84048C21354B7C00305197 /* DailyTask（日常任务） */,
 				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
+				0C8049E921476E320032B57A /* Reception（接待相关） */,
 			);
 			path = "Home（首页相关）";
 			sourceTree = "<group>";
@@ -1675,7 +1863,9 @@
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
 				0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
+				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
+				0C804A0621476E620032B57A /* BuyViewController.m in Sources */,
 				0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */,
 				0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
@@ -1717,6 +1907,7 @@
 				0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */,
 				0C37F5A5212E60D700E357EB /* ArchivesView.m in Sources */,
 				0C8404A021354BA200305197 /* SalesTaskView.m in Sources */,
+				0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
@@ -1755,6 +1946,7 @@
 				0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,
 				0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */,
+				0C804A0021476E4F0032B57A /* ReceptionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

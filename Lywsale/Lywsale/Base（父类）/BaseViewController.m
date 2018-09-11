@@ -99,6 +99,21 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:saveBtn];
 }
 
+- (void)addNavRightImage:(NSString *)imgString complete:(void (^)())complete {
+    
+    UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    saveBtn.frame = CGRectMake(0, 0, 30, 30);
+    [saveBtn setBackgroundImage:[UIImage imageNamed:imgString] forState:UIControlStateNormal];
+    [[saveBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+        if (complete) {
+            complete();
+        }
+    }];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:saveBtn];
+}
+
 #pragma mark - 提示框
 - (void)alertWithTitle:(NSString *)title msg:(NSString *)msg isShowCancel:(BOOL)isShowCancel complete:(void (^)())complete {
     

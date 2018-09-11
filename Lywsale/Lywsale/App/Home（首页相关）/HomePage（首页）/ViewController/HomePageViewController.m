@@ -68,7 +68,6 @@
         [self.dataPanelView setGoViewControllerBlock:^(UIViewController *vc) {
             
             @strongify(self);
-            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }

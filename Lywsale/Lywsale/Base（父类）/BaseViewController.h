@@ -45,6 +45,13 @@ typedef void(^ActionSheetCompleteBlock)(NSInteger index);
 - (void)addNavRightTitle:(NSString *)titleString complete:(void (^)())complete;
 
 /**
+ 添加导航右边图片
+
+ @param imgString 图片
+ */
+- (void)addNavRightImage:(NSString *)imgString complete:(void (^)())complete;
+
+/**
  提示框
 
  @param title           标题
