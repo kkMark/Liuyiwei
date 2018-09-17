@@ -112,6 +112,8 @@
 		0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA0F9213FC5080072EAB9 /* RegisteredView.m */; };
 		0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA0FF213FD1CD0072EAB9 /* RetrieveViewController.m */; };
 		0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */; };
+		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
+		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
 /* End PBXBuildFile section */
 
@@ -328,6 +330,10 @@
 		0CEFA0FF213FD1CD0072EAB9 /* RetrieveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveViewController.m; sourceTree = "<group>"; };
 		0CEFA101213FD4940072EAB9 /* RetrieveViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RetrieveViewModel.h; sourceTree = "<group>"; };
 		0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RetrieveViewModel.m; sourceTree = "<group>"; };
+		114A0531214A43EC0021E8ED /* WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
+		114A0532214A43EC0021E8ED /* WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
+		114A0534214A43FE0021E8ED /* KnowledgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeViewController.h; sourceTree = "<group>"; };
+		114A0535214A43FE0021E8ED /* KnowledgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeViewController.m; sourceTree = "<group>"; };
 		3FC6A3317F8728887B35A61A /* Pods-Lywsale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.release.xcconfig"; sourceTree = "<group>"; };
 		7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lywsale.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C58AA252108754216FE46E /* Pods-Lywsale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1348,6 +1354,8 @@
 				0CC6B11121281811004EC6FC /* Login（登录相关） */,
 				0CE1EC05212887F900A373D7 /* Certification（认证相关） */,
 				0C9BBB8F212A519000A09A02 /* Home（首页相关） */,
+				114A052F214A437F0021E8ED /* Work（工作相关） */,
+				114A0530214A43B20021E8ED /* Knowledge （知识相关） */,
 				0C37F55F212D51AF00E357EB /* Personal（个人中心相关） */,
 			);
 			path = App;
@@ -1749,6 +1757,24 @@
 			path = "RComplete（注册完成）";
 			sourceTree = "<group>";
 		};
+		114A052F214A437F0021E8ED /* Work（工作相关） */ = {
+			isa = PBXGroup;
+			children = (
+				114A0531214A43EC0021E8ED /* WorkViewController.h */,
+				114A0532214A43EC0021E8ED /* WorkViewController.m */,
+			);
+			path = "Work（工作相关）";
+			sourceTree = "<group>";
+		};
+		114A0530214A43B20021E8ED /* Knowledge （知识相关） */ = {
+			isa = PBXGroup;
+			children = (
+				114A0534214A43FE0021E8ED /* KnowledgeViewController.h */,
+				114A0535214A43FE0021E8ED /* KnowledgeViewController.m */,
+			);
+			path = "Knowledge （知识相关）";
+			sourceTree = "<group>";
+		};
 		4F2AA32469F7011E0C8F49D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1892,6 +1918,7 @@
 				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
 				0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */,
+				114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */,
 				0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
@@ -1950,6 +1977,7 @@
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
 				0C84047D213528CC00305197 /* DataPanelView.m in Sources */,
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
+				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,
 				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,

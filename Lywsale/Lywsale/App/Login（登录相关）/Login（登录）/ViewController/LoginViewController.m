@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "RootViewController.h"
 #import "LoginView.h"
+#import "LoginViewModel.h"
 
 @interface LoginViewController ()
 
@@ -47,8 +48,15 @@
         }
         else {
             
-            RootViewController *tabbarVC = [RootViewController new];
-            [self presentViewController:tabbarVC animated:YES completion:nil];
+            [[LoginViewModel new] loginWithAccount:account password:password success:^(NSDictionary *dict) {
+                
+                RootViewController *tabbarVC = [RootViewController new];
+                [self presentViewController:tabbarVC animated:YES completion:nil];
+                
+            } failure:^(NSError *error) {
+                
+            }];
+            
         }
     }];
 }

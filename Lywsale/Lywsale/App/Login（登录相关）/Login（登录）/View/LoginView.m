@@ -59,6 +59,8 @@
         textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.keyboardType = UIKeyboardTypeASCIICapable;
         textField.placeholder = titles[i];
+        textField.tag = i + 100;
+        [textField addTarget:self action:@selector(textFieldTextChange:) forControlEvents:UIControlEventEditingChanged];
         [bgView addSubview:textField];
         
         if (i == 1) {
@@ -111,7 +113,7 @@
         titleLabel.textAlignment = i == 0 ? NSTextAlignmentLeft : NSTextAlignmentRight;
         [button addSubview:titleLabel];
         [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-    
+            
             NSString *vcName = @"RegisteredViewController";
             if (i == 1) {
                 vcName = @"RetrieveViewController";
@@ -120,6 +122,16 @@
             self.goViewController([[UINavigationController alloc] initWithRootViewController:[NSClassFromString(vcName) new]]);
         }];
     }
+}
+
+-(void)textFieldTextChange:(UITextField *)sender{
+    
+    if (sender.tag - 100 == 0) {
+        self.account = sender.text;
+    }else{
+        self.password = sender.text;
+    }
+    
 }
 
 // 点击登录按钮

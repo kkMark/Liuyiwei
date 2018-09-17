@@ -1,9 +1,25 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - DKViewPage (1.0.7)
   - IQKeyboardManager (6.1.1)
   - Masonry (1.1.0)
   - "MBProgressHUD+DK (1.1.1)"
   - MJRefresh (3.1.15.3)
+  - NinaPagerView (1.6.3)
   - ReactiveObjC (3.1.0)
   - SDAutoLayout (2.2.1)
   - SDWebImage (4.4.2):
@@ -11,36 +27,42 @@ PODS:
   - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
+  - AFNetworking
   - DKViewPage
   - IQKeyboardManager
   - Masonry
   - "MBProgressHUD+DK"
   - MJRefresh
+  - NinaPagerView
   - ReactiveObjC
   - SDAutoLayout
   - SDWebImage
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
     - DKViewPage
     - IQKeyboardManager
     - Masonry
     - "MBProgressHUD+DK"
     - MJRefresh
+    - NinaPagerView
     - ReactiveObjC
     - SDAutoLayout
     - SDWebImage
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   DKViewPage: 18c64bcdcb4ed7c93ec1057bb089607533d37276
   IQKeyboardManager: 79c57795f5c2408d259d37b9da2ed07efcbb5225
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   "MBProgressHUD+DK": 9394614f7106e640784d044bc19512c1167e9e97
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  NinaPagerView: 4a245c33df8c5212fbde3c32ce39a3765eb334bc
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 21d219c8c811ef027d1c9633686daee783dd7f14
+PODFILE CHECKSUM: 981691df0c1bd940d0c8d5d156bab4371cbad975
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

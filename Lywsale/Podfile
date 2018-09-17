@@ -8,7 +8,8 @@ target 'Lywsale' do
   # Pods for Lywsale
 
   inhibit_all_warnings!
-
+  
+  pod 'AFNetworking'
   pod 'ReactiveObjC', :inhibit_warnings => true
   pod 'Masonry'
   pod 'SDAutoLayout'
@@ -17,5 +18,6 @@ target 'Lywsale' do
   pod 'MBProgressHUD+DK'
   pod 'SDWebImage'
   pod 'DKViewPage'
-
+  pod 'NinaPagerView'
+  
 end

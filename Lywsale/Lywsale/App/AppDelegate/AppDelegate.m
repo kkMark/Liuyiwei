@@ -28,7 +28,10 @@
 #endif
     
     // 判断用户是否登录
-    NSString *userId = GetUserDefault(UserID);
+//    NSString *userId = GetUserDefault(UserID);
+    
+    NSString *userId = @"";
+    
     if (userId.length == 0) {
 
         // 判断是否未登录

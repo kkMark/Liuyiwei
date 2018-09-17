@@ -14,7 +14,8 @@ typedef void(^RequestFailure)(NSError *error);
 typedef enum : NSUInteger {
 
     GetMode = 0,
-    PostMode
+    PostMode,
+    PatchModel
     
 } RequestMode;
 
@@ -39,5 +40,8 @@ typedef enum : NSUInteger {
      @param failure 失败回调
  */
 - (void)requestMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure;
+
+//AF请求
+- (void)requestAFMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure;
 
 @end

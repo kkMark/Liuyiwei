@@ -14,7 +14,7 @@
 #import <MJRefresh/MJRefresh.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <UIImageView+WebCache.h>
-
+#import <SDAutoLayout.h>
 // 类别
 #import "UIView+Category.h"
 #import "UILabel+Category.h"

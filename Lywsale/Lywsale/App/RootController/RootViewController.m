@@ -26,7 +26,7 @@
     NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
 
     // 控制器名字
-    NSArray *viewControllerNames = @[@"HomePageViewController", @"PersonalViewController", @"PersonalViewController", @"PersonalViewController"];
+    NSArray *viewControllerNames = @[@"HomePageViewController", @"WorkViewController", @"KnowledgeViewController", @"PersonalViewController"];
     
     // 标题
     NSArray *titles = @[@"主页", @"工作", @"知识", @"我的"];
@@ -42,6 +42,7 @@
         nav.tabBarItem.title = titles[i];
         nav.title = titles[i];
         [viewControllers addObject:nav];
+        
     }
     
     self.viewControllers = viewControllers;
