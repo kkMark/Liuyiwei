@@ -19,5 +19,6 @@ target 'Lywsale' do
   pod 'SDWebImage'
   pod 'DKViewPage'
   pod 'NinaPagerView'
+  pod 'WZLBadge'
   
 end

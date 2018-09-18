@@ -25,6 +25,7 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - WZLBadge (1.2.6)
 
 DEPENDENCIES:
   - AFNetworking
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - ReactiveObjC
   - SDAutoLayout
   - SDWebImage
+  - WZLBadge
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -50,6 +52,7 @@ SPEC REPOS:
     - ReactiveObjC
     - SDAutoLayout
     - SDWebImage
+    - WZLBadge
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -62,7 +65,8 @@ SPEC CHECKSUMS:
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDAutoLayout: 8bf6b3bbc8b01f775d4defbb4fda2ace805461be
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  WZLBadge: 9ec779dcfd94c825518b395e8315fccaabff1bfa
 
-PODFILE CHECKSUM: 981691df0c1bd940d0c8d5d156bab4371cbad975
+PODFILE CHECKSUM: bdcfd8634523fea92c5752e365c950a44a69a32c
 
 COCOAPODS: 1.5.3

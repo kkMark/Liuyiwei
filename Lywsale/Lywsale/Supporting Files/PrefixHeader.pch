@@ -15,6 +15,7 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <UIImageView+WebCache.h>
 #import <SDAutoLayout.h>
+#import "WZLBadgeImport.h"
 // 类别
 #import "UIView+Category.h"
 #import "UILabel+Category.h"

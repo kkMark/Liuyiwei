@@ -7,10 +7,15 @@
 //
 
 #import "WorkViewController.h"
+#import "HomeMessgeView.h"
 
 @interface WorkViewController ()
 
 @property (nonatomic ,strong) UIView *choiceView;
+
+@property (nonatomic ,copy) NSArray *titileArray;
+
+@property (nonatomic ,strong) HomeMessgeView *homeMessgeView;
 
 @end
 
@@ -20,6 +25,8 @@
     [super viewDidLoad];
     
     self.title = @"工作";
+    
+    self.view.backgroundColor = kPageBgColor;
     
     [self initUI];
     
@@ -39,18 +46,27 @@
     
     [self addChoice];
     
+    self.homeMessgeView = [HomeMessgeView new];
+    [self.view addSubview:self.homeMessgeView];
+    
+    self.homeMessgeView.sd_layout
+    .leftSpaceToView(self.view, 0)
+    .rightSpaceToView(self.view, 0)
+    .topSpaceToView(self.choiceView, 10)
+    .bottomSpaceToView(self.view, 0);
+    
 }
 
 -(void)addChoice{
     
-    NSArray *titileArray = @[@"代开单",@"扫码提货",@"订单管理",@"会员管理",@"我的奖励",@"公告信息",@"二维码",@"店员管理"];
+    self.titileArray = @[@"代开单",@"扫码提货",@"订单管理",@"会员管理",@"我的奖励",@"公告信息",@"二维码",@"店员管理"];
     
     NSArray *imageArray = @[@"Work_Order",@"Work_Goods",@"Work_OrderManagement",@"Work_MemberManagement",@"Work_MyAwards",@"Work_Announcement",@"Work_QrCode",@"Work_ClerkManagement"];
     
     NSInteger integer = 0;
     NSInteger countInteger = 0;
     
-    for (int i = 0; i < titileArray.count; i++) {
+    for (int i = 0; i < self.titileArray.count; i++) {
         
         if (countInteger == 3) {
             integer++;
@@ -83,7 +99,7 @@
         .heightEqualToWidth();
         
         UILabel *titleLabel = [UILabel new];
-        titleLabel.text = titileArray[i];
+        titleLabel.text = self.titileArray[i];
         titleLabel.font = [UIFont systemFontOfSize:14];
         [view addSubview:titleLabel];
         
@@ -98,6 +114,8 @@
 }
 
 -(void)selecTap:(UITapGestureRecognizer *)sender{
+    
+    NSLog(@"点击了 - %@",self.titileArray[sender.view.tag - 1000]);
     
 }
 

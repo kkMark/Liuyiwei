@@ -114,6 +114,9 @@
 		0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */; };
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
+		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
+		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
+		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
 /* End PBXBuildFile section */
 
@@ -334,6 +337,12 @@
 		114A0532214A43EC0021E8ED /* WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
 		114A0534214A43FE0021E8ED /* KnowledgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeViewController.h; sourceTree = "<group>"; };
 		114A0535214A43FE0021E8ED /* KnowledgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeViewController.m; sourceTree = "<group>"; };
+		11AA452D2150FF5600ED7293 /* HomeMessgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeTableViewCell.h; sourceTree = "<group>"; };
+		11AA452E2150FF5600ED7293 /* HomeMessgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeView.h; sourceTree = "<group>"; };
+		11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeTableViewCell.m; sourceTree = "<group>"; };
+		11AA45302150FF5600ED7293 /* HomeMessgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeView.m; sourceTree = "<group>"; };
+		11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeModel.m; sourceTree = "<group>"; };
+		11AA45352150FF8F00ED7293 /* HomeMessgeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeModel.h; sourceTree = "<group>"; };
 		3FC6A3317F8728887B35A61A /* Pods-Lywsale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.release.xcconfig"; sourceTree = "<group>"; };
 		7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lywsale.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C58AA252108754216FE46E /* Pods-Lywsale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1760,6 +1769,8 @@
 		114A052F214A437F0021E8ED /* Work（工作相关） */ = {
 			isa = PBXGroup;
 			children = (
+				11AA45332150FF7F00ED7293 /* Model */,
+				11AA452C2150FF5600ED7293 /* View */,
 				114A0531214A43EC0021E8ED /* WorkViewController.h */,
 				114A0532214A43EC0021E8ED /* WorkViewController.m */,
 			);
@@ -1773,6 +1784,26 @@
 				114A0535214A43FE0021E8ED /* KnowledgeViewController.m */,
 			);
 			path = "Knowledge （知识相关）";
+			sourceTree = "<group>";
+		};
+		11AA452C2150FF5600ED7293 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11AA452D2150FF5600ED7293 /* HomeMessgeTableViewCell.h */,
+				11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */,
+				11AA452E2150FF5600ED7293 /* HomeMessgeView.h */,
+				11AA45302150FF5600ED7293 /* HomeMessgeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11AA45332150FF7F00ED7293 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11AA45352150FF8F00ED7293 /* HomeMessgeModel.h */,
+				11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4F2AA32469F7011E0C8F49D1 /* Pods */ = {
@@ -1909,6 +1940,7 @@
 			files = (
 				0CE1EC27212889E800A373D7 /* AddTypeView.m in Sources */,
 				0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */,
+				11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */,
 				0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */,
 				0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */,
 				0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */,
@@ -1927,6 +1959,7 @@
 				0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */,
 				0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
+				11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
 				0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */,
 				0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */,
@@ -1959,6 +1992,7 @@
 				0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */,
 				0C7AEA92213E584D00138A31 /* MyRankingCell.m in Sources */,
 				0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */,
+				11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */,
 				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
