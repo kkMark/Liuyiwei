@@ -48,14 +48,14 @@
         }
         else {
             
-            [[LoginViewModel new] loginWithAccount:account password:password success:^(NSDictionary *dict) {
-                
-                RootViewController *tabbarVC = [RootViewController new];
-                [self presentViewController:tabbarVC animated:YES completion:nil];
-                
-            } failure:^(NSError *error) {
-                
-            }];
+            RootViewController *tabbarVC = [RootViewController new];
+            [self presentViewController:tabbarVC animated:YES completion:nil];
+            
+//            [[LoginViewModel new] loginWithAccount:account password:password success:^(NSDictionary *dict) {
+//  
+//            } failure:^(NSError *error) {
+//                
+//            }];
             
         }
     }];
