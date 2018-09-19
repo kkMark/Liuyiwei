@@ -129,7 +129,7 @@
         contentLabel.text = titles[i];
         contentLabel.font = [UIFont systemFontOfSize:14];
         contentLabel.textColor = kMainTextColor;
-        contentLabel.textAlignment = NSTextAlignmentRight;
+        contentLabel.textAlignment = contentLabel.height > titleLabel.height ? NSTextAlignmentLeft : NSTextAlignmentRight;
         contentLabel.numberOfLines = 0;
         
         if ([contentLabel.text isEqualToString:@"活动简介"]) {
@@ -140,10 +140,6 @@
         contentLabel.width = bgView.width - contentLabel.x - 10;
         contentLabel.height = [contentLabel getTextHeight];
         [bgView addSubview:contentLabel];
-        
-        if (<#condition#>) {
-            <#statements#>
-        }
         
         y = contentLabel.maxY + 15;
     }
