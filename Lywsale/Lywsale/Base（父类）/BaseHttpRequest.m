@@ -83,9 +83,7 @@
         request.HTTPBody = jsonData;
         request.timeoutInterval = 15;
         [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-//        [request setValue:@"36406" forHTTPHeaderField:@"AppKey"];
-//        [request setValue:@"bb6d0cce003791740c3c81ac7f236e90" forHTTPHeaderField:@"Sign"];
-        
+
         NSURLSession *session = [NSURLSession sharedSession];
         [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             
@@ -104,30 +102,27 @@
     }
 }
 
--(void)requestAFMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure{
+- (void)requestAFMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure {
     
     BaseViewController *viewController = (BaseViewController *)[self getCurrentViewController];
     if (self.isLoading) {
         [viewController showHudAnimated:YES];
     }
     
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html",@"application/xml", nil];
+    [manager.requestSerializer setValue:@"text/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    manager.requestSerializer.timeoutInterval = 15;
+    [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+
+    DebugLog(@"================ requestURL =====================\n %@\n%@", self.urlString, self.parameters);
+    
     if (mode == PostMode) {
         
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html",@"application/xml", nil];
-        // 设置超时时间
-        [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-        manager.requestSerializer.timeoutInterval = 15;
-        [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-        [manager.requestSerializer setValue:@"text/json" forHTTPHeaderField:@"Accept"];
-        
-        DebugLog(@"================ requestURL =====================\n %@\n%@", self.urlString,self.parameters);
-        
-        [manager POST:self.urlString parameters:self.parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        [manager POST:self.urlString parameters:self.parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            
-            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject,task.response.URL);
+            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject, task.response.URL);
             
             if (success){
                 success(responseObject);
@@ -136,7 +131,7 @@
             [viewController showHudAnimated:NO];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
+           
             NSLog(@"%@", error);
             
             if (failure) {
@@ -144,25 +139,14 @@
             }
             
             [viewController showHudAnimated:NO];
-            
         }];
-        
     }
     
     if (mode == PatchModel) {
-
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html",@"application/xml", nil];
-        // 设置超时时间
-        [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
-        manager.requestSerializer.timeoutInterval = 15;
-        [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-        [manager.requestSerializer setValue:@"text/json" forHTTPHeaderField:@"Accept"];
         
-        DebugLog(@"================ requestURL =====================\n %@\n%@", self.urlString,self.parameters);
         [manager PATCH:self.urlString parameters:self.parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject,task.response.URL);
+            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject, task.response.URL);
             
             if (success){
                 success(responseObject);
@@ -181,9 +165,7 @@
             [viewController showHudAnimated:NO];
             
         }];
-        
     }
-    
 }
 
 @end

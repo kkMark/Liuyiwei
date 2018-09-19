@@ -41,7 +41,13 @@ typedef enum : NSUInteger {
  */
 - (void)requestMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure;
 
-//AF请求
+/**
+     AF请求
+
+     @param mode 请求类型
+     @param success 成功回调
+     @param failure 失败回调
+ */
 - (void)requestAFMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure;
 
 @end

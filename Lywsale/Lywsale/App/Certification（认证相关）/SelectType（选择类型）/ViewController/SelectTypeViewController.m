@@ -17,7 +17,6 @@
 @property (nonatomic, strong) SearchView *searchView;
 @property (nonatomic, strong) NSDictionary *dataSource;
 
-
 @end
 
 @implementation SelectTypeViewController

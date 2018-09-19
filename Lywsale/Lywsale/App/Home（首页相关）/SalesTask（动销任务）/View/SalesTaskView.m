@@ -8,6 +8,7 @@
 
 #import "SalesTaskView.h"
 #import "SalesTaskCell.h"
+
 @interface SalesTaskView ()
 
 @property (nonatomic, assign) float cellHeight;
@@ -50,6 +51,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (self.goViewControllerBlock) {
+        
+        UIViewController *vc = [NSClassFromString(@"ActivityDetailsViewController") new];
+        self.goViewControllerBlock(vc);
+    }
 }
 
 @end
