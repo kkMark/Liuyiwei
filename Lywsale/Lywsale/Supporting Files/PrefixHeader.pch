@@ -23,6 +23,7 @@
 #import "Toast+UIView.h"
 #import "UINavigationController+Category.h"
 #import "UIImage+Category.h"
+#import "NSString+ToJSON.h"
 
 // Macro
 #import "AppMacro.h"
