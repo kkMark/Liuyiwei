@@ -8,6 +8,7 @@
 
 #import "WorkViewController.h"
 #import "HomeMessgeView.h"
+#import "AnnouncementViewController.h"
 
 @interface WorkViewController ()
 
@@ -83,7 +84,7 @@
         
         view.sd_layout
         .leftSpaceToView(self.choiceView, 20 + countInteger * (ScreenWidth * 0.23))
-        .topSpaceToView(self.choiceView, 5 + integer * (ScreenWidth * 0.23))
+        .topSpaceToView(self.choiceView, 5 + integer * (ScreenWidth * 0.22))
         .widthIs(ScreenWidth * 0.21)
         .heightIs(ScreenWidth * 0.21);
         
@@ -115,7 +116,17 @@
 
 -(void)selecTap:(UITapGestureRecognizer *)sender{
     
-    NSLog(@"点击了 - %@",self.titileArray[sender.view.tag - 1000]);
+    NSString *string = self.titileArray[sender.view.tag - 1000];
+    NSLog(@"点击了 - %@",string);
+    
+    if ([string isEqualToString:@"公告信息"]) {
+        
+        AnnouncementViewController *announcementView = [[AnnouncementViewController alloc] init];
+        [self.navigationController pushViewController:announcementView animated:YES];
+        
+    }
+    
+    
     
 }
 

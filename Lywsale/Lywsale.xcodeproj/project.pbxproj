@@ -114,6 +114,7 @@
 		0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */; };
 		0CF0EF912152226100DF2DFA /* ActivityDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0EF902152226100DF2DFA /* ActivityDetailsViewController.m */; };
 		0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */; };
+		1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141FD112152524400FAF01F /* AnnouncementViewController.m */; };
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
 		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
@@ -339,6 +340,8 @@
 		0CF0EF902152226100DF2DFA /* ActivityDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailsViewController.m; sourceTree = "<group>"; };
 		0CF0EF92215222CD00DF2DFA /* ActivityDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDetailsView.h; sourceTree = "<group>"; };
 		0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailsView.m; sourceTree = "<group>"; };
+		1141FD102152524400FAF01F /* AnnouncementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncementViewController.h; sourceTree = "<group>"; };
+		1141FD112152524400FAF01F /* AnnouncementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementViewController.m; sourceTree = "<group>"; };
 		114A0531214A43EC0021E8ED /* WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
 		114A0532214A43EC0021E8ED /* WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
 		114A0534214A43FE0021E8ED /* KnowledgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeViewController.h; sourceTree = "<group>"; };
@@ -1824,9 +1827,19 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		1141FD0F215251EA00FAF01F /* Announcement（公告信息） */ = {
+			isa = PBXGroup;
+			children = (
+				1141FD102152524400FAF01F /* AnnouncementViewController.h */,
+				1141FD112152524400FAF01F /* AnnouncementViewController.m */,
+			);
+			path = "Announcement（公告信息）";
+			sourceTree = "<group>";
+		};
 		114A052F214A437F0021E8ED /* Work（工作相关） */ = {
 			isa = PBXGroup;
 			children = (
+				1141FD0F215251EA00FAF01F /* Announcement（公告信息） */,
 				11AA45332150FF7F00ED7293 /* Model */,
 				11AA452C2150FF5600ED7293 /* View */,
 				114A0531214A43EC0021E8ED /* WorkViewController.h */,
@@ -2029,6 +2042,7 @@
 				0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */,
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
+				1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */,
 				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
