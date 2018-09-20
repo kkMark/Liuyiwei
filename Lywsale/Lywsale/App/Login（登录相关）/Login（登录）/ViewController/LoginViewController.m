@@ -52,7 +52,17 @@
             [self presentViewController:tabbarVC animated:YES completion:nil];
             
             [[LoginViewModel new] loginWithAccount:account password:password success:^(NSDictionary *dict) {
-  
+                
+                if (dict != nil && ![dict isEqual:[NSNull null]]) {
+                    
+                    SetUserDefault(UserName, dict [@"memberName"]);
+                    SetUserDefault(UserID, dict[@"memberId"]);
+                    SetUserDefault(Token_Type, dict[@"tokenMsg"][@"token_type"]);
+                    SetUserDefault(Access_Token, dict[@"tokenMsg"][@"access_token"]);
+                    SetUserDefault(Refresh_Token, dict[@"tokenMsg"][@"refresh_token"]);
+                    
+                }
+                
             } failure:^(NSError *error) {
                 
             }];
