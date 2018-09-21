@@ -29,13 +29,19 @@
 
 - (void)setupSubviews {
 
+    // 头部
     UIView *headerView = [self headerViewWithFrame:CGRectMake(10, 0, self.bgScrollView.width - 20, 45) title:@"雷易得满减活动"];
     [self.bgScrollView addSubview:headerView];
     
+    // 说明
     UIView *remarkView = [self remarkViewWithFrame:CGRectMake(10, headerView.maxY, self.bgScrollView.width - 20, 0)];
     [self.bgScrollView addSubview:remarkView];
     
-    self.bgScrollView.contentSize = CGSizeMake(0, remarkView.maxY);
+    // 奖励
+    UIView *rewardView = [self rewardViewWithFrame:CGRectMake(10, remarkView.maxY + 15, self.bgScrollView.width - 20, 0)];
+    [self.bgScrollView addSubview:rewardView];
+    
+    self.bgScrollView.contentSize = CGSizeMake(0, rewardView.maxY);
 }
 
 #pragma mark - lazy
@@ -97,6 +103,32 @@
     }
     
     return titleView;
+}
+
+- (UIView *)rewardViewWithFrame:(CGRect)rect {
+    
+    UIView *bgView = [[UIView alloc] initWithFrame:rect];
+    bgView.backgroundColor = [UIColor whiteColor];
+    bgView.layer.cornerRadius = 3;
+    bgView.layer.shadowColor = [UIColor grayColor].CGColor;
+    bgView.layer.shadowOffset = CGSizeMake(3, 3);
+    bgView.layer.shadowOpacity = 0.3;
+    
+    // 标题
+    UIView *titleView = [self titleViewWithFrame:CGRectMake(0, 15, bgView.width, 20) title:@"奖励规则"];
+    [bgView addSubview:titleView];
+    
+    // 内容
+    UILabel *contecnt = [[UILabel alloc] initWithFrame:CGRectMake(10, titleView.maxY + 15, bgView.width - 20, 0)];
+    contecnt.text = @"奖励制度亦称“奖金制度”。规定奖励权限的划分、奖励形式、奖励标准及奖金来源的准则，是工资制度的一个组成部分。我国目前实行的奖金范围是： (1) 生产 (业务) 奖。包括超产奖、质量奖、安全 (无事故) 奖、考核各项经济指标的综合奖、提前竣工奖、外轮速遣奖、年终奖 (劳动分红) 等；(2) 节约奖。包括各种动力、燃料、原材料等节约奖。";
+    contecnt.font = [UIFont systemFontOfSize:14];
+    contecnt.textColor = kMainTextColor;
+    contecnt.numberOfLines = 0;
+    contecnt.height = [contecnt getTextHeight];
+    [bgView addSubview:contecnt];
+    
+    bgView.height = contecnt.maxY + 15;
+    return bgView;
 }
 
 /// 介绍

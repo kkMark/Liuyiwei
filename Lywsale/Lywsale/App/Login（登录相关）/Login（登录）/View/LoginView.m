@@ -124,14 +124,14 @@
     }
 }
 
--(void)textFieldTextChange:(UITextField *)sender{
+- (void)textFieldTextChange:(UITextField *)sender {
     
     if (sender.tag - 100 == 0) {
         self.account = sender.text;
-    }else{
+    }
+    else {
         self.password = sender.text;
     }
-    
 }
 
 // 点击登录按钮

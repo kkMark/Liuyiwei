@@ -50,24 +50,45 @@
             
             RootViewController *tabbarVC = [RootViewController new];
             [self presentViewController:tabbarVC animated:YES completion:nil];
-            
-            [[LoginViewModel new] loginWithAccount:account password:password success:^(NSDictionary *dict) {
-                
-                if (dict != nil && ![dict isEqual:[NSNull null]]) {
-                    
-                    SetUserDefault(UserName, dict [@"memberName"]);
-                    SetUserDefault(UserID, dict[@"memberId"]);
-                    SetUserDefault(Token_Type, dict[@"tokenMsg"][@"token_type"]);
-                    SetUserDefault(Access_Token, dict[@"tokenMsg"][@"access_token"]);
-                    SetUserDefault(Refresh_Token, dict[@"tokenMsg"][@"refresh_token"]);
-                    
-                }
-                
-            } failure:^(NSError *error) {
-                
-            }];
-            
         }
+        
+        return;
+        
+        if (account.length == 0) {
+            return [self.view makeToast:@"请输入账号"];
+        }
+        
+        if (password.length == 0) {
+            return [self.view makeToast:@"请输入密码"];
+        }
+        
+        [[LoginViewModel new] loginWithAccount:account password:password success:^(NSDictionary *dict) {
+            
+            if (dict != nil && ![dict isEqual:[NSNull null]]) {
+                
+                SetUserDefault(UserName, dict [@"memberName"]);
+                SetUserDefault(UserID, dict[@"memberId"]);
+                SetUserDefault(Token_Type, dict[@"tokenMsg"][@"token_type"]);
+                SetUserDefault(Access_Token, dict[@"tokenMsg"][@"access_token"]);
+                SetUserDefault(Refresh_Token, dict[@"tokenMsg"][@"refresh_token"]);
+            }
+            
+            if ([self.presentingViewController isKindOfClass:[RootViewController class]]) {
+                
+                RootViewController *tabbarVC = (RootViewController *)self.presentingViewController;
+                tabbarVC.selectedIndex = 0;
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            else {
+                
+                RootViewController *tabbarVC = [RootViewController new];
+                [self presentViewController:tabbarVC animated:YES completion:nil];
+            }
+            
+        } failure:^(NSError *error) {
+            
+            
+        }];
     }];
 }
 

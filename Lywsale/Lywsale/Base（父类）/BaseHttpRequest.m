@@ -111,7 +111,6 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html",@"application/xml", nil];
-//    [manager.requestSerializer setValue:@"text/json" forHTTPHeaderField:@"Accept"];
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = 15;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
