@@ -1365,8 +1365,8 @@
 				0C84049121354B7C00305197 /* SalesTask（动销任务） */,
 				0CF0EF892151F86100DF2DFA /* SalesDetails（动销详情相关） */,
 				0C84048C21354B7C00305197 /* DailyTask（日常任务） */,
-				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
 				0C8049E921476E320032B57A /* Reception（接待相关） */,
+				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
 			);
 			path = "Home（首页相关）";
 			sourceTree = "<group>";
