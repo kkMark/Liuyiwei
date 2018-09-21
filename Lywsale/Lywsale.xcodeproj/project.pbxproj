@@ -43,6 +43,7 @@
 		0C3FD1BD2154DF5200534B8D /* UploadHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD1BC2154DF5200534B8D /* UploadHistoryViewController.m */; };
 		0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD1BF2154DF6900534B8D /* UploadHistoryView.m */; };
 		0C3FD1C32154DF7B00534B8D /* UploadHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD1C22154DF7B00534B8D /* UploadHistoryCell.m */; };
+		0C3FD1C62154E86300534B8D /* UploadImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD1C52154E86300534B8D /* UploadImgCell.m */; };
 		0C523971213E19B20083260A /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C523970213E19B20083260A /* UIImage+Category.m */; };
 		0C523978213E37E30083260A /* TaskTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C523977213E37E30083260A /* TaskTypeCell.m */; };
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
@@ -201,6 +202,8 @@
 		0C3FD1BF2154DF6900534B8D /* UploadHistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadHistoryView.m; sourceTree = "<group>"; };
 		0C3FD1C12154DF7B00534B8D /* UploadHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadHistoryCell.h; sourceTree = "<group>"; };
 		0C3FD1C22154DF7B00534B8D /* UploadHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadHistoryCell.m; sourceTree = "<group>"; };
+		0C3FD1C42154E86300534B8D /* UploadImgCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadImgCell.h; sourceTree = "<group>"; };
+		0C3FD1C52154E86300534B8D /* UploadImgCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadImgCell.m; sourceTree = "<group>"; };
 		0C52396F213E19B20083260A /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		0C523970213E19B20083260A /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		0C523976213E37E30083260A /* TaskTypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTypeCell.h; sourceTree = "<group>"; };
@@ -944,6 +947,8 @@
 		0C3FD1B82154DEA300534B8D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C3FD1C42154E86300534B8D /* UploadImgCell.h */,
+				0C3FD1C52154E86300534B8D /* UploadImgCell.m */,
 				0C3FD1C12154DF7B00534B8D /* UploadHistoryCell.h */,
 				0C3FD1C22154DF7B00534B8D /* UploadHistoryCell.m */,
 				0C3FD1BE2154DF6900534B8D /* UploadHistoryView.h */,
@@ -2190,6 +2195,7 @@
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
+				0C3FD1C62154E86300534B8D /* UploadImgCell.m in Sources */,
 				0C84047D213528CC00305197 /* DataPanelView.m in Sources */,
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
 				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,
@@ -2371,7 +2377,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4P7EQZ5XW5;
+				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2392,7 +2398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4P7EQZ5XW5;
+				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

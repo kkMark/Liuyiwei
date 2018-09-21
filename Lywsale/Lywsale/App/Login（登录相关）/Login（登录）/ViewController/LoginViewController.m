@@ -51,9 +51,7 @@
             RootViewController *tabbarVC = [RootViewController new];
             [self presentViewController:tabbarVC animated:YES completion:nil];
         }
-        
-        return;
-        
+                
         if (account.length == 0) {
             return [self.view makeToast:@"请输入账号"];
         }

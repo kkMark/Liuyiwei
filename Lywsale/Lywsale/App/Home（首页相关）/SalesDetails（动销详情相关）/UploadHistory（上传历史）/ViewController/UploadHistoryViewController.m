@@ -24,7 +24,8 @@
     [super viewDidLoad];
     [self setTitle:@"上传历史"];
     [self addNavRight];
-    
+ 
+    self.historyView.dataSources = @[@"", @"", @""];
 }
 
 - (void)addNavRight {
