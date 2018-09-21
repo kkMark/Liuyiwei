@@ -111,11 +111,10 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html",@"application/xml", nil];
-    [manager.requestSerializer setValue:@"text/json" forHTTPHeaderField:@"Accept"];
+//    [manager.requestSerializer setValue:@"text/json" forHTTPHeaderField:@"Accept"];
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = 15;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
-
     DebugLog(@"================ requestURL =====================\n %@\n%@", self.urlString, self.parameters);
     
     if (mode == PostMode) {
@@ -143,6 +142,8 @@
     }
     
     if (mode == PatchModel) {
+        
+        manager.requestSerializer = [[AFJSONRequestSerializer alloc]init];
         
         [manager PATCH:self.urlString parameters:self.parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             

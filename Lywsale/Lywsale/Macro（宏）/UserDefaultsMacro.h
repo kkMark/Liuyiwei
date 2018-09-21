@@ -13,6 +13,13 @@
 #define UserName    @"userName"
 // 用户ID
 #define UserID      @"userId"
+// token类型
+#define Token_Type      @"token_type"
+// 访问token
+#define Access_Token    @"access_token"
+// 刷新token
+#define Refresh_Token   @"refresh_token"
+
 
 #endif /* UserDefaultsMacro_h */
 

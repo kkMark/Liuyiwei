@@ -108,8 +108,8 @@
         headerView.backgroundColor = [UIColor whiteColor];
         
         UILabel *label = [UILabel new];
-        label.text = @"消息列表";
-        label.font = [UIFont systemFontOfSize:16];
+        label.text = @"消息";
+        label.font = [UIFont systemFontOfSize:17];
         [headerView addSubview:label];
         
         label.sd_layout
@@ -118,15 +118,15 @@
         .heightIs(16);
         [label setSingleLineAutoResizeWithMaxWidth:200];
         
-        UIView *view = [UIView new];
-        view.backgroundColor = kMainColor;
-        [headerView addSubview:view];
-        
-        view.sd_layout
-        .leftSpaceToView(headerView, 0)
-        .topSpaceToView(headerView, 5)
-        .bottomSpaceToView(headerView, 5)
-        .widthIs(5);
+//        UIView *view = [UIView new];
+//        view.backgroundColor = kMainColor;
+//        [headerView addSubview:view];
+//        
+//        view.sd_layout
+//        .leftSpaceToView(headerView, 0)
+//        .topSpaceToView(headerView, 5)
+//        .bottomSpaceToView(headerView, 5)
+//        .widthIs(5);
         
     }
     
