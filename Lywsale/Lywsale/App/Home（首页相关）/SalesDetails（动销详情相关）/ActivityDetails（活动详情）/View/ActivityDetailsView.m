@@ -29,10 +29,10 @@
 
 - (void)setupSubviews {
 
-    UIView *headerView = [self headerViewWithFrame:CGRectMake(10, 0, bgScrollView.width - 20, 45) title:@"雷易得满减活动"];
+    UIView *headerView = [self headerViewWithFrame:CGRectMake(10, 0, self.bgScrollView.width - 20, 45) title:@"雷易得满减活动"];
     [self.bgScrollView addSubview:headerView];
     
-    UIView *remarkView = [self remarkViewWithFrame:CGRectMake(10, headerView.maxY, bgScrollView.width - 20, 0)];
+    UIView *remarkView = [self remarkViewWithFrame:CGRectMake(10, headerView.maxY, self.bgScrollView.width - 20, 0)];
     [self.bgScrollView addSubview:remarkView];
     
     self.bgScrollView.contentSize = CGSizeMake(0, remarkView.maxY);
@@ -58,9 +58,9 @@
     
     UIView *headerView = [[UIView alloc] initWithFrame:rect];
     
-    UIImageView *headerImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"task_salesDetails"]];
-    headerImgView.width = headerImgView.height = 25;
+    UIImageView *headerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25, 25)];
     headerImgView.centerY = headerView.height / 2;
+    headerImgView.image = [UIImage imageNamed:@"task_salesDetails"];
     [headerView addSubview:headerImgView];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(headerImgView.maxX + 10, 0, 0, headerView.height)];
@@ -90,7 +90,7 @@
     for (int i = 0; i < 2; i++) {
         
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 25, 1)];
-        lineView.x = i == 0 ? titleLabel.x - 10 : titleLabel.maxX + 10;
+        lineView.x = i == 0 ? titleLabel.x - 35 : titleLabel.maxX + 10;
         lineView.centerY = titleLabel.centerY;
         lineView.backgroundColor = kMainColor;
         [titleView addSubview:lineView];
@@ -104,7 +104,7 @@
     
     UIView *bgView = [[UIView alloc] initWithFrame:rect];
     bgView.backgroundColor = [UIColor whiteColor];
-    bgView.layer.cornerRadius = 2;
+    bgView.layer.cornerRadius = 3;
     bgView.layer.shadowColor = [UIColor grayColor].CGColor;
     bgView.layer.shadowOffset = CGSizeMake(3, 3);
     bgView.layer.shadowOpacity = 0.3;
@@ -129,7 +129,6 @@
         contentLabel.text = titles[i];
         contentLabel.font = [UIFont systemFontOfSize:14];
         contentLabel.textColor = kMainTextColor;
-        contentLabel.textAlignment = contentLabel.height > titleLabel.height ? NSTextAlignmentLeft : NSTextAlignmentRight;
         contentLabel.numberOfLines = 0;
         
         if ([contentLabel.text isEqualToString:@"活动简介"]) {
@@ -139,6 +138,7 @@
         
         contentLabel.width = bgView.width - contentLabel.x - 10;
         contentLabel.height = [contentLabel getTextHeight];
+        contentLabel.textAlignment = contentLabel.height > titleLabel.height ? NSTextAlignmentLeft : NSTextAlignmentRight;
         [bgView addSubview:contentLabel];
         
         y = contentLabel.maxY + 15;
