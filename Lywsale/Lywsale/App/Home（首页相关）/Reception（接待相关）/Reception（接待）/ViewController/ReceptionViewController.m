@@ -39,6 +39,13 @@
         headerView = [[ReceptionHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
         headerView.height = headerView.viewHeight;
         [self.view addSubview:headerView];
+        
+        @weakify(self);
+        [headerView setGoViewControllerBlock:^(UIViewController *vc) {
+           
+            @strongify(self);
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return headerView;

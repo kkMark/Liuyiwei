@@ -82,6 +82,18 @@
         titleLabel.textColor = color;
         [btn addSubview:titleLabel];
         
+        [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+           
+            NSString *vcName = @"ReceptionRemarkViewController";
+            if ([titleLabel.text isEqualToString:@"接待备注"]) {   
+                vcName = @"ReceptionRemarkViewController";
+            }
+            
+            if (vcName.length != 0 && self.goViewControllerBlock) {
+                self.goViewControllerBlock([NSClassFromString(vcName) new]);
+            }
+        }];
+        
         self.viewHeight = btn.maxY + 15;
     }
 }

@@ -45,11 +45,14 @@
         if ([cellIdentifier isEqualToString:@"HeaderCell"]) {
             cell.accessoryView = self.headerImgView;
         }
-    }
-    
-    NSArray *titles = @[@"绑定手机", @"修改密码"];
-    if ([titles containsObject:title]) {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        NSArray *titles = @[@"绑定手机", @"修改密码"];
+        if ([titles containsObject:title]) {
+            
+            UIImageView *moreImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 17, 17)];
+            moreImgView.image = [UIImage imageNamed:@"more"];
+            cell.accessoryView = moreImgView;
+        }
     }
     
     cell.textLabel.textColor = kMainTextColor;

@@ -11,5 +11,6 @@
 @interface ReceptionHeaderView : BaseView
 
 @property (nonatomic, assign) float viewHeight;
+@property (nonatomic, copy) void (^goViewControllerBlock)(UIViewController *vc);
 
 @end

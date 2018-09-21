@@ -93,10 +93,14 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
+        
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
+        
+        UIImageView *moreImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 17, 17)];
+        moreImgView.image = [UIImage imageNamed:@"more"];
+        cell.accessoryView = moreImgView;
     }
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.text = self.dataSources[indexPath.row];
     cell.textLabel.textColor = kMainTextColor;

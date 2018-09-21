@@ -15,15 +15,18 @@
     
     ApplyCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
+        
         cell = [[ApplyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    }
-
-    if ([self.dataSources[indexPath.row] isEqualToString:@"请选择所在省市区"] ||
-        [self.dataSources[indexPath.row] isEqualToString:@"请选择所在街道"])
-    {
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.textField.enabled = NO;
+        
+        if ([self.dataSources[indexPath.row] isEqualToString:@"请选择所在省市区"] ||
+            [self.dataSources[indexPath.row] isEqualToString:@"请选择所在街道"])
+        {
+            UIImageView *moreImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 17, 17)];
+            moreImgView.image = [UIImage imageNamed:@"more"];
+            cell.accessoryView = moreImgView;
+            cell.textField.enabled = NO;
+        }
     }
     
     cell.textField.placeholder = self.dataSources[indexPath.row];

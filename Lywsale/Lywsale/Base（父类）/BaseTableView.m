@@ -109,7 +109,12 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
+        
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+        
+        UIImageView *moreImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 17, 17)];
+        moreImgView.image = [UIImage imageNamed:@"more"];
+        cell.accessoryView = moreImgView;
     }
     
     cell.textLabel.font = [UIFont systemFontOfSize:14];
