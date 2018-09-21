@@ -40,6 +40,9 @@
 		0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D896D212AB51600D02FE0 /* WriteInfoView.m */; };
 		0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */; };
 		0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */; };
+		0C3FD1BD2154DF5200534B8D /* UploadHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD1BC2154DF5200534B8D /* UploadHistoryViewController.m */; };
+		0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD1BF2154DF6900534B8D /* UploadHistoryView.m */; };
+		0C3FD1C32154DF7B00534B8D /* UploadHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3FD1C22154DF7B00534B8D /* UploadHistoryCell.m */; };
 		0C523971213E19B20083260A /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C523970213E19B20083260A /* UIImage+Category.m */; };
 		0C523978213E37E30083260A /* TaskTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C523977213E37E30083260A /* TaskTypeCell.m */; };
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
@@ -192,6 +195,12 @@
 		0C3D8970212AB52300D02FE0 /* WriteInfoViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoViewModel.m; sourceTree = "<group>"; };
 		0C3D8972212AB52C00D02FE0 /* WriteInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoModel.h; sourceTree = "<group>"; };
 		0C3D8973212AB52C00D02FE0 /* WriteInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoModel.m; sourceTree = "<group>"; };
+		0C3FD1BB2154DF5200534B8D /* UploadHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadHistoryViewController.h; sourceTree = "<group>"; };
+		0C3FD1BC2154DF5200534B8D /* UploadHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadHistoryViewController.m; sourceTree = "<group>"; };
+		0C3FD1BE2154DF6900534B8D /* UploadHistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadHistoryView.h; sourceTree = "<group>"; };
+		0C3FD1BF2154DF6900534B8D /* UploadHistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadHistoryView.m; sourceTree = "<group>"; };
+		0C3FD1C12154DF7B00534B8D /* UploadHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadHistoryCell.h; sourceTree = "<group>"; };
+		0C3FD1C22154DF7B00534B8D /* UploadHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadHistoryCell.m; sourceTree = "<group>"; };
 		0C52396F213E19B20083260A /* UIImage+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		0C523970213E19B20083260A /* UIImage+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		0C523976213E37E30083260A /* TaskTypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTypeCell.h; sourceTree = "<group>"; };
@@ -910,6 +919,51 @@
 				0C25101321312B9500DDF4BB /* HomePageViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C3FD1B62154DE8A00534B8D /* UploadHistory（上传历史） */ = {
+			isa = PBXGroup;
+			children = (
+				0C3FD1BA2154DEAF00534B8D /* ViewModel */,
+				0C3FD1B92154DEA800534B8D /* Model */,
+				0C3FD1B82154DEA300534B8D /* View */,
+				0C3FD1B72154DE9C00534B8D /* ViewController */,
+			);
+			path = "UploadHistory（上传历史）";
+			sourceTree = "<group>";
+		};
+		0C3FD1B72154DE9C00534B8D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C3FD1BB2154DF5200534B8D /* UploadHistoryViewController.h */,
+				0C3FD1BC2154DF5200534B8D /* UploadHistoryViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C3FD1B82154DEA300534B8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C3FD1C12154DF7B00534B8D /* UploadHistoryCell.h */,
+				0C3FD1C22154DF7B00534B8D /* UploadHistoryCell.m */,
+				0C3FD1BE2154DF6900534B8D /* UploadHistoryView.h */,
+				0C3FD1BF2154DF6900534B8D /* UploadHistoryView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C3FD1B92154DEA800534B8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C3FD1BA2154DEAF00534B8D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0C54C6902154CBA300C8FB10 /* UploadCredentials（上传凭证） */ = {
@@ -1828,6 +1882,7 @@
 		0CF0EF892151F86100DF2DFA /* SalesDetails（动销详情相关） */ = {
 			isa = PBXGroup;
 			children = (
+				0C3FD1B62154DE8A00534B8D /* UploadHistory（上传历史） */,
 				0C54C6902154CBA300C8FB10 /* UploadCredentials（上传凭证） */,
 				0CF0EF8A2152220F00DF2DFA /* ActivityDetails（活动详情） */,
 			);
@@ -2064,6 +2119,7 @@
 				11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */,
 				0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */,
 				0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */,
+				0C3FD1C32154DF7B00534B8D /* UploadHistoryCell.m in Sources */,
 				0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */,
 				0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */,
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
@@ -2100,6 +2156,7 @@
 				0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */,
 				0C804A0C214796040032B57A /* CustomerInfoView.m in Sources */,
 				0CE1EC2A2128F3D700A373D7 /* SelectTypeViewModel.m in Sources */,
+				0C3FD1BD2154DF5200534B8D /* UploadHistoryViewController.m in Sources */,
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
 				0C804A122147A1670032B57A /* BuyCell.m in Sources */,
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
@@ -2144,6 +2201,7 @@
 				0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
+				0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */,
 				0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */,
 				0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */,
 				0CF0EF912152226100DF2DFA /* ActivityDetailsViewController.m in Sources */,

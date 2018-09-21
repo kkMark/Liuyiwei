@@ -28,8 +28,12 @@
 
 - (void)addNavRight {
     
+    @weakify(self);
     [self addNavRightTitle:@"上传历史" complete:^{
-        
+    
+        @strongify(self);
+        NSString *vcName = @"UploadHistoryViewController";
+        [self.navigationController pushViewController:[NSClassFromString(vcName) new] animated:YES];
     }];
 }
 
