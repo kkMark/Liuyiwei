@@ -6,11 +6,11 @@
 //  Copyright © 2018年 黄锡凯. All rights reserved.
 //
 
-#import "BaseTableView.h"
+#import "BaseView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UploadCredentialsView : BaseTableView
+@interface UploadCredentialsView : BaseView
 
 @end
 

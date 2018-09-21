@@ -35,13 +35,18 @@
 
 - (void)uploadBtn {
     
-    UIButton *nextBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    nextBtn.backgroundColor = kMainColor;
-    nextBtn.frame = CGRectMake(0, self.detailsView.maxY, ScreenWidth, 45);
-    nextBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-    [nextBtn setTitle:@"去上传凭证" forState:UIControlStateNormal];
-    [nextBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:nextBtn];
+    UIButton *uploadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    uploadBtn.backgroundColor = kMainColor;
+    uploadBtn.frame = CGRectMake(0, self.detailsView.maxY, ScreenWidth, 45);
+    uploadBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [uploadBtn setTitle:@"去上传凭证" forState:UIControlStateNormal];
+    [uploadBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [[uploadBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+        NSString *vcName = @"UploadCredentialsViewController";
+        [self.navigationController pushViewController:[NSClassFromString(vcName) new] animated:YES];
+    }];
+    [self.view addSubview:uploadBtn];
 }
 
 #pragma mark - lazy

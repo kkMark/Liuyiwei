@@ -7,26 +7,50 @@
 //
 
 #import "UploadCredentialsViewController.h"
+#import "UploadCredentialsView.h"
 
 @interface UploadCredentialsViewController ()
+
+@property (nonatomic, strong) UploadCredentialsView *uploadView;
 
 @end
 
 @implementation UploadCredentialsViewController
+@synthesize uploadView;
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setTitle:@"上传凭证"];
+    
+    [self uploadBtn];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - lazy
+- (UploadCredentialsView *)uploadView {
+    
+    if (!uploadView) {
+        
+        uploadView = [[UploadCredentialsView alloc] initWithFrame:self.view.frame];
+        uploadView.height = self.view.height - self.navHeight - 45;
+        [self.view addSubview:uploadView];
+    }
+    
+    return uploadView;
 }
-*/
+
+- (void)uploadBtn {
+    
+    UIButton *uploadBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    uploadBtn.backgroundColor = kMainColor;
+    uploadBtn.frame = CGRectMake(0, self.uploadView.maxY, ScreenWidth, 45);
+    uploadBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [uploadBtn setTitle:@"确  定" forState:UIControlStateNormal];
+    [uploadBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [[uploadBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+    }];
+    [self.view addSubview:uploadBtn];
+}
 
 @end
