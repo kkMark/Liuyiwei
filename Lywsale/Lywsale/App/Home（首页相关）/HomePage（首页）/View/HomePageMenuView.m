@@ -60,6 +60,9 @@
     self.signInBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [self.signInBtn setTitle:@"签到" forState:UIControlStateNormal];
     [self.signInBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [[self.signInBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self goViewController:@""];
+    }];
     [self addSubview:self.signInBtn];
     
     // 用户昵称
@@ -79,6 +82,29 @@
     xxLabel.font = [UIFont boldSystemFontOfSize:12];
     xxLabel.textColor = [UIColor whiteColor];
     [self addSubview:xxLabel];
+    
+    if ([GetUserDefault(UserType) isEqualToString:@"1"]) {
+    
+        // 店员明细
+        UIButton *detailBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        detailBtn.frame = CGRectMake(0, 0, 70, 30);
+        detailBtn.centerX = self.signInBtn.centerX;
+        detailBtn.centerY = titleLabel.centerY;
+        detailBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [detailBtn setTitle:@"店员明细" forState:UIControlStateNormal];
+        [detailBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [[detailBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            [self goViewController:@"SalesclerkViewController"];
+        }];
+        [self addSubview:detailBtn];
+    }
+}
+
+- (void)goViewController:(NSString *)vcName {
+    
+    if (self.goViewControllerBlock) {
+        self.goViewControllerBlock([NSClassFromString(vcName) new]);
+    }
 }
 
 @end

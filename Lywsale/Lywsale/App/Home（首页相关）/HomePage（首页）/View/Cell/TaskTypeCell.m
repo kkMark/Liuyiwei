@@ -23,12 +23,23 @@
 
 - (void)setupSubviews {
     
+    NSDateComponents *componets = [[NSCalendar autoupdatingCurrentCalendar] components:NSCalendarUnitWeekday fromDate:[NSDate date]];
+    NSInteger weekday = [componets weekday];
+    NSLog(@"weekday = %zd", weekday);
+    
     NSArray *imgs = @[@"homepage_pin", @"homepage_daily", @"homepage_learning", @"homepage_history"];
     NSArray *titles = @[@"动销任务", @"日常任务", @"学习任务", @"历史业绩"];
+    
+    if ([GetUserDefault(UserType) isEqualToString:@"1"]) {
+        
+        imgs = @[@"homepage_pin", @"homepage_daily", @"homepage_learning", @"homepage_results", @"homepage_history"];
+        titles = @[@"动销任务", @"日常任务", @"学习任务", @"业绩设置", @"历史业绩"];
+    }
+    
     for (int i = 0; i < imgs.count; i++) {
         
         UIButton *iconBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        iconBtn.frame = CGRectMake(ScreenWidth / 4 * i, 0, ScreenWidth / 4, 95);
+        iconBtn.frame = CGRectMake(ScreenWidth / imgs.count * i, 0, ScreenWidth / imgs.count, 95);
         [self.contentView addSubview:iconBtn];
         
         UIImageView *iconImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 15, 40, 40)];
@@ -39,7 +50,7 @@
         UILabel *titleLabel = [[UILabel alloc] init];
         titleLabel.frame = CGRectMake(0, iconImgView.maxY + 10, iconBtn.width, 15);
         titleLabel.text = titles[i];
-        titleLabel.font = [UIFont systemFontOfSize:14];
+        titleLabel.font = [UIFont systemFontOfSize:imgs.count > 4 ? 12 : 14];
         titleLabel.textColor = kMainTextColor;
         titleLabel.textAlignment = NSTextAlignmentCenter;
         [iconBtn addSubview:titleLabel];

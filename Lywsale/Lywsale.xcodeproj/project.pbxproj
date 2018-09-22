@@ -10,6 +10,10 @@
 		0C12144A2155D3E00028368D /* RemarkMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214492155D3E00028368D /* RemarkMenuView.m */; };
 		0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214542156152C0028368D /* DrugReviewViewController.m */; };
 		0C1214582156157F0028368D /* DrugReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214572156157F0028368D /* DrugReviewView.m */; };
+		0C121465215635720028368D /* SalesclerkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C121464215635720028368D /* SalesclerkViewController.m */; };
+		0C1214682156359A0028368D /* SalesclerkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214672156359A0028368D /* SalesclerkView.m */; };
+		0C121470215637E80028368D /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C12146F215637E80028368D /* SignInViewController.m */; };
+		0C121473215638170028368D /* SignInView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C121472215638170028368D /* SignInView.m */; };
 		0C1F77EE21555E7F0059E915 /* ReceptionRemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77ED21555E7F0059E915 /* ReceptionRemarkViewController.m */; };
 		0C1F77F121555E9A0059E915 /* ReceptionRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F021555E9A0059E915 /* ReceptionRemarkView.m */; };
 		0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F3215561C80059E915 /* ReceptionRemarkCell.m */; };
@@ -142,6 +146,14 @@
 		0C1214542156152C0028368D /* DrugReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrugReviewViewController.m; sourceTree = "<group>"; };
 		0C1214562156157F0028368D /* DrugReviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugReviewView.h; sourceTree = "<group>"; };
 		0C1214572156157F0028368D /* DrugReviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrugReviewView.m; sourceTree = "<group>"; };
+		0C121463215635720028368D /* SalesclerkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesclerkViewController.h; sourceTree = "<group>"; };
+		0C121464215635720028368D /* SalesclerkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesclerkViewController.m; sourceTree = "<group>"; };
+		0C1214662156359A0028368D /* SalesclerkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesclerkView.h; sourceTree = "<group>"; };
+		0C1214672156359A0028368D /* SalesclerkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesclerkView.m; sourceTree = "<group>"; };
+		0C12146E215637E80028368D /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		0C12146F215637E80028368D /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		0C121471215638170028368D /* SignInView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInView.h; sourceTree = "<group>"; };
+		0C121472215638170028368D /* SignInView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInView.m; sourceTree = "<group>"; };
 		0C1F77EC21555E7F0059E915 /* ReceptionRemarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionRemarkViewController.h; sourceTree = "<group>"; };
 		0C1F77ED21555E7F0059E915 /* ReceptionRemarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionRemarkViewController.m; sourceTree = "<group>"; };
 		0C1F77EF21555E9A0059E915 /* ReceptionRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionRemarkView.h; sourceTree = "<group>"; };
@@ -446,6 +458,92 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C12145E215634EF0028368D /* Salesclerk（店员明细） */ = {
+			isa = PBXGroup;
+			children = (
+				0C12145F215634EF0028368D /* ViewModel */,
+				0C121460215634EF0028368D /* Model */,
+				0C121461215634EF0028368D /* View */,
+				0C121462215634EF0028368D /* ViewController */,
+			);
+			path = "Salesclerk（店员明细）";
+			sourceTree = "<group>";
+		};
+		0C12145F215634EF0028368D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C121460215634EF0028368D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C121461215634EF0028368D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C1214662156359A0028368D /* SalesclerkView.h */,
+				0C1214672156359A0028368D /* SalesclerkView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C121462215634EF0028368D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C121463215635720028368D /* SalesclerkViewController.h */,
+				0C121464215635720028368D /* SalesclerkViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C121469215637D80028368D /* SignIn（签到） */ = {
+			isa = PBXGroup;
+			children = (
+				0C12146A215637D80028368D /* ViewModel */,
+				0C12146B215637D80028368D /* Model */,
+				0C12146C215637D80028368D /* View */,
+				0C12146D215637D80028368D /* ViewController */,
+			);
+			path = "SignIn（签到）";
+			sourceTree = "<group>";
+		};
+		0C12146A215637D80028368D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C12146B215637D80028368D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C12146C215637D80028368D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C121471215638170028368D /* SignInView.h */,
+				0C121472215638170028368D /* SignInView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C12146D215637D80028368D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C12146E215637E80028368D /* SignInViewController.h */,
+				0C12146F215637E80028368D /* SignInViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		0C1F77E721555E400059E915 /* ReceptionRemark（接待备注） */ = {
@@ -1472,6 +1570,8 @@
 			isa = PBXGroup;
 			children = (
 				0C3D8967212AAC0700D02FE0 /* HomePage（首页） */,
+				0C121469215637D80028368D /* SignIn（签到） */,
+				0C12145E215634EF0028368D /* Salesclerk（店员明细） */,
 				0C84049121354B7C00305197 /* SalesTask（动销任务） */,
 				0CF0EF892151F86100DF2DFA /* SalesDetails（动销详情相关） */,
 				0C84048C21354B7C00305197 /* DailyTask（日常任务） */,
@@ -2232,6 +2332,7 @@
 				0CE1EC27212889E800A373D7 /* AddTypeView.m in Sources */,
 				0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */,
 				11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */,
+				0C121465215635720028368D /* SalesclerkViewController.m in Sources */,
 				0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */,
 				0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */,
 				0C3FD1C32154DF7B00534B8D /* UploadHistoryCell.m in Sources */,
@@ -2292,7 +2393,9 @@
 				0C7AEA92213E584D00138A31 /* MyRankingCell.m in Sources */,
 				0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */,
 				11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */,
+				0C121473215638170028368D /* SignInView.m in Sources */,
 				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
+				0C121470215637E80028368D /* SignInViewController.m in Sources */,
 				0C1214582156157F0028368D /* DrugReviewView.m in Sources */,
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
@@ -2339,6 +2442,7 @@
 				0C37F58E212D612A00E357EB /* FootprintHeaderView.m in Sources */,
 				0C804A152147BBDE0032B57A /* MaintenanceView.m in Sources */,
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
+				0C1214682156359A0028368D /* SalesclerkView.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
 				0C523971213E19B20083260A /* UIImage+Category.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,

@@ -14,5 +14,6 @@
 
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) void (^selectIndex)(NSInteger index);
+@property (nonatomic, strong) void (^goViewControllerBlock)(UIViewController *vc);
 
 @end
