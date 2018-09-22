@@ -13,6 +13,8 @@
 #define UserName    @"userName"
 // 用户ID
 #define UserID      @"userId"
+// 用户类型 0 - 店员， 1 - 店长
+#define UserType    @"userType"
 // token类型
 #define Token_Type      @"token_type"
 // 访问token

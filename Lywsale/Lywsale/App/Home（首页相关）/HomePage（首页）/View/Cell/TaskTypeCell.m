@@ -50,6 +50,9 @@
             if (i == 1) {
                 vcName = @"DailyTaskViewController";
             }
+            else if (i == 2) {
+                vcName = @"LearningTaskViewController";
+            }
             
             if (self.goViewControllerBlock) {
                 

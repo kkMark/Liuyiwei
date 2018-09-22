@@ -16,8 +16,14 @@
 @property (nonatomic, strong) UILabel *titleLabel;
 /// 天数
 @property (nonatomic, strong) UILabel *dayLabel;
+/// 时间
+@property (nonatomic, strong) UILabel *timeLabel;
 /// 备注
 @property (nonatomic, strong) UILabel *remarkLabel;
+/// 课程
+@property (nonatomic, strong) UIImageView *learningBgImgView;
+/// 状态图标
+@property (nonatomic, strong) UIImageView *stateImgView;
 
 @end
 
@@ -38,13 +44,50 @@
     
     float spacing = 15;
     
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(20, 0, ScreenWidth - 40, 0)];
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 0)];
     bgView.backgroundColor = [UIColor whiteColor];
-    bgView.layer.cornerRadius = 5;
-    bgView.layer.masksToBounds = YES;
-    bgView.layer.borderWidth = 1;
-    bgView.layer.borderColor = kLineColor.CGColor;
+    bgView.layer.cornerRadius = 2;
+    bgView.layer.shadowColor = [UIColor grayColor].CGColor;
+    bgView.layer.shadowOffset = CGSizeMake(3, 3);
+    bgView.layer.shadowOpacity = 0.3;
     [self.contentView addSubview:bgView];
+    
+    // 新课程
+    UIImage *taskBgImg = [UIImage imageNamed:@"taskBgImg_2"];
+    self.learningBgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 0, 0)];
+    self.learningBgImgView.image = taskBgImg;
+    self.learningBgImgView.size = taskBgImg.size;
+    [bgView addSubview:self.learningBgImgView];
+    
+    UILabel *taskLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.learningBgImgView.width, self.learningBgImgView.height)];
+    taskLabel.text = @"新课程";
+    taskLabel.font = [UIFont systemFontOfSize:12];
+    taskLabel.textColor = [UIColor whiteColor];
+    taskLabel.textAlignment = NSTextAlignmentCenter;
+    [self.learningBgImgView addSubview:taskLabel];
+    
+    // 标题
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(spacing, self.learningBgImgView.maxY + 10, 0, 20)];
+    self.titleLabel.text = @"博路定用药培训";
+    self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
+    self.titleLabel.textColor = kMainTextColor;
+    self.titleLabel.width = bgView.width - self.titleLabel.x - self.timeLabel.width;
+    [bgView addSubview:self.titleLabel];
+    
+    // 时间
+    self.timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 0, 20)];
+    self.timeLabel.centerY = self.titleLabel.centerY;
+    self.timeLabel.text = @"2018-05-18 18:11";
+    self.timeLabel.font = [UIFont systemFontOfSize:12];
+    self.timeLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
+    self.timeLabel.width = [self.timeLabel getTextWidth];
+    self.timeLabel.x = bgView.width - self.timeLabel.width - 10;
+    [bgView addSubview:self.timeLabel];
+    
+    // 分割线
+    UIView *lineView = [[UILabel alloc] initWithFrame:CGRectMake(0, self.titleLabel.maxY + 10, bgView.width, 0.3)];
+    lineView.backgroundColor = kLineColor;
+    [bgView addSubview:lineView];
     
     // 天数
     self.dayLabel = [[UILabel alloc] initWithFrame:CGRectMake(bgView.width - 80 - spacing, 0, 80, 30)];
@@ -59,32 +102,33 @@
     [attStr addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:30] range:NSMakeRange(0, 2)];
     self.dayLabel.attributedText = attStr;
     
-    // 图标
-    self.iconImgView = [[UIImageView alloc] initWithFrame:CGRectMake(spacing, spacing, 20, 18)];
-    self.iconImgView.image = [UIImage imageNamed:@"TestTaskImg"];
-    [bgView addSubview:self.iconImgView];
-    
-    // 标题
-    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.iconImgView.maxX + 10, 0, 0, 20)];
-    self.titleLabel.centerY = self.iconImgView.centerY;
-    self.titleLabel.text = @"博路定动销任务";
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:14];
-    self.titleLabel.textColor = kMainTextColor;
-    self.titleLabel.width = bgView.width - self.titleLabel.x - self.dayLabel.width - spacing * 2;
-    [bgView addSubview:self.titleLabel];
- 
-    self.remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(spacing, self.titleLabel.maxY + 5, 0, 0)];
+    // 备注
+    self.remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(spacing, lineView.maxY + spacing, 0, 0)];
     self.remarkLabel.text = @"完成博路定知识培训，即可参与博路定动销活动！";
     self.remarkLabel.font = [UIFont systemFontOfSize:13];
     self.remarkLabel.textColor = kMainTextColor;
     self.remarkLabel.numberOfLines = 0;
     self.remarkLabel.width = bgView.width - self.dayLabel.width - spacing * 2;
     self.remarkLabel.height = [self.remarkLabel getTextHeight];
+    self.dayLabel.centerY = self.remarkLabel.centerY;
     [bgView addSubview:self.remarkLabel];
     
+    // 获取高度
     bgView.height = self.remarkLabel.maxY + spacing;
-    self.dayLabel.centerY = bgView.height / 2;
+    
+    // 状态图
+    UIImage *stateImg = [UIImage imageNamed:@"task_complete"];
+    self.stateImgView = [[UIImageView alloc] initWithImage:stateImg];
+    self.stateImgView.image = stateImg;
+    self.stateImgView.size = stateImg.size;
+    self.stateImgView.x = bgView.width - stateImg.size.width - 10;
+    self.stateImgView.y = bgView.height - stateImg.size.height - 10;
+    [bgView addSubview:self.stateImgView];
+    
     self.cellHeight = bgView.height;
+    
+    self.dayLabel.hidden = arc4random() % 2;
+    self.stateImgView.hidden = !self.dayLabel.hidden;
 }
 
 @end
