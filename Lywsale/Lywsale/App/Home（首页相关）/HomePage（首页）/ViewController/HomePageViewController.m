@@ -52,6 +52,14 @@
         menuView = [[HomePageMenuView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.statusBarHeight + 115)];
         menuView.backgroundColor = [UIColor whiteColor];
         [self.view addSubview:menuView];
+        
+        @weakify(self);
+        [self.menuView setGoViewControllerBlock:^(UIViewController *vc) {
+            
+            @strongify(self);
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }    
     return menuView;
 }

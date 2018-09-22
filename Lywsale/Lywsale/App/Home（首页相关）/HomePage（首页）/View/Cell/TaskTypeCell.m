@@ -23,10 +23,6 @@
 
 - (void)setupSubviews {
     
-    NSDateComponents *componets = [[NSCalendar autoupdatingCurrentCalendar] components:NSCalendarUnitWeekday fromDate:[NSDate date]];
-    NSInteger weekday = [componets weekday];
-    NSLog(@"weekday = %zd", weekday);
-    
     NSArray *imgs = @[@"homepage_pin", @"homepage_daily", @"homepage_learning", @"homepage_history"];
     NSArray *titles = @[@"动销任务", @"日常任务", @"学习任务", @"历史业绩"];
     

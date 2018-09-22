@@ -8,8 +8,11 @@
 //
 
 #import "SignInViewController.h"
+#import "SignInView.h"
 
 @interface SignInViewController ()
+
+@property (nonatomic, strong) SignInView *signInView;
 
 @end
 
@@ -18,8 +21,21 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-
+    [self setTitle:@"签到拿积分"];
+    [self addNavRight];
     
+    self.signInView = [[SignInView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.signInView];
+}
+
+- (void)addNavRight {
+    
+    @weakify(self);
+    [self addNavRightTitle:@"签到规则" complete:^{
+        
+        @strongify(self);
+        
+    }];
 }
 
 @end

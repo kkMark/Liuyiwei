@@ -61,7 +61,7 @@
     [self.signInBtn setTitle:@"签到" forState:UIControlStateNormal];
     [self.signInBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [[self.signInBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        [self goViewController:@""];
+        [self goViewController:@"SignInViewController"];
     }];
     [self addSubview:self.signInBtn];
     
