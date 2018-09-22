@@ -31,6 +31,7 @@
             cell = [[ReceptionRemarkCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"Cell"];
         }
         
+        cell.title = @"接待备注";
         return cell;
     }
     else {

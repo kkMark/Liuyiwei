@@ -1,18 +1,16 @@
 //
-//  ReceptionRemarkCell.h
+//  DrugReviewViewController.h
 //  Lywsale
 //
 //  Created by M on 2018/9/22.
 //  Copyright © 2018年 黄锡凯. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ReceptionRemarkCell : UITableViewCell
-
-@property (nonatomic, strong) NSString *title;
+@interface DrugReviewViewController : BaseViewController
 
 @end
 

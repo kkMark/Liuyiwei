@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C12144A2155D3E00028368D /* RemarkMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214492155D3E00028368D /* RemarkMenuView.m */; };
+		0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214542156152C0028368D /* DrugReviewViewController.m */; };
+		0C1214582156157F0028368D /* DrugReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214572156157F0028368D /* DrugReviewView.m */; };
 		0C1F77EE21555E7F0059E915 /* ReceptionRemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77ED21555E7F0059E915 /* ReceptionRemarkViewController.m */; };
 		0C1F77F121555E9A0059E915 /* ReceptionRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F021555E9A0059E915 /* ReceptionRemarkView.m */; };
 		0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F3215561C80059E915 /* ReceptionRemarkCell.m */; };
@@ -136,6 +138,10 @@
 /* Begin PBXFileReference section */
 		0C1214482155D3E00028368D /* RemarkMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemarkMenuView.h; sourceTree = "<group>"; };
 		0C1214492155D3E00028368D /* RemarkMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemarkMenuView.m; sourceTree = "<group>"; };
+		0C1214532156152C0028368D /* DrugReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugReviewViewController.h; sourceTree = "<group>"; };
+		0C1214542156152C0028368D /* DrugReviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrugReviewViewController.m; sourceTree = "<group>"; };
+		0C1214562156157F0028368D /* DrugReviewView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugReviewView.h; sourceTree = "<group>"; };
+		0C1214572156157F0028368D /* DrugReviewView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrugReviewView.m; sourceTree = "<group>"; };
 		0C1F77EC21555E7F0059E915 /* ReceptionRemarkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionRemarkViewController.h; sourceTree = "<group>"; };
 		0C1F77ED21555E7F0059E915 /* ReceptionRemarkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionRemarkViewController.m; sourceTree = "<group>"; };
 		0C1F77EF21555E9A0059E915 /* ReceptionRemarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionRemarkView.h; sourceTree = "<group>"; };
@@ -399,6 +405,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C12144E215614640028368D /* DrugReview（用药回访） */ = {
+			isa = PBXGroup;
+			children = (
+				0C121452215615160028368D /* ViewModel */,
+				0C121451215615110028368D /* Model */,
+				0C1214502156150D0028368D /* View */,
+				0C12144F215615070028368D /* ViewController */,
+			);
+			path = "DrugReview（用药回访）";
+			sourceTree = "<group>";
+		};
+		0C12144F215615070028368D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C1214532156152C0028368D /* DrugReviewViewController.h */,
+				0C1214542156152C0028368D /* DrugReviewViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C1214502156150D0028368D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C1214562156157F0028368D /* DrugReviewView.h */,
+				0C1214572156157F0028368D /* DrugReviewView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C121451215615110028368D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C121452215615160028368D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0C1F77E721555E400059E915 /* ReceptionRemark（接待备注） */ = {
 			isa = PBXGroup;
 			children = (
@@ -1098,6 +1147,7 @@
 		0C8049E921476E320032B57A /* Reception（接待相关） */ = {
 			isa = PBXGroup;
 			children = (
+				0C12144E215614640028368D /* DrugReview（用药回访） */,
 				0C1F77E721555E400059E915 /* ReceptionRemark（接待备注） */,
 				0C8049F921476E320032B57A /* Reception（接待） */,
 				0C8049F421476E320032B57A /* CustomerInfo（客户信息） */,
@@ -2243,6 +2293,7 @@
 				0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */,
 				11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */,
 				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
+				0C1214582156157F0028368D /* DrugReviewView.m in Sources */,
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
 				0C37F55E212D4A9000E357EB /* TipCell.m in Sources */,
@@ -2269,6 +2320,7 @@
 				0C523978213E37E30083260A /* TaskTypeCell.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */,
+				0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
 				0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */,

@@ -8,6 +8,12 @@
 
 #import "ReceptionRemarkCell.h"
 
+@interface ReceptionRemarkCell ()
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@end
+
 @implementation ReceptionRemarkCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -24,7 +30,7 @@
 - (void)setupSubviews {
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth, 45)];
-    titleLabel.text = @"接待备注";
+    titleLabel.text = self.title;
     titleLabel.font = [UIFont systemFontOfSize:14];
     titleLabel.textColor = kMainTextColor;
     [self.contentView addSubview:titleLabel];
@@ -48,6 +54,14 @@
     [[textView rac_textSignal] subscribeNext:^(NSString * _Nullable x) {
         tipLabel.hidden = x.length > 0 ? YES : NO;
     }];
+    
+    self.titleLabel = titleLabel;
+}
+
+- (void)setTitle:(NSString *)title {
+    
+    _title = title;
+    self.titleLabel.text = title;
 }
 
 @end

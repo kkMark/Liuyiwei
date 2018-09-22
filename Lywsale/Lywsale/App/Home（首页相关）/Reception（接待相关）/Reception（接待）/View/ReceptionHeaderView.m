@@ -77,16 +77,23 @@
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(iconImgView.maxX + 10, 0, 0, btn.height)];
         titleLabel.width = width - titleLabel.x;
-        titleLabel.text = i == 0 ? @"打电话" : @"接待备注";
+        titleLabel.text = i == 0 ? @"打电话" : @"用药回访";
         titleLabel.font = [UIFont systemFontOfSize:15];
         titleLabel.textColor = color;
         [btn addSubview:titleLabel];
+        
+        if ([titleLabel.text isEqualToString:@"用药回访"]) {
+            iconImgView.image = [UIImage imageNamed:@"reception-drug"];
+        }
         
         [[btn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
            
             NSString *vcName = @"ReceptionRemarkViewController";
             if ([titleLabel.text isEqualToString:@"接待备注"]) {   
                 vcName = @"ReceptionRemarkViewController";
+            }
+            else if ([titleLabel.text isEqualToString:@"用药回访"]) {
+                vcName = @"DrugReviewViewController";
             }
             
             if (vcName.length != 0 && self.goViewControllerBlock) {
