@@ -9,6 +9,7 @@
 
 #import "SignInViewController.h"
 #import "SignInView.h"
+#import "SignInRulesView.h"
 
 @interface SignInViewController ()
 
@@ -24,17 +25,16 @@
     [self setTitle:@"签到拿积分"];
     [self addNavRight];
     
-    self.signInView = [[SignInView alloc] initWithFrame:self.view.frame];
+    self.signInView = [[SignInView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight)];
     [self.view addSubview:self.signInView];
 }
 
 - (void)addNavRight {
     
-    @weakify(self);
     [self addNavRightTitle:@"签到规则" complete:^{
         
-        @strongify(self);
-        
+        SignInRulesView *rulesView = [[SignInRulesView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+        [[UIApplication sharedApplication].keyWindow addSubview:rulesView];
     }];
 }
 
