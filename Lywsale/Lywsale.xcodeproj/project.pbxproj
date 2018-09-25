@@ -138,6 +138,10 @@
 		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
 		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
+		11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D052158C5E10032FE0B /* BaseTabelListView.m */; };
+		11ED7D092158C6460032FE0B /* BaseTableSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D082158C6460032FE0B /* BaseTableSectionView.m */; };
+		11ED7D0D2158C8640032FE0B /* AnnouncementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D0C2158C8640032FE0B /* AnnouncementView.m */; };
+		11ED7D102158C88A0032FE0B /* AnnouncenmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D0F2158C88A0032FE0B /* AnnouncenmentTableViewCell.m */; };
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
 /* End PBXBuildFile section */
 
@@ -406,6 +410,14 @@
 		11AA45302150FF5600ED7293 /* HomeMessgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeView.m; sourceTree = "<group>"; };
 		11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeModel.m; sourceTree = "<group>"; };
 		11AA45352150FF8F00ED7293 /* HomeMessgeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeModel.h; sourceTree = "<group>"; };
+		11ED7D042158C5E10032FE0B /* BaseTabelListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTabelListView.h; sourceTree = "<group>"; };
+		11ED7D052158C5E10032FE0B /* BaseTabelListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTabelListView.m; sourceTree = "<group>"; };
+		11ED7D072158C6460032FE0B /* BaseTableSectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableSectionView.h; sourceTree = "<group>"; };
+		11ED7D082158C6460032FE0B /* BaseTableSectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableSectionView.m; sourceTree = "<group>"; };
+		11ED7D0B2158C8640032FE0B /* AnnouncementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncementView.h; sourceTree = "<group>"; };
+		11ED7D0C2158C8640032FE0B /* AnnouncementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementView.m; sourceTree = "<group>"; };
+		11ED7D0E2158C88A0032FE0B /* AnnouncenmentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncenmentTableViewCell.h; sourceTree = "<group>"; };
+		11ED7D0F2158C88A0032FE0B /* AnnouncenmentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncenmentTableViewCell.m; sourceTree = "<group>"; };
 		3FC6A3317F8728887B35A61A /* Pods-Lywsale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.release.xcconfig"; sourceTree = "<group>"; };
 		7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lywsale.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C58AA252108754216FE46E /* Pods-Lywsale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1730,6 +1742,10 @@
 				0CDDB5502127342800D42F76 /* BaseTableView.m */,
 				0CDDB54A2127341D00D42F76 /* BaseViewController.h */,
 				0CDDB5492127341D00D42F76 /* BaseViewController.m */,
+				11ED7D042158C5E10032FE0B /* BaseTabelListView.h */,
+				11ED7D052158C5E10032FE0B /* BaseTabelListView.m */,
+				11ED7D072158C6460032FE0B /* BaseTableSectionView.h */,
+				11ED7D082158C6460032FE0B /* BaseTableSectionView.m */,
 			);
 			path = "Base（父类）";
 			sourceTree = "<group>";
@@ -2160,6 +2176,7 @@
 		1141FD0F215251EA00FAF01F /* Announcement（公告信息） */ = {
 			isa = PBXGroup;
 			children = (
+				11ED7D0A2158C8340032FE0B /* View */,
 				1141FD102152524400FAF01F /* AnnouncementViewController.h */,
 				1141FD112152524400FAF01F /* AnnouncementViewController.m */,
 			);
@@ -2205,6 +2222,17 @@
 				11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11ED7D0A2158C8340032FE0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11ED7D0B2158C8640032FE0B /* AnnouncementView.h */,
+				11ED7D0C2158C8640032FE0B /* AnnouncementView.m */,
+				11ED7D0E2158C88A0032FE0B /* AnnouncenmentTableViewCell.h */,
+				11ED7D0F2158C88A0032FE0B /* AnnouncenmentTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		4F2AA32469F7011E0C8F49D1 /* Pods */ = {
@@ -2343,6 +2371,7 @@
 				0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */,
 				11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */,
 				0C121465215635720028368D /* SalesclerkViewController.m in Sources */,
+				11ED7D092158C6460032FE0B /* BaseTableSectionView.m in Sources */,
 				0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */,
 				0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */,
 				0C3FD1C32154DF7B00534B8D /* UploadHistoryCell.m in Sources */,
@@ -2379,6 +2408,7 @@
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */,
 				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
+				11ED7D102158C88A0032FE0B /* AnnouncenmentTableViewCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
 				0C804A0F2147A14C0032B57A /* BuyView.m in Sources */,
@@ -2416,6 +2446,7 @@
 				0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */,
 				0C37F5A5212E60D700E357EB /* ArchivesView.m in Sources */,
 				0C8404A021354BA200305197 /* SalesTaskView.m in Sources */,
+				11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */,
 				0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
@@ -2443,6 +2474,7 @@
 				0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */,
 				0CF0EF912152226100DF2DFA /* ActivityDetailsViewController.m in Sources */,
 				0C8404A321354BB200305197 /* DailyTaskViewController.m in Sources */,
+				11ED7D0D2158C8640032FE0B /* AnnouncementView.m in Sources */,
 				0CEFA0F7213FC4F40072EAB9 /* RegisteredViewController.m in Sources */,
 				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C54C6972154CBF100C8FB10 /* UploadCredentialsViewController.m in Sources */,
