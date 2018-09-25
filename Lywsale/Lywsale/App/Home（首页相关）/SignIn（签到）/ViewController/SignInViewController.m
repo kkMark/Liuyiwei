@@ -9,6 +9,7 @@
 
 #import "SignInViewController.h"
 #import "SignInView.h"
+#import "SignInRulesView.h"
 
 @interface SignInViewController ()
 
@@ -30,11 +31,10 @@
 
 - (void)addNavRight {
     
-    @weakify(self);
     [self addNavRightTitle:@"签到规则" complete:^{
         
-        @strongify(self);
-        
+        SignInRulesView *rulesView = [[SignInRulesView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+        [[UIApplication sharedApplication].keyWindow addSubview:rulesView];
     }];
 }
 

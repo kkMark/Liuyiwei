@@ -22,6 +22,7 @@
 		0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25101621312C7600DDF4BB /* HomePageMenuView.m */; };
 		0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CA3F212FFD23001A78A0 /* MoreViewController.m */; };
 		0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C29CA42212FFD36001A78A0 /* MoreView.m */; };
+		0C2E77B82159C395008DEB3A /* SignInRulesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E77B72159C395008DEB3A /* SignInRulesView.m */; };
 		0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */; };
 		0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F556212D3F1500E357EB /* WriteInfoTypeCell.m */; };
 		0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F559212D3F3B00E357EB /* WriteInfoCertificateCell.m */; };
@@ -170,6 +171,8 @@
 		0C29CA3F212FFD23001A78A0 /* MoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		0C29CA41212FFD36001A78A0 /* MoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreView.h; sourceTree = "<group>"; };
 		0C29CA42212FFD36001A78A0 /* MoreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreView.m; sourceTree = "<group>"; };
+		0C2E77B62159C395008DEB3A /* SignInRulesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInRulesView.h; sourceTree = "<group>"; };
+		0C2E77B72159C395008DEB3A /* SignInRulesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInRulesView.m; sourceTree = "<group>"; };
 		0C37F552212D3EEB00E357EB /* WriteInfoTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoTextFieldCell.h; sourceTree = "<group>"; };
 		0C37F553212D3EEB00E357EB /* WriteInfoTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteInfoTextFieldCell.m; sourceTree = "<group>"; };
 		0C37F555212D3F1500E357EB /* WriteInfoTypeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WriteInfoTypeCell.h; sourceTree = "<group>"; };
@@ -533,6 +536,8 @@
 			children = (
 				0C121471215638170028368D /* SignInView.h */,
 				0C121472215638170028368D /* SignInView.m */,
+				0C2E77B62159C395008DEB3A /* SignInRulesView.h */,
+				0C2E77B72159C395008DEB3A /* SignInRulesView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2424,6 +2429,7 @@
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */,
 				0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */,
+				0C2E77B82159C395008DEB3A /* SignInRulesView.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
 				0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */,
