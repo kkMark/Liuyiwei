@@ -6,11 +6,11 @@
 //  Copyright © 2018年 黄锡凯. All rights reserved.
 //
 
-#import "BaseView.h"
+#import "BaseTableView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SalesclerkView : BaseView
+@interface SalesclerkView : BaseTableView
 
 @end
 
