@@ -7,6 +7,7 @@
 //
 
 #import "KnowledgeViewController.h"
+#import "KnowledgeRequest.h"
 
 @interface KnowledgeViewController ()
 
@@ -17,7 +18,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"知识首页";
+    self.title = @"知识";
+    
+    [self request];
+    
+    [self initUI];
+    
+}
+
+-(void)request{
+    
+    [[KnowledgeRequest new] GetTrainCategoriesPageNumber:1 PageSize:10 success:^(NSDictionary *dict) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
+-(void)initUI{
+    
+    
     
 }
 

@@ -22,9 +22,9 @@
 #if DEBUG
     
     // 测试的
-    SetUserDefault(UserName, @"咕咕咕咕咕");
-    SetUserDefault(UserID, @"123");
-    SetUserDefault(UserType, @"1");
+//    SetUserDefault(UserName, @"咕咕咕咕咕");
+//    SetUserDefault(UserID, @"123");
+//    SetUserDefault(UserType, @"1");
 
     [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
 #endif

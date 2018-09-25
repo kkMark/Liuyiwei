@@ -114,7 +114,39 @@
     [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer.timeoutInterval = 15;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
+    manager.requestSerializer = [[AFJSONRequestSerializer alloc]init];
+    
+    if (GetUserDefault(Access_Token) != nil && ![GetUserDefault(Access_Token) isEqualToString:@"nil"]) {
+        [manager.requestSerializer setValue:[NSString stringWithFormat:@"bearer%@",GetUserDefault(Access_Token)] forHTTPHeaderField:@"authorization"];
+    }
+    
     DebugLog(@"================ requestURL =====================\n %@\n%@", self.urlString, self.parameters);
+
+    if (mode == GetMode) {
+        
+        [manager GET:self.urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject, task.response.URL);
+            
+            if (success){
+                success(responseObject);
+            };
+            
+            [viewController showHudAnimated:NO];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            NSLog(@"%@", error);
+            
+            if (failure) {
+                failure(error);
+            }
+            
+            [viewController showHudAnimated:NO];
+            
+        }];
+        
+    }
     
     if (mode == PostMode) {
         
@@ -141,9 +173,7 @@
     }
     
     if (mode == PatchModel) {
-        
-        manager.requestSerializer = [[AFJSONRequestSerializer alloc]init];
-        
+
         [manager PATCH:self.urlString parameters:self.parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
             DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject, task.response.URL);
