@@ -70,36 +70,44 @@
 /** 开始请求 */
 - (void)requestMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure {
     
+    BaseViewController *viewController = (BaseViewController *)[self getCurrentViewController];
+    if (self.isLoading) {
+        [viewController showHudAnimated:YES];
+    }
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
     if (mode == PostMode) {
-        
-        BaseViewController *viewController = (BaseViewController *)[self getCurrentViewController];
-        if (self.isLoading) {
-            [viewController showHudAnimated:YES];
-        }
-        
+    
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self.parameters options:NSJSONWritingPrettyPrinted error:nil];
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
         request.HTTPMethod = @"POST";
         request.HTTPBody = jsonData;
         request.timeoutInterval = 15;
-        [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-
-        NSURLSession *session = [NSURLSession sharedSession];
-        [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-               
-                if (error) failure(error);
-                else {
-                    
-                    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                    NSLog(@"%@", dict);
-                    if (success) success(dict);
-                }
-            });
-            
-        }] resume];
     }
+    
+    if ([GetUserDefault(Access_Token) length] != 0) {
+        NSString *token = [NSString stringWithFormat:@"bearer%@",GetUserDefault(Access_Token)];
+        [request setValue:token forHTTPHeaderField:@"authorization"];
+    }
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [viewController hideHudAnimated];
+            
+            if (error) failure(error);
+            else {
+                
+                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSLog(@"%@", dict);
+                if (success) success(dict);
+            }
+        });
+        
+    }] resume];
 }
 
 - (void)requestAFMode:(RequestMode)mode success:(RequestSuccess)success failure:(RequestFailure)failure {
