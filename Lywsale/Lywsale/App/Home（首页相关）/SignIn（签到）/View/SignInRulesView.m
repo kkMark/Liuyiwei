@@ -52,9 +52,7 @@
     okBtn.titleLabel.font = [UIFont systemFontOfSize:16];
     [okBtn setTitle:@"知道了" forState:UIControlStateNormal];
     [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [[okBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        [self removeFromSuperview];
-    }];
+    [okBtn addTarget:self action:@selector(touchesBegan:withEvent:) forControlEvents:UIControlEventTouchUpInside];
     [rulesView addSubview:okBtn];
     
     rulesView.height = okBtn.maxY;
