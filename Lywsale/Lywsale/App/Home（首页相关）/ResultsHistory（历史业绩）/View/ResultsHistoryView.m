@@ -1,0 +1,58 @@
+//
+//  ResultsHistoryView.m
+//  Lywsale
+//
+//  Created by M on 2018/9/25.
+//  Copyright © 2018年 黄锡凯. All rights reserved.
+//
+
+#import "ResultsHistoryView.h"
+#import "ResultsHistoryCell.h"
+
+@interface ResultsHistoryView ()
+
+@property (nonatomic, assign) CGFloat cellHeight;
+
+@end
+
+@implementation ResultsHistoryView
+
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    
+    if (self = [super initWithFrame:frame style:style]) {
+        
+        self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 15)];
+    }
+    
+    return self;
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataSources.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    ResultsHistoryCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    if (cell == nil) {
+        
+        cell = [[ResultsHistoryCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
+        cell.backgroundColor = kPageBgColor;
+        
+        self.cellHeight = cell.cellHeight;
+    }
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.cellHeight;
+}
+
+@end
+

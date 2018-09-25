@@ -54,11 +54,17 @@
         [[iconBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
            
             NSString *vcName = @"SalesTaskViewController";
-            if (i == 1) {
+            if ([titleLabel.text isEqualToString:@"日常任务"]) {
                 vcName = @"DailyTaskViewController";
             }
-            else if (i == 2) {
+            else if ([titleLabel.text isEqualToString:@"学习任务"]) {
                 vcName = @"LearningTaskViewController";
+            }
+            else if ([titleLabel.text isEqualToString:@"业绩设置"]) {
+                vcName = @"ResultsSettingViewController";
+            }
+            else if ([titleLabel.text isEqualToString:@"历史业绩"]) {
+                vcName = @"ResultsHistoryViewController";
             }
             
             if (self.goViewControllerBlock) {

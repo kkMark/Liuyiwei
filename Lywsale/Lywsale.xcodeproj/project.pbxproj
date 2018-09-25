@@ -18,6 +18,11 @@
 		0C1F77F121555E9A0059E915 /* ReceptionRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F021555E9A0059E915 /* ReceptionRemarkView.m */; };
 		0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F3215561C80059E915 /* ReceptionRemarkCell.m */; };
 		0C219600215A150C00D2696D /* SalesclerkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2195FF215A150B00D2696D /* SalesclerkCell.m */; };
+		0C219608215A1C9B00D2696D /* ResultsSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C219607215A1C9B00D2696D /* ResultsSettingViewController.m */; };
+		0C21960B215A1CAB00D2696D /* ResultsSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C21960A215A1CAB00D2696D /* ResultsSettingView.m */; };
+		0C219616215A206100D2696D /* ResultsHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C219615215A206100D2696D /* ResultsHistoryViewController.m */; };
+		0C219619215A208700D2696D /* ResultsHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C219618215A208700D2696D /* ResultsHistoryView.m */; };
+		0C21961C215A216600D2696D /* ResultsHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C21961B215A216600D2696D /* ResultsHistoryCell.m */; };
 		0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23AE4D2129B42E00BC2CAC /* RootViewController.m */; };
 		0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25101321312B9500DDF4BB /* HomePageViewController.m */; };
 		0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25101621312C7600DDF4BB /* HomePageMenuView.m */; };
@@ -168,6 +173,16 @@
 		0C1F77F3215561C80059E915 /* ReceptionRemarkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionRemarkCell.m; sourceTree = "<group>"; };
 		0C2195FE215A150B00D2696D /* SalesclerkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesclerkCell.h; sourceTree = "<group>"; };
 		0C2195FF215A150B00D2696D /* SalesclerkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesclerkCell.m; sourceTree = "<group>"; };
+		0C219606215A1C9B00D2696D /* ResultsSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultsSettingViewController.h; sourceTree = "<group>"; };
+		0C219607215A1C9B00D2696D /* ResultsSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultsSettingViewController.m; sourceTree = "<group>"; };
+		0C219609215A1CAB00D2696D /* ResultsSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultsSettingView.h; sourceTree = "<group>"; };
+		0C21960A215A1CAB00D2696D /* ResultsSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultsSettingView.m; sourceTree = "<group>"; };
+		0C219614215A206100D2696D /* ResultsHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultsHistoryViewController.h; sourceTree = "<group>"; };
+		0C219615215A206100D2696D /* ResultsHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultsHistoryViewController.m; sourceTree = "<group>"; };
+		0C219617215A208700D2696D /* ResultsHistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultsHistoryView.h; sourceTree = "<group>"; };
+		0C219618215A208700D2696D /* ResultsHistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultsHistoryView.m; sourceTree = "<group>"; };
+		0C21961A215A216600D2696D /* ResultsHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultsHistoryCell.h; sourceTree = "<group>"; };
+		0C21961B215A216600D2696D /* ResultsHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultsHistoryCell.m; sourceTree = "<group>"; };
 		0C23AE4D2129B42E00BC2CAC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0C23AE4E2129B42E00BC2CAC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		0C25101221312B9500DDF4BB /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -613,6 +628,94 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C219601215A1C2C00D2696D /* ResultsSetting（业绩设置） */ = {
+			isa = PBXGroup;
+			children = (
+				0C219602215A1C2C00D2696D /* ViewModel */,
+				0C219603215A1C2C00D2696D /* Model */,
+				0C219604215A1C2C00D2696D /* View */,
+				0C219605215A1C2C00D2696D /* ViewController */,
+			);
+			path = "ResultsSetting（业绩设置）";
+			sourceTree = "<group>";
+		};
+		0C219602215A1C2C00D2696D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C219603215A1C2C00D2696D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C219604215A1C2C00D2696D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C219609215A1CAB00D2696D /* ResultsSettingView.h */,
+				0C21960A215A1CAB00D2696D /* ResultsSettingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C219605215A1C2C00D2696D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C219606215A1C9B00D2696D /* ResultsSettingViewController.h */,
+				0C219607215A1C9B00D2696D /* ResultsSettingViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C21960F215A203B00D2696D /* ResultsHistory（历史业绩） */ = {
+			isa = PBXGroup;
+			children = (
+				0C219610215A203B00D2696D /* ViewModel */,
+				0C219611215A203B00D2696D /* Model */,
+				0C219612215A203B00D2696D /* View */,
+				0C219613215A203B00D2696D /* ViewController */,
+			);
+			path = "ResultsHistory（历史业绩）";
+			sourceTree = "<group>";
+		};
+		0C219610215A203B00D2696D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C219611215A203B00D2696D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C219612215A203B00D2696D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C21961A215A216600D2696D /* ResultsHistoryCell.h */,
+				0C21961B215A216600D2696D /* ResultsHistoryCell.m */,
+				0C219617215A208700D2696D /* ResultsHistoryView.h */,
+				0C219618215A208700D2696D /* ResultsHistoryView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0C219613215A203B00D2696D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0C219614215A206100D2696D /* ResultsHistoryViewController.h */,
+				0C219615215A206100D2696D /* ResultsHistoryViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		0C23AE4C2129B42E00BC2CAC /* RootController */ = {
@@ -1599,6 +1702,8 @@
 				0C84048C21354B7C00305197 /* DailyTask（日常任务） */,
 				0C8049E921476E320032B57A /* Reception（接待相关） */,
 				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
+				0C219601215A1C2C00D2696D /* ResultsSetting（业绩设置） */,
+				0C21960F215A203B00D2696D /* ResultsHistory（历史业绩） */,
 			);
 			path = "Home（首页相关）";
 			sourceTree = "<group>";
@@ -2374,6 +2479,7 @@
 				11ED7D092158C6460032FE0B /* BaseTableSectionView.m in Sources */,
 				0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */,
 				0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */,
+				0C21961C215A216600D2696D /* ResultsHistoryCell.m in Sources */,
 				0C3FD1C32154DF7B00534B8D /* UploadHistoryCell.m in Sources */,
 				0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */,
 				0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */,
@@ -2397,10 +2503,12 @@
 				11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
 				0C1F77EE21555E7F0059E915 /* ReceptionRemarkViewController.m in Sources */,
+				0C219616215A206100D2696D /* ResultsHistoryViewController.m in Sources */,
 				0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */,
 				0C84049D21354B8E00305197 /* SalesTaskViewController.m in Sources */,
 				0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
+				0C21960B215A1CAB00D2696D /* ResultsSettingView.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
 				0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */,
@@ -2479,6 +2587,7 @@
 				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C54C6972154CBF100C8FB10 /* UploadCredentialsViewController.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
+				0C219608215A1C9B00D2696D /* ResultsSettingViewController.m in Sources */,
 				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,
 				0CE1EC302128F3EC00A373D7 /* SelectTypeView.m in Sources */,
 				0C8404A621354BC100305197 /* DailyTaskView.m in Sources */,
@@ -2490,6 +2599,7 @@
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
 				0C523971213E19B20083260A /* UIImage+Category.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
+				0C219619215A208700D2696D /* ResultsHistoryView.m in Sources */,
 				0C7AEA95213E610800138A31 /* RankingCell.m in Sources */,
 				0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */,
 				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,
