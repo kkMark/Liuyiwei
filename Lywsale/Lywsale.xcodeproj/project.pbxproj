@@ -17,6 +17,7 @@
 		0C1F77EE21555E7F0059E915 /* ReceptionRemarkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77ED21555E7F0059E915 /* ReceptionRemarkViewController.m */; };
 		0C1F77F121555E9A0059E915 /* ReceptionRemarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F021555E9A0059E915 /* ReceptionRemarkView.m */; };
 		0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F77F3215561C80059E915 /* ReceptionRemarkCell.m */; };
+		0C219600215A150C00D2696D /* SalesclerkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C2195FF215A150B00D2696D /* SalesclerkCell.m */; };
 		0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C23AE4D2129B42E00BC2CAC /* RootViewController.m */; };
 		0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25101321312B9500DDF4BB /* HomePageViewController.m */; };
 		0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25101621312C7600DDF4BB /* HomePageMenuView.m */; };
@@ -161,6 +162,8 @@
 		0C1F77F021555E9A0059E915 /* ReceptionRemarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionRemarkView.m; sourceTree = "<group>"; };
 		0C1F77F2215561C80059E915 /* ReceptionRemarkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionRemarkCell.h; sourceTree = "<group>"; };
 		0C1F77F3215561C80059E915 /* ReceptionRemarkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionRemarkCell.m; sourceTree = "<group>"; };
+		0C2195FE215A150B00D2696D /* SalesclerkCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesclerkCell.h; sourceTree = "<group>"; };
+		0C2195FF215A150B00D2696D /* SalesclerkCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesclerkCell.m; sourceTree = "<group>"; };
 		0C23AE4D2129B42E00BC2CAC /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		0C23AE4E2129B42E00BC2CAC /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		0C25101221312B9500DDF4BB /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
@@ -491,6 +494,8 @@
 		0C121461215634EF0028368D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C2195FE215A150B00D2696D /* SalesclerkCell.h */,
+				0C2195FF215A150B00D2696D /* SalesclerkCell.m */,
 				0C1214662156359A0028368D /* SalesclerkView.h */,
 				0C1214672156359A0028368D /* SalesclerkView.m */,
 			);
@@ -2386,6 +2391,7 @@
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
 				0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */,
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
+				0C219600215A150C00D2696D /* SalesclerkCell.m in Sources */,
 				0C37F5F1212E9A9800E357EB /* HelpView.m in Sources */,
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
 				0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */,
