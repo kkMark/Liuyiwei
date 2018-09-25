@@ -24,7 +24,7 @@
     [self setTitle:@"签到拿积分"];
     [self addNavRight];
     
-    self.signInView = [[SignInView alloc] initWithFrame:self.view.frame];
+    self.signInView = [[SignInView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight)];
     [self.view addSubview:self.signInView];
 }
 

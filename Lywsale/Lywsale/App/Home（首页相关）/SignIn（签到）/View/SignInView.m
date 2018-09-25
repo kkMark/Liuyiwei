@@ -103,7 +103,7 @@
     // 星期
     NSDate *date = [calendar dateFromComponents:components];
     NSDateComponents *componets = [[NSCalendar autoupdatingCurrentCalendar] components:NSCalendarUnitWeekday fromDate:date];
-    NSInteger day = [componets weekday];
+    NSInteger day = [componets weekday] - 1;
     day = day == 7 ? 0 : day;
     
     // 天数
@@ -123,10 +123,21 @@
     float y = dateLabel.maxY;
     float x = 15;
     float width = (ScreenWidth - 30) / 7;
+    NSArray *weeks = @[@"日", @"一", @"二", @"三", @"四", @"五", @"六"];
+    for (int i = 0; i < weeks.count; i++) {
+        
+        UILabel *weekLabel = [[UILabel alloc] initWithFrame:CGRectMake(15 + i * width, y, width, width)];
+        weekLabel.text = weeks[i];
+        weekLabel.font = [UIFont systemFontOfSize:14];
+        weekLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
+        weekLabel.textAlignment = NSTextAlignmentCenter;
+        [bgView addSubview:weekLabel];
+    }
+    
     for (NSInteger i = day; i < numberDay + day; i++) {
         
         x = 15 + i % 7 * width;
-        y = dateLabel.maxY + i / 7 * width;
+        y = (dateLabel.maxY + width) + i / 7 * width;
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(x, y, width, width);
