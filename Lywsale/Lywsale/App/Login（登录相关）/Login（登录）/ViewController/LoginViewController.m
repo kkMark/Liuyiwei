@@ -40,18 +40,6 @@
     [self.loginView setLoginBlock:^(NSString *account, NSString *password) {
     
         @strongify(self);
-        if ([self.presentingViewController isKindOfClass:[RootViewController class]]) {
-            
-            RootViewController *tabbarVC = (RootViewController *)self.presentingViewController;
-            tabbarVC.selectedIndex = 0;
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
-        else {
-            
-            RootViewController *tabbarVC = [RootViewController new];
-            [self presentViewController:tabbarVC animated:YES completion:nil];
-        }
-                
         if (account.length == 0) {
             return [self.view makeToast:@"请输入账号"];
         }
@@ -64,7 +52,8 @@
             
             if (dict != nil && ![dict isEqual:[NSNull null]]) {
                 
-                SetUserDefault(UserName, dict [@"memberName"]);
+                SetUserDefault(Account, account);
+                SetUserDefault(UserName, dict[@"memberName"]);
                 SetUserDefault(UserID, dict[@"memberId"]);
                 SetUserDefault(Token_Type, dict[@"tokenMsg"][@"token_type"]);
                 SetUserDefault(Access_Token, dict[@"tokenMsg"][@"access_token"]);

@@ -65,6 +65,8 @@
            
             @strongify(self);
             [self alertWithTitle:@"温馨提示" msg:@"确定要退出吗？" isShowCancel:YES complete:^{
+                
+                [self clearUserDefaultsData];
                 [self logOut];
             }];
         }];
@@ -88,6 +90,16 @@
             }
         }];
     }
+}
+
+- (void)clearUserDefaultsData {
+    
+    NSString *account = GetUserDefault(Account);
+    
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    
+    SetUserDefault(Account, account);
 }
 
 @end

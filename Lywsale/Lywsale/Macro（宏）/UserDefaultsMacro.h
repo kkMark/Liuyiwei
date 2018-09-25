@@ -9,19 +9,20 @@
 #ifndef UserDefaultsMacro_h
 #define UserDefaultsMacro_h
 
+// 用户账号
+#define Account         @"userAccount"
 // 用户昵称
-#define UserName    @"userName"
+#define UserName        @"userName"
 // 用户ID
-#define UserID      @"userId"
+#define UserID          @"userId"
 // 用户类型 0 - 店员， 1 - 店长
-#define UserType    @"userType"
+#define UserType        @"userType"
 // token类型
 #define Token_Type      @"token_type"
 // 访问token
 #define Access_Token    @"access_token"
 // 刷新token
 #define Refresh_Token   @"refresh_token"
-
 
 #endif /* UserDefaultsMacro_h */
 

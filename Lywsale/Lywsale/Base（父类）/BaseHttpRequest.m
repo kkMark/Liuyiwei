@@ -132,7 +132,7 @@
                 success(responseObject);
             };
             
-            [viewController showHudAnimated:NO];
+            [viewController hideHudAnimated];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
@@ -142,8 +142,7 @@
                 failure(error);
             }
             
-            [viewController showHudAnimated:NO];
-            
+            [viewController hideHudAnimated];
         }];
         
     }
@@ -158,8 +157,8 @@
                 success(responseObject);
             };
             
-            [viewController showHudAnimated:NO];
-            
+            [viewController hideHudAnimated];
+
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
             NSLog(@"%@", error);
@@ -168,7 +167,7 @@
                 failure(error);
             }
             
-            [viewController showHudAnimated:NO];
+            [viewController hideHudAnimated];
         }];
     }
     
@@ -182,8 +181,8 @@
                 success(responseObject);
             };
             
-            [viewController showHudAnimated:NO];
-            
+            [viewController hideHudAnimated];
+
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
             NSLog(@"%@", error);
@@ -192,8 +191,7 @@
                 failure(error);
             }
             
-            [viewController showHudAnimated:NO];
-            
+            [viewController hideHudAnimated];
         }];
     }
 }

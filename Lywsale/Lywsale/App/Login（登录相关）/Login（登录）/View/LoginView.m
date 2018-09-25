@@ -63,6 +63,12 @@
         [textField addTarget:self action:@selector(textFieldTextChange:) forControlEvents:UIControlEventEditingChanged];
         [bgView addSubview:textField];
         
+        if (i == 0) {
+                
+            textField.text = GetUserDefault(Account);
+            self.account = textField.text;
+        }
+        
         if (i == 1) {
             
             UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, bgView.width, 1)];
