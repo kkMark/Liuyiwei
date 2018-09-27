@@ -7,12 +7,14 @@
 //
 
 #import "SalesTaskViewController.h"
+#import "SalesTaskViewModel.h"
 #import "SalesTaskView.h"
 
 @interface SalesTaskViewController ()
 
 @property (nonatomic, strong) SalesTaskView *salesTaskView;
 @property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, assign) int page;
 
 @end
 
@@ -23,10 +25,13 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    [self initNavRight];
     
     self.title = @"动销任务";
+    self.page = 1;
     self.salesTaskView.dataSources = @[@"", @"", @""];
+
+    [self initNavRight];
+    [self request];
 }
 
 - (void)initNavRight {
@@ -102,6 +107,20 @@
     }
     
     return salesTaskView;
+}
+
+
+#pragma mark - request
+- (void)request {
+    
+    [[SalesTaskViewModel new] getSalesTask:self.page success:^(NSDictionary *dict) {
+        
+        NSLog(@"请求成功 = %@", dict);
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
 }
 
 @end

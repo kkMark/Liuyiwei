@@ -66,6 +66,8 @@
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
 		0C54C6972154CBF100C8FB10 /* UploadCredentialsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C6962154CBF100C8FB10 /* UploadCredentialsViewController.m */; };
 		0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */; };
+		0C6A9EFE215B1A4800CFB389 /* SalesTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */; };
+		0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9F01215B2E7B00CFB389 /* PublicHeaderView.m */; };
 		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
 		0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36ED2130EF030081DB1C /* FootprintView.m */; };
 		0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F02130EFCA0081DB1C /* FootprintCell.m */; };
@@ -271,6 +273,10 @@
 		0C54C6962154CBF100C8FB10 /* UploadCredentialsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadCredentialsViewController.m; sourceTree = "<group>"; };
 		0C54C69B2154CCED00C8FB10 /* UploadCredentialsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadCredentialsView.h; sourceTree = "<group>"; };
 		0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadCredentialsView.m; sourceTree = "<group>"; };
+		0C6A9EFC215B1A4800CFB389 /* SalesTaskViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewModel.h; sourceTree = "<group>"; };
+		0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskViewModel.m; sourceTree = "<group>"; };
+		0C6A9F00215B2E7B00CFB389 /* PublicHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicHeaderView.h; sourceTree = "<group>"; };
+		0C6A9F01215B2E7B00CFB389 /* PublicHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicHeaderView.m; sourceTree = "<group>"; };
 		0C6B36E921300B0E0081DB1C /* WebHelpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebHelpViewController.h; sourceTree = "<group>"; };
 		0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebHelpViewController.m; sourceTree = "<group>"; };
 		0C6B36EC2130EF030081DB1C /* FootprintView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintView.h; sourceTree = "<group>"; };
@@ -1351,6 +1357,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0C6A9EFF215B2E6800CFB389 /* PublicHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A9F00215B2E7B00CFB389 /* PublicHeaderView.h */,
+				0C6A9F01215B2E7B00CFB389 /* PublicHeaderView.m */,
+			);
+			path = PublicHeaderView;
+			sourceTree = "<group>";
+		};
 		0C6B36E821300ADD0081DB1C /* WebHelp（帮助相关） */ = {
 			isa = PBXGroup;
 			children = (
@@ -1621,6 +1636,8 @@
 		0C84049221354B7C00305197 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0C6A9EFC215B1A4800CFB389 /* SalesTaskViewModel.h */,
+				0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -2135,6 +2152,7 @@
 		0CE1EC3A212901D400A373D7 /* Public（公用） */ = {
 			isa = PBXGroup;
 			children = (
+				0C6A9EFF215B2E6800CFB389 /* PublicHeaderView */,
 				0CE1EC482129143100A373D7 /* CustomTextField */,
 				0CE1EC3B212901ED00A373D7 /* SearchView（搜索框） */,
 				0C37F55B212D4A9000E357EB /* TipCell（提示Cell） */,
@@ -2587,6 +2605,7 @@
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
 				0C804A1B2147C4900032B57A /* ReceptionHeaderView.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
+				0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */,
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
@@ -2596,6 +2615,7 @@
 				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,
 				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
+				0C6A9EFE215B1A4800CFB389 /* SalesTaskViewModel.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
 				0C523978213E37E30083260A /* TaskTypeCell.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
