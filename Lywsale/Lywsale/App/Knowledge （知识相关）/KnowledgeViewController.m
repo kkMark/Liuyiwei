@@ -8,8 +8,11 @@
 
 #import "KnowledgeViewController.h"
 #import "KnowledgeRequest.h"
+#import "KnowledgeView.h"
 
 @interface KnowledgeViewController ()
+
+@property (nonatomic ,strong) KnowledgeView *knowledgeView;
 
 @end
 
@@ -38,7 +41,14 @@
 
 -(void)initUI{
     
+    self.knowledgeView = [KnowledgeView new];
+    [self.view addSubview:self.knowledgeView];
     
+    self.knowledgeView.sd_layout
+    .leftSpaceToView(self.view, 0)
+    .rightSpaceToView(self.view, 0)
+    .topSpaceToView(self.view, 0)
+    .bottomSpaceToView(self.view, 0);
     
 }
 
