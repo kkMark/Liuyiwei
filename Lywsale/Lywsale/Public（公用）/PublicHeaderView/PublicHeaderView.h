@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface PublicHeaderView : UIView
 
 @property (nonatomic, strong) NSArray *titles;
+@property (nonatomic, assign) NSInteger index;
 
 @end
 

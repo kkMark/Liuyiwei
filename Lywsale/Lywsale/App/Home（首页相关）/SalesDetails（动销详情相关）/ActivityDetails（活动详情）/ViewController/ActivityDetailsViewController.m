@@ -7,17 +7,21 @@
 //
 
 #import "ActivityDetailsViewController.h"
+#import "PublicHeaderView.h"
 #import "ActivityDetailsView.h"
+#import "SalesSendView.h"
 
 @interface ActivityDetailsViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) ActivityDetailsView *detailsView;
-@property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, strong) SalesSendView *salesSendView;
+@property (nonatomic, strong) PublicHeaderView *headerView;
 @property (nonatomic, strong) UIScrollView *bgScrollView;
 
 @end
 
 @implementation ActivityDetailsViewController
+@synthesize salesSendView;
 @synthesize detailsView;
 @synthesize headerView;
 @synthesize bgScrollView;
@@ -71,6 +75,17 @@
 }
 
 #pragma mark - lazy
+- (SalesSendView *)salesSendView {
+    
+    if (!salesSendView) {
+        
+        salesSendView = [[SalesSendView alloc] initWithFrame:CGRectMake(ScreenWidth, 0, ScreenWidth, self.bgScrollView.height)];
+        [self.bgScrollView addSubview:salesSendView];
+    }
+    
+    return salesSendView;
+}
+
 - (ActivityDetailsView *)detailsView {
     
     if (!detailsView) {
@@ -82,48 +97,13 @@
     return detailsView;
 }
 
-- (UIView *)headerView {
+- (PublicHeaderView *)headerView {
     
     if (!headerView) {
         
-        NSArray *titles = @[@"任务详情", @"分发", @"执行情况"];
-        
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
-        headerView.backgroundColor = [UIColor whiteColor];
+        headerView = [[PublicHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
+        headerView.titles = @[@"任务详情", @"分发", @"执行情况"];
         [self.view addSubview:headerView];
-        
-        UIView *headerLine = [[UIView alloc] initWithFrame:CGRectMake(0, headerView.height - 2, 100, 2)];
-        headerLine.backgroundColor = kMainColor;
-        headerLine.centerX = ScreenWidth / titles.count / 2;
-        [headerView addSubview:headerLine];
-        
-        for (int i = 0; i < titles.count; i++) {
-            
-            UIButton *titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            titleBtn.tag = i + 10;
-            titleBtn.selected = i == 0 ? YES : NO;
-            titleBtn.frame = CGRectMake(ScreenWidth / titles.count * i, 0, ScreenWidth / titles.count, headerView.height);
-            titleBtn.titleLabel.font = [UIFont systemFontOfSize:14];
-            [titleBtn setTitle:titles[i] forState:UIControlStateNormal];
-            [titleBtn setTitleColor:[UIColor colorWithHexString:@"0x999999"] forState:UIControlStateNormal];
-            [titleBtn setTitleColor:kMainColor forState:UIControlStateSelected];
-            [headerView addSubview:titleBtn];
-            
-            [[titleBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-                
-                [UIView animateWithDuration:0.25 animations:^{
-                    
-                    for (int index = 0; index < titles.count; index++) {
-                        
-                        UIButton *tempBtn = [self.view viewWithTag:index + 10];
-                        if (index == i) tempBtn.selected = YES;
-                        else tempBtn.selected = NO;
-                    }
-                    
-                    headerLine.centerX = titleBtn.centerX;
-                }];
-            }];
-        }
     }
     
     return headerView;
@@ -148,9 +128,13 @@
     return bgScrollView;
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;
+    NSLog(@"scrollViewDidEndDecelerating = %zd", index);
     
+    self.headerView.index = index;
+    self.salesSendView.dataSource = @[];
 }
 
 @end

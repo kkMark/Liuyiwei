@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C011C93215E0C5D0015F449 /* SalesSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C011C92215E0C5D0015F449 /* SalesSendView.m */; };
 		0C12144A2155D3E00028368D /* RemarkMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214492155D3E00028368D /* RemarkMenuView.m */; };
 		0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214542156152C0028368D /* DrugReviewViewController.m */; };
 		0C1214582156157F0028368D /* DrugReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214572156157F0028368D /* DrugReviewView.m */; };
@@ -155,6 +156,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C011C91215E0C5D0015F449 /* SalesSendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesSendView.h; sourceTree = "<group>"; };
+		0C011C92215E0C5D0015F449 /* SalesSendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesSendView.m; sourceTree = "<group>"; };
 		0C1214482155D3E00028368D /* RemarkMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemarkMenuView.h; sourceTree = "<group>"; };
 		0C1214492155D3E00028368D /* RemarkMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemarkMenuView.m; sourceTree = "<group>"; };
 		0C1214532156152C0028368D /* DrugReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugReviewViewController.h; sourceTree = "<group>"; };
@@ -462,6 +465,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C011C90215E09210015F449 /* 活动详情 */ = {
+			isa = PBXGroup;
+			children = (
+				0CF0EF92215222CD00DF2DFA /* ActivityDetailsView.h */,
+				0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */,
+			);
+			path = "活动详情";
+			sourceTree = "<group>";
+		};
 		0C12144E215614640028368D /* DrugReview（用药回访） */ = {
 			isa = PBXGroup;
 			children = (
@@ -2178,6 +2190,23 @@
 			path = CustomTextField;
 			sourceTree = "<group>";
 		};
+		0CE7AADE215E012500C3750C /* 分发 */ = {
+			isa = PBXGroup;
+			children = (
+				0CE7AAE0215E013500C3750C /* View */,
+			);
+			path = "分发";
+			sourceTree = "<group>";
+		};
+		0CE7AAE0215E013500C3750C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0C011C91215E0C5D0015F449 /* SalesSendView.h */,
+				0C011C92215E0C5D0015F449 /* SalesSendView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0CEFA0F1213FC4CD0072EAB9 /* Registered（注册） */ = {
 			isa = PBXGroup;
 			children = (
@@ -2282,8 +2311,8 @@
 		0CF0EF8C2152223C00DF2DFA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0CF0EF92215222CD00DF2DFA /* ActivityDetailsView.h */,
-				0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */,
+				0CE7AADE215E012500C3750C /* 分发 */,
+				0C011C90215E09210015F449 /* 活动详情 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2627,6 +2656,7 @@
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
 				0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */,
 				0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */,
+				0C011C93215E0C5D0015F449 /* SalesSendView.m in Sources */,
 				0C29CA43212FFD36001A78A0 /* MoreView.m in Sources */,
 				0CF0EF912152226100DF2DFA /* ActivityDetailsViewController.m in Sources */,
 				0C8404A321354BB200305197 /* DailyTaskViewController.m in Sources */,

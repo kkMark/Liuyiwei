@@ -25,12 +25,17 @@
     self.headerView.width = self.width;
 }
 
+- (void)setIndex:(NSInteger)index {
+    
+    [self btnClick:[self viewWithTag:index + 10]];
+}
+
 #pragma mark - lazy
 - (UIView *)headerView {
     
     if (!headerView) {
         
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 45)];
+        headerView = [[UIView alloc] initWithFrame:self.frame];
         headerView.backgroundColor = [UIColor whiteColor];
         [self addSubview:headerView];
         
