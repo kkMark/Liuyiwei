@@ -26,7 +26,7 @@
 
 -(void)addTitleList:(NSArray *)array{
     
-    _dataSource = [NSMutableArray arrayWithArray:array];
+    self.dataSource = [NSMutableArray arrayWithArray:array];
     
     [self.myTable reloadData];
     
@@ -46,14 +46,20 @@
     self.myTable.delegate = self;
     self.myTable.dataSource = self;
     self.myTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.myTable.backgroundColor = [UIColor clearColor];
+    self.myTable.backgroundColor = kPageBgColor;
     [self addSubview:self.myTable];
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 1;
+    NSDictionary *dict = self.dataSource[section];
+    
+    NSArray *keys = [dict allKeys];
+    
+    NSArray *array = dict[keys[0]];
+    
+    return array.count;
     
 }
 
@@ -109,21 +115,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     
-//    cell.model = self.dataSource[indexPath.row];
-    
     return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-//    AddGroupModel *model = self.dataSource[indexPath.row];
-    
-//    NSString *pushString = model.titleString;
-//
-//    if (self.pushBlock) {
-//        self.pushBlock(pushString);
-//    }
-    
 }
 
 @end

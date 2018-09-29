@@ -10,4 +10,6 @@
 
 @interface KnowledgeView : BaseTableSectionView
 
+@property (nonatomic ,strong) UIView *headerView;
+
 @end
