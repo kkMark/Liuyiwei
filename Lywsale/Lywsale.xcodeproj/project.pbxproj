@@ -140,6 +140,8 @@
 		0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CEFA102213FD4940072EAB9 /* RetrieveViewModel.m */; };
 		0CF0EF912152226100DF2DFA /* ActivityDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0EF902152226100DF2DFA /* ActivityDetailsViewController.m */; };
 		0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */; };
+		0CF519802160B9170015B16D /* SalesSendListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5197F2160B9170015B16D /* SalesSendListView.m */; };
+		0CF519832160BF390015B16D /* SalesSendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF519822160BF390015B16D /* SalesSendListCell.m */; };
 		1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141FD112152524400FAF01F /* AnnouncementViewController.m */; };
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
@@ -425,6 +427,10 @@
 		0CF0EF902152226100DF2DFA /* ActivityDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailsViewController.m; sourceTree = "<group>"; };
 		0CF0EF92215222CD00DF2DFA /* ActivityDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDetailsView.h; sourceTree = "<group>"; };
 		0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailsView.m; sourceTree = "<group>"; };
+		0CF5197E2160B9170015B16D /* SalesSendListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesSendListView.h; sourceTree = "<group>"; };
+		0CF5197F2160B9170015B16D /* SalesSendListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesSendListView.m; sourceTree = "<group>"; };
+		0CF519812160BF390015B16D /* SalesSendListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesSendListCell.h; sourceTree = "<group>"; };
+		0CF519822160BF390015B16D /* SalesSendListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesSendListCell.m; sourceTree = "<group>"; };
 		1141FD102152524400FAF01F /* AnnouncementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncementViewController.h; sourceTree = "<group>"; };
 		1141FD112152524400FAF01F /* AnnouncementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementViewController.m; sourceTree = "<group>"; };
 		114A0531214A43EC0021E8ED /* WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
@@ -2196,18 +2202,14 @@
 		0CE7AADE215E012500C3750C /* 分发 */ = {
 			isa = PBXGroup;
 			children = (
-				0CE7AAE0215E013500C3750C /* View */,
-			);
-			path = "分发";
-			sourceTree = "<group>";
-		};
-		0CE7AAE0215E013500C3750C /* View */ = {
-			isa = PBXGroup;
-			children = (
 				0C011C91215E0C5D0015F449 /* SalesSendView.h */,
 				0C011C92215E0C5D0015F449 /* SalesSendView.m */,
+				0CF519812160BF390015B16D /* SalesSendListCell.h */,
+				0CF519822160BF390015B16D /* SalesSendListCell.m */,
+				0CF5197E2160B9170015B16D /* SalesSendListView.h */,
+				0CF5197F2160B9170015B16D /* SalesSendListView.m */,
 			);
-			path = View;
+			path = "分发";
 			sourceTree = "<group>";
 		};
 		0CEFA0F1213FC4CD0072EAB9 /* Registered（注册） */ = {
@@ -2294,8 +2296,6 @@
 		0CF0EF8A2152220F00DF2DFA /* ActivityDetails（活动详情） */ = {
 			isa = PBXGroup;
 			children = (
-				0CF0EF8E2152224500DF2DFA /* ViewModel */,
-				0CF0EF8D2152224300DF2DFA /* Model */,
 				0CF0EF8C2152223C00DF2DFA /* View */,
 				0CF0EF8B2152223100DF2DFA /* ViewController */,
 			);
@@ -2318,20 +2318,6 @@
 				0C011C90215E09210015F449 /* 活动详情 */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0CF0EF8D2152224300DF2DFA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0CF0EF8E2152224500DF2DFA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		1141FD0F215251EA00FAF01F /* Announcement（公告信息） */ = {
@@ -2645,6 +2631,8 @@
 				11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */,
 				0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
+				0CF519832160BF390015B16D /* SalesSendListCell.m in Sources */,
+				0CF519802160B9170015B16D /* SalesSendListView.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
 				0C804A1B2147C4900032B57A /* ReceptionHeaderView.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
@@ -2843,7 +2831,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4P7EQZ5XW5;
+				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2864,7 +2852,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4P7EQZ5XW5;
+				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

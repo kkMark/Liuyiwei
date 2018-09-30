@@ -64,12 +64,16 @@
     }
     
     [uploadBtn setTitle:title forState:UIControlStateNormal];
-    [[uploadBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        
+    [[uploadBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x)
+    {
         if ([title isEqualToString:@"去上传凭证"]) {
          
             NSString *vcName = @"UploadCredentialsViewController";
             [self.navigationController pushViewController:[NSClassFromString(vcName) new] animated:YES];
+        }
+        else if ([title isEqualToString:@"分发给店员"]) {
+            
+            [self.bgScrollView setContentOffset:CGPointMake(ScreenWidth, 0) animated:YES];
         }
     }];
 }
@@ -134,7 +138,7 @@
     NSLog(@"scrollViewDidEndDecelerating = %zd", index);
     
     self.headerView.index = index;
-    self.salesSendView.dataSource = @[];
+    self.salesSendView.dataSource = @[@"", @"", @"", @""];
 }
 
 @end
