@@ -143,6 +143,7 @@
 		1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141FD112152524400FAF01F /* AnnouncementViewController.m */; };
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
+		116392B7215F6AB5004160A2 /* CourseSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116392B6215F6AB5004160A2 /* CourseSortViewController.m */; };
 		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
 		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
@@ -430,6 +431,8 @@
 		114A0532214A43EC0021E8ED /* WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
 		114A0534214A43FE0021E8ED /* KnowledgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeViewController.h; sourceTree = "<group>"; };
 		114A0535214A43FE0021E8ED /* KnowledgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeViewController.m; sourceTree = "<group>"; };
+		116392B5215F6AB5004160A2 /* CourseSortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSortViewController.h; sourceTree = "<group>"; };
+		116392B6215F6AB5004160A2 /* CourseSortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseSortViewController.m; sourceTree = "<group>"; };
 		11AA452D2150FF5600ED7293 /* HomeMessgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeTableViewCell.h; sourceTree = "<group>"; };
 		11AA452E2150FF5600ED7293 /* HomeMessgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeView.h; sourceTree = "<group>"; };
 		11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeTableViewCell.m; sourceTree = "<group>"; };
@@ -2356,12 +2359,22 @@
 		114A0530214A43B20021E8ED /* Knowledge （知识相关） */ = {
 			isa = PBXGroup;
 			children = (
+				116392B4215F6A88004160A2 /* CourseSort（课程分类） */,
 				11D1DFCC215A3EE500FF7045 /* View */,
 				11D1DFCB215A2E6900FF7045 /* Request */,
 				114A0534214A43FE0021E8ED /* KnowledgeViewController.h */,
 				114A0535214A43FE0021E8ED /* KnowledgeViewController.m */,
 			);
 			path = "Knowledge （知识相关）";
+			sourceTree = "<group>";
+		};
+		116392B4215F6A88004160A2 /* CourseSort（课程分类） */ = {
+			isa = PBXGroup;
+			children = (
+				116392B5215F6AB5004160A2 /* CourseSortViewController.h */,
+				116392B6215F6AB5004160A2 /* CourseSortViewController.m */,
+			);
+			path = "CourseSort（课程分类）";
 			sourceTree = "<group>";
 		};
 		11AA452C2150FF5600ED7293 /* View */ = {
@@ -2623,6 +2636,7 @@
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,
 				0CDDB5532127342800D42F76 /* BaseTableView.m in Sources */,
 				0C37F55E212D4A9000E357EB /* TipCell.m in Sources */,
+				116392B7215F6AB5004160A2 /* CourseSortViewController.m in Sources */,
 				0CE1EC4121290FBD00A373D7 /* ApplyViewController.m in Sources */,
 				0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */,
 				0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */,
