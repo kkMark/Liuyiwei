@@ -10,17 +10,20 @@
 #import "PublicHeaderView.h"
 #import "ActivityDetailsView.h"
 #import "SalesSendView.h"
+#import "PerformView.h"
 
 @interface ActivityDetailsViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) ActivityDetailsView *detailsView;
 @property (nonatomic, strong) SalesSendView *salesSendView;
 @property (nonatomic, strong) PublicHeaderView *headerView;
+@property (nonatomic, strong) PerformView *performView;
 @property (nonatomic, strong) UIScrollView *bgScrollView;
 
 @end
 
 @implementation ActivityDetailsViewController
+@synthesize performView;
 @synthesize salesSendView;
 @synthesize detailsView;
 @synthesize headerView;
@@ -79,6 +82,17 @@
 }
 
 #pragma mark - lazy
+- (PerformView *)performView {
+    
+    if (!performView) {
+        
+        performView = [[PerformView alloc] initWithFrame:CGRectMake(ScreenWidth * 2, 0, ScreenWidth, self.bgScrollView.height)];
+        [self.bgScrollView addSubview:performView];
+    }
+    
+    return performView;
+}
+
 - (SalesSendView *)salesSendView {
     
     if (!salesSendView) {
@@ -108,6 +122,13 @@
         headerView = [[PublicHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
         headerView.titles = @[@"任务详情", @"分发", @"执行情况"];
         [self.view addSubview:headerView];
+        
+        @weakify(self);
+        [headerView setSelectIndexBlock:^(NSInteger index) {
+            
+            @strongify(self);
+            [self.bgScrollView setContentOffset:CGPointMake(ScreenWidth * index, 0) animated:YES];
+        }];
     }
     
     return headerView;
@@ -123,9 +144,13 @@
         [self.view addSubview:bgScrollView];
         
         if ([GetUserDefault(UserType) isEqualToString:@"1"]) {
+            
             bgScrollView.y = self.headerView.height;
             bgScrollView.height -= self.headerView.height;
             bgScrollView.contentSize = CGSizeMake(ScreenWidth * 3, 0);
+            
+            self.salesSendView.dataSource = @[@"", @"", @"", @""];
+            self.performView.dataSources = @[@"", @"", @"", @"", @""];
         }
     }
     
@@ -138,7 +163,6 @@
     NSLog(@"scrollViewDidEndDecelerating = %zd", index);
     
     self.headerView.index = index;
-    self.salesSendView.dataSource = @[@"", @"", @"", @""];
 }
 
 @end

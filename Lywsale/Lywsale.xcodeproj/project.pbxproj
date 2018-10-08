@@ -67,6 +67,8 @@
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
 		0C54C6972154CBF100C8FB10 /* UploadCredentialsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C6962154CBF100C8FB10 /* UploadCredentialsViewController.m */; };
 		0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */; };
+		0C5F2CC7216AF08800801951 /* PerformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC6216AF08800801951 /* PerformView.m */; };
+		0C5F2CCA216AF16600801951 /* PerformCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC9216AF16600801951 /* PerformCell.m */; };
 		0C6A9EFE215B1A4800CFB389 /* SalesTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */; };
 		0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9F01215B2E7B00CFB389 /* PublicHeaderView.m */; };
 		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
@@ -279,6 +281,10 @@
 		0C54C6962154CBF100C8FB10 /* UploadCredentialsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadCredentialsViewController.m; sourceTree = "<group>"; };
 		0C54C69B2154CCED00C8FB10 /* UploadCredentialsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadCredentialsView.h; sourceTree = "<group>"; };
 		0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadCredentialsView.m; sourceTree = "<group>"; };
+		0C5F2CC5216AF08800801951 /* PerformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformView.h; sourceTree = "<group>"; };
+		0C5F2CC6216AF08800801951 /* PerformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformView.m; sourceTree = "<group>"; };
+		0C5F2CC8216AF16600801951 /* PerformCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformCell.h; sourceTree = "<group>"; };
+		0C5F2CC9216AF16600801951 /* PerformCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformCell.m; sourceTree = "<group>"; };
 		0C6A9EFC215B1A4800CFB389 /* SalesTaskViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewModel.h; sourceTree = "<group>"; };
 		0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskViewModel.m; sourceTree = "<group>"; };
 		0C6A9F00215B2E7B00CFB389 /* PublicHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicHeaderView.h; sourceTree = "<group>"; };
@@ -1378,6 +1384,17 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0C5F2CC4216AF06D00801951 /* 执行情况 */ = {
+			isa = PBXGroup;
+			children = (
+				0C5F2CC8216AF16600801951 /* PerformCell.h */,
+				0C5F2CC9216AF16600801951 /* PerformCell.m */,
+				0C5F2CC5216AF08800801951 /* PerformView.h */,
+				0C5F2CC6216AF08800801951 /* PerformView.m */,
+			);
+			path = "执行情况";
+			sourceTree = "<group>";
+		};
 		0C6A9EFF215B2E6800CFB389 /* PublicHeaderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2314,6 +2331,7 @@
 		0CF0EF8C2152223C00DF2DFA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C5F2CC4216AF06D00801951 /* 执行情况 */,
 				0CE7AADE215E012500C3750C /* 分发 */,
 				0C011C90215E09210015F449 /* 活动详情 */,
 			);
@@ -2556,6 +2574,7 @@
 				0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */,
 				0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */,
 				0C1F77F121555E9A0059E915 /* ReceptionRemarkView.m in Sources */,
+				0C5F2CCA216AF16600801951 /* PerformCell.m in Sources */,
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
@@ -2656,6 +2675,7 @@
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
+				0C5F2CC7216AF08800801951 /* PerformView.m in Sources */,
 				0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */,
 				0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */,
 				0C011C93215E0C5D0015F449 /* SalesSendView.m in Sources */,
