@@ -22,7 +22,7 @@
 
 - (void)setupSubviews {
     
-    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(20, 0, ScreenWidth - 40, 35)];
+    self.bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 35)];
     self.bgView.layer.borderColor = [UIColor colorWithHexString:@"0xEEF0F3"].CGColor;
     self.bgView.layer.borderWidth = 0.5;
     [self.contentView addSubview:self.bgView];
@@ -33,7 +33,6 @@
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.bgView.width / 4 * i, 0, self.bgView.width / 4, self.bgView.height)];
         titleLabel.tag = i + 100;
         titleLabel.text = titles[i];
-        titleLabel.font = [UIFont systemFontOfSize:13];
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.textAlignment = NSTextAlignmentCenter;
         [self.bgView addSubview:titleLabel];
@@ -55,14 +54,19 @@
     
     self.bgView.backgroundColor = color;
     
-    if (indexPath.row != 0) {
+    NSArray *titles = @[@"陈六", @"50000", @"30", @"3%"];
+    for (int i = 0; i < 4; i++) {
         
-        NSArray *titles = @[@"陈六", @"50000", @"30", @"3%"];
-        for (int i = 0; i < 4; i++) {
+        UILabel *titleLabel = [self viewWithTag:i + 100];
+        if (indexPath.row != 0) {
             
-            UILabel *titleLabel = [self viewWithTag:i + 100];
             titleLabel.text = titles[i];
+            titleLabel.font = [UIFont systemFontOfSize:13];
             titleLabel.textColor = kMainTextColor;
+        }
+        else {
+            
+            titleLabel.font = [UIFont systemFontOfSize:12];
         }
     }
 }

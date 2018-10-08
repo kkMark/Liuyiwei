@@ -86,7 +86,7 @@
     
     if (!performView) {
         
-        performView = [[PerformView alloc] initWithFrame:CGRectMake(ScreenWidth * 2, 0, ScreenWidth, self.bgScrollView.height)];
+        performView = [[PerformView alloc] initWithFrame:CGRectMake(ScreenWidth * 2, 0, ScreenWidth, self.bgScrollView.height) style:UITableViewStyleGrouped];
         [self.bgScrollView addSubview:performView];
     }
     
