@@ -148,6 +148,9 @@
 		116392B7215F6AB5004160A2 /* CourseSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116392B6215F6AB5004160A2 /* CourseSortViewController.m */; };
 		11686F5F216AE98C0001C3F9 /* CourseSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F5E216AE98C0001C3F9 /* CourseSortView.m */; };
 		11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F61216AEF670001C3F9 /* CourseSortTableViewCell.m */; };
+		11686F66216AFC210001C3F9 /* DrugSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F65216AFC210001C3F9 /* DrugSortViewController.m */; };
+		11686F6A216AFC6B0001C3F9 /* DrugTabooViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F69216AFC6B0001C3F9 /* DrugTabooViewController.m */; };
+		11686F6E216B02640001C3F9 /* DrugSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F6D216B02640001C3F9 /* DrugSortView.m */; };
 		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
 		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
@@ -445,6 +448,12 @@
 		11686F5E216AE98C0001C3F9 /* CourseSortView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseSortView.m; sourceTree = "<group>"; };
 		11686F60216AEF670001C3F9 /* CourseSortTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSortTableViewCell.h; sourceTree = "<group>"; };
 		11686F61216AEF670001C3F9 /* CourseSortTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseSortTableViewCell.m; sourceTree = "<group>"; };
+		11686F64216AFC210001C3F9 /* DrugSortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugSortViewController.h; sourceTree = "<group>"; };
+		11686F65216AFC210001C3F9 /* DrugSortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrugSortViewController.m; sourceTree = "<group>"; };
+		11686F68216AFC6B0001C3F9 /* DrugTabooViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugTabooViewController.h; sourceTree = "<group>"; };
+		11686F69216AFC6B0001C3F9 /* DrugTabooViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrugTabooViewController.m; sourceTree = "<group>"; };
+		11686F6C216B02640001C3F9 /* DrugSortView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugSortView.h; sourceTree = "<group>"; };
+		11686F6D216B02640001C3F9 /* DrugSortView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrugSortView.m; sourceTree = "<group>"; };
 		11AA452D2150FF5600ED7293 /* HomeMessgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeTableViewCell.h; sourceTree = "<group>"; };
 		11AA452E2150FF5600ED7293 /* HomeMessgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeView.h; sourceTree = "<group>"; };
 		11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeTableViewCell.m; sourceTree = "<group>"; };
@@ -2351,6 +2360,8 @@
 		114A0530214A43B20021E8ED /* Knowledge （知识相关） */ = {
 			isa = PBXGroup;
 			children = (
+				11686F67216AFC4C0001C3F9 /* DrugTaboo（药品禁忌） */,
+				11686F63216AFBBF0001C3F9 /* DrugSort（药品分类） */,
 				116392B4215F6A88004160A2 /* CourseSort（课程分类） */,
 				11D1DFCC215A3EE500FF7045 /* View */,
 				11D1DFCB215A2E6900FF7045 /* Request */,
@@ -2387,6 +2398,34 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		11686F63216AFBBF0001C3F9 /* DrugSort（药品分类） */ = {
+			isa = PBXGroup;
+			children = (
+				11686F6B216B02240001C3F9 /* View */,
+				11686F64216AFC210001C3F9 /* DrugSortViewController.h */,
+				11686F65216AFC210001C3F9 /* DrugSortViewController.m */,
+			);
+			path = "DrugSort（药品分类）";
+			sourceTree = "<group>";
+		};
+		11686F67216AFC4C0001C3F9 /* DrugTaboo（药品禁忌） */ = {
+			isa = PBXGroup;
+			children = (
+				11686F68216AFC6B0001C3F9 /* DrugTabooViewController.h */,
+				11686F69216AFC6B0001C3F9 /* DrugTabooViewController.m */,
+			);
+			path = "DrugTaboo（药品禁忌）";
+			sourceTree = "<group>";
+		};
+		11686F6B216B02240001C3F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11686F6C216B02640001C3F9 /* DrugSortView.h */,
+				11686F6D216B02640001C3F9 /* DrugSortView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		11AA452C2150FF5600ED7293 /* View */ = {
@@ -2601,6 +2640,7 @@
 				0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */,
 				11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
+				11686F6A216AFC6B0001C3F9 /* DrugTabooViewController.m in Sources */,
 				0C1F77EE21555E7F0059E915 /* ReceptionRemarkViewController.m in Sources */,
 				0C219616215A206100D2696D /* ResultsHistoryViewController.m in Sources */,
 				0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */,
@@ -2615,6 +2655,7 @@
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */,
+				11686F6E216B02640001C3F9 /* DrugSortView.m in Sources */,
 				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
 				11ED7D102158C88A0032FE0B /* AnnouncenmentTableViewCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
@@ -2634,6 +2675,7 @@
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
 				0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */,
 				0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */,
+				11686F66216AFC210001C3F9 /* DrugSortViewController.m in Sources */,
 				0C9A9407214130FF00CACE20 /* RCompleteViewController.m in Sources */,
 				0C37F5D6212E904700E357EB /* MyCardView.m in Sources */,
 				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,

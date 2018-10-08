@@ -10,6 +10,8 @@
 #import "KnowledgeRequest.h"
 #import "KnowledgeView.h"
 #import "CourseSortViewController.h"
+#import "DrugSortViewController.h"
+#import "DrugTabooViewController.h"
 
 @interface KnowledgeViewController ()
 
@@ -89,8 +91,16 @@
         }
         if ([pushString isEqualToString:@"药品分类"]) {
             
+            DrugSortViewController *VC = [[DrugSortViewController alloc] init];
+            VC.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:VC animated:YES];
+            
         }
         if ([pushString isEqualToString:@"药品禁忌"]) {
+         
+            DrugTabooViewController *VC = [[DrugTabooViewController alloc] init];
+            VC.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:VC animated:YES];
             
         }
         

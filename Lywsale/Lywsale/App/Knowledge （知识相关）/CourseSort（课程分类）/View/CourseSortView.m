@@ -71,7 +71,7 @@
     [view addSubview:imageView];
     
     imageView.sd_layout
-    .leftSpaceToView(view, 20)
+    .leftSpaceToView(view, 12.5 + 10)
     .centerYEqualToView(view)
     .widthIs(24)
     .heightEqualToWidth();
