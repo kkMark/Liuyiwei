@@ -75,6 +75,10 @@
         
         self.lineView.centerX = btn.centerX;
     }];
+    
+    if (self.selectIndexBlock) {
+        self.selectIndexBlock(btn.tag - 10);
+    }
 }
 
 @end

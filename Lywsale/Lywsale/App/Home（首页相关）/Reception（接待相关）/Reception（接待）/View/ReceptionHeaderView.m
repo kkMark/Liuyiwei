@@ -77,7 +77,7 @@
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(iconImgView.maxX + 10, 0, 0, btn.height)];
         titleLabel.width = width - titleLabel.x;
-        titleLabel.text = i == 0 ? @"打电话" : @"用药回访";
+        titleLabel.text = i == 0 ? @"打电话" : @"接待备注";
         titleLabel.font = [UIFont systemFontOfSize:15];
         titleLabel.textColor = color;
         [btn addSubview:titleLabel];
