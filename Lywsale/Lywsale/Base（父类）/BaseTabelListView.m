@@ -46,7 +46,7 @@
     self.myTable.delegate = self;
     self.myTable.dataSource = self;
     self.myTable.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.myTable.backgroundColor = [UIColor clearColor];
+    self.myTable.backgroundColor = kPageBgColor;
     [self addSubview:self.myTable];
     
 }
