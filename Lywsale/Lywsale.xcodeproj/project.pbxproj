@@ -69,6 +69,7 @@
 		0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */; };
 		0C5F2CC7216AF08800801951 /* PerformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC6216AF08800801951 /* PerformView.m */; };
 		0C5F2CCA216AF16600801951 /* PerformCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC9216AF16600801951 /* PerformCell.m */; };
+		0C5F2CCD216B349200801951 /* DailyTaskManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */; };
 		0C6A9EFE215B1A4800CFB389 /* SalesTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */; };
 		0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9F01215B2E7B00CFB389 /* PublicHeaderView.m */; };
 		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
@@ -290,6 +291,8 @@
 		0C5F2CC6216AF08800801951 /* PerformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformView.m; sourceTree = "<group>"; };
 		0C5F2CC8216AF16600801951 /* PerformCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformCell.h; sourceTree = "<group>"; };
 		0C5F2CC9216AF16600801951 /* PerformCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformCell.m; sourceTree = "<group>"; };
+		0C5F2CCB216B349200801951 /* DailyTaskManagerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskManagerCell.h; sourceTree = "<group>"; };
+		0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskManagerCell.m; sourceTree = "<group>"; };
 		0C6A9EFC215B1A4800CFB389 /* SalesTaskViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewModel.h; sourceTree = "<group>"; };
 		0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskViewModel.m; sourceTree = "<group>"; };
 		0C6A9F00215B2E7B00CFB389 /* PublicHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicHeaderView.h; sourceTree = "<group>"; };
@@ -1658,6 +1661,8 @@
 		0C84048F21354B7C00305197 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C5F2CCB216B349200801951 /* DailyTaskManagerCell.h */,
+				0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */,
 				0C8404B0213634AF00305197 /* DailyTaskCell.h */,
 				0C8404B1213634AF00305197 /* DailyTaskCell.m */,
 				0C8404A421354BC100305197 /* DailyTaskView.h */,
@@ -2649,6 +2654,7 @@
 				0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */,
+				0C5F2CCD216B349200801951 /* DailyTaskManagerCell.m in Sources */,
 				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C804A0621476E620032B57A /* BuyViewController.m in Sources */,
