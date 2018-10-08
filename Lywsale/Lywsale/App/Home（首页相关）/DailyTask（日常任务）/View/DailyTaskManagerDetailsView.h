@@ -1,5 +1,5 @@
 //
-//  DailyTaskManagerCell.h
+//  DailyTaskManagerDetailsView.h
 //  Lywsale
 //
 //  Created by 黄锡凯 on 2018/10/8.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DailyTaskManagerCell : UITableViewCell
-
-@property (nonatomic, assign) CGFloat cellHeight;
+@interface DailyTaskManagerDetailsView : UIView
 
 @end

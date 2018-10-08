@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C011C93215E0C5D0015F449 /* SalesSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C011C92215E0C5D0015F449 /* SalesSendView.m */; };
+		0C08A7D2216B83A50058A0BE /* DailyTaskManagerDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */; };
 		0C12144A2155D3E00028368D /* RemarkMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214492155D3E00028368D /* RemarkMenuView.m */; };
 		0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214542156152C0028368D /* DrugReviewViewController.m */; };
 		0C1214582156157F0028368D /* DrugReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214572156157F0028368D /* DrugReviewView.m */; };
@@ -169,6 +170,8 @@
 /* Begin PBXFileReference section */
 		0C011C91215E0C5D0015F449 /* SalesSendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesSendView.h; sourceTree = "<group>"; };
 		0C011C92215E0C5D0015F449 /* SalesSendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesSendView.m; sourceTree = "<group>"; };
+		0C08A7D0216B83A50058A0BE /* DailyTaskManagerDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskManagerDetailsView.h; sourceTree = "<group>"; };
+		0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskManagerDetailsView.m; sourceTree = "<group>"; };
 		0C1214482155D3E00028368D /* RemarkMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemarkMenuView.h; sourceTree = "<group>"; };
 		0C1214492155D3E00028368D /* RemarkMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemarkMenuView.m; sourceTree = "<group>"; };
 		0C1214532156152C0028368D /* DrugReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugReviewViewController.h; sourceTree = "<group>"; };
@@ -1661,6 +1664,8 @@
 		0C84048F21354B7C00305197 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C08A7D0216B83A50058A0BE /* DailyTaskManagerDetailsView.h */,
+				0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */,
 				0C5F2CCB216B349200801951 /* DailyTaskManagerCell.h */,
 				0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */,
 				0C8404B0213634AF00305197 /* DailyTaskCell.h */,
@@ -2648,6 +2653,7 @@
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
+				0C08A7D2216B83A50058A0BE /* DailyTaskManagerDetailsView.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
 				0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */,
 				114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */,

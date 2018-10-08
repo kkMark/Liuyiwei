@@ -8,6 +8,7 @@
 
 #import "DailyTaskView.h"
 #import "DailyTaskCell.h"
+#import "DailyTaskManagerCell.h"
 #import "ReceptionViewController.h"
 
 @interface DailyTaskView ()
@@ -40,14 +41,31 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    DailyTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DailyTaskCell"];
-    if (cell == nil) {
-        cell = [[DailyTaskCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DailyTaskCell"];
-        cell.backgroundColor = self.backgroundColor;
+    // 店长
+    if ([GetUserDefault(UserType) isEqualToString:@"1"]) {
+        
+        DailyTaskManagerCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DailyTaskManagerCell"];
+        if (cell == nil) {
+            cell = [[DailyTaskManagerCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DailyTaskManagerCell"];
+            cell.backgroundColor = self.backgroundColor;
+        }
+        
+        self.cellHeight = cell.cellHeight;
+        return cell;
+
     }
-    
-    self.cellHeight = cell.cellHeight;
-    return cell;
+    // 店员
+    else {
+        
+        DailyTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DailyTaskCell"];
+        if (cell == nil) {
+            cell = [[DailyTaskCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"DailyTaskCell"];
+            cell.backgroundColor = self.backgroundColor;
+        }
+        
+        self.cellHeight = cell.cellHeight;
+        return cell;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
