@@ -122,6 +122,7 @@
     if ([string isEqualToString:@"公告信息"]) {
         
         AnnouncementViewController *announcementView = [[AnnouncementViewController alloc] init];
+        announcementView.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:announcementView animated:YES];
         
     }

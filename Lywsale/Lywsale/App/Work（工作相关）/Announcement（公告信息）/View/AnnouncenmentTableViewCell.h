@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AnnouncementModel.h"
 
 @interface AnnouncenmentTableViewCell : UITableViewCell
+
+@property (nonatomic ,copy) AnnouncementModel *model;
+
+@property (nonatomic ,strong) UIView *BGView;
+
+@property (nonatomic ,strong) UILabel *titleLabel;
+
+@property (nonatomic ,strong) UILabel *timeLabel;
+
+@property (nonatomic ,strong) UILabel *contentLabel;
 
 @end
