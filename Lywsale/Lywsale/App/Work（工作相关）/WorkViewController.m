@@ -127,6 +127,11 @@
         
     }
     
+    if ([string isEqualToString:@"扫码提货"]) {
+        
+        
+        
+    }
     
     
 }
