@@ -146,6 +146,8 @@
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
 		116392B7215F6AB5004160A2 /* CourseSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116392B6215F6AB5004160A2 /* CourseSortViewController.m */; };
+		11686F5F216AE98C0001C3F9 /* CourseSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F5E216AE98C0001C3F9 /* CourseSortView.m */; };
+		11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F61216AEF670001C3F9 /* CourseSortTableViewCell.m */; };
 		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
 		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
@@ -439,6 +441,10 @@
 		114A0535214A43FE0021E8ED /* KnowledgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeViewController.m; sourceTree = "<group>"; };
 		116392B5215F6AB5004160A2 /* CourseSortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSortViewController.h; sourceTree = "<group>"; };
 		116392B6215F6AB5004160A2 /* CourseSortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseSortViewController.m; sourceTree = "<group>"; };
+		11686F5D216AE98C0001C3F9 /* CourseSortView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSortView.h; sourceTree = "<group>"; };
+		11686F5E216AE98C0001C3F9 /* CourseSortView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseSortView.m; sourceTree = "<group>"; };
+		11686F60216AEF670001C3F9 /* CourseSortTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSortTableViewCell.h; sourceTree = "<group>"; };
+		11686F61216AEF670001C3F9 /* CourseSortTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseSortTableViewCell.m; sourceTree = "<group>"; };
 		11AA452D2150FF5600ED7293 /* HomeMessgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeTableViewCell.h; sourceTree = "<group>"; };
 		11AA452E2150FF5600ED7293 /* HomeMessgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeView.h; sourceTree = "<group>"; };
 		11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeTableViewCell.m; sourceTree = "<group>"; };
@@ -2357,10 +2363,30 @@
 		116392B4215F6A88004160A2 /* CourseSort（课程分类） */ = {
 			isa = PBXGroup;
 			children = (
+				11686F5C216AE93A0001C3F9 /* Model */,
+				11686F5B216AE92D0001C3F9 /* View */,
 				116392B5215F6AB5004160A2 /* CourseSortViewController.h */,
 				116392B6215F6AB5004160A2 /* CourseSortViewController.m */,
 			);
 			path = "CourseSort（课程分类）";
+			sourceTree = "<group>";
+		};
+		11686F5B216AE92D0001C3F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11686F5D216AE98C0001C3F9 /* CourseSortView.h */,
+				11686F5E216AE98C0001C3F9 /* CourseSortView.m */,
+				11686F60216AEF670001C3F9 /* CourseSortTableViewCell.h */,
+				11686F61216AEF670001C3F9 /* CourseSortTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11686F5C216AE93A0001C3F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		11AA452C2150FF5600ED7293 /* View */ = {
@@ -2564,6 +2590,7 @@
 				114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */,
 				0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
+				11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */,
 				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C804A0621476E620032B57A /* BuyViewController.m in Sources */,
@@ -2669,6 +2696,7 @@
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
 				0C219608215A1C9B00D2696D /* ResultsSettingViewController.m in Sources */,
 				0C37F58B212D60C500E357EB /* FootprintViewController.m in Sources */,
+				11686F5F216AE98C0001C3F9 /* CourseSortView.m in Sources */,
 				0CE1EC302128F3EC00A373D7 /* SelectTypeView.m in Sources */,
 				0C8404A621354BC100305197 /* DailyTaskView.m in Sources */,
 				0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */,

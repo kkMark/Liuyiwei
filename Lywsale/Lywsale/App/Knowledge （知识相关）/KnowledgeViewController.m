@@ -9,6 +9,7 @@
 #import "KnowledgeViewController.h"
 #import "KnowledgeRequest.h"
 #import "KnowledgeView.h"
+#import "CourseSortViewController.h"
 
 @interface KnowledgeViewController ()
 
@@ -80,6 +81,10 @@
     self.knowledgeView.pushBlock = ^(NSString *pushString) {
         
         if ([pushString isEqualToString:@"课程分类"]) {
+            
+            CourseSortViewController *VC = [[CourseSortViewController alloc] init];
+            VC.hidesBottomBarWhenPushed = YES;
+            [weakSelf.navigationController pushViewController:VC animated:YES];
             
         }
         if ([pushString isEqualToString:@"药品分类"]) {
