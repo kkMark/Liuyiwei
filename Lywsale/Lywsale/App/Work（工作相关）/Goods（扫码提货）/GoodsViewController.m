@@ -17,6 +17,8 @@
 @property (nonatomic ,copy) NSString *codeString;
 //验证码输入
 @property (nonatomic ,strong) BaseTextField *codeTextField;
+//确认提货码
+@property (nonatomic ,strong) UIButton *sendButton;
 
 @end
 
@@ -96,21 +98,43 @@
     .heightIs(80)
     .centerYEqualToView(self.codeView);
     
-    @weakify(self);
-    [[self.codeTextField rac_textSignal] subscribeNext:^(id x) {
-        @strongify(self);
-        if (self.codeTextField.text.length > 6) {
-            self.codeTextField.text = [self.codeTextField.text substringFromIndex:6];
-        }
-    }];
+//    @weakify(self);
+//    [[self.codeTextField rac_textSignal] subscribeNext:^(id x) {
+//        @strongify(self);
+//        if (self.codeTextField.text.length > 6) {
+//            self.codeTextField.text = [self.codeTextField.text substringFromIndex:5];
+//        }
+//    }];
     
     [self.codeTextField becomeFirstResponder];
+    
+    self.sendButton = [UIButton new];
+    self.sendButton.titleLabel.font = [UIFont systemFontOfSize: 17];
+    [self.sendButton setTitle:@"确认提货码" forState:UIControlStateNormal];
+    [self.sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.sendButton setBackgroundColor: RGB(81, 103, 241)];
+    [self.sendButton.layer setMasksToBounds:YES];
+    [self.sendButton.layer setCornerRadius:5.0];
+    [self.sendButton addTarget:self action:@selector(sendButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.sendButton];
+    
+    self.sendButton.sd_layout
+    .rightSpaceToView(self.view, 15)
+    .leftSpaceToView(self.view, 15)
+    .topSpaceToView(self.codeTextField, 83.5)
+    .heightIs(45);
     
 }
 
 -(void)textFieldTextChange:(NSNotification *)sender{
     
     self.codeString = self.codeTextField.text;
+    
+    if (self.codeString.length > 5) {
+
+        self.codeTextField.text = [self.codeTextField.text substringToIndex:5];
+        
+    }
     
     for (int i = 0; i < 5; i++) {
         
@@ -129,11 +153,15 @@
         
     }
     
-    if (self.codeString.length == 5) {
-        [[NSNotificationCenter defaultCenter]removeObserver:self];
-        
-        
-    }
+//    if (self.codeString.length == 5) {
+//
+////        [[NSNotificationCenter defaultCenter]removeObserver:self];
+//
+//    }
+    
+}
+
+-(void)sendButton:(UIButton *)sender{
     
 }
 

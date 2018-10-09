@@ -10,6 +10,7 @@
 #import "HomeMessgeView.h"
 #import "AnnouncementViewController.h"
 #import "GoodsViewController.h"
+#import "OrderManagementViewController.h"
 
 @interface WorkViewController ()
 
@@ -133,6 +134,14 @@
         GoodsViewController *goodsView = [[GoodsViewController alloc] init];
         goodsView.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:goodsView animated:YES];
+        
+    }
+    
+    if ([string isEqualToString:@"订单管理"]) {
+        
+        OrderManagementViewController *VC = [[OrderManagementViewController alloc] init];
+        VC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:VC animated:YES];
         
     }
     
