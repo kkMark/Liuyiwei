@@ -107,7 +107,7 @@
             
             // 提现按钮
             UIButton *extractBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            extractBtn.frame = CGRectMake(numberLabel.x, 0, 90, 25);
+            extractBtn.frame = CGRectMake(numberLabel.x - 10, 0, 90, 25);
             extractBtn.centerY = titleLabel.centerY + 15;
             extractBtn.layer.borderWidth = 1.5;
             extractBtn.layer.borderColor = kMainColor.CGColor;
@@ -118,11 +118,14 @@
             [extractBtn setTitleColor:kMainColor forState:UIControlStateNormal];
             [userInfoBgView addSubview:extractBtn];
             
-            if (self.goViewController) {
-                
-                NSString *vcName = @"";
-                self.goViewController([NSClassFromString(@"vcName") new]);
-            }
+            [[extractBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x)
+            {
+                if (self.goViewController) {
+                    
+                    NSString *vcName = @"WithdrawalViewController";
+                    self.goViewController([NSClassFromString(vcName) new]);
+                }
+            }];
         }
     }
     

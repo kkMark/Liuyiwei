@@ -102,6 +102,9 @@
 		0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AE21354CCA00305197 /* SalesTaskCell.m */; };
 		0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404B1213634AF00305197 /* DailyTaskCell.m */; };
 		0C9A9407214130FF00CACE20 /* RCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A9406214130FF00CACE20 /* RCompleteViewController.m */; };
+		0CC3FD1C216CCF3E001848BE /* WithdrawalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD1B216CCF3E001848BE /* WithdrawalView.m */; };
+		0CC3FD1F216CCF46001848BE /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD1E216CCF46001848BE /* WithdrawalViewController.m */; };
+		0CC3FD25216CD9C6001848BE /* AmountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD24216CD9C6001848BE /* AmountCell.m */; };
 		0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B119212818CD004EC6FC /* LoginViewController.m */; };
 		0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11C212818DE004EC6FC /* LoginView.m */; };
 		0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B11F212818EE004EC6FC /* LoginModel.m */; };
@@ -366,6 +369,12 @@
 		0C8404B1213634AF00305197 /* DailyTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskCell.m; sourceTree = "<group>"; };
 		0C9A9405214130FF00CACE20 /* RCompleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCompleteViewController.h; sourceTree = "<group>"; };
 		0C9A9406214130FF00CACE20 /* RCompleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCompleteViewController.m; sourceTree = "<group>"; };
+		0CC3FD1A216CCF3E001848BE /* WithdrawalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalView.h; sourceTree = "<group>"; };
+		0CC3FD1B216CCF3E001848BE /* WithdrawalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawalView.m; sourceTree = "<group>"; };
+		0CC3FD1D216CCF46001848BE /* WithdrawalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
+		0CC3FD1E216CCF46001848BE /* WithdrawalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawalViewController.m; sourceTree = "<group>"; };
+		0CC3FD23216CD9C6001848BE /* AmountCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountCell.h; sourceTree = "<group>"; };
+		0CC3FD24216CD9C6001848BE /* AmountCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountCell.m; sourceTree = "<group>"; };
 		0CC6B118212818CD004EC6FC /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		0CC6B119212818CD004EC6FC /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0CC6B11B212818DE004EC6FC /* LoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
@@ -532,29 +541,6 @@
 				0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */,
 			);
 			path = "活动详情";
-			sourceTree = "<group>";
-		};
-		0C08A7D3216B86470058A0BE /* 申请提现 */ = {
-			isa = PBXGroup;
-			children = (
-				0C08A7D5216B86520058A0BE /* View */,
-				0C08A7D4216B864C0058A0BE /* ViewController */,
-			);
-			path = "申请提现";
-			sourceTree = "<group>";
-		};
-		0C08A7D4216B864C0058A0BE /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		0C08A7D5216B86520058A0BE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		0C12144E215614640028368D /* DrugReview（用药回访） */ = {
@@ -846,8 +832,8 @@
 		0C37F55F212D51AF00E357EB /* Personal（个人中心相关） */ = {
 			isa = PBXGroup;
 			children = (
-				0C08A7D3216B86470058A0BE /* 申请提现 */,
 				0C37F56F212D526900E357EB /* Personal（个人中心） */,
+				0CC3FD17216CCF27001848BE /* Withdrawal（申请提现） */,
 				0C37F560212D526800E357EB /* Footprint（足迹相关） */,
 				0C37F59B212E60D700E357EB /* Archives（档案相关） */,
 				0C37F57E212D526900E357EB /* Bank（银行卡相关） */,
@@ -1842,6 +1828,35 @@
 			path = "Home（首页相关）";
 			sourceTree = "<group>";
 		};
+		0CC3FD17216CCF27001848BE /* Withdrawal（申请提现） */ = {
+			isa = PBXGroup;
+			children = (
+				0CC3FD18216CCF27001848BE /* View */,
+				0CC3FD19216CCF27001848BE /* ViewController */,
+			);
+			path = "Withdrawal（申请提现）";
+			sourceTree = "<group>";
+		};
+		0CC3FD18216CCF27001848BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0CC3FD23216CD9C6001848BE /* AmountCell.h */,
+				0CC3FD24216CD9C6001848BE /* AmountCell.m */,
+				0CC3FD1A216CCF3E001848BE /* WithdrawalView.h */,
+				0CC3FD1B216CCF3E001848BE /* WithdrawalView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0CC3FD19216CCF27001848BE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0CC3FD1D216CCF46001848BE /* WithdrawalViewController.h */,
+				0CC3FD1E216CCF46001848BE /* WithdrawalViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0CC6B11121281811004EC6FC /* Login（登录相关） */ = {
 			isa = PBXGroup;
 			children = (
@@ -2766,6 +2781,7 @@
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				1126142D216C81BA005D0B40 /* OrderManageTableViewCell.m in Sources */,
+				0CC3FD1C216CCF3E001848BE /* WithdrawalView.m in Sources */,
 				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
 				0C08A7D2216B83A50058A0BE /* DailyTaskManagerDetailsView.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
@@ -2798,6 +2814,7 @@
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
 				0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */,
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
+				0CC3FD25216CD9C6001848BE /* AmountCell.m in Sources */,
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */,
 				11686F6E216B02640001C3F9 /* DrugSortView.m in Sources */,
@@ -2907,6 +2924,7 @@
 				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,
 				0C8404AC21354BE100305197 /* LearningTaskView.m in Sources */,
 				0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */,
+				0CC3FD1F216CCF46001848BE /* WithdrawalViewController.m in Sources */,
 				0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,
 				0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */,

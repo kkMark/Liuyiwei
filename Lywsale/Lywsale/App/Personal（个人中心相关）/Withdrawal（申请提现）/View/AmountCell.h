@@ -1,0 +1,13 @@
+//
+//  AmountCell.h
+//  Lywsale
+//
+//  Created by 黄锡凯 on 2018/10/9.
+//  Copyright © 2018 黄锡凯. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface AmountCell : UITableViewCell
+
+@end
