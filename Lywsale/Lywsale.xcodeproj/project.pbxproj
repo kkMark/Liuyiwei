@@ -144,6 +144,7 @@
 		0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */; };
 		0CF519802160B9170015B16D /* SalesSendListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF5197F2160B9170015B16D /* SalesSendListView.m */; };
 		0CF519832160BF390015B16D /* SalesSendListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CF519822160BF390015B16D /* SalesSendListCell.m */; };
+		1126141E216C3A0F005D0B40 /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1126141C216C3A0E005D0B40 /* BaseTextField.m */; };
 		1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141FD112152524400FAF01F /* AnnouncementViewController.m */; };
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
@@ -444,6 +445,8 @@
 		0CF5197F2160B9170015B16D /* SalesSendListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesSendListView.m; sourceTree = "<group>"; };
 		0CF519812160BF390015B16D /* SalesSendListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesSendListCell.h; sourceTree = "<group>"; };
 		0CF519822160BF390015B16D /* SalesSendListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesSendListCell.m; sourceTree = "<group>"; };
+		1126141C216C3A0E005D0B40 /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextField.m; sourceTree = "<group>"; };
+		1126141D216C3A0E005D0B40 /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextField.h; sourceTree = "<group>"; };
 		1141FD102152524400FAF01F /* AnnouncementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncementViewController.h; sourceTree = "<group>"; };
 		1141FD112152524400FAF01F /* AnnouncementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementViewController.m; sourceTree = "<group>"; };
 		114A0531214A43EC0021E8ED /* WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
@@ -1919,6 +1922,8 @@
 		0CDDB548212733FA00D42F76 /* Base（父类） */ = {
 			isa = PBXGroup;
 			children = (
+				1126141D216C3A0E005D0B40 /* BaseTextField.h */,
+				1126141C216C3A0E005D0B40 /* BaseTextField.m */,
 				0CC6B1212128192A004EC6FC /* BaseHttpRequest.h */,
 				0CC6B1222128192A004EC6FC /* BaseHttpRequest.m */,
 				0CDDB54F2127342800D42F76 /* BaseModel.h */,
@@ -2752,6 +2757,7 @@
 				0C804A1B2147C4900032B57A /* ReceptionHeaderView.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
 				0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */,
+				1126141E216C3A0F005D0B40 /* BaseTextField.m in Sources */,
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,

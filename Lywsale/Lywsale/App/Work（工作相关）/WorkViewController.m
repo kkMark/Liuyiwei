@@ -9,6 +9,7 @@
 #import "WorkViewController.h"
 #import "HomeMessgeView.h"
 #import "AnnouncementViewController.h"
+#import "GoodsViewController.h"
 
 @interface WorkViewController ()
 
@@ -129,7 +130,9 @@
     
     if ([string isEqualToString:@"扫码提货"]) {
         
-        
+        GoodsViewController *goodsView = [[GoodsViewController alloc] init];
+        goodsView.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:goodsView animated:YES];
         
     }
     
