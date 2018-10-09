@@ -510,6 +510,29 @@
 			path = "活动详情";
 			sourceTree = "<group>";
 		};
+		0C08A7D3216B86470058A0BE /* 申请提现 */ = {
+			isa = PBXGroup;
+			children = (
+				0C08A7D5216B86520058A0BE /* View */,
+				0C08A7D4216B864C0058A0BE /* ViewController */,
+			);
+			path = "申请提现";
+			sourceTree = "<group>";
+		};
+		0C08A7D4216B864C0058A0BE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C08A7D5216B86520058A0BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0C12144E215614640028368D /* DrugReview（用药回访） */ = {
 			isa = PBXGroup;
 			children = (
@@ -799,6 +822,7 @@
 		0C37F55F212D51AF00E357EB /* Personal（个人中心相关） */ = {
 			isa = PBXGroup;
 			children = (
+				0C08A7D3216B86470058A0BE /* 申请提现 */,
 				0C37F56F212D526900E357EB /* Personal（个人中心） */,
 				0C37F560212D526800E357EB /* Footprint（足迹相关） */,
 				0C37F59B212E60D700E357EB /* Archives（档案相关） */,
