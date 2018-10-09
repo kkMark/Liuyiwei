@@ -28,6 +28,16 @@
     
     self.title = @"系统公告";
     
+    self.dataArray = [NSMutableArray array];
+    
+    [self.dataArray addObjectsFromArray:@[
+                                          
+                                          @{@"content":@"据共同社报道，这是他在确定获奖后首次接受海外媒体的面对面采访。穆奎格认为，刚果内战为“经济战争”。他控诉称：“全世界的人们和企业只考虑利益。追求利益与性暴力受害者的痛苦有直接关系。”",@"title":@"消息内容",@"time":@"2018-01-12 08:33"},
+                                          @{@"content":@"据共同社报道，这是他在确定获奖后首次接受海外媒体的面对面采访。穆奎格认为，刚果内战为“经济战争”。他控诉称：“全世界的人们和企业只考虑利益。追求利益与性暴力受害者的痛苦有直接关系。”",@"title":@"消息内容",@"time":@"2018-01-12 08:33"},
+                                          @{@"content":@"据共同社报道，这是他在确定获奖后首次接受海外媒体的面对面采访。穆奎格认为，刚果内战为“经济战争”。他控诉称：“全世界的人们和企业只考虑利益。追求利益与性暴力受害者的痛苦有直接关系。”",@"title":@"消息内容",@"time":@"2018-01-12 08:33"}
+                                          
+                                          ]];
+    
     [self request];
     
     [self initUI];
@@ -41,6 +51,7 @@
 -(void)initUI{
     
     self.announcementView = [AnnouncementView new];
+    self.announcementView.myTable.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:self.announcementView];
     
     self.announcementView.sd_layout
@@ -48,6 +59,8 @@
     .rightSpaceToView(self.view, 0)
     .topSpaceToView(self.view, 0)
     .bottomSpaceToView(self.view, 0);
+    
+    [self.announcementView addTitleList:self.dataArray];
     
 }
 
