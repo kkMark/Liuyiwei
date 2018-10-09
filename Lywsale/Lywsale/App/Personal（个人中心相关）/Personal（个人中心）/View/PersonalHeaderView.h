@@ -12,4 +12,6 @@
 
 @property (nonatomic, assign) float viewHeight;
 
+@property (nonatomic, copy) void (^goViewController)(UIViewController *vc);
+
 @end

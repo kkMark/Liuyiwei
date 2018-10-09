@@ -117,6 +117,12 @@
             [extractBtn setTitle:@"申请提现" forState:UIControlStateNormal];
             [extractBtn setTitleColor:kMainColor forState:UIControlStateNormal];
             [userInfoBgView addSubview:extractBtn];
+            
+            if (self.goViewController) {
+                
+                NSString *vcName = @"";
+                self.goViewController([NSClassFromString(@"vcName") new]);
+            }
         }
     }
     

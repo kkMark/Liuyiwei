@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C011C93215E0C5D0015F449 /* SalesSendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C011C92215E0C5D0015F449 /* SalesSendView.m */; };
+		0C08A7D2216B83A50058A0BE /* DailyTaskManagerDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */; };
 		0C12144A2155D3E00028368D /* RemarkMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214492155D3E00028368D /* RemarkMenuView.m */; };
 		0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214542156152C0028368D /* DrugReviewViewController.m */; };
 		0C1214582156157F0028368D /* DrugReviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C1214572156157F0028368D /* DrugReviewView.m */; };
@@ -69,6 +70,7 @@
 		0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */; };
 		0C5F2CC7216AF08800801951 /* PerformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC6216AF08800801951 /* PerformView.m */; };
 		0C5F2CCA216AF16600801951 /* PerformCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC9216AF16600801951 /* PerformCell.m */; };
+		0C5F2CCD216B349200801951 /* DailyTaskManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */; };
 		0C6A9EFE215B1A4800CFB389 /* SalesTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */; };
 		0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9F01215B2E7B00CFB389 /* PublicHeaderView.m */; };
 		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
@@ -171,6 +173,8 @@
 /* Begin PBXFileReference section */
 		0C011C91215E0C5D0015F449 /* SalesSendView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesSendView.h; sourceTree = "<group>"; };
 		0C011C92215E0C5D0015F449 /* SalesSendView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesSendView.m; sourceTree = "<group>"; };
+		0C08A7D0216B83A50058A0BE /* DailyTaskManagerDetailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskManagerDetailsView.h; sourceTree = "<group>"; };
+		0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskManagerDetailsView.m; sourceTree = "<group>"; };
 		0C1214482155D3E00028368D /* RemarkMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemarkMenuView.h; sourceTree = "<group>"; };
 		0C1214492155D3E00028368D /* RemarkMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemarkMenuView.m; sourceTree = "<group>"; };
 		0C1214532156152C0028368D /* DrugReviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrugReviewViewController.h; sourceTree = "<group>"; };
@@ -293,6 +297,8 @@
 		0C5F2CC6216AF08800801951 /* PerformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformView.m; sourceTree = "<group>"; };
 		0C5F2CC8216AF16600801951 /* PerformCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformCell.h; sourceTree = "<group>"; };
 		0C5F2CC9216AF16600801951 /* PerformCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformCell.m; sourceTree = "<group>"; };
+		0C5F2CCB216B349200801951 /* DailyTaskManagerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskManagerCell.h; sourceTree = "<group>"; };
+		0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskManagerCell.m; sourceTree = "<group>"; };
 		0C6A9EFC215B1A4800CFB389 /* SalesTaskViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskViewModel.h; sourceTree = "<group>"; };
 		0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskViewModel.m; sourceTree = "<group>"; };
 		0C6A9F00215B2E7B00CFB389 /* PublicHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicHeaderView.h; sourceTree = "<group>"; };
@@ -511,6 +517,29 @@
 				0CF0EF93215222CD00DF2DFA /* ActivityDetailsView.m */,
 			);
 			path = "活动详情";
+			sourceTree = "<group>";
+		};
+		0C08A7D3216B86470058A0BE /* 申请提现 */ = {
+			isa = PBXGroup;
+			children = (
+				0C08A7D5216B86520058A0BE /* View */,
+				0C08A7D4216B864C0058A0BE /* ViewController */,
+			);
+			path = "申请提现";
+			sourceTree = "<group>";
+		};
+		0C08A7D4216B864C0058A0BE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C08A7D5216B86520058A0BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0C12144E215614640028368D /* DrugReview（用药回访） */ = {
@@ -802,6 +831,7 @@
 		0C37F55F212D51AF00E357EB /* Personal（个人中心相关） */ = {
 			isa = PBXGroup;
 			children = (
+				0C08A7D3216B86470058A0BE /* 申请提现 */,
 				0C37F56F212D526900E357EB /* Personal（个人中心） */,
 				0C37F560212D526800E357EB /* Footprint（足迹相关） */,
 				0C37F59B212E60D700E357EB /* Archives（档案相关） */,
@@ -1667,6 +1697,10 @@
 		0C84048F21354B7C00305197 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C08A7D0216B83A50058A0BE /* DailyTaskManagerDetailsView.h */,
+				0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */,
+				0C5F2CCB216B349200801951 /* DailyTaskManagerCell.h */,
+				0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */,
 				0C8404B0213634AF00305197 /* DailyTaskCell.h */,
 				0C8404B1213634AF00305197 /* DailyTaskCell.m */,
 				0C8404A421354BC100305197 /* DailyTaskView.h */,
@@ -2674,12 +2708,14 @@
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				0C8404A921354BD400305197 /* LearningTaskViewController.m in Sources */,
+				0C08A7D2216B83A50058A0BE /* DailyTaskManagerDetailsView.m in Sources */,
 				0CE62AE6212FB5D600DFC1A4 /* SelectPriceView.m in Sources */,
 				0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */,
 				114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */,
 				0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */,
+				0C5F2CCD216B349200801951 /* DailyTaskManagerCell.m in Sources */,
 				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
 				0C804A0621476E620032B57A /* BuyViewController.m in Sources */,

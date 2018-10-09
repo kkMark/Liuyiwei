@@ -80,6 +80,14 @@
         headerView = [[PersonalHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
         headerView.height = headerView.viewHeight;
         [self.view addSubview:headerView];
+        
+        @weakify(self);
+        [headerView setGoViewController:^(UIViewController *vc) {
+         
+            @strongify(self);
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return headerView;
