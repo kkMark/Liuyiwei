@@ -13,8 +13,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    cell.textLabel.textColor = kMainTextColor;
+    cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text = self.dataSources[indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:@"help_iconImg"];
     return cell;
 }
 

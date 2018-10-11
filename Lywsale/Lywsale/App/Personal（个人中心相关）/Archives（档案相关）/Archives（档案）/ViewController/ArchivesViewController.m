@@ -22,7 +22,7 @@
 
     [super viewDidLoad];
 
-    self.archivesView.dataSources = @[@"头像", @"姓名", @"职务", @"所属药房", @"绑定手机", @"修改密码"];
+    self.archivesView.dataSources = @[@"接待ID", @"姓名", @"职务", @"所属药房", @"绑定手机", @"修改密码"];
 }
 
 

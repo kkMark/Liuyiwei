@@ -38,7 +38,7 @@
     tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(4 + textView.x, 8.5, textView.width, 15)];
     tipLabel.text = @"文本框";
     tipLabel.font = [UIFont systemFontOfSize:14];
-    tipLabel.textColor = [UIColor lightGrayColor];
+    tipLabel.textColor = [UIColor colorWithHexString:@"0x999999"];
     tipLabel.numberOfLines = 0;
     tipLabel.height = [tipLabel getTextHeight];
     [textView addSubview:tipLabel];
