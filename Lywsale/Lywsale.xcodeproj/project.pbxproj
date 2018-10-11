@@ -152,6 +152,8 @@
 		1126142A216C8185005D0B40 /* OrderManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11261429216C8185005D0B40 /* OrderManageView.m */; };
 		1126142D216C81BA005D0B40 /* OrderManageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1126142C216C81BA005D0B40 /* OrderManageTableViewCell.m */; };
 		11261431216C824C005D0B40 /* OrderManageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11261430216C824C005D0B40 /* OrderManageModel.m */; };
+		11261435216C9CDF005D0B40 /* MemberManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11261434216C9CDF005D0B40 /* MemberManagementViewController.m */; };
+		11261439216C9E06005D0B40 /* MemberManagementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11261438216C9E06005D0B40 /* MemberManagementView.m */; };
 		1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141FD112152524400FAF01F /* AnnouncementViewController.m */; };
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
@@ -468,6 +470,10 @@
 		1126142C216C81BA005D0B40 /* OrderManageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderManageTableViewCell.m; sourceTree = "<group>"; };
 		1126142F216C824C005D0B40 /* OrderManageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderManageModel.h; sourceTree = "<group>"; };
 		11261430216C824C005D0B40 /* OrderManageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderManageModel.m; sourceTree = "<group>"; };
+		11261433216C9CDF005D0B40 /* MemberManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberManagementViewController.h; sourceTree = "<group>"; };
+		11261434216C9CDF005D0B40 /* MemberManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberManagementViewController.m; sourceTree = "<group>"; };
+		11261437216C9E06005D0B40 /* MemberManagementView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberManagementView.h; sourceTree = "<group>"; };
+		11261438216C9E06005D0B40 /* MemberManagementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberManagementView.m; sourceTree = "<group>"; };
 		1141FD102152524400FAF01F /* AnnouncementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncementViewController.h; sourceTree = "<group>"; };
 		1141FD112152524400FAF01F /* AnnouncementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementViewController.m; sourceTree = "<group>"; };
 		114A0531214A43EC0021E8ED /* WorkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkViewController.h; sourceTree = "<group>"; };
@@ -2454,6 +2460,25 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		11261432216C9BFE005D0B40 /* MemberManagement（会员管理） */ = {
+			isa = PBXGroup;
+			children = (
+				11261436216C9DC9005D0B40 /* View */,
+				11261433216C9CDF005D0B40 /* MemberManagementViewController.h */,
+				11261434216C9CDF005D0B40 /* MemberManagementViewController.m */,
+			);
+			path = "MemberManagement（会员管理）";
+			sourceTree = "<group>";
+		};
+		11261436216C9DC9005D0B40 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11261437216C9E06005D0B40 /* MemberManagementView.h */,
+				11261438216C9E06005D0B40 /* MemberManagementView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1141FD0F215251EA00FAF01F /* Announcement（公告信息） */ = {
 			isa = PBXGroup;
 			children = (
@@ -2468,6 +2493,7 @@
 		114A052F214A437F0021E8ED /* Work（工作相关） */ = {
 			isa = PBXGroup;
 			children = (
+				11261432216C9BFE005D0B40 /* MemberManagement（会员管理） */,
 				1126141F216C7C2B005D0B40 /* OrderManagement（订单管理） */,
 				11686F73216B3AE20001C3F9 /* Goods（扫码提货） */,
 				1141FD0F215251EA00FAF01F /* Announcement（公告信息） */,
@@ -2774,6 +2800,7 @@
 				0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */,
+				11261439216C9E06005D0B40 /* MemberManagementView.m in Sources */,
 				0C5F2CCD216B349200801951 /* DailyTaskManagerCell.m in Sources */,
 				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
@@ -2861,6 +2888,7 @@
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
 				0C3FD1C62154E86300534B8D /* UploadImgCell.m in Sources */,
 				0C84047D213528CC00305197 /* DataPanelView.m in Sources */,
+				11261435216C9CDF005D0B40 /* MemberManagementViewController.m in Sources */,
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
 				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,
 				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
