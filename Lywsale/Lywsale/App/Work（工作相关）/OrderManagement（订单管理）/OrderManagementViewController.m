@@ -56,11 +56,11 @@
     
     NSArray *titleArray = @[@"全部",@"待付款",@"待收货",@"已完成",@"已取消"];
     
-    NinaPagerView *ninaPagerView = [[NinaPagerView alloc] initWithFrame:CGRectMake(0, 88, ScreenWidth, ScreenHeight) WithTitles:titleArray WithObjects:self.childViewControllers];
+    NinaPagerView *ninaPagerView = [[NinaPagerView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) WithTitles:titleArray WithObjects:self.childViewControllers];
     ninaPagerView.ninaPagerStyles = NinaPagerStyleBottomLine;
     ninaPagerView.nina_navigationBarHidden = NO;
     ninaPagerView.selectTitleColor = RGB(81, 103, 241);
-    ninaPagerView.unSelectTitleColor = [UIColor blackColor];
+    ninaPagerView.unSelectTitleColor = RGB(153, 153, 153);
     ninaPagerView.underlineColor = RGB(81, 103, 241);
     ninaPagerView.selectBottomLinePer = 0.8;
     ninaPagerView.delegate = self;
