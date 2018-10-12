@@ -78,6 +78,7 @@
 		0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F02130EFCA0081DB1C /* FootprintCell.m */; };
 		0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */; };
 		0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */; };
+		0C6FE68D217081EF004E51CD /* SalesTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FE68C217081EF004E51CD /* SalesTaskModel.m */; };
 		0C7AEA92213E584D00138A31 /* MyRankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA91213E584D00138A31 /* MyRankingCell.m */; };
 		0C7AEA95213E610800138A31 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA94213E610800138A31 /* RankingCell.m */; };
 		0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */; };
@@ -326,6 +327,8 @@
 		0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCourseCell.m; sourceTree = "<group>"; };
 		0C6B36F5213107C30081DB1C /* UINavigationController+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Category.h"; sourceTree = "<group>"; };
 		0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Category.m"; sourceTree = "<group>"; };
+		0C6FE68B217081EF004E51CD /* SalesTaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskModel.h; sourceTree = "<group>"; };
+		0C6FE68C217081EF004E51CD /* SalesTaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskModel.m; sourceTree = "<group>"; };
 		0C7AEA90213E584D00138A31 /* MyRankingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRankingCell.h; sourceTree = "<group>"; };
 		0C7AEA91213E584D00138A31 /* MyRankingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRankingCell.m; sourceTree = "<group>"; };
 		0C7AEA93213E610800138A31 /* RankingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RankingCell.h; sourceTree = "<group>"; };
@@ -1483,6 +1486,15 @@
 			path = "WebHelp（帮助相关）";
 			sourceTree = "<group>";
 		};
+		0C6FE68A217081E3004E51CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C6FE68B217081EF004E51CD /* SalesTaskModel.h */,
+				0C6FE68C217081EF004E51CD /* SalesTaskModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0C7AEA96213E6BA000138A31 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1738,7 +1750,7 @@
 			isa = PBXGroup;
 			children = (
 				0C84049221354B7C00305197 /* ViewModel */,
-				0C84049321354B7C00305197 /* Model */,
+				0C6FE68A217081E3004E51CD /* Model */,
 				0C84049421354B7C00305197 /* View */,
 				0C84049521354B7C00305197 /* ViewController */,
 			);
@@ -1752,13 +1764,6 @@
 				0C6A9EFD215B1A4800CFB389 /* SalesTaskViewModel.m */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C84049321354B7C00305197 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0C84049421354B7C00305197 /* View */ = {
@@ -2926,6 +2931,7 @@
 				0CE1EC4121290FBD00A373D7 /* ApplyViewController.m in Sources */,
 				0CC6B11A212818CD004EC6FC /* LoginViewController.m in Sources */,
 				0C37F585212D527F00E357EB /* PersonalViewController.m in Sources */,
+				0C6FE68D217081EF004E51CD /* SalesTaskModel.m in Sources */,
 				0C37F5A5212E60D700E357EB /* ArchivesView.m in Sources */,
 				0C8404A021354BA200305197 /* SalesTaskView.m in Sources */,
 				11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */,

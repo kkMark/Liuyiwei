@@ -15,6 +15,7 @@
     
     NSString *urlString = [NSString stringWithFormat:@"dongxiaoActivities$enterable?pageNumber=10&pageSize=%d", page];
     
+    self.port = @"18082";
     self.urlString = [self getRequestUrl:@[urlString]];
     [self requestMode:GetMode success:success failure:failure];
 }

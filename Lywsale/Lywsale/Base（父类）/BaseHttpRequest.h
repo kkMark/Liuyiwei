@@ -21,7 +21,11 @@ typedef enum : NSUInteger {
 
 @interface BaseHttpRequest : NSObject
 
+/// 地址
 @property (nonatomic, strong) NSString *urlString;
+/// 端口号 默认28084
+@property (nonatomic, strong) NSString *port;
+/// 参数
 @property (nonatomic, strong) id parameters;
 /// 是否加载 默认YES
 @property (nonatomic, assign) BOOL isLoading;
