@@ -7,6 +7,7 @@
 //
 
 #import "HomePageViewController.h"
+#import "HomePageViewModel.h"
 #import "HomePageMenuView.h"
 #import "DataPanelView.h"
 
@@ -81,6 +82,12 @@
     }
     
     return dataPanelView;
+}
+
+#pragma mark - request
+- (void)getDataSource {
+    
+    
 }
 
 @end

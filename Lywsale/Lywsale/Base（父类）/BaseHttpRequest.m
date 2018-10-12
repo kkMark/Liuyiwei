@@ -76,6 +76,8 @@
         [viewController showHudAnimated:YES];
     }
     
+    NSLog(@"%@", self.urlString);
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.urlString]];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 

@@ -115,7 +115,7 @@
     
     [[SalesTaskViewModel new] getSalesTask:self.page success:^(NSDictionary *dict) {
         
-        NSLog(@"请求成功 = %@", dict);
+        
         
     } failure:^(NSError *error) {
         
