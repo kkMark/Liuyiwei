@@ -41,6 +41,8 @@
     
     [self initUI];
     
+    [self block];
+    
 }
 
 -(void)initUI{
@@ -57,5 +59,14 @@
     [self.memberManagementView addTitleList:self.dataArray];
     
 }
+
+-(void)block{
+    
+    self.memberManagementView.pushBlock = ^(NSString *pushString) {
+        
+    };
+    
+}
+
 
 @end

@@ -171,6 +171,7 @@
 		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
 		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
+		11ABF0682170367500AEDE04 /* GradientRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF0672170367500AEDE04 /* GradientRound.m */; };
 		11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */; };
 		11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFD1215A3F5C00FF7045 /* KnowledgeView.m */; };
 		11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D052158C5E10032FE0B /* BaseTabelListView.m */; };
@@ -511,6 +512,8 @@
 		11AA45302150FF5600ED7293 /* HomeMessgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeView.m; sourceTree = "<group>"; };
 		11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeModel.m; sourceTree = "<group>"; };
 		11AA45352150FF8F00ED7293 /* HomeMessgeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeModel.h; sourceTree = "<group>"; };
+		11ABF0662170367500AEDE04 /* GradientRound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientRound.h; sourceTree = "<group>"; };
+		11ABF0672170367500AEDE04 /* GradientRound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientRound.m; sourceTree = "<group>"; };
 		11D1DFC8215A2E6500FF7045 /* KnowledgeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeRequest.h; sourceTree = "<group>"; };
 		11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeRequest.m; sourceTree = "<group>"; };
 		11D1DFD0215A3F5C00FF7045 /* KnowledgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeView.h; sourceTree = "<group>"; };
@@ -2286,6 +2289,7 @@
 		0CE1EC3A212901D400A373D7 /* Public（公用） */ = {
 			isa = PBXGroup;
 			children = (
+				11ABF0652170360F00AEDE04 /* GradientRound（渐变圆） */,
 				0C6A9EFF215B2E6800CFB389 /* PublicHeaderView */,
 				0CE1EC482129143100A373D7 /* CustomTextField */,
 				0CE1EC3B212901ED00A373D7 /* SearchView（搜索框） */,
@@ -2629,6 +2633,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		11ABF0652170360F00AEDE04 /* GradientRound（渐变圆） */ = {
+			isa = PBXGroup;
+			children = (
+				11ABF0662170367500AEDE04 /* GradientRound.h */,
+				11ABF0672170367500AEDE04 /* GradientRound.m */,
+			);
+			path = "GradientRound（渐变圆）";
+			sourceTree = "<group>";
+		};
 		11D1DFCB215A2E6900FF7045 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -2950,6 +2963,7 @@
 				0C7AEA95213E610800138A31 /* RankingCell.m in Sources */,
 				0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */,
 				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,
+				11ABF0682170367500AEDE04 /* GradientRound.m in Sources */,
 				0C8404AC21354BE100305197 /* LearningTaskView.m in Sources */,
 				0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */,
 				0CC3FD1F216CCF46001848BE /* WithdrawalViewController.m in Sources */,
