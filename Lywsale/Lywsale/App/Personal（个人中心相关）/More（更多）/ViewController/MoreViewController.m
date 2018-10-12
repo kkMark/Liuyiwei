@@ -26,7 +26,7 @@
     [super viewDidLoad];
     
     self.title = @"设置";
-    self.moreView.dataSources = @[@"关于我们"];
+    self.moreView.dataSources = @[@"关于我们", @"本站声明"];
 }
 
 #pragma mark - lazy

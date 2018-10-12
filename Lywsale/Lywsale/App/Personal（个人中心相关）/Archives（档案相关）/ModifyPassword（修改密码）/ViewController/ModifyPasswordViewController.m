@@ -26,29 +26,66 @@
 
 - (void)setupSubviews {
     
-    // 输入框
-    CustomTextField *textField;
-    NSArray *titles = @[@"验证旧密码", @"输入新密码", @"确认新密码"];
-    NSArray *imgs = @[@"Login_Password", @"Login_Password", @"Login_Password"];
+    // 账号、密码
+    NSArray *titles = @[@"验证旧密码", @"输入新密码", @"请输入确认新密码"];
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 30, ScreenWidth - 30, 45 * titles.count)];
+    bgView.layer.borderWidth = 1;
+    bgView.layer.borderColor = [UIColor colorWithHexString:@"0xd1d1d1"].CGColor;
+    bgView.backgroundColor = [UIColor whiteColor];
+    bgView.layer.cornerRadius = 2;
+    [self.view addSubview:bgView];
+    
     for (int i = 0; i < titles.count; i++) {
         
-        CGRect rect = CGRectMake(20, 30 + (55 * i), ScreenWidth - 40, 45);
-        textField = [[CustomTextField alloc] initWithFrame:rect leftImg:imgs[i] isCaptcha:i == 0];
-        textField.placeholder = titles[i];
+        // 文本框
+        UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 45 * i, bgView.width - 20, 45)];
+        textField.font = [UIFont systemFontOfSize:14];
+        textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         textField.keyboardType = UIKeyboardTypeASCIICapable;
-        [self.view addSubview:textField];
+        textField.placeholder = titles[i];
+        textField.secureTextEntry = i > 0 ? YES : NO;
+        [bgView addSubview:textField];
+        
+        if (i != 0) {
+            
+            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 45 * i, bgView.width, 1)];
+            lineView.backgroundColor = [UIColor colorWithHexString:@"0xd1d1d1"];
+            [bgView addSubview:lineView];
+        }
+        
+        if (i == 1) {
+            
+            UIButton *passwordBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+            passwordBtn.frame = CGRectMake(0, 0, 45, 45);
+            [passwordBtn setImage:[UIImage imageNamed:@"login_show"] forState:UIControlStateNormal];
+            [[passwordBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+                
+                passwordBtn.selected = !passwordBtn.selected;
+                [passwordBtn setImage:[UIImage imageNamed:passwordBtn.selected ? @"login_hidden" : @"login_show"] forState:UIControlStateNormal];
+                
+                textField.secureTextEntry = !passwordBtn.selected;
+            }];
+            
+            textField.rightView = passwordBtn;
+            textField.rightViewMode = UITextFieldViewModeAlways;
+        }
     }
     
-    // 类型按钮
-    UIButton *typeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    typeBtn.backgroundColor = kMainColor;
-    typeBtn.frame = CGRectMake(textField.x, textField.maxY + 30, textField.width, 40);
-    typeBtn.layer.cornerRadius = typeBtn.height / 2;
-    typeBtn.layer.masksToBounds = YES;
-    typeBtn.titleLabel.font = [UIFont boldSystemFontOfSize:15];
-    [typeBtn setTitle:@"确定修改" forState:UIControlStateNormal];
-    [typeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.view addSubview:typeBtn];
+    // 保存按钮
+    UIButton *saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    saveBtn.backgroundColor = kMainColor;
+    saveBtn.frame = CGRectMake(15, bgView.maxY + 30, ScreenWidth - 30, 45);
+    saveBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [saveBtn setTitle:@"保  存" forState:UIControlStateNormal];
+    [saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [saveBtn addTarget:self action:@selector(saveBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:saveBtn];
+}
+
+// 保存新密码
+- (void)saveBtnClick {
+    
+    
 }
 
 @end

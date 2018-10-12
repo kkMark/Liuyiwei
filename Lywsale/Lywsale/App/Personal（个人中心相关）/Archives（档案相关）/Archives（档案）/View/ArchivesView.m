@@ -55,11 +55,11 @@
         }
     }
     
-    cell.textLabel.textColor = kMainTextColor;
+    cell.textLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.text = title;
     cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
-    cell.detailTextLabel.textColor = [UIColor lightGrayColor];
+    cell.detailTextLabel.textColor = kMainTextColor;
     return cell;
 }
 

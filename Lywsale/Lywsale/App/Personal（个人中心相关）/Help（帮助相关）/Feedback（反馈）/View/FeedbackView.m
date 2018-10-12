@@ -52,7 +52,7 @@
         footerView.backgroundColor = [UIColor whiteColor];
         
         KTextFeildView *textFeildView = [[KTextFeildView alloc] initWithFrame:CGRectMake(20, 15, ScreenWidth - 40, 170)];
-        textFeildView.tipString = @"碰到问题，请告诉我们";
+        textFeildView.tipString = @"请输入碰到问题，请告诉我们";
         textFeildView.layer.borderColor = [kLineColor CGColor];
         textFeildView.layer.borderWidth = 0.3;
         [footerView addSubview:textFeildView];
@@ -104,7 +104,9 @@
     cell.textLabel.font = [UIFont systemFontOfSize:14];
     cell.textLabel.text = self.dataSources[indexPath.row];
     cell.textLabel.textColor = kMainTextColor;
-    cell.detailTextLabel.textColor = kMainTextColor;
+    cell.detailTextLabel.textColor = [UIColor colorWithHexString:@"0x999999"];
+    cell.detailTextLabel.text = @"请选择问题类型";
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:14];
     return cell;
 }
 
