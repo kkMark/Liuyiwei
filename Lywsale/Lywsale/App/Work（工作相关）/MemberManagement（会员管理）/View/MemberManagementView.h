@@ -12,4 +12,10 @@
 
 @property (nonatomic ,strong) UIView *headerView;
 
+@property (nonatomic ,strong) UILabel *totalLabel;
+
+@property (nonatomic ,strong) UILabel *effectiveLabel;
+
+@property (nonatomic ,strong) UILabel *InvalidLabel;
+
 @end

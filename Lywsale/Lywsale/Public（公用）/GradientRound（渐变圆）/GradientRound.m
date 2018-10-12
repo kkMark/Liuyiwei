@@ -65,7 +65,7 @@
     //左边的渐变图层
     CAGradientLayer *leftGradientLayer = [CAGradientLayer layer];
     leftGradientLayer.frame = CGRectMake(0, 0, self.width, self.height);
-    [leftGradientLayer setColors:[NSArray arrayWithObjects:(id)RGBA(components[0] * 255, components[1] * 255, components[2] * 255, 1).CGColor, (id)RGBA(components[0] * 255, components[1] * 255/2, components[2] * 255, 1).CGColor, nil]];
+    [leftGradientLayer setColors:[NSArray arrayWithObjects:(id)RGBA(components[0] * 255, components[1] * 255, components[2] * 255, 1).CGColor, (id)RGBA(components[0] * 255, components[1] * 255 / 2, components[2] * 255, 1).CGColor, nil]];
     [leftGradientLayer setLocations:@[@0,@1]];
     [leftGradientLayer setStartPoint:CGPointMake(0, 1)];
     [leftGradientLayer setEndPoint:CGPointMake(1, 0)];
@@ -74,7 +74,7 @@
     
     CAGradientLayer *rightGradientLayer = [CAGradientLayer layer];
     rightGradientLayer.frame = CGRectMake(self.width, 0, self.width, self.height);
-    [rightGradientLayer setColors:[NSArray arrayWithObjects:(id)RGBA(components[0] * 255, components[1] * 255 / 2, components[2] * 255, 1.0).CGColor, (id)RGBA(components[0] * 255, components[1] * 255, components[2] * 255, 1.0).CGColor, nil]];
+    [rightGradientLayer setColors:[NSArray arrayWithObjects:(id)RGBA(components[0] * 255, components[1] * 255 / 3, components[2] * 255, 1.0).CGColor, (id)RGBA(components[0] * 255, components[1] * 255 / 3, components[2] * 255, 1.0).CGColor, nil]];
     [rightGradientLayer setLocations:@[@0.1, @1]];
     [rightGradientLayer setStartPoint:CGPointMake(1, 0)];
     [rightGradientLayer setEndPoint:CGPointMake(0.5, 1)];

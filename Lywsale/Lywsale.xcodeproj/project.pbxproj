@@ -172,6 +172,7 @@
 		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
 		11ABF0682170367500AEDE04 /* GradientRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF0672170367500AEDE04 /* GradientRound.m */; };
+		11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */; };
 		11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */; };
 		11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFD1215A3F5C00FF7045 /* KnowledgeView.m */; };
 		11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D052158C5E10032FE0B /* BaseTabelListView.m */; };
@@ -514,6 +515,8 @@
 		11AA45352150FF8F00ED7293 /* HomeMessgeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeModel.h; sourceTree = "<group>"; };
 		11ABF0662170367500AEDE04 /* GradientRound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientRound.h; sourceTree = "<group>"; };
 		11ABF0672170367500AEDE04 /* GradientRound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientRound.m; sourceTree = "<group>"; };
+		11ABF06A2170703C00AEDE04 /* MyAwardsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAwardsViewController.h; sourceTree = "<group>"; };
+		11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwardsViewController.m; sourceTree = "<group>"; };
 		11D1DFC8215A2E6500FF7045 /* KnowledgeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeRequest.h; sourceTree = "<group>"; };
 		11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeRequest.m; sourceTree = "<group>"; };
 		11D1DFD0215A3F5C00FF7045 /* KnowledgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeView.h; sourceTree = "<group>"; };
@@ -2512,6 +2515,7 @@
 		114A052F214A437F0021E8ED /* Work（工作相关） */ = {
 			isa = PBXGroup;
 			children = (
+				11ABF06921706FFF00AEDE04 /* MyAwards（我的奖励） */,
 				11261432216C9BFE005D0B40 /* MemberManagement（会员管理） */,
 				1126141F216C7C2B005D0B40 /* OrderManagement（订单管理） */,
 				11686F73216B3AE20001C3F9 /* Goods（扫码提货） */,
@@ -2640,6 +2644,15 @@
 				11ABF0672170367500AEDE04 /* GradientRound.m */,
 			);
 			path = "GradientRound（渐变圆）";
+			sourceTree = "<group>";
+		};
+		11ABF06921706FFF00AEDE04 /* MyAwards（我的奖励） */ = {
+			isa = PBXGroup;
+			children = (
+				11ABF06A2170703C00AEDE04 /* MyAwardsViewController.h */,
+				11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */,
+			);
+			path = "MyAwards（我的奖励）";
 			sourceTree = "<group>";
 		};
 		11D1DFCB215A2E6900FF7045 /* Request */ = {
@@ -2926,6 +2939,7 @@
 				0C6A9EFE215B1A4800CFB389 /* SalesTaskViewModel.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
 				0C523978213E37E30083260A /* TaskTypeCell.m in Sources */,
+				11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */,
 				0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */,

@@ -26,9 +26,9 @@
     
     if (!headerView) {
         
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth,309)];
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth,299)];
         
-        UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 294)];
+        UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 284)];
         backView.backgroundColor = [UIColor whiteColor];
         [headerView addSubview:backView];
         
@@ -98,16 +98,97 @@
     [self.headerView addSubview:gradientRound];
     
     gradientRound.sd_layout
-    .leftSpaceToView(self.headerView, 20)
+    .leftSpaceToView(self.headerView, 42)
     .topSpaceToView(lineView, 20)
     .widthIs(150)
     .heightEqualToWidth();
     gradientRound.transform = CGAffineTransformRotate (gradientRound.transform, -M_PI_2); //view就是UIView的实例，直接将transform赋值UIView的就会做出相应的旋转处理
     
     gradientRound.didFinishAutoLayoutBlock = ^(CGRect frame) {
-        [gradientRound addCircleWithColor:RGB(97, 75, 243)];
+        [gradientRound addCircleWithColor:RGB(81, 103, 241)];
         [gradientRound animateToProgress:0.8];
     };
+    
+    UILabel *totalMemberLabel = [UILabel new];
+    totalMemberLabel.text = @"总会员";
+    totalMemberLabel.font = [UIFont systemFontOfSize:16];
+    [self.headerView addSubview:totalMemberLabel];
+    
+    totalMemberLabel.sd_layout
+    .centerXEqualToView(gradientRound)
+    .topSpaceToView(lineView, 75)
+    .heightIs(16);
+    [totalMemberLabel setSingleLineAutoResizeWithMaxWidth:100];
+    
+    self.totalLabel = [UILabel new];
+    self.totalLabel.text = @"15000";
+    self.totalLabel.textColor = RGB(81, 103, 241);
+    self.totalLabel.font = [UIFont systemFontOfSize:24];
+    [self.headerView addSubview:self.totalLabel];
+    
+    self.totalLabel.sd_layout
+    .centerXEqualToView(gradientRound)
+    .topSpaceToView(totalMemberLabel, 5)
+    .heightIs(24);
+    [self.totalLabel setSingleLineAutoResizeWithMaxWidth:100];
+    
+    NSArray *memberArray = @[@"有效会员",@"无效会员"];
+    
+    for (int i = 0; i < memberArray.count; i++) {
+        
+        UIView * view = [UIView new];
+        view.backgroundColor = i == 0 ? RGB(81, 103, 241):RGB(232, 232, 238);
+        view.layer.cornerRadius = 5;
+        view.layer.masksToBounds = YES;
+        [self.headerView addSubview:view];
+        
+        view.sd_layout
+        .leftSpaceToView(gradientRound, 45)
+        .topSpaceToView(lineView, 43 + i * 47)
+        .widthIs(10)
+        .heightEqualToWidth();
+        
+        UILabel *titleLabel = [UILabel new];
+        titleLabel.text = memberArray[i];
+        titleLabel.font = [UIFont systemFontOfSize:13];
+        titleLabel.textColor = RGB(102, 102, 102);
+        [self.headerView addSubview:titleLabel];
+        
+        titleLabel.sd_layout
+        .leftSpaceToView(view, 5)
+        .centerYEqualToView(view)
+        .heightIs(13);
+        [titleLabel setSingleLineAutoResizeWithMaxWidth:100];
+        
+        if (i == 0) {
+            
+            self.effectiveLabel = [UILabel new];
+            self.effectiveLabel.text = @"13500";
+            self.effectiveLabel.font = [UIFont systemFontOfSize:13];
+            [self.headerView addSubview:self.effectiveLabel];
+            
+            self.effectiveLabel.sd_layout
+            .leftSpaceToView(view, 5)
+            .topSpaceToView(titleLabel, 8)
+            .heightIs(13);
+            [self.effectiveLabel setSingleLineAutoResizeWithMaxWidth:100];
+            
+        }else{
+            
+            self.InvalidLabel = [UILabel new];
+            self.InvalidLabel.text = @"1500";
+            self.InvalidLabel.font = [UIFont systemFontOfSize:13];
+            [self.headerView addSubview:self.InvalidLabel];
+            
+            self.InvalidLabel.sd_layout
+            .leftSpaceToView(view, 5)
+            .topSpaceToView(titleLabel, 8)
+            .heightIs(13);
+            [self.InvalidLabel setSingleLineAutoResizeWithMaxWidth:100];
+            
+        }
+        
+    }
     
 }
 
