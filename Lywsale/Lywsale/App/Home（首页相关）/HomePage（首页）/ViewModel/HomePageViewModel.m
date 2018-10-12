@@ -10,6 +10,7 @@
 
 @implementation HomePageViewModel
 
+/// 获取导购每月销售任务完成情况
 - (void)getSalesSituation:(NSString *)shoppingGuideId
                     month:(NSString *)month
                   success:(RequestSuccess)success

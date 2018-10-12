@@ -16,6 +16,7 @@
     
     if (self = [super init]) {
         self.isLoading = YES;
+        self.port = @"28084";
     }
     
     return self;
@@ -59,7 +60,7 @@
 /** 获取IP地址 */
 - (NSString *)getRequestUrl:(NSArray *)parArr {
     
-    NSString *tempStr = @"http://39.108.140.12:28084";
+    NSString *tempStr = [NSString stringWithFormat:@"http://39.108.140.12:%@", self.port];
     for (int i = 0; i < parArr.count; i++) {
         tempStr = [NSString stringWithFormat:@"%@/%@", tempStr, parArr[i]];
     }

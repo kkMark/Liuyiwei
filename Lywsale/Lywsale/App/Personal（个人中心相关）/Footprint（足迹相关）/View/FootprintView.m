@@ -32,16 +32,14 @@
         
         return cell;
     }
-    else {
-        
-        FootprintCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FootprintCourseCell"];
-        if (cell == nil) {
-            cell = [[FootprintCourseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FootprintCourseCell"];
-        }
-        
-        cell.isCollect = self.currentIndex == 1 ? NO : YES;
-        return cell;
+    
+    FootprintCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FootprintCourseCell"];
+    if (cell == nil) {
+        cell = [[FootprintCourseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FootprintCourseCell"];
     }
+    
+    cell.isCollect = self.currentIndex == 1 ? NO : YES;
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
