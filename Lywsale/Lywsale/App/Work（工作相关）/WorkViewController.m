@@ -13,6 +13,7 @@
 #import "OrderManagementViewController.h"
 #import "MemberManagementViewController.h"
 #import "MyAwardsViewController.h"
+#import "OrderViewController.h"
 
 @interface WorkViewController ()
 
@@ -158,6 +159,14 @@
     if ([string isEqualToString:@"我的奖励"]) {
         
         MyAwardsViewController *VC = [[MyAwardsViewController alloc] init];
+        VC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:VC animated:YES];
+        
+    }
+    
+    if ([string isEqualToString:@"代开单"]) {
+        
+        OrderViewController *VC = [[OrderViewController alloc] init];
         VC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:VC animated:YES];
         

@@ -25,9 +25,9 @@
     
     if (!headerView) {
         
-        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth,299)];
+        headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth,129)];
         
-        UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 284)];
+        UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 114)];
         backView.backgroundColor = [UIColor whiteColor];
         [headerView addSubview:backView];
         
@@ -120,7 +120,7 @@
     lineView.sd_layout
     .leftSpaceToView(self.headerView, 0)
     .rightSpaceToView(self.headerView, 0)
-    .topSpaceToView(self.headerView, 52)
+    .topSpaceToView(self.headerView, 62)
     .heightIs(15);
     
     NSArray *moreArray = @[@"奖励类型",@"周期"];
@@ -131,7 +131,31 @@
         [self.headerView addSubview:view];
         
         view.sd_layout
-        .leftSpaceToView(self.headerView, 0);
+        .leftSpaceToView(self.headerView, i * ScreenWidth / 2)
+        .widthIs(ScreenWidth/2)
+        .topSpaceToView(lineView, 0)
+        .heightIs(40);
+        
+        UILabel *label = [UILabel new];
+        label.text = moreArray[i];
+        label.font = [UIFont systemFontOfSize:13];
+        [view addSubview:label];
+        
+        label.sd_layout
+        .leftSpaceToView(view, view.width/2 - 50)
+        .centerYEqualToView(view)
+        .heightIs(13);
+        [label setSingleLineAutoResizeWithMaxWidth:100];
+        
+        UIImageView *imageView = [UIImageView new];
+        imageView.image = [UIImage imageNamed:@"more1"];
+        [view addSubview:imageView];
+        
+        imageView.sd_layout
+        .leftSpaceToView(label, 7)
+        .centerYEqualToView(label)
+        .widthIs(17)
+        .heightEqualToWidth();
         
     }
     

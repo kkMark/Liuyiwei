@@ -175,6 +175,7 @@
 		11ABF0682170367500AEDE04 /* GradientRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF0672170367500AEDE04 /* GradientRound.m */; };
 		11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */; };
 		11ABF070217071DE00AEDE04 /* MyAwardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF06F217071DE00AEDE04 /* MyAwardsView.m */; };
+		11ABF074217089E100AEDE04 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF073217089E100AEDE04 /* OrderViewController.m */; };
 		11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */; };
 		11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFD1215A3F5C00FF7045 /* KnowledgeView.m */; };
 		11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D052158C5E10032FE0B /* BaseTabelListView.m */; };
@@ -523,6 +524,8 @@
 		11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwardsViewController.m; sourceTree = "<group>"; };
 		11ABF06E217071DE00AEDE04 /* MyAwardsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAwardsView.h; sourceTree = "<group>"; };
 		11ABF06F217071DE00AEDE04 /* MyAwardsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwardsView.m; sourceTree = "<group>"; };
+		11ABF072217089E100AEDE04 /* OrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		11ABF073217089E100AEDE04 /* OrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
 		11D1DFC8215A2E6500FF7045 /* KnowledgeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeRequest.h; sourceTree = "<group>"; };
 		11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeRequest.m; sourceTree = "<group>"; };
 		11D1DFD0215A3F5C00FF7045 /* KnowledgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeView.h; sourceTree = "<group>"; };
@@ -2523,6 +2526,7 @@
 		114A052F214A437F0021E8ED /* Work（工作相关） */ = {
 			isa = PBXGroup;
 			children = (
+				11ABF071217089BF00AEDE04 /* Order（代开单） */,
 				11ABF06921706FFF00AEDE04 /* MyAwards（我的奖励） */,
 				11261432216C9BFE005D0B40 /* MemberManagement（会员管理） */,
 				1126141F216C7C2B005D0B40 /* OrderManagement（订单管理） */,
@@ -2671,6 +2675,15 @@
 				11ABF06F217071DE00AEDE04 /* MyAwardsView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		11ABF071217089BF00AEDE04 /* Order（代开单） */ = {
+			isa = PBXGroup;
+			children = (
+				11ABF072217089E100AEDE04 /* OrderViewController.h */,
+				11ABF073217089E100AEDE04 /* OrderViewController.m */,
+			);
+			path = "Order（代开单）";
 			sourceTree = "<group>";
 		};
 		11D1DFCB215A2E6900FF7045 /* Request */ = {
@@ -2901,6 +2914,7 @@
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
 				0C804A122147A1670032B57A /* BuyCell.m in Sources */,
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
+				11ABF074217089E100AEDE04 /* OrderViewController.m in Sources */,
 				0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */,
 				0CDDB54B2127341D00D42F76 /* BaseViewController.m in Sources */,
 				0C219600215A150C00D2696D /* SalesclerkCell.m in Sources */,
