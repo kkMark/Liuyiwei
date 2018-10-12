@@ -173,6 +173,7 @@
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
 		11ABF0682170367500AEDE04 /* GradientRound.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF0672170367500AEDE04 /* GradientRound.m */; };
 		11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */; };
+		11ABF070217071DE00AEDE04 /* MyAwardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF06F217071DE00AEDE04 /* MyAwardsView.m */; };
 		11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */; };
 		11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFD1215A3F5C00FF7045 /* KnowledgeView.m */; };
 		11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D052158C5E10032FE0B /* BaseTabelListView.m */; };
@@ -517,6 +518,8 @@
 		11ABF0672170367500AEDE04 /* GradientRound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientRound.m; sourceTree = "<group>"; };
 		11ABF06A2170703C00AEDE04 /* MyAwardsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAwardsViewController.h; sourceTree = "<group>"; };
 		11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwardsViewController.m; sourceTree = "<group>"; };
+		11ABF06E217071DE00AEDE04 /* MyAwardsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAwardsView.h; sourceTree = "<group>"; };
+		11ABF06F217071DE00AEDE04 /* MyAwardsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwardsView.m; sourceTree = "<group>"; };
 		11D1DFC8215A2E6500FF7045 /* KnowledgeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeRequest.h; sourceTree = "<group>"; };
 		11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeRequest.m; sourceTree = "<group>"; };
 		11D1DFD0215A3F5C00FF7045 /* KnowledgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeView.h; sourceTree = "<group>"; };
@@ -2649,10 +2652,20 @@
 		11ABF06921706FFF00AEDE04 /* MyAwards（我的奖励） */ = {
 			isa = PBXGroup;
 			children = (
+				11ABF06D217071BA00AEDE04 /* View */,
 				11ABF06A2170703C00AEDE04 /* MyAwardsViewController.h */,
 				11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */,
 			);
 			path = "MyAwards（我的奖励）";
+			sourceTree = "<group>";
+		};
+		11ABF06D217071BA00AEDE04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11ABF06E217071DE00AEDE04 /* MyAwardsView.h */,
+				11ABF06F217071DE00AEDE04 /* MyAwardsView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		11D1DFCB215A2E6900FF7045 /* Request */ = {
@@ -2974,6 +2987,7 @@
 				0C523971213E19B20083260A /* UIImage+Category.m in Sources */,
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
 				0C219619215A208700D2696D /* ResultsHistoryView.m in Sources */,
+				11ABF070217071DE00AEDE04 /* MyAwardsView.m in Sources */,
 				0C7AEA95213E610800138A31 /* RankingCell.m in Sources */,
 				0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */,
 				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,
