@@ -8,6 +8,7 @@
 
 #import "OrderManageListViewController.h"
 #import "OrderManageView.h"
+#import "OrderManagementRequest.h"
 
 @interface OrderManageListViewController ()
 
@@ -36,6 +37,16 @@
 }
 
 -(void)request{
+    
+    if (self.type == 0) {
+        
+        [[OrderManagementRequest new] GetOrderMainPageNumber:1 PageSize:10 success:^(NSDictionary *dict) {
+            
+        } failure:^(NSError *error) {
+            
+        }];
+        
+    }
     
 }
 

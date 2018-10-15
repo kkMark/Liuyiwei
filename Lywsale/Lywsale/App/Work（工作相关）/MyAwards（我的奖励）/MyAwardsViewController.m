@@ -8,6 +8,7 @@
 
 #import "MyAwardsViewController.h"
 #import "MyAwardsView.h"
+#import "MyAwardsRequest.h"
 
 @interface MyAwardsViewController ()
 
@@ -42,6 +43,24 @@
     [self initUI];
     
     [self block];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self request];
+    
+}
+
+-(void)request{
+    
+    [[MyAwardsRequest new] GetSumIntegralsuccess:^(NSDictionary *dict) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
 }
 

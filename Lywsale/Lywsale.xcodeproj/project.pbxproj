@@ -161,6 +161,9 @@
 		1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1141FD112152524400FAF01F /* AnnouncementViewController.m */; };
 		114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0532214A43EC0021E8ED /* WorkViewController.m */; };
 		114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 114A0535214A43FE0021E8ED /* KnowledgeViewController.m */; };
+		1160E78D21742F940040FA6F /* WorkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1160E78C21742F940040FA6F /* WorkRequest.m */; };
+		1160E791217438420040FA6F /* OrderManagementRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1160E790217438420040FA6F /* OrderManagementRequest.m */; };
+		1160E79521743A280040FA6F /* MyAwardsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1160E79421743A280040FA6F /* MyAwardsRequest.m */; };
 		116392B7215F6AB5004160A2 /* CourseSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 116392B6215F6AB5004160A2 /* CourseSortViewController.m */; };
 		11686F5F216AE98C0001C3F9 /* CourseSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F5E216AE98C0001C3F9 /* CourseSortView.m */; };
 		11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F61216AEF670001C3F9 /* CourseSortTableViewCell.m */; };
@@ -498,6 +501,12 @@
 		114A0532214A43EC0021E8ED /* WorkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkViewController.m; sourceTree = "<group>"; };
 		114A0534214A43FE0021E8ED /* KnowledgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeViewController.h; sourceTree = "<group>"; };
 		114A0535214A43FE0021E8ED /* KnowledgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeViewController.m; sourceTree = "<group>"; };
+		1160E78B21742F940040FA6F /* WorkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WorkRequest.h; sourceTree = "<group>"; };
+		1160E78C21742F940040FA6F /* WorkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkRequest.m; sourceTree = "<group>"; };
+		1160E78F217438420040FA6F /* OrderManagementRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderManagementRequest.h; sourceTree = "<group>"; };
+		1160E790217438420040FA6F /* OrderManagementRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderManagementRequest.m; sourceTree = "<group>"; };
+		1160E79321743A280040FA6F /* MyAwardsRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAwardsRequest.h; sourceTree = "<group>"; };
+		1160E79421743A280040FA6F /* MyAwardsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwardsRequest.m; sourceTree = "<group>"; };
 		116392B5215F6AB5004160A2 /* CourseSortViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSortViewController.h; sourceTree = "<group>"; };
 		116392B6215F6AB5004160A2 /* CourseSortViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CourseSortViewController.m; sourceTree = "<group>"; };
 		11686F5D216AE98C0001C3F9 /* CourseSortView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CourseSortView.h; sourceTree = "<group>"; };
@@ -2461,6 +2470,7 @@
 		1126141F216C7C2B005D0B40 /* OrderManagement（订单管理） */ = {
 			isa = PBXGroup;
 			children = (
+				1160E78E217438280040FA6F /* Request */,
 				1126142E216C81F1005D0B40 /* Model */,
 				11261427216C814E005D0B40 /* View */,
 				11261423216C7EB6005D0B40 /* VC */,
@@ -2543,6 +2553,7 @@
 				11AA452C2150FF5600ED7293 /* View */,
 				114A0531214A43EC0021E8ED /* WorkViewController.h */,
 				114A0532214A43EC0021E8ED /* WorkViewController.m */,
+				1160E78A21742F4A0040FA6F /* Request */,
 			);
 			path = "Work（工作相关）";
 			sourceTree = "<group>";
@@ -2559,6 +2570,33 @@
 				114A0535214A43FE0021E8ED /* KnowledgeViewController.m */,
 			);
 			path = "Knowledge （知识相关）";
+			sourceTree = "<group>";
+		};
+		1160E78A21742F4A0040FA6F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				1160E78B21742F940040FA6F /* WorkRequest.h */,
+				1160E78C21742F940040FA6F /* WorkRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		1160E78E217438280040FA6F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				1160E78F217438420040FA6F /* OrderManagementRequest.h */,
+				1160E790217438420040FA6F /* OrderManagementRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		1160E79221743A130040FA6F /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				1160E79321743A280040FA6F /* MyAwardsRequest.h */,
+				1160E79421743A280040FA6F /* MyAwardsRequest.m */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		116392B4215F6A88004160A2 /* CourseSort（课程分类） */ = {
@@ -2668,6 +2706,7 @@
 		11ABF06921706FFF00AEDE04 /* MyAwards（我的奖励） */ = {
 			isa = PBXGroup;
 			children = (
+				1160E79221743A130040FA6F /* Request */,
 				11ABF06D217071BA00AEDE04 /* View */,
 				11ABF06A2170703C00AEDE04 /* MyAwardsViewController.h */,
 				11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */,
@@ -2879,6 +2918,7 @@
 				0C121465215635720028368D /* SalesclerkViewController.m in Sources */,
 				11ED7D092158C6460032FE0B /* BaseTableSectionView.m in Sources */,
 				0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */,
+				1160E78D21742F940040FA6F /* WorkRequest.m in Sources */,
 				0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */,
 				0C21961C215A216600D2696D /* ResultsHistoryCell.m in Sources */,
 				0C3FD1C32154DF7B00534B8D /* UploadHistoryCell.m in Sources */,
@@ -2989,10 +3029,12 @@
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
+				1160E791217438420040FA6F /* OrderManagementRequest.m in Sources */,
 				0C3FD1C62154E86300534B8D /* UploadImgCell.m in Sources */,
 				0C84047D213528CC00305197 /* DataPanelView.m in Sources */,
 				11261435216C9CDF005D0B40 /* MemberManagementViewController.m in Sources */,
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
+				1160E79521743A280040FA6F /* MyAwardsRequest.m in Sources */,
 				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,
 				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
@@ -3189,7 +3231,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D594586J86;
+				DEVELOPMENT_TEAM = 6K454Q8M7V;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3210,7 +3252,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D594586J86;
+				DEVELOPMENT_TEAM = 6K454Q8M7V;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

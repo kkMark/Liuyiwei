@@ -43,11 +43,17 @@
                                                                 @{@"image":@"",@"title":@"博路定用药培训"}
                                                                     ]}]];
     
-    [self request];
-    
     [self initUI];
     
     [self block];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self request];
     
 }
 
