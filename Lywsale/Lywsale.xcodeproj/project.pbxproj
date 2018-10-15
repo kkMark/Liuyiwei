@@ -176,6 +176,8 @@
 		11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF06B2170703C00AEDE04 /* MyAwardsViewController.m */; };
 		11ABF070217071DE00AEDE04 /* MyAwardsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF06F217071DE00AEDE04 /* MyAwardsView.m */; };
 		11ABF074217089E100AEDE04 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF073217089E100AEDE04 /* OrderViewController.m */; };
+		11ABF07821708C7000AEDE04 /* QrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF07721708C7000AEDE04 /* QrCodeViewController.m */; };
+		11ABF07C2170969000AEDE04 /* QRMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ABF07B2170969000AEDE04 /* QRMembersViewController.m */; };
 		11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */; };
 		11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D1DFD1215A3F5C00FF7045 /* KnowledgeView.m */; };
 		11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D052158C5E10032FE0B /* BaseTabelListView.m */; };
@@ -526,6 +528,10 @@
 		11ABF06F217071DE00AEDE04 /* MyAwardsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAwardsView.m; sourceTree = "<group>"; };
 		11ABF072217089E100AEDE04 /* OrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
 		11ABF073217089E100AEDE04 /* OrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		11ABF07621708C7000AEDE04 /* QrCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QrCodeViewController.h; sourceTree = "<group>"; };
+		11ABF07721708C7000AEDE04 /* QrCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QrCodeViewController.m; sourceTree = "<group>"; };
+		11ABF07A2170969000AEDE04 /* QRMembersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRMembersViewController.h; sourceTree = "<group>"; };
+		11ABF07B2170969000AEDE04 /* QRMembersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRMembersViewController.m; sourceTree = "<group>"; };
 		11D1DFC8215A2E6500FF7045 /* KnowledgeRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeRequest.h; sourceTree = "<group>"; };
 		11D1DFC9215A2E6500FF7045 /* KnowledgeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KnowledgeRequest.m; sourceTree = "<group>"; };
 		11D1DFD0215A3F5C00FF7045 /* KnowledgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KnowledgeView.h; sourceTree = "<group>"; };
@@ -2526,6 +2532,7 @@
 		114A052F214A437F0021E8ED /* Work（工作相关） */ = {
 			isa = PBXGroup;
 			children = (
+				11ABF07521708C4000AEDE04 /* QrCode（二维码） */,
 				11ABF071217089BF00AEDE04 /* Order（代开单） */,
 				11ABF06921706FFF00AEDE04 /* MyAwards（我的奖励） */,
 				11261432216C9BFE005D0B40 /* MemberManagement（会员管理） */,
@@ -2684,6 +2691,25 @@
 				11ABF073217089E100AEDE04 /* OrderViewController.m */,
 			);
 			path = "Order（代开单）";
+			sourceTree = "<group>";
+		};
+		11ABF07521708C4000AEDE04 /* QrCode（二维码） */ = {
+			isa = PBXGroup;
+			children = (
+				11ABF0792170964900AEDE04 /* VC */,
+				11ABF07621708C7000AEDE04 /* QrCodeViewController.h */,
+				11ABF07721708C7000AEDE04 /* QrCodeViewController.m */,
+			);
+			path = "QrCode（二维码）";
+			sourceTree = "<group>";
+		};
+		11ABF0792170964900AEDE04 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				11ABF07A2170969000AEDE04 /* QRMembersViewController.h */,
+				11ABF07B2170969000AEDE04 /* QRMembersViewController.m */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		11D1DFCB215A2E6900FF7045 /* Request */ = {
@@ -2898,6 +2924,7 @@
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
 				0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */,
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
+				11ABF07C2170969000AEDE04 /* QRMembersViewController.m in Sources */,
 				0CC3FD25216CD9C6001848BE /* AmountCell.m in Sources */,
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */,
@@ -2989,6 +3016,7 @@
 				0CF0EF912152226100DF2DFA /* ActivityDetailsViewController.m in Sources */,
 				0C8404A321354BB200305197 /* DailyTaskViewController.m in Sources */,
 				11ED7D0D2158C8640032FE0B /* AnnouncementView.m in Sources */,
+				11ABF07821708C7000AEDE04 /* QrCodeViewController.m in Sources */,
 				0CEFA0F7213FC4F40072EAB9 /* RegisteredViewController.m in Sources */,
 				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C54C6972154CBF100C8FB10 /* UploadCredentialsViewController.m in Sources */,

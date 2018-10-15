@@ -14,6 +14,7 @@
 #import "MemberManagementViewController.h"
 #import "MyAwardsViewController.h"
 #import "OrderViewController.h"
+#import "QrCodeViewController.h"
 
 @interface WorkViewController ()
 
@@ -167,6 +168,14 @@
     if ([string isEqualToString:@"代开单"]) {
         
         OrderViewController *VC = [[OrderViewController alloc] init];
+        VC.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:VC animated:YES];
+        
+    }
+    
+    if ([string isEqualToString:@"二维码"]) {
+        
+        QrCodeViewController *VC = [[QrCodeViewController alloc] init];
         VC.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:VC animated:YES];
         
