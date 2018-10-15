@@ -33,9 +33,9 @@
         [self.BGView addSubview:imageView];
         
         imageView.sd_layout
-        .leftSpaceToView(self.BGView, 20 + countInteger * 100 + countInteger * (ScreenWidth * 0.06))
+        .leftSpaceToView(self.BGView, (ScreenWidth * 0.04) + countInteger * ((ScreenWidth - 25) * 0.266) + countInteger * ((ScreenWidth - 25) * 0.06))
         .topSpaceToView(self.BGView, 10 + integer * 50)
-        .widthIs(100)
+        .widthIs((ScreenWidth - 25) * 0.266)
         .heightIs(30);
         
         NSDictionary *dict = courseSortArray[i];
