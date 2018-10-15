@@ -15,6 +15,7 @@
 #import "MyAwardsViewController.h"
 #import "OrderViewController.h"
 #import "QrCodeViewController.h"
+#import "WorkRequest.h"
 
 @interface WorkViewController ()
 
@@ -36,6 +37,24 @@
     self.view.backgroundColor = kPageBgColor;
     
     [self initUI];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self request];
+    
+}
+
+-(void)request{
+    
+    [[WorkRequest new] GetChatRecordPageNumber:1 PageSize:10 success:^(NSDictionary *dict) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
     
 }
 
