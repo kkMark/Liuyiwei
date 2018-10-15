@@ -11,6 +11,13 @@
 @interface RetrieveViewModel : BaseHttpRequest
 
 /**
+     发送验证码
+ 
+     @param phone 手机号
+ */
+- (void)sendCode:(NSString *)phone success:(RequestSuccess)success failure:(RequestFailure)failure;
+
+/**
      重置密码
  
      @param account 用户

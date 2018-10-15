@@ -103,6 +103,7 @@
 		0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AE21354CCA00305197 /* SalesTaskCell.m */; };
 		0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404B1213634AF00305197 /* DailyTaskCell.m */; };
 		0C9A9407214130FF00CACE20 /* RCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A9406214130FF00CACE20 /* RCompleteViewController.m */; };
+		0CAB76C52174260000B5076E /* RegisteredViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB76C42174260000B5076E /* RegisteredViewModel.m */; };
 		0CC3FD1C216CCF3E001848BE /* WithdrawalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD1B216CCF3E001848BE /* WithdrawalView.m */; };
 		0CC3FD1F216CCF46001848BE /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD1E216CCF46001848BE /* WithdrawalViewController.m */; };
 		0CC3FD25216CD9C6001848BE /* AmountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD24216CD9C6001848BE /* AmountCell.m */; };
@@ -383,6 +384,8 @@
 		0C8404B1213634AF00305197 /* DailyTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskCell.m; sourceTree = "<group>"; };
 		0C9A9405214130FF00CACE20 /* RCompleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCompleteViewController.h; sourceTree = "<group>"; };
 		0C9A9406214130FF00CACE20 /* RCompleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCompleteViewController.m; sourceTree = "<group>"; };
+		0CAB76C32174260000B5076E /* RegisteredViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewModel.h; sourceTree = "<group>"; };
+		0CAB76C42174260000B5076E /* RegisteredViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewModel.m; sourceTree = "<group>"; };
 		0CC3FD1A216CCF3E001848BE /* WithdrawalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalView.h; sourceTree = "<group>"; };
 		0CC3FD1B216CCF3E001848BE /* WithdrawalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawalView.m; sourceTree = "<group>"; };
 		0CC3FD1D216CCF46001848BE /* WithdrawalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
@@ -1866,6 +1869,15 @@
 			path = "Home（首页相关）";
 			sourceTree = "<group>";
 		};
+		0CAB76C2217425D300B5076E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0CAB76C32174260000B5076E /* RegisteredViewModel.h */,
+				0CAB76C42174260000B5076E /* RegisteredViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0CC3FD17216CCF27001848BE /* Withdrawal（申请提现） */ = {
 			isa = PBXGroup;
 			children = (
@@ -2361,7 +2373,7 @@
 		0CEFA0F1213FC4CD0072EAB9 /* Registered（注册） */ = {
 			isa = PBXGroup;
 			children = (
-				0CEFA0F4213FC4E00072EAB9 /* ViewModel */,
+				0CAB76C2217425D300B5076E /* ViewModel */,
 				0CEFA0F3213FC4DC0072EAB9 /* View */,
 				0CEFA0F2213FC4D70072EAB9 /* ViewController */,
 			);
@@ -2384,13 +2396,6 @@
 				0CEFA0F9213FC5080072EAB9 /* RegisteredView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		0CEFA0F4213FC4E00072EAB9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0CEFA0FB213FD1A80072EAB9 /* Retrieve（找回密码） */ = {
@@ -2946,6 +2951,7 @@
 				0C804A0621476E620032B57A /* BuyViewController.m in Sources */,
 				0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */,
 				0C12144A2155D3E00028368D /* RemarkMenuView.m in Sources */,
+				0CAB76C52174260000B5076E /* RegisteredViewModel.m in Sources */,
 				0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */,
 				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
 				0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */,
