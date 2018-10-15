@@ -7,9 +7,19 @@
 //
 
 #import "RetrieveViewController.h"
+#import "RetrieveViewModel.h"
 
 @interface RetrieveViewController ()
 
+/// 验证码
+@property (nonatomic, copy) NSString *code;
+/// 手机号
+@property (nonatomic, copy) NSString *phone;
+/// 密码
+@property (nonatomic, copy) NSString *password;
+/// 确认密码
+@property (nonatomic, copy) NSString *confirmPassword;
+/// 验证码按钮
 @property (nonatomic, strong) UIButton *sendCodeBtn;
 
 @end
@@ -48,6 +58,14 @@
         textField.placeholder = titles[i];
         textField.secureTextEntry = i > 0 ? YES : NO;
         [bgView addSubview:textField];
+        
+        [[textField rac_textSignal] subscribeNext:^(NSString * _Nullable x) {
+           
+            if (i == 0) self.phone = x;
+            else if (i == 1) self.code = x;
+            else if (i == 2) self.password = x;
+            else if (i == 3) self.confirmPassword = x;
+        }];
         
         if (i != 0) {
             
@@ -93,7 +111,27 @@
 // 找回密码
 - (void)retrieveBtnClick {
     
+    NSArray *arr = @[self.phone, self.code, self.password, self.confirmPassword];
+    for (int i = 0; i < arr.count; i++) {
+        
+        if ([arr[i] length] == 0) {
+            return [self.view makeToast:@"请将以上信息填写完整"];
+        }
+    }
     
+    if ([self.password isEqualToString:self.confirmPassword]) {
+        return [self.view makeToast:@"两次输入的密码不一致"];
+    }
+    
+    [[RetrieveViewModel new] forgetPasswordAccount:self.phone password:self.password code:self.code success:^(NSDictionary *dict) {
+        
+        [[UIApplication sharedApplication].keyWindow makeToast:@"修改成功，请返回登陆"];
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    } failure:^(NSError *error) {
+       
+        [self.view makeToast:@"找回密码失败，请稍后再试"];
+    }];
 }
 
 
@@ -108,6 +146,28 @@
         [sendCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
         [sendCodeBtn setTitleColor:kMainColor forState:UIControlStateNormal];
         [sendCodeBtn addTarget:self action:@selector(openCountdown) forControlEvents:UIControlEventTouchUpInside];
+        
+        @weakify(self);
+        [[sendCodeBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            
+            @strongify(self);
+            if (self.phone.length > 0) {
+                
+                [[RetrieveViewModel new] sendCode:self.phone success:^(NSDictionary *dict) {
+                    
+                    NSLog(@"%@", dict);
+                    [self openCountdown];
+                    
+                } failure:^(NSError *error) {
+                    
+                    [self.view makeToast:@"获取验证码失败"];
+                }];
+            }
+            else {
+                
+                [self.view makeToast:@"请输入找回的账号"];
+            }
+        }];
     }
     
     return sendCodeBtn;

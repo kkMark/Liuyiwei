@@ -62,7 +62,7 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
 
 - (void)makeToast:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^{
-    [self makeToast:message duration:CSToastDefaultDuration position:CSToastDefaultPosition];
+    [self makeToast:message duration:CSToastDefaultDuration position:@"bottom"];
     });
 }
 
