@@ -15,16 +15,12 @@
     self.urlString = [self getRequestUrl:@[@"members", @"verificationCode"]];
     self.parameters = @{ @"mobile" : phone, @"type" : @"1" };
     [self requestMode:PostMode success:success failure:failure];
-    
-    NSLog(@"暂未测试该接口");
 }
 
-- (void)registered:(NSString *)account
-          password:(NSString *)password
-              code:(NSString *)code
-           success:(RequestSuccess)success
-           failure:(RequestFailure)failure
-{
+- (void)registered:(RegisteredModel *)model success:(RequestSuccess)success failure:(RequestFailure)failure {
+    
+    self.urlString = [self getRequestUrl:@[@"members", @"register"]];
+    
     NSLog(@"暂未实现");
 }
 

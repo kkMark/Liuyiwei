@@ -28,7 +28,6 @@
     self.writeInfoView.dataSources = @[@"姓名", @"我是", @"邀请码", @"工作证"];
 }
 
-
 #pragma mark - lazy
 - (WriteInfoView *)writeInfoView {
     
@@ -53,6 +52,14 @@
         [okBtn setTitle:@"确定加入" forState:UIControlStateNormal];
         [okBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.view addSubview:okBtn];
+        
+        @weakify(self);
+        [[okBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+           
+            @strongify(self);
+            NSString *vcName = @"RCompleteViewController";
+            [self.navigationController pushViewController:[NSClassFromString(vcName) new] animated:YES];
+        }];
     }
     
     return okBtn;

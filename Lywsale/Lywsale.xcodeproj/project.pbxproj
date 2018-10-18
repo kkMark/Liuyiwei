@@ -83,6 +83,7 @@
 		0C7AEA95213E610800138A31 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA94213E610800138A31 /* RankingCell.m */; };
 		0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */; };
 		0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */; };
+		0C7D3C70217485150075427E /* RegisteredModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C7D3C6F217485150075427E /* RegisteredModel.m */; };
 		0C804A0021476E4F0032B57A /* ReceptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8049FF21476E4F0032B57A /* ReceptionViewController.m */; };
 		0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0221476E580032B57A /* CustomerInfoViewController.m */; };
 		0C804A0621476E620032B57A /* BuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C804A0521476E620032B57A /* BuyViewController.m */; };
@@ -344,6 +345,8 @@
 		0C7AEA98213E78CE00138A31 /* PersonalHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonalHeaderView.m; sourceTree = "<group>"; };
 		0C7AEA9F213E8E5300138A31 /* HomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewModel.h; sourceTree = "<group>"; };
 		0C7AEAA0213E8E5300138A31 /* HomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewModel.m; sourceTree = "<group>"; };
+		0C7D3C6E217485150075427E /* RegisteredModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredModel.h; sourceTree = "<group>"; };
+		0C7D3C6F217485150075427E /* RegisteredModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteredModel.m; sourceTree = "<group>"; };
 		0C8049FE21476E4F0032B57A /* ReceptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceptionViewController.h; sourceTree = "<group>"; };
 		0C8049FF21476E4F0032B57A /* ReceptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceptionViewController.m; sourceTree = "<group>"; };
 		0C804A0121476E580032B57A /* CustomerInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerInfoViewController.h; sourceTree = "<group>"; };
@@ -1529,6 +1532,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		0C7D3C6D217485040075427E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C7D3C6E217485150075427E /* RegisteredModel.h */,
+				0C7D3C6F217485150075427E /* RegisteredModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0C8049E921476E320032B57A /* Reception（接待相关） */ = {
 			isa = PBXGroup;
 			children = (
@@ -2374,6 +2386,7 @@
 			isa = PBXGroup;
 			children = (
 				0CAB76C2217425D300B5076E /* ViewModel */,
+				0C7D3C6D217485040075427E /* Model */,
 				0CEFA0F3213FC4DC0072EAB9 /* View */,
 				0CEFA0F2213FC4D70072EAB9 /* ViewController */,
 			);
@@ -3040,6 +3053,7 @@
 				0C84047D213528CC00305197 /* DataPanelView.m in Sources */,
 				11261435216C9CDF005D0B40 /* MemberManagementViewController.m in Sources */,
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
+				0C7D3C70217485150075427E /* RegisteredModel.m in Sources */,
 				1160E79521743A280040FA6F /* MyAwardsRequest.m in Sources */,
 				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,
 				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
@@ -3237,7 +3251,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6K454Q8M7V;
+				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3258,7 +3272,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6K454Q8M7V;
+				DEVELOPMENT_TEAM = D594586J86;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

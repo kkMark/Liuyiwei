@@ -14,13 +14,7 @@
 
 /**
      获取导购每月销售任务完成情况
-
-     @param shoppingGuideId 导购ID
-     @param month 月份
  */
-- (void)getSalesSituation:(NSString *)shoppingGuideId
-                    month:(NSString *)month
-                  success:(RequestSuccess)success
-                  failure:(RequestFailure)failure;
+- (void)getSalesSituationSuccess:(RequestSuccess)success failure:(RequestFailure)failure;
 
 @end

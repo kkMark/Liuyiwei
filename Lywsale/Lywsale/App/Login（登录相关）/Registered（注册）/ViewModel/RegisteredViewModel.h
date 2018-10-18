@@ -7,6 +7,7 @@
 //
 
 #import "BaseHttpRequest.h"
+#import "RegisteredModel.h"
 
 @interface RegisteredViewModel : BaseHttpRequest
 
@@ -20,13 +21,9 @@
 /**
      注册
  
-     @param account 用户
-     @param password 密码
-     @param code 验证码
+     @param model 注册模型
  */
-- (void)registered:(NSString *)account
-          password:(NSString *)password
-              code:(NSString *)code
+- (void)registered:(RegisteredModel *)model
            success:(RequestSuccess)success
            failure:(RequestFailure)failure;
 

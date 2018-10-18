@@ -33,6 +33,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+    
+    [self getDataSource];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
@@ -87,7 +89,11 @@
 #pragma mark - request
 - (void)getDataSource {
     
-    
+    [[HomePageViewModel new] getSalesSituationSuccess:^(NSDictionary *dict) {
+        
+        
+        
+    } failure:nil];
 }
 
 @end
