@@ -7,12 +7,14 @@
 //
 
 #import "DailyTaskViewController.h"
+#import "DailyTaskViewModel.h"
 #import "DailyTaskView.h"
 
 @interface DailyTaskViewController ()
 
 @property (nonatomic, strong) DailyTaskView *dailyTaskView;
 @property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, assign) int page;
 
 @end
 
@@ -23,10 +25,13 @@
 - (void)viewDidLoad {
 
     [super viewDidLoad];
-    [self initNavRight];
-
+    
     self.title = @"日常任务";
+    self.page = 1;
     self.dailyTaskView.dataSources = @[@"", @"", @"", @""];
+    
+    [self initNavRight];
+    [self getDataSource];
 }
 
 - (void)initNavRight {
@@ -103,6 +108,16 @@
     }
     
     return dailyTaskView;
+}
+
+- (void)getDataSource {
+    
+    [[DailyTaskViewModel new] getDailyTask:self.page type:@"1" success:^(NSDictionary *dict) {
+        
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 @end

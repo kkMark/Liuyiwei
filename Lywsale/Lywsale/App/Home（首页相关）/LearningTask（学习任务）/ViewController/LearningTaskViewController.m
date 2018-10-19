@@ -8,6 +8,7 @@
 
 #import "LearningTaskViewController.h"
 #import "LearningTaskView.h"
+#import "LearningTaskViewModel.h"
 
 @interface LearningTaskViewController ()
 
@@ -26,6 +27,8 @@
     
     self.title = @"学习任务";
     self.learningTaskView.dataSources = @[@"", @"", @""];
+    
+    [self getTask];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -101,6 +104,15 @@
     }
     
     return learningTaskView;
+}
+
+- (void)getTask {
+    
+    [[LearningTaskViewModel new] getTask:1 success:^(NSDictionary *dict) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 @end

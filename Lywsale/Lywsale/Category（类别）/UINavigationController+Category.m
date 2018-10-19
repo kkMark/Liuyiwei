@@ -25,15 +25,15 @@
     [self.interactivePopGestureRecognizer setEnabled:NO];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = self;
-        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-    }
-}
+//- (void)viewWillAppear:(BOOL)animated {
+//
+//    [super viewWillAppear:animated];
+//
+//    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+//        self.navigationController.interactivePopGestureRecognizer.delegate = self;
+//        self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+//    }
+//}
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     

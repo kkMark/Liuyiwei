@@ -68,6 +68,8 @@
 		0C534EA9212EA676001C2A7A /* KTextFeildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C534EA8212EA676001C2A7A /* KTextFeildView.m */; };
 		0C54C6972154CBF100C8FB10 /* UploadCredentialsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C6962154CBF100C8FB10 /* UploadCredentialsViewController.m */; };
 		0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */; };
+		0C5E026B2179BB9C008B3D91 /* DailyTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E026A2179BB9C008B3D91 /* DailyTaskViewModel.m */; };
+		0C5E026F2179BEC8008B3D91 /* LearningTaskViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E026E2179BEC8008B3D91 /* LearningTaskViewModel.m */; };
 		0C5F2CC7216AF08800801951 /* PerformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC6216AF08800801951 /* PerformView.m */; };
 		0C5F2CCA216AF16600801951 /* PerformCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CC9216AF16600801951 /* PerformCell.m */; };
 		0C5F2CCD216B349200801951 /* DailyTaskManagerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */; };
@@ -315,6 +317,10 @@
 		0C54C6962154CBF100C8FB10 /* UploadCredentialsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadCredentialsViewController.m; sourceTree = "<group>"; };
 		0C54C69B2154CCED00C8FB10 /* UploadCredentialsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UploadCredentialsView.h; sourceTree = "<group>"; };
 		0C54C69C2154CCED00C8FB10 /* UploadCredentialsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UploadCredentialsView.m; sourceTree = "<group>"; };
+		0C5E02692179BB9C008B3D91 /* DailyTaskViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskViewModel.h; sourceTree = "<group>"; };
+		0C5E026A2179BB9C008B3D91 /* DailyTaskViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskViewModel.m; sourceTree = "<group>"; };
+		0C5E026D2179BEC8008B3D91 /* LearningTaskViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningTaskViewModel.h; sourceTree = "<group>"; };
+		0C5E026E2179BEC8008B3D91 /* LearningTaskViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningTaskViewModel.m; sourceTree = "<group>"; };
 		0C5F2CC5216AF08800801951 /* PerformView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformView.h; sourceTree = "<group>"; };
 		0C5F2CC6216AF08800801951 /* PerformView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformView.m; sourceTree = "<group>"; };
 		0C5F2CC8216AF16600801951 /* PerformCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformCell.h; sourceTree = "<group>"; };
@@ -1481,6 +1487,24 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		0C5E02622179BB3D008B3D91 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C5E02692179BB9C008B3D91 /* DailyTaskViewModel.h */,
+				0C5E026A2179BB9C008B3D91 /* DailyTaskViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C5E026C2179BEBC008B3D91 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C5E026D2179BEC8008B3D91 /* LearningTaskViewModel.h */,
+				0C5E026E2179BEC8008B3D91 /* LearningTaskViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0C5F2CC4216AF06D00801951 /* 执行情况 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1733,19 +1757,12 @@
 		0C84048C21354B7C00305197 /* DailyTask（日常任务） */ = {
 			isa = PBXGroup;
 			children = (
-				0C84048D21354B7C00305197 /* ViewModel */,
+				0C5E02622179BB3D008B3D91 /* ViewModel */,
 				0C84048E21354B7C00305197 /* Model */,
 				0C84048F21354B7C00305197 /* View */,
 				0C84049021354B7C00305197 /* ViewController */,
 			);
 			path = "DailyTask（日常任务）";
-			sourceTree = "<group>";
-		};
-		0C84048D21354B7C00305197 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0C84048E21354B7C00305197 /* Model */ = {
@@ -1822,19 +1839,12 @@
 		0C84049621354B7D00305197 /* LearningTask（学习任务） */ = {
 			isa = PBXGroup;
 			children = (
-				0C84049721354B7D00305197 /* ViewModel */,
+				0C5E026C2179BEBC008B3D91 /* ViewModel */,
 				0C84049821354B7D00305197 /* Model */,
 				0C84049921354B7D00305197 /* View */,
 				0C84049A21354B7D00305197 /* ViewController */,
 			);
 			path = "LearningTask（学习任务）";
-			sourceTree = "<group>";
-		};
-		0C84049721354B7D00305197 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0C84049821354B7D00305197 /* Model */ = {
@@ -2848,6 +2858,7 @@
 				TargetAttributes = {
 					0CDDB52B2127338600D42F76 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -2978,6 +2989,7 @@
 				0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */,
+				0C5E026B2179BB9C008B3D91 /* DailyTaskViewModel.m in Sources */,
 				0C21960B215A1CAB00D2696D /* ResultsSettingView.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
@@ -3007,6 +3019,7 @@
 				0C37F5F1212E9A9800E357EB /* HelpView.m in Sources */,
 				0CE1EC4B21291A3400A373D7 /* UploadInfoViewController.m in Sources */,
 				0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */,
+				0C5E026F2179BEC8008B3D91 /* LearningTaskViewModel.m in Sources */,
 				0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */,
 				11261431216C824C005D0B40 /* OrderManageModel.m in Sources */,
 				11686F66216AFC210001C3F9 /* DrugSortViewController.m in Sources */,
@@ -3249,9 +3262,11 @@
 			baseConfigurationReference = E3C58AA252108754216FE46E /* Pods-Lywsale.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D594586J86;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6K454Q8M7V;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3261,7 +3276,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yyhmp.lywsale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "8748176b-c195-4fd6-a81d-a99e8de5d0ab";
+				PROVISIONING_PROFILE_SPECIFIER = "六医卫导购测试证书1";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lywsale/App/Home（首页相关）/DailyTask（日常任务）/ViewModel/Lywsale-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -3270,9 +3290,11 @@
 			baseConfigurationReference = 3FC6A3317F8728887B35A61A /* Pods-Lywsale.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = NO;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D594586J86;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6K454Q8M7V;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/Lywsale/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Lywsale/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3282,7 +3304,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yyhmp.lywsale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "129e7450-cd18-488b-aca3-1fc78e39633d";
+				PROVISIONING_PROFILE_SPECIFIER = "六医卫导购发布证书_1";
+				SWIFT_OBJC_BRIDGING_HEADER = "Lywsale/App/Home（首页相关）/DailyTask（日常任务）/ViewModel/Lywsale-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
