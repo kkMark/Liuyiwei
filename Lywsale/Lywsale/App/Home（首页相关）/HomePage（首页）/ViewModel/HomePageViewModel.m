@@ -11,13 +11,16 @@
 @implementation HomePageViewModel
 
 /// 获取导购每月销售任务完成情况
-- (void)getSalesSituation:(NSString *)shoppingGuideId
-                    month:(NSString *)month
-                  success:(RequestSuccess)success
-                  failure:(RequestFailure)failure
-{
+- (void)getSalesSituationSuccess:(RequestSuccess)success failure:(RequestFailure)failure {
+    
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyyMM"];
+    
+    NSString *currentDate = [dateFormatter stringFromDate:[NSDate date]];
+    
+    self.port = @"18082";
     self.urlString = [self getRequestUrl:@[@"shoppingGuide", @"getSalesSituation"]];
-    self.parameters = @{ @"shoppingGuideId" : shoppingGuideId, @"month" : month };
+    self.parameters = @{ @"shoppingGuideId" : GetUserDefault(UserID), @"month" : currentDate };
     [self requestMode:PostMode success:success failure:failure];
 }
 

@@ -14,9 +14,7 @@
     
     self.urlString = [self getRequestUrl:@[@"members", @"verificationCode"]];
     self.parameters = @{ @"mobile" : phone, @"type" : @"2" };
-    [self requestMode:PostMode success:success failure:failure];
-    
-    NSLog(@"暂未测试该接口");
+    [self requestMode:PostMode success:success failure:failure];    
 }
 
 - (void)forgetPasswordAccount:(NSString *)account

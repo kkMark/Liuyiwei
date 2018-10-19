@@ -119,14 +119,14 @@
         }
     }
     
-    if ([self.password isEqualToString:self.confirmPassword]) {
+    if (![self.password isEqualToString:self.confirmPassword]) {
         return [self.view makeToast:@"两次输入的密码不一致"];
     }
     
     [[RetrieveViewModel new] forgetPasswordAccount:self.phone password:self.password code:self.code success:^(NSDictionary *dict) {
         
         [[UIApplication sharedApplication].keyWindow makeToast:@"修改成功，请返回登陆"];
-        [self.navigationController popViewControllerAnimated:YES];
+        [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         
     } failure:^(NSError *error) {
        
@@ -190,7 +190,7 @@
             dispatch_source_cancel(timer);
             dispatch_async(dispatch_get_main_queue(), ^{
                 
-                [self.sendCodeBtn setTitle:@"重新发送" forState:UIControlStateNormal];
+                [self.sendCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
                 self.sendCodeBtn.userInteractionEnabled = YES;
             });
             
