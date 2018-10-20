@@ -10,4 +10,6 @@
 
 @interface MyCardView : BaseTableView
 
+@property (nonatomic, assign) BOOL isEdit;
+
 @end

@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UILabel *numberLabel;
 @property (nonatomic, strong) UILabel *defaultCardLabel;
 @property (nonatomic, strong) UIButton *defaultBtn;
+@property (nonatomic, strong) UIButton *editBtn;
 
 @end
 
@@ -24,6 +25,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupSubviews];
     }
     
@@ -70,9 +72,26 @@
     self.defaultBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.defaultBtn.frame = CGRectMake(self.defaultCardLabel.x - 25, 0, 20, 20);
     self.defaultBtn.centerY = self.bankNameLabel.centerY;
-    [self.defaultBtn setImage:[UIImage imageNamed:@"checkbox_nor"] forState:UIControlStateNormal];
-    [self.defaultBtn setImage:[UIImage imageNamed:@"checkbox_sel"] forState:UIControlStateSelected];
+    [self.defaultBtn setImage:[UIImage imageNamed:@"myCard_edit"] forState:UIControlStateNormal];
+    [self.defaultBtn setImage:[UIImage imageNamed:@"myCard_edit_sel"] forState:UIControlStateSelected];
     [bgView addSubview:self.defaultBtn];
+    
+    self.editBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.editBtn.hidden = YES;
+    self.editBtn.frame = CGRectMake(bgView.width - 40, 0, 20, 20);
+    self.editBtn.centerY = bgView.centerY;
+    [self.editBtn setImage:[UIImage imageNamed:@"myCard_edit"] forState:UIControlStateNormal];
+    [self.editBtn setImage:[UIImage imageNamed:@"myCard_edit_sel"] forState:UIControlStateSelected];
+    [bgView addSubview:self.editBtn];
+}
+
+- (void)setIsEdit:(BOOL)isEdit {
+    
+    _isEdit = isEdit;
+    self.editBtn.selected = NO;
+    
+    self.editBtn.hidden = !isEdit;
+    self.defaultBtn.hidden = self.defaultCardLabel.hidden = isEdit;
 }
 
 @end

@@ -12,11 +12,13 @@
 @interface MyCardViewController ()
 
 @property (nonatomic, strong) MyCardView *myCardView;
+@property (nonatomic, strong) UIButton *deleteBtn;
 
 @end
 
 @implementation MyCardViewController
 @synthesize myCardView;
+@synthesize deleteBtn;
 
 - (void)viewDidLoad {
     
@@ -30,8 +32,19 @@
 
 - (void)setEditRightTitle {
     
+    __weak typeof(self)weakSelf = self;
     [self addNavRightTitle:@"编辑" complete:^{
-        
+     
+        weakSelf.myCardView.isEdit = YES;
+        weakSelf.myCardView.height -= weakSelf.deleteBtn.height;
+        weakSelf.deleteBtn.y = weakSelf.myCardView.maxY;
+        [weakSelf addNavRightTitle:@"完成" complete:^{
+            
+            weakSelf.myCardView.isEdit = NO;
+            weakSelf.myCardView.height += weakSelf.deleteBtn.height;
+            weakSelf.deleteBtn.y = weakSelf.myCardView.maxY;
+            [weakSelf setEditRightTitle];
+        }];
     }];
 }
 
@@ -46,6 +59,22 @@
     }
     
     return myCardView;
+}
+
+- (UIButton *)deleteBtn {
+    
+    if (!deleteBtn) {
+        
+        deleteBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        deleteBtn.frame = CGRectMake(0, self.myCardView.maxY - 40, ScreenWidth, 45);
+        deleteBtn.backgroundColor = kMainColor;
+        deleteBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+        [deleteBtn setTitle:@"删  除" forState:UIControlStateNormal];
+        [deleteBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self.view addSubview:deleteBtn];
+    }
+    
+    return deleteBtn;
 }
 
 @end

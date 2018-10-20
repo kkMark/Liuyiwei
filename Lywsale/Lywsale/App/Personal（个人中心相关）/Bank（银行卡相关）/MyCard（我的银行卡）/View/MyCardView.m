@@ -37,6 +37,17 @@
     return footerView;
 }
 
+#pragma mark - set
+- (void)setIsEdit:(BOOL)isEdit {
+    
+    _isEdit = isEdit;
+    
+    self.footerView.height = 85 * !isEdit;
+    self.footerView.hidden = isEdit;
+    
+    [self reloadData];
+}
+
 #pragma mark - tableview
 - (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
     
@@ -69,6 +80,7 @@
         cell.backgroundColor = self.backgroundColor;
     }
     
+    cell.isEdit = self.isEdit;
     return cell;
 }
 

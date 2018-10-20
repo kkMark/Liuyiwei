@@ -10,4 +10,6 @@
 
 @interface MyCardCell : UITableViewCell
 
+@property (nonatomic, assign) BOOL isEdit;
+
 @end
