@@ -32,6 +32,16 @@
         [addCardBtn setTitle:@"添加银行卡" forState:UIControlStateNormal];
         [addCardBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [footerView addSubview:addCardBtn];
+        
+        @weakify(self);
+        [[addCardBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+           
+            @strongify(self);
+            NSString *vcName = @"AddCardViewController";
+            if (self.goViewControllerBlock) {
+                self.goViewControllerBlock([NSClassFromString(vcName) new]);
+            }
+        }];
     }
     
     return footerView;

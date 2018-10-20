@@ -56,6 +56,14 @@
         myCardView = [[MyCardView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         myCardView.height = ScreenHeight - self.navHeight;
         [self.view addSubview:myCardView];
+        
+        @weakify(self);
+        [self.myCardView setGoViewControllerBlock:^(UIViewController *vc) {
+           
+            @strongify(self);
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return myCardView;
