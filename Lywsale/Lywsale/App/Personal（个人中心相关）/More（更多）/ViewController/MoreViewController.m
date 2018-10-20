@@ -77,6 +77,8 @@
 
 - (void)logOut {
     
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateView" object:nil];
+    
     if ([self.presentingViewController isKindOfClass:[LoginViewController class]]) {
         [self.tabBarController dismissViewControllerAnimated:YES completion:nil];
     }

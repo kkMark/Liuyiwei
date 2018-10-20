@@ -58,6 +58,11 @@
                 SetUserDefault(Token_Type, dict[@"tokenMsg"][@"token_type"]);
                 SetUserDefault(Access_Token, dict[@"tokenMsg"][@"access_token"]);
                 SetUserDefault(Refresh_Token, dict[@"tokenMsg"][@"refresh_token"]);
+                
+                if ([dict[@"type"] isEqualToString:@"6"]) {
+                    SetUserDefault(UserType, @"1");
+                }
+                else SetUserDefault(UserType, @"0");
             }
             
             if ([self.presentingViewController isKindOfClass:[RootViewController class]]) {

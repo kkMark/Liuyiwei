@@ -23,7 +23,7 @@
     
     if (!defaultImgView) {
         
-        UIImage *img = [UIImage imageNamed:@"AppNoData"];
+        UIImage *img = [UIImage imageNamed:@"AppDefaultImg"];
         defaultImgView = [UIImageView new];
         [self addSubview:defaultImgView];
         [defaultImgView mas_makeConstraints:^(MASConstraintMaker *make) {

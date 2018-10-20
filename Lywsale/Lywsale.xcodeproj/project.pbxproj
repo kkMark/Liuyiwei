@@ -43,14 +43,7 @@
 		0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5A4212E60D700E357EB /* ArchivesViewController.m */; };
 		0C37F5B3212E615100E357EB /* BindingMobileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5B2212E615100E357EB /* BindingMobileViewController.m */; };
 		0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5B8212E67C400E357EB /* ModifyPasswordViewController.m */; };
-		0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5BD212E904700E357EB /* MyCardViewModel.m */; };
-		0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5BF212E904700E357EB /* MyCardModel.m */; };
-		0C37F5D6212E904700E357EB /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5C4212E904700E357EB /* MyCardView.m */; };
-		0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5C5212E904700E357EB /* MyCardCell.m */; };
 		0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5C8212E904700E357EB /* MyCardViewController.m */; };
-		0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5CF212E904700E357EB /* AddCardCell.m */; };
-		0C37F5DB212E904700E357EB /* AddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5D0212E904700E357EB /* AddCardView.m */; };
-		0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5D3212E904700E357EB /* AddCardViewController.m */; };
 		0C37F5F1212E9A9800E357EB /* HelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5ED212E9A9800E357EB /* HelpView.m */; };
 		0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F0212E9A9800E357EB /* HelpViewController.m */; };
 		0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C37F5F4212E9BB200E357EB /* FeedbackViewController.m */; };
@@ -107,6 +100,8 @@
 		0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404B1213634AF00305197 /* DailyTaskCell.m */; };
 		0C9A9407214130FF00CACE20 /* RCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A9406214130FF00CACE20 /* RCompleteViewController.m */; };
 		0CAB76C52174260000B5076E /* RegisteredViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB76C42174260000B5076E /* RegisteredViewModel.m */; };
+		0CC35943217AFD10000BA3B1 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC35942217AFD10000BA3B1 /* MyCardView.m */; };
+		0CC35946217AFD23000BA3B1 /* MyCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC35945217AFD23000BA3B1 /* MyCardCell.m */; };
 		0CC3FD1C216CCF3E001848BE /* WithdrawalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD1B216CCF3E001848BE /* WithdrawalView.m */; };
 		0CC3FD1F216CCF46001848BE /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD1E216CCF46001848BE /* WithdrawalViewController.m */; };
 		0CC3FD25216CD9C6001848BE /* AmountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC3FD24216CD9C6001848BE /* AmountCell.m */; };
@@ -267,22 +262,8 @@
 		0C37F5B2212E615100E357EB /* BindingMobileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingMobileViewController.m; sourceTree = "<group>"; };
 		0C37F5B7212E67C400E357EB /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModifyPasswordViewController.h; sourceTree = "<group>"; };
 		0C37F5B8212E67C400E357EB /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModifyPasswordViewController.m; sourceTree = "<group>"; };
-		0C37F5BC212E904700E357EB /* MyCardViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardViewModel.h; sourceTree = "<group>"; };
-		0C37F5BD212E904700E357EB /* MyCardViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardViewModel.m; sourceTree = "<group>"; };
-		0C37F5BF212E904700E357EB /* MyCardModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardModel.m; sourceTree = "<group>"; };
-		0C37F5C0212E904700E357EB /* MyCardModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardModel.h; sourceTree = "<group>"; };
-		0C37F5C2212E904700E357EB /* MyCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardView.h; sourceTree = "<group>"; };
-		0C37F5C3212E904700E357EB /* MyCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardCell.h; sourceTree = "<group>"; };
-		0C37F5C4212E904700E357EB /* MyCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardView.m; sourceTree = "<group>"; };
-		0C37F5C5212E904700E357EB /* MyCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardCell.m; sourceTree = "<group>"; };
 		0C37F5C7212E904700E357EB /* MyCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardViewController.h; sourceTree = "<group>"; };
 		0C37F5C8212E904700E357EB /* MyCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardViewController.m; sourceTree = "<group>"; };
-		0C37F5CC212E904700E357EB /* AddCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardCell.h; sourceTree = "<group>"; };
-		0C37F5CD212E904700E357EB /* AddCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardView.h; sourceTree = "<group>"; };
-		0C37F5CF212E904700E357EB /* AddCardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardCell.m; sourceTree = "<group>"; };
-		0C37F5D0212E904700E357EB /* AddCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardView.m; sourceTree = "<group>"; };
-		0C37F5D2212E904700E357EB /* AddCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
-		0C37F5D3212E904700E357EB /* AddCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		0C37F5EC212E9A9800E357EB /* HelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpView.h; sourceTree = "<group>"; };
 		0C37F5ED212E9A9800E357EB /* HelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpView.m; sourceTree = "<group>"; };
 		0C37F5EF212E9A9800E357EB /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
@@ -395,6 +376,10 @@
 		0C9A9406214130FF00CACE20 /* RCompleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCompleteViewController.m; sourceTree = "<group>"; };
 		0CAB76C32174260000B5076E /* RegisteredViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewModel.h; sourceTree = "<group>"; };
 		0CAB76C42174260000B5076E /* RegisteredViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisteredViewModel.m; sourceTree = "<group>"; };
+		0CC35941217AFD10000BA3B1 /* MyCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCardView.h; sourceTree = "<group>"; };
+		0CC35942217AFD10000BA3B1 /* MyCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCardView.m; sourceTree = "<group>"; };
+		0CC35944217AFD23000BA3B1 /* MyCardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCardCell.h; sourceTree = "<group>"; };
+		0CC35945217AFD23000BA3B1 /* MyCardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCardCell.m; sourceTree = "<group>"; };
 		0CC3FD1A216CCF3E001848BE /* WithdrawalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalView.h; sourceTree = "<group>"; };
 		0CC3FD1B216CCF3E001848BE /* WithdrawalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WithdrawalView.m; sourceTree = "<group>"; };
 		0CC3FD1D216CCF46001848BE /* WithdrawalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
@@ -1040,7 +1025,6 @@
 		0C37F57E212D526900E357EB /* Bank（银行卡相关） */ = {
 			isa = PBXGroup;
 			children = (
-				0C37F5C9212E904700E357EB /* AddCard（添加银行卡） */,
 				0C37F5BA212E904700E357EB /* MyCard（我的银行卡） */,
 			);
 			path = "Bank（银行卡相关）";
@@ -1195,8 +1179,6 @@
 		0C37F5BB212E904700E357EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0C37F5BC212E904700E357EB /* MyCardViewModel.h */,
-				0C37F5BD212E904700E357EB /* MyCardViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1204,8 +1186,6 @@
 		0C37F5BE212E904700E357EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0C37F5BF212E904700E357EB /* MyCardModel.m */,
-				0C37F5C0212E904700E357EB /* MyCardModel.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1213,10 +1193,10 @@
 		0C37F5C1212E904700E357EB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0C37F5C3212E904700E357EB /* MyCardCell.h */,
-				0C37F5C5212E904700E357EB /* MyCardCell.m */,
-				0C37F5C2212E904700E357EB /* MyCardView.h */,
-				0C37F5C4212E904700E357EB /* MyCardView.m */,
+				0CC35944217AFD23000BA3B1 /* MyCardCell.h */,
+				0CC35945217AFD23000BA3B1 /* MyCardCell.m */,
+				0CC35941217AFD10000BA3B1 /* MyCardView.h */,
+				0CC35942217AFD10000BA3B1 /* MyCardView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1226,35 +1206,6 @@
 			children = (
 				0C37F5C7212E904700E357EB /* MyCardViewController.h */,
 				0C37F5C8212E904700E357EB /* MyCardViewController.m */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		0C37F5C9212E904700E357EB /* AddCard（添加银行卡） */ = {
-			isa = PBXGroup;
-			children = (
-				0C37F5CA212E904700E357EB /* View */,
-				0C37F5D1212E904700E357EB /* ViewController */,
-			);
-			path = "AddCard（添加银行卡）";
-			sourceTree = "<group>";
-		};
-		0C37F5CA212E904700E357EB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				0C37F5CC212E904700E357EB /* AddCardCell.h */,
-				0C37F5CF212E904700E357EB /* AddCardCell.m */,
-				0C37F5CD212E904700E357EB /* AddCardView.h */,
-				0C37F5D0212E904700E357EB /* AddCardView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		0C37F5D1212E904700E357EB /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				0C37F5D2212E904700E357EB /* AddCardViewController.h */,
-				0C37F5D3212E904700E357EB /* AddCardViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2977,7 +2928,6 @@
 				0C12144A2155D3E00028368D /* RemarkMenuView.m in Sources */,
 				0CAB76C52174260000B5076E /* RegisteredViewModel.m in Sources */,
 				0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */,
-				0C37F5DC212E904700E357EB /* AddCardViewController.m in Sources */,
 				0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */,
 				11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */,
 				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
@@ -3000,7 +2950,6 @@
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */,
 				11686F6E216B02640001C3F9 /* DrugSortView.m in Sources */,
-				0C37F5D7212E904700E357EB /* MyCardCell.m in Sources */,
 				11ED7D102158C88A0032FE0B /* AnnouncenmentTableViewCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
@@ -3024,7 +2973,6 @@
 				11261431216C824C005D0B40 /* OrderManageModel.m in Sources */,
 				11686F66216AFC210001C3F9 /* DrugSortViewController.m in Sources */,
 				0C9A9407214130FF00CACE20 /* RCompleteViewController.m in Sources */,
-				0C37F5D6212E904700E357EB /* MyCardView.m in Sources */,
 				0C37F55A212D3F3B00E357EB /* WriteInfoCertificateCell.m in Sources */,
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
 				0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */,
@@ -3093,7 +3041,6 @@
 				11ED7D0D2158C8640032FE0B /* AnnouncementView.m in Sources */,
 				11ABF07821708C7000AEDE04 /* QrCodeViewController.m in Sources */,
 				0CEFA0F7213FC4F40072EAB9 /* RegisteredViewController.m in Sources */,
-				0C37F5DB212E904700E357EB /* AddCardView.m in Sources */,
 				0C54C6972154CBF100C8FB10 /* UploadCredentialsViewController.m in Sources */,
 				0C23AE4F2129B42E00BC2CAC /* RootViewController.m in Sources */,
 				0C219608215A1C9B00D2696D /* ResultsSettingViewController.m in Sources */,
@@ -3112,16 +3059,15 @@
 				0C219619215A208700D2696D /* ResultsHistoryView.m in Sources */,
 				11ABF070217071DE00AEDE04 /* MyAwardsView.m in Sources */,
 				0C7AEA95213E610800138A31 /* RankingCell.m in Sources */,
-				0C37F5D5212E904700E357EB /* MyCardModel.m in Sources */,
-				0C37F5D4212E904700E357EB /* MyCardViewModel.m in Sources */,
+				0CC35946217AFD23000BA3B1 /* MyCardCell.m in Sources */,
 				11ABF0682170367500AEDE04 /* GradientRound.m in Sources */,
 				0C8404AC21354BE100305197 /* LearningTaskView.m in Sources */,
 				0C3D8971212AB52300D02FE0 /* WriteInfoViewModel.m in Sources */,
 				0CC3FD1F216CCF46001848BE /* WithdrawalViewController.m in Sources */,
-				0C37F5DA212E904700E357EB /* AddCardCell.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,
 				0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */,
 				0C804A0021476E4F0032B57A /* ReceptionViewController.m in Sources */,
+				0CC35943217AFD10000BA3B1 /* MyCardView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

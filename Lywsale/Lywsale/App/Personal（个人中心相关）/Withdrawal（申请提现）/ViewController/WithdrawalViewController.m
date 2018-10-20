@@ -31,7 +31,7 @@
 
 - (void)setupSubviews {
 
-    withdrawalView = [[WithdrawalView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 64 - self.okBtn.height) style:UITableViewStyleGrouped];
+    withdrawalView = [[WithdrawalView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight - self.okBtn.height) style:UITableViewStyleGrouped];
     [self.view addSubview:withdrawalView];
 }
 

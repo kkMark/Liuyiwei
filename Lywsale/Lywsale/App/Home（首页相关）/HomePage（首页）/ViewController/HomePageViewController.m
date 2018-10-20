@@ -27,12 +27,16 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    self.dataPanelView.dataSources = @[@"", @"", @"", @"", @""];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"UpdateView" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        [self updateView];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
+
+    self.dataPanelView.dataSources = @[@"", @"", @"", @"", @""];
     
     [self getDataSource];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
@@ -45,6 +49,15 @@
     if (self.navigationController.viewControllers.count > 1) {
         [self.navigationController setNavigationBarHidden:NO animated:animated];
     }
+}
+
+- (void)updateView {
+    
+    [self.menuView removeFromSuperview];
+    [self.dataPanelView removeFromSuperview];
+    
+    self.menuView = nil;
+    self.dataPanelView = nil;
 }
 
 #pragma mark - lazy

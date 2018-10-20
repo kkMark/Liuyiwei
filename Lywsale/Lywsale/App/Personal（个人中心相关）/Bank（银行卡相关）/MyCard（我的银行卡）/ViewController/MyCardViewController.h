@@ -7,10 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "MyCardModel.h"
 
 @interface MyCardViewController : BaseViewController
-
-@property (nonatomic, strong) void (^selectBackCard)(MyCardModel *model);
 
 @end
