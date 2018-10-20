@@ -10,6 +10,4 @@
 
 @interface MyCardCell : UITableViewCell
 
-@property (nonatomic, assign) float cellHeight;
-
 @end
