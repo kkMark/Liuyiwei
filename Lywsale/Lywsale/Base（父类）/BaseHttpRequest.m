@@ -102,13 +102,9 @@
             
             [viewController hideHudAnimated];
             
-            if (error) failure(error);
-            else {
-                
-                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                NSLog(@"%@", dict);
-                if (success) success(dict);
-            }
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            NSLog(@"%@", dict);
+            
         });
         
     }] resume];

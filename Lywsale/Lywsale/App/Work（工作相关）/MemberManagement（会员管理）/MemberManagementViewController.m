@@ -8,6 +8,7 @@
 
 #import "MemberManagementViewController.h"
 #import "MemberManagementView.h"
+#import "AddMembersViewController.h"
 
 @interface MemberManagementViewController ()
 
@@ -61,8 +62,24 @@
 }
 
 -(void)block{
-    
+    @weakify(self);
     self.memberManagementView.pushBlock = ^(NSString *pushString) {
+        @strongify(self);
+        
+        if ([pushString isEqualToString:@"标签管理"]) {
+            
+        }
+        
+        if ([pushString isEqualToString:@"添加会员"]) {
+            
+            AddMembersViewController *VC = [[AddMembersViewController alloc] init];
+            [self.navigationController pushViewController:VC animated:YES];
+            
+        }
+        
+        if ([pushString isEqualToString:@"群发消息"]) {
+            
+        }
         
     };
     

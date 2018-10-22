@@ -174,6 +174,9 @@
 		11686F6E216B02640001C3F9 /* DrugSortView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F6D216B02640001C3F9 /* DrugSortView.m */; };
 		11686F72216B28830001C3F9 /* AnnouncementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F71216B28830001C3F9 /* AnnouncementModel.m */; };
 		11686F76216B3B2F0001C3F9 /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11686F75216B3B2F0001C3F9 /* GoodsViewController.m */; };
+		1179BAAD217D639300BF97CF /* AddMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1179BAAC217D639300BF97CF /* AddMembersViewController.m */; };
+		1179BAB1217D647A00BF97CF /* AddMembersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1179BAB0217D647A00BF97CF /* AddMembersView.m */; };
+		1179BAB4217D6B5900BF97CF /* AddMembersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1179BAB3217D6B5900BF97CF /* AddMembersTableViewCell.m */; };
 		11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */; };
 		11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45302150FF5600ED7293 /* HomeMessgeView.m */; };
 		11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AA45342150FF8E00ED7293 /* HomeMessgeModel.m */; };
@@ -529,6 +532,12 @@
 		11686F71216B28830001C3F9 /* AnnouncementModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementModel.m; sourceTree = "<group>"; };
 		11686F74216B3B2F0001C3F9 /* GoodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
 		11686F75216B3B2F0001C3F9 /* GoodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
+		1179BAAB217D639300BF97CF /* AddMembersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMembersViewController.h; sourceTree = "<group>"; };
+		1179BAAC217D639300BF97CF /* AddMembersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMembersViewController.m; sourceTree = "<group>"; };
+		1179BAAF217D647A00BF97CF /* AddMembersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMembersView.h; sourceTree = "<group>"; };
+		1179BAB0217D647A00BF97CF /* AddMembersView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMembersView.m; sourceTree = "<group>"; };
+		1179BAB2217D6B5900BF97CF /* AddMembersTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMembersTableViewCell.h; sourceTree = "<group>"; };
+		1179BAB3217D6B5900BF97CF /* AddMembersTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMembersTableViewCell.m; sourceTree = "<group>"; };
 		11AA452D2150FF5600ED7293 /* HomeMessgeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeTableViewCell.h; sourceTree = "<group>"; };
 		11AA452E2150FF5600ED7293 /* HomeMessgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeMessgeView.h; sourceTree = "<group>"; };
 		11AA452F2150FF5600ED7293 /* HomeMessgeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeMessgeTableViewCell.m; sourceTree = "<group>"; };
@@ -2554,6 +2563,7 @@
 		11261432216C9BFE005D0B40 /* MemberManagement（会员管理） */ = {
 			isa = PBXGroup;
 			children = (
+				1179BAAA217D635300BF97CF /* AddMembers（添加会员） */,
 				11261436216C9DC9005D0B40 /* View */,
 				11261433216C9CDF005D0B40 /* MemberManagementViewController.h */,
 				11261434216C9CDF005D0B40 /* MemberManagementViewController.m */,
@@ -2714,6 +2724,27 @@
 				11686F75216B3B2F0001C3F9 /* GoodsViewController.m */,
 			);
 			path = "Goods（扫码提货）";
+			sourceTree = "<group>";
+		};
+		1179BAAA217D635300BF97CF /* AddMembers（添加会员） */ = {
+			isa = PBXGroup;
+			children = (
+				1179BAAE217D645200BF97CF /* View */,
+				1179BAAB217D639300BF97CF /* AddMembersViewController.h */,
+				1179BAAC217D639300BF97CF /* AddMembersViewController.m */,
+			);
+			path = "AddMembers（添加会员）";
+			sourceTree = "<group>";
+		};
+		1179BAAE217D645200BF97CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1179BAAF217D647A00BF97CF /* AddMembersView.h */,
+				1179BAB0217D647A00BF97CF /* AddMembersView.m */,
+				1179BAB2217D6B5900BF97CF /* AddMembersTableViewCell.h */,
+				1179BAB3217D6B5900BF97CF /* AddMembersTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		11AA452C2150FF5600ED7293 /* View */ = {
@@ -3034,6 +3065,7 @@
 				0C54C69D2154CCED00C8FB10 /* UploadCredentialsView.m in Sources */,
 				0C5E026F2179BEC8008B3D91 /* LearningTaskViewModel.m in Sources */,
 				0C7AEAA1213E8E5300138A31 /* HomePageViewModel.m in Sources */,
+				1179BAB4217D6B5900BF97CF /* AddMembersTableViewCell.m in Sources */,
 				11261431216C824C005D0B40 /* OrderManageModel.m in Sources */,
 				11686F66216AFC210001C3F9 /* DrugSortViewController.m in Sources */,
 				0CC8333F217B114600C1E5B9 /* AddCardView.m in Sources */,
@@ -3069,6 +3101,7 @@
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
 				0C804A1B2147C4900032B57A /* ReceptionHeaderView.m in Sources */,
 				0CE1EC2D2128F3E000A373D7 /* SelectTypeModel.m in Sources */,
+				1179BAB1217D647A00BF97CF /* AddMembersView.m in Sources */,
 				11261426216C7EDA005D0B40 /* OrderManageListViewController.m in Sources */,
 				0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */,
 				1126141E216C3A0F005D0B40 /* BaseTextField.m in Sources */,
@@ -3091,6 +3124,7 @@
 				11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */,
+				1179BAAD217D639300BF97CF /* AddMembersViewController.m in Sources */,
 				0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */,
 				0C2E77B82159C395008DEB3A /* SignInRulesView.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
