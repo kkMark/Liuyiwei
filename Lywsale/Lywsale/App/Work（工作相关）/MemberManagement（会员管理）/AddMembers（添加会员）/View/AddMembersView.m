@@ -50,7 +50,23 @@
         
     }
     
+    if (indexPath.row == 0 || indexPath.row == 8 || indexPath.row == 9 || indexPath.row == 10) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSDictionary *dict = self.dataSource[indexPath.row];
+    
+    NSString *pushString = [dict allKeys][0];
+    
+    if (self.pushBlock) {
+        self.pushBlock(pushString);
+    }
+    
 }
 
 @end

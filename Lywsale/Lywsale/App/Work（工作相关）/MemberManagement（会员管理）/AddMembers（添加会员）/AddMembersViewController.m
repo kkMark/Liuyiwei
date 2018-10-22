@@ -26,11 +26,19 @@
     
     self.title = @"添加会员";
     
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd"];
+    
+    NSDate *datenow = [NSDate date];
+    NSString *currentTimeString = [formatter stringFromDate:datenow];
+    
     self.dataArray = [NSMutableArray array];
     
-    [self.dataArray addObjectsFromArray:@[@{@"会员号":@"1"},@{@"姓名":@"1"},@{@"性别":@"1"},@{@"生日":@"1"},@{@"手机号码":@"1"},@{@"科组":@"1"},@{@"病种":@"1"},@{@"省市":@"1"},@{@"级别":@"1"},@{@"加入日期":@"1"},@{@"所属药师":@"1"}]];
+    [self.dataArray addObjectsFromArray:@[@{@"会员号":@"1"},@{@"姓名":@"1"},@{@"性别":@"1"},@{@"生日":@"1"},@{@"手机号码":@"1"},@{@"科组":@"1"},@{@"病种":@"1"},@{@"省市":@"1"},@{@"级别":@"普通会员"},@{@"加入日期":currentTimeString},@{@"所属药师":GetUserDefault(UserName)}]];
     
     [self initUI];
+    
+    [self block];
     
 }
 
@@ -64,7 +72,13 @@
 
 -(void)add:(UIButton *)sender{
     
+}
+
+-(void)block{
     
+    self.addMembersView.pushBlock = ^(NSString *pushString) {
+        
+    };
     
 }
 
