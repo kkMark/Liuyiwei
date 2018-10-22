@@ -7,6 +7,7 @@
 //
 
 #import "AddCardView.h"
+#import "SelectListView.h"
 
 @interface AddCardView ()
 
@@ -95,6 +96,32 @@
     }
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [self endEditing:YES];
+    
+    NSString *text = self.dataSources[indexPath.row];
+    if (indexPath.row > 0) {
+        
+        if ([text isEqualToString:@"卡号"]) {
+            [self.numberTextField becomeFirstResponder];
+        }
+        else {
+            
+            if ([text isEqualToString:@"银行"]) {
+                
+            }
+            else if ([text isEqualToString:@"支行"]) {
+                
+            }
+            
+            SelectListView *selectListView = [[SelectListView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) title:text];
+            [[UIApplication sharedApplication].keyWindow addSubview:selectListView];
+        }
+    }
 }
 
 @end

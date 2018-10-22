@@ -113,6 +113,7 @@
 		0CC6B12921281DED004EC6FC /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC6B12821281DED004EC6FC /* BaseView.m */; };
 		0CC8333C217B113400C1E5B9 /* AddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8333B217B113400C1E5B9 /* AddCardViewController.m */; };
 		0CC8333F217B114600C1E5B9 /* AddCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC8333E217B114600C1E5B9 /* AddCardView.m */; };
+		0CC83343217B22C400C1E5B9 /* SelectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC83342217B22C400C1E5B9 /* SelectListView.m */; };
 		0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDDB5302127338600D42F76 /* AppDelegate.m */; };
 		0CDDB5372127338600D42F76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDB5352127338600D42F76 /* Main.storyboard */; };
 		0CDDB5392127338700D42F76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CDDB5382127338700D42F76 /* Assets.xcassets */; };
@@ -404,6 +405,8 @@
 		0CC8333B217B113400C1E5B9 /* AddCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		0CC8333D217B114600C1E5B9 /* AddCardView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCardView.h; sourceTree = "<group>"; };
 		0CC8333E217B114600C1E5B9 /* AddCardView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCardView.m; sourceTree = "<group>"; };
+		0CC83341217B22C400C1E5B9 /* SelectListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectListView.h; sourceTree = "<group>"; };
+		0CC83342217B22C400C1E5B9 /* SelectListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectListView.m; sourceTree = "<group>"; };
 		0CDDB52C2127338600D42F76 /* Lywsale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lywsale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CDDB52F2127338600D42F76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0CDDB5302127338600D42F76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1958,6 +1961,7 @@
 		0CC83336217B101900C1E5B9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0CC83340217B22B100C1E5B9 /* SelectListView */,
 				0CC8333D217B114600C1E5B9 /* AddCardView.h */,
 				0CC8333E217B114600C1E5B9 /* AddCardView.m */,
 			);
@@ -1985,6 +1989,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0CC83340217B22B100C1E5B9 /* SelectListView */ = {
+			isa = PBXGroup;
+			children = (
+				0CC83341217B22C400C1E5B9 /* SelectListView.h */,
+				0CC83342217B22C400C1E5B9 /* SelectListView.m */,
+			);
+			path = SelectListView;
 			sourceTree = "<group>";
 		};
 		0CDDB5232127338600D42F76 = {
@@ -2942,6 +2955,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC83343217B22C400C1E5B9 /* SelectListView.m in Sources */,
 				0CE1EC27212889E800A373D7 /* AddTypeView.m in Sources */,
 				0C37F554212D3EEB00E357EB /* WriteInfoTextFieldCell.m in Sources */,
 				11AA45312150FF5600ED7293 /* HomeMessgeTableViewCell.m in Sources */,
