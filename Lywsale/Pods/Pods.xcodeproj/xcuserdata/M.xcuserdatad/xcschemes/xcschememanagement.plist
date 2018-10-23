@@ -6,6 +6,8 @@
 	<dict>
 		<key>AFNetworking.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
@@ -46,6 +48,8 @@
 		</dict>
 		<key>NinaPagerView.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
@@ -79,11 +83,34 @@
 		</dict>
 		<key>WZLBadge.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>03AAC1E92F1C627E02C7E4385F625E53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>42AD32A5D33C0D2B1AD0051BB676DBC7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94885F7BB20105182EDDF9E5CF36CB60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DDAAFF9586B2A56E23A7293F173018C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

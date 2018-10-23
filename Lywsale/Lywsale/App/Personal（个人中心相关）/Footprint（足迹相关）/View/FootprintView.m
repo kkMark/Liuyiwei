@@ -33,10 +33,18 @@
 
 
 #pragma mark - tableview
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataSources.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (self.currentIndex == 0) {
-        
+
         if (indexPath.section == 0) {
          
             StatisticsTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTimeCell"];
@@ -74,10 +82,10 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
-        return 45;
+        return 90;
     }
     
-    return 100;
+    return 80;
 }
 
 @end

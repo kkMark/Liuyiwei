@@ -22,6 +22,7 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self setupSubviews];
     }
     
@@ -30,23 +31,32 @@
 
 - (void)setupSubviews {
     
-    bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 45)];
+    bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 80)];
     bgView.backgroundColor = [UIColor whiteColor];
+    bgView.layer.cornerRadius = 2;
+    bgView.layer.shadowColor = [UIColor grayColor].CGColor;
+    bgView.layer.shadowOffset = CGSizeMake(3, 3);
+    bgView.layer.shadowOpacity = 0.3;
     [self.contentView addSubview:bgView];
     
-    CGRect frame = CGRectMake(10, 0, 0, bgView.height);
+    UIView *titleView = [self titleViewWithFrame:CGRectMake(0, 0, bgView.width, 40) title:@"时间段"];
+    [bgView addSubview:titleView];
+    
+    CGRect frame = CGRectMake(15, titleView.maxY, 0, 25);
+    UIButton *dateBtn;
     for (int i = 0; i < 2; i++) {
         
-        UIButton *dateBtn = [self dateBtnWithFrame:frame];
+        dateBtn = [self dateBtnWithFrame:frame];
         [bgView addSubview:dateBtn];
         
         if (i == 0) {
             
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(dateBtn.maxX + 10, 0, 0, bgView.height)];
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(dateBtn.maxX + 10, 0, 0, frame.size.height)];
             titleLabel.text = @"至";
             titleLabel.font = [UIFont systemFontOfSize:12];
             titleLabel.textColor = kMainTextColor;
             titleLabel.width = [titleLabel getTextWidth];
+            titleLabel.centerY = dateBtn.centerY;
             [bgView addSubview:titleLabel];
             
             frame.origin.x = titleLabel.maxX + 10;
@@ -56,8 +66,8 @@
     
     UIButton *okBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     okBtn.frame = CGRectMake(frame.origin.x + 10, 0, 0, 25);
-    okBtn.width = bgView.width - okBtn.x - 20;
-    okBtn.centerY = bgView.height / 2;
+    okBtn.width = bgView.width - okBtn.x - 10;
+    okBtn.centerY = dateBtn.centerY;
     okBtn.backgroundColor = kMainColor;
     okBtn.layer.cornerRadius = 5;
     okBtn.layer.masksToBounds = YES;
@@ -67,18 +77,36 @@
     [bgView addSubview:okBtn];
 }
 
+- (UIView *)titleViewWithFrame:(CGRect)rect title:(NSString *)title {
+    
+    UIView *titleView = [[UIView alloc] initWithFrame:rect];
+    
+    UIView *colorView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, 3, 18)];
+    colorView.centerY = titleView.height / 2;
+    colorView.backgroundColor = kMainColor;
+    [titleView addSubview:colorView];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(colorView.maxX + 5, 0, titleView.width, titleView.height)];
+    titleLabel.text = @"时间段";
+    titleLabel.font = [UIFont fontWithName:@"PingFang-SC-Medium" size:17];
+    titleLabel.textColor = kMainTextColor;
+    [titleView addSubview:titleLabel];
+    
+    return titleView;
+}
+
 - (UIButton *)dateBtnWithFrame:(CGRect)rect {
     
     UIButton *dateBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     dateBtn.frame = rect;
-    dateBtn.centerY = bgView.height / 2;
     [bgView addSubview:dateBtn];
     
-    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, 0, 45)];
+    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 0, 0, dateBtn.height)];
     dateLabel.text = @"2018-09-02";
     dateLabel.font = [UIFont systemFontOfSize:12];
     dateLabel.textColor = kMainTextColor;
     dateLabel.width = [dateLabel getTextWidth];
+    dateLabel.centerY = dateBtn.height / 2;
     [dateBtn addSubview:dateLabel];
     
     UIImage *img = [UIImage imageNamed:@"more1"];
