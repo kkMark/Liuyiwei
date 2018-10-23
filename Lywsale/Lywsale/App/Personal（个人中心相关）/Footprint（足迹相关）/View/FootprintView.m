@@ -9,6 +9,7 @@
 #import "FootprintView.h"
 #import "FootprintCell.h"
 #import "FootprintCourseCell.h"
+#import "StatisticsTimeCell.h"
 
 @implementation FootprintView
 
@@ -19,18 +20,46 @@
     [self reloadData];
 }
 
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style {
+    
+    if (self = [super initWithFrame:frame style:style]) {
+        
+        self.separatorStyle = UITableViewCellSeparatorStyleNone;
+        self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 15)];
+    }
+    
+    return self;
+}
+
 
 #pragma mark - tableview
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (self.currentIndex == 0) {
         
-        FootprintCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FootprintCell"];
-        if (cell == nil) {
-            cell = [[FootprintCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FootprintCell"];
+        if (indexPath.section == 0) {
+         
+            StatisticsTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTimeCell"];
+            if (cell == nil) {
+                cell = [[StatisticsTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"StatisticsTimeCell"];
+                cell.backgroundColor = self.backgroundColor;
+            }
+            
+            return cell;
+            
         }
-        
-        return cell;
+        else if (indexPath.section == 1) {
+            
+            
+        }
+        else if (indexPath.section == 2) {
+            
+            
+        }
+        else if (indexPath.section == 3) {
+            
+            
+        }
     }
     
     FootprintCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FootprintCourseCell"];
@@ -43,6 +72,11 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (indexPath.section == 0) {
+        return 45;
+    }
+    
     return 100;
 }
 

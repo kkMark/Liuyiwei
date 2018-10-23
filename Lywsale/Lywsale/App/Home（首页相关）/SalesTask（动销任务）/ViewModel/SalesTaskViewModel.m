@@ -13,7 +13,7 @@
 
 - (void)getSalesTask:(int)page success:(RequestSuccess)success failure:(RequestFailure)failure {
     
-    NSString *urlString = [NSString stringWithFormat:@"dongxiaoActivities$enterable?pageNumber=10&pageSize=%d", page];
+    NSString *urlString = [NSString stringWithFormat:@"dongxiaoActivities$enterable?pageNumber=%d&pageSize=10", page];
     
     self.port = @"18082";
     self.urlString = [self getRequestUrl:@[urlString]];
