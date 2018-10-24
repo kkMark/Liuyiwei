@@ -7,9 +7,16 @@
 //
 
 #import "FootprintView.h"
-#import "FootprintCell.h"
-#import "FootprintCourseCell.h"
 #import "StatisticsTimeCell.h"
+#import "StatisticsTaskCell.h"
+
+@interface FootprintView ()
+
+@property (nonatomic, assign) CGFloat dongxiaoHeight;
+@property (nonatomic, assign) CGFloat dailyHeight;
+@property (nonatomic, assign) CGFloat learningHeight;
+
+@end
 
 @implementation FootprintView
 
@@ -34,7 +41,7 @@
 
 #pragma mark - tableview
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataSources.count;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -43,46 +50,46 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (self.currentIndex == 0) {
-
-        if (indexPath.section == 0) {
-         
-            StatisticsTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTimeCell"];
-            if (cell == nil) {
-                cell = [[StatisticsTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"StatisticsTimeCell"];
-                cell.backgroundColor = self.backgroundColor;
-            }
-            
-            return cell;
-            
+    if (indexPath.section == 0) {
+        
+        StatisticsTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTimeCell"];
+        if (cell == nil) {
+            cell = [[StatisticsTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"StatisticsTimeCell"];
+            cell.backgroundColor = self.backgroundColor;
         }
-        else if (indexPath.section == 1) {
-            
-            
-        }
-        else if (indexPath.section == 2) {
-            
-            
-        }
-        else if (indexPath.section == 3) {
-            
-            
-        }
+        
+        return cell;
     }
-    
-    FootprintCourseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FootprintCourseCell"];
-    if (cell == nil) {
-        cell = [[FootprintCourseCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FootprintCourseCell"];
+    else {
+        
+        NSString *cellIdentifier = [NSString stringWithFormat:@"task_%zd", indexPath.section];
+        StatisticsTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil) {
+            
+            cell = [[StatisticsTaskCell alloc] initWithTask:indexPath.section - 1 reuseIdentifier:cellIdentifier];
+            cell.backgroundColor = self.backgroundColor;
+            
+            NSArray *values = @[@"dongxiaoHeight", @"dailyHeight", @"learningHeight"];
+            [self setValue:@(cell.cellHeight) forKey:values[indexPath.section - 1]];
+        }
+        
+        return cell;
     }
-    
-    cell.isCollect = self.currentIndex == 1 ? NO : YES;
-    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.section == 0) {
         return 90;
+    }
+    else if (indexPath.section == 1) {
+        return self.dongxiaoHeight;
+    }
+    else if (indexPath.section == 2) {
+        return self.dailyHeight;
+    }
+    else {
+        return self.learningHeight;
     }
     
     return 80;

@@ -18,6 +18,8 @@ typedef enum : NSUInteger {
 
 @interface StatisticsTaskCell : UITableViewCell
 
+@property (nonatomic, assign) CGFloat cellHeight;
+
 - (instancetype)initWithTask:(TaskType)type reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

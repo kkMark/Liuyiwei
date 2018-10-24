@@ -69,8 +69,6 @@
 		0C6A9F02215B2E7B00CFB389 /* PublicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A9F01215B2E7B00CFB389 /* PublicHeaderView.m */; };
 		0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */; };
 		0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36ED2130EF030081DB1C /* FootprintView.m */; };
-		0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F02130EFCA0081DB1C /* FootprintCell.m */; };
-		0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */; };
 		0C6B36F7213107C30081DB1C /* UINavigationController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */; };
 		0C6FE68D217081EF004E51CD /* SalesTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C6FE68C217081EF004E51CD /* SalesTaskModel.m */; };
 		0C717FE2217DFBD700ECB7EC /* StatisticsTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C717FE1217DFBD700ECB7EC /* StatisticsTimeCell.m */; };
@@ -321,10 +319,6 @@
 		0C6B36EA21300B0E0081DB1C /* WebHelpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebHelpViewController.m; sourceTree = "<group>"; };
 		0C6B36EC2130EF030081DB1C /* FootprintView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintView.h; sourceTree = "<group>"; };
 		0C6B36ED2130EF030081DB1C /* FootprintView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintView.m; sourceTree = "<group>"; };
-		0C6B36EF2130EFCA0081DB1C /* FootprintCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintCell.h; sourceTree = "<group>"; };
-		0C6B36F02130EFCA0081DB1C /* FootprintCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCell.m; sourceTree = "<group>"; };
-		0C6B36F22130F8EC0081DB1C /* FootprintCourseCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintCourseCell.h; sourceTree = "<group>"; };
-		0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCourseCell.m; sourceTree = "<group>"; };
 		0C6B36F5213107C30081DB1C /* UINavigationController+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Category.h"; sourceTree = "<group>"; };
 		0C6B36F6213107C30081DB1C /* UINavigationController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Category.m"; sourceTree = "<group>"; };
 		0C6FE68B217081EF004E51CD /* SalesTaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SalesTaskModel.h; sourceTree = "<group>"; };
@@ -926,10 +920,6 @@
 			isa = PBXGroup;
 			children = (
 				0C717FDF217DFB7C00ECB7EC /* Statistics（统计） */,
-				0C6B36F22130F8EC0081DB1C /* FootprintCourseCell.h */,
-				0C6B36F32130F8EC0081DB1C /* FootprintCourseCell.m */,
-				0C6B36EF2130EFCA0081DB1C /* FootprintCell.h */,
-				0C6B36F02130EFCA0081DB1C /* FootprintCell.m */,
 				0C6B36EC2130EF030081DB1C /* FootprintView.h */,
 				0C6B36ED2130EF030081DB1C /* FootprintView.m */,
 			);
@@ -3039,7 +3029,6 @@
 				0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */,
 				0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */,
 				11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */,
-				0C6B36F42130F8EC0081DB1C /* FootprintCourseCell.m in Sources */,
 				11686F6A216AFC6B0001C3F9 /* DrugTabooViewController.m in Sources */,
 				0C1F77EE21555E7F0059E915 /* ReceptionRemarkViewController.m in Sources */,
 				0C219616215A206100D2696D /* ResultsHistoryViewController.m in Sources */,
@@ -3088,7 +3077,6 @@
 				0CE1EC3E212901ED00A373D7 /* SearchView.m in Sources */,
 				0C37F5F2212E9A9800E357EB /* HelpViewController.m in Sources */,
 				0C7AEA92213E584D00138A31 /* MyRankingCell.m in Sources */,
-				0C6B36F12130EFCA0081DB1C /* FootprintCell.m in Sources */,
 				11686F72216B28830001C3F9 /* AnnouncementModel.m in Sources */,
 				11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */,
 				0C121473215638170028368D /* SignInView.m in Sources */,
