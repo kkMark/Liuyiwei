@@ -97,6 +97,7 @@
 		0C8404AC21354BE100305197 /* LearningTaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AB21354BE100305197 /* LearningTaskView.m */; };
 		0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AE21354CCA00305197 /* SalesTaskCell.m */; };
 		0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404B1213634AF00305197 /* DailyTaskCell.m */; };
+		0C93B8332182BCD100B8ACBE /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C93B8322182BCD100B8ACBE /* FootprintCell.m */; };
 		0C9A9407214130FF00CACE20 /* RCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A9406214130FF00CACE20 /* RCompleteViewController.m */; };
 		0CAB76C52174260000B5076E /* RegisteredViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB76C42174260000B5076E /* RegisteredViewModel.m */; };
 		0CC35943217AFD10000BA3B1 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC35942217AFD10000BA3B1 /* MyCardView.m */; };
@@ -375,6 +376,8 @@
 		0C8404AE21354CCA00305197 /* SalesTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SalesTaskCell.m; sourceTree = "<group>"; };
 		0C8404B0213634AF00305197 /* DailyTaskCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyTaskCell.h; sourceTree = "<group>"; };
 		0C8404B1213634AF00305197 /* DailyTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskCell.m; sourceTree = "<group>"; };
+		0C93B8312182BCD100B8ACBE /* FootprintCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintCell.h; sourceTree = "<group>"; };
+		0C93B8322182BCD100B8ACBE /* FootprintCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCell.m; sourceTree = "<group>"; };
 		0C9A9405214130FF00CACE20 /* RCompleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCompleteViewController.h; sourceTree = "<group>"; };
 		0C9A9406214130FF00CACE20 /* RCompleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCompleteViewController.m; sourceTree = "<group>"; };
 		0CAB76C32174260000B5076E /* RegisteredViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewModel.h; sourceTree = "<group>"; };
@@ -919,6 +922,7 @@
 		0C37F563212D526800E357EB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C93B82D2182BBDE00B8ACBE /* Study（学习） */,
 				0C717FDF217DFB7C00ECB7EC /* Statistics（统计） */,
 				0C6B36EC2130EF030081DB1C /* FootprintView.h */,
 				0C6B36ED2130EF030081DB1C /* FootprintView.m */,
@@ -1845,6 +1849,15 @@
 				0C8404A821354BD400305197 /* LearningTaskViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0C93B82D2182BBDE00B8ACBE /* Study（学习） */ = {
+			isa = PBXGroup;
+			children = (
+				0C93B8312182BCD100B8ACBE /* FootprintCell.h */,
+				0C93B8322182BCD100B8ACBE /* FootprintCell.m */,
+			);
+			path = "Study（学习）";
 			sourceTree = "<group>";
 		};
 		0C9BBB8F212A519000A09A02 /* Home（首页相关） */ = {
@@ -3038,6 +3051,7 @@
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */,
 				0C5E026B2179BB9C008B3D91 /* DailyTaskViewModel.m in Sources */,
+				0C93B8332182BCD100B8ACBE /* FootprintCell.m in Sources */,
 				0C21960B215A1CAB00D2696D /* ResultsSettingView.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
