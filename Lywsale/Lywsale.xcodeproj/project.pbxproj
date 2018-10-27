@@ -98,6 +98,7 @@
 		0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404AE21354CCA00305197 /* SalesTaskCell.m */; };
 		0C8404B2213634AF00305197 /* DailyTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8404B1213634AF00305197 /* DailyTaskCell.m */; };
 		0C93B8332182BCD100B8ACBE /* FootprintCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C93B8322182BCD100B8ACBE /* FootprintCell.m */; };
+		0C93B83621840D1F00B8ACBE /* LearningTaskDeatailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C93B83521840D1F00B8ACBE /* LearningTaskDeatailsView.m */; };
 		0C9A9407214130FF00CACE20 /* RCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9A9406214130FF00CACE20 /* RCompleteViewController.m */; };
 		0CAB76C52174260000B5076E /* RegisteredViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CAB76C42174260000B5076E /* RegisteredViewModel.m */; };
 		0CC35943217AFD10000BA3B1 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CC35942217AFD10000BA3B1 /* MyCardView.m */; };
@@ -378,6 +379,8 @@
 		0C8404B1213634AF00305197 /* DailyTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyTaskCell.m; sourceTree = "<group>"; };
 		0C93B8312182BCD100B8ACBE /* FootprintCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintCell.h; sourceTree = "<group>"; };
 		0C93B8322182BCD100B8ACBE /* FootprintCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintCell.m; sourceTree = "<group>"; };
+		0C93B83421840D1F00B8ACBE /* LearningTaskDeatailsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningTaskDeatailsView.h; sourceTree = "<group>"; };
+		0C93B83521840D1F00B8ACBE /* LearningTaskDeatailsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningTaskDeatailsView.m; sourceTree = "<group>"; };
 		0C9A9405214130FF00CACE20 /* RCompleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCompleteViewController.h; sourceTree = "<group>"; };
 		0C9A9406214130FF00CACE20 /* RCompleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCompleteViewController.m; sourceTree = "<group>"; };
 		0CAB76C32174260000B5076E /* RegisteredViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisteredViewModel.h; sourceTree = "<group>"; };
@@ -1752,8 +1755,7 @@
 		0C84048F21354B7C00305197 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0C08A7D0216B83A50058A0BE /* DailyTaskManagerDetailsView.h */,
-				0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */,
+				0C93B83721840D2600B8ACBE /* 店长详情 */,
 				0C5F2CCB216B349200801951 /* DailyTaskManagerCell.h */,
 				0C5F2CCC216B349200801951 /* DailyTaskManagerCell.m */,
 				0C8404B0213634AF00305197 /* DailyTaskCell.h */,
@@ -1834,6 +1836,7 @@
 		0C84049921354B7D00305197 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0C93B83821840D3400B8ACBE /* 店长详情 */,
 				0C399F3F2137D57C00B5DA6D /* LearningTaskCell.h */,
 				0C399F402137D57C00B5DA6D /* LearningTaskCell.m */,
 				0C8404AA21354BE100305197 /* LearningTaskView.h */,
@@ -1858,6 +1861,24 @@
 				0C93B8322182BCD100B8ACBE /* FootprintCell.m */,
 			);
 			path = "Study（学习）";
+			sourceTree = "<group>";
+		};
+		0C93B83721840D2600B8ACBE /* 店长详情 */ = {
+			isa = PBXGroup;
+			children = (
+				0C08A7D0216B83A50058A0BE /* DailyTaskManagerDetailsView.h */,
+				0C08A7D1216B83A50058A0BE /* DailyTaskManagerDetailsView.m */,
+			);
+			path = "店长详情";
+			sourceTree = "<group>";
+		};
+		0C93B83821840D3400B8ACBE /* 店长详情 */ = {
+			isa = PBXGroup;
+			children = (
+				0C93B83421840D1F00B8ACBE /* LearningTaskDeatailsView.h */,
+				0C93B83521840D1F00B8ACBE /* LearningTaskDeatailsView.m */,
+			);
+			path = "店长详情";
 			sourceTree = "<group>";
 		};
 		0C9BBB8F212A519000A09A02 /* Home（首页相关） */ = {
@@ -3065,6 +3086,7 @@
 				11ED7D102158C88A0032FE0B /* AnnouncenmentTableViewCell.m in Sources */,
 				0CDDB566212734DB00D42F76 /* UIView+Category.m in Sources */,
 				0CDDB5522127342800D42F76 /* CustomTextField.m in Sources */,
+				0C93B83621840D1F00B8ACBE /* LearningTaskDeatailsView.m in Sources */,
 				0C804A0F2147A14C0032B57A /* BuyView.m in Sources */,
 				0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */,
 				0C804A0C214796040032B57A /* CustomerInfoView.m in Sources */,

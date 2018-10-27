@@ -44,6 +44,10 @@
             return [self.view makeToast:@"请输入账号"];
         }
         
+        if ([self isPhoneNum:account]) {
+            return [self.view makeToast:@"手机号错误，请输入正确的手机号码"];
+        }
+        
         if (password.length == 0) {
             return [self.view makeToast:@"请输入密码"];
         }
@@ -82,6 +86,13 @@
             
         }];
     }];
+}
+
+- (BOOL)isPhoneNum:(NSString *)number {
+    
+    NSString *mobile = @"^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|7[0678])\\d{8}$";
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobile];
+    return [regextestmobile evaluateWithObject:number];
 }
 
 @end

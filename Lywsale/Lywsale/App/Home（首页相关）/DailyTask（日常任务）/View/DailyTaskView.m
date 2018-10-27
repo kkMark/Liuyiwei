@@ -10,6 +10,7 @@
 #import "DailyTaskCell.h"
 #import "DailyTaskManagerCell.h"
 #import "ReceptionViewController.h"
+#import "DailyTaskManagerDetailsView.h"
 
 @interface DailyTaskView ()
 
@@ -76,10 +77,18 @@
     
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     
-    if (self.goViewControllerBlock) {
+    if ([GetUserDefault(UserType) isEqualToString:@"1"]) {
         
-        ReceptionViewController *vc = [ReceptionViewController new];
-        self.goViewControllerBlock(vc);
+        DailyTaskManagerDetailsView *vc = [[DailyTaskManagerDetailsView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) title:@"回访标题" data:@[]];
+        [[UIApplication sharedApplication].keyWindow addSubview:vc];
+    }
+    else {
+        
+        if (self.goViewControllerBlock) {
+            
+            ReceptionViewController *vc = [ReceptionViewController new];
+            self.goViewControllerBlock(vc);
+        }
     }
 }
 
