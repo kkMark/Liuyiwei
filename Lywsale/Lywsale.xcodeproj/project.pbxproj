@@ -194,6 +194,8 @@
 		11ED7D0D2158C8640032FE0B /* AnnouncementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D0C2158C8640032FE0B /* AnnouncementView.m */; };
 		11ED7D102158C88A0032FE0B /* AnnouncenmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D0F2158C88A0032FE0B /* AnnouncenmentTableViewCell.m */; };
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
+		2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */; };
+		2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E42186E8B00066EF28 /* TrainingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -571,6 +573,10 @@
 		11ED7D0C2158C8640032FE0B /* AnnouncementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementView.m; sourceTree = "<group>"; };
 		11ED7D0E2158C88A0032FE0B /* AnnouncenmentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncenmentTableViewCell.h; sourceTree = "<group>"; };
 		11ED7D0F2158C88A0032FE0B /* AnnouncenmentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncenmentTableViewCell.m; sourceTree = "<group>"; };
+		2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewController.h; sourceTree = "<group>"; };
+		2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewController.m; sourceTree = "<group>"; };
+		2ADBF9E32186E8B00066EF28 /* TrainingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingView.h; sourceTree = "<group>"; };
+		2ADBF9E42186E8B00066EF28 /* TrainingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingView.m; sourceTree = "<group>"; };
 		3FC6A3317F8728887B35A61A /* Pods-Lywsale.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.release.xcconfig"; sourceTree = "<group>"; };
 		7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lywsale.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C58AA252108754216FE46E /* Pods-Lywsale.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lywsale.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lywsale/Pods-Lywsale.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1892,6 +1898,7 @@
 				0C84048C21354B7C00305197 /* DailyTask（日常任务） */,
 				0C8049E921476E320032B57A /* Reception（接待相关） */,
 				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
+				2ADBF9DA2186E6780066EF28 /* Training（培训相关） */,
 				0C219601215A1C2C00D2696D /* ResultsSetting（业绩设置） */,
 				0C21960F215A203B00D2696D /* ResultsHistory（历史业绩） */,
 			);
@@ -2890,6 +2897,57 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2ADBF9DA2186E6780066EF28 /* Training（培训相关） */ = {
+			isa = PBXGroup;
+			children = (
+				2ADBF9DF2186E8530066EF28 /* Training（培训） */,
+			);
+			path = "Training（培训相关）";
+			sourceTree = "<group>";
+		};
+		2ADBF9DB2186E8420066EF28 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */,
+				2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2ADBF9DC2186E8480066EF28 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2ADBF9E32186E8B00066EF28 /* TrainingView.h */,
+				2ADBF9E42186E8B00066EF28 /* TrainingView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2ADBF9DD2186E84E0066EF28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2ADBF9DE2186E84F0066EF28 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2ADBF9DF2186E8530066EF28 /* Training（培训） */ = {
+			isa = PBXGroup;
+			children = (
+				2ADBF9DE2186E84F0066EF28 /* ViewModel */,
+				2ADBF9DD2186E84E0066EF28 /* Model */,
+				2ADBF9DC2186E8480066EF28 /* View */,
+				2ADBF9DB2186E8420066EF28 /* ViewController */,
+			);
+			path = "Training（培训）";
+			sourceTree = "<group>";
+		};
 		4F2AA32469F7011E0C8F49D1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -3037,6 +3095,7 @@
 				0C37F5B9212E67C400E357EB /* ModifyPasswordViewController.m in Sources */,
 				0CE1EC4E2129573800A373D7 /* UploadInfoView.m in Sources */,
 				0C717FE5217EC39000ECB7EC /* StatisticsTaskCell.m in Sources */,
+				2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */,
 				0C1F77F121555E9A0059E915 /* ReceptionRemarkView.m in Sources */,
 				1126142A216C8185005D0B40 /* OrderManageView.m in Sources */,
 				0C5F2CCA216AF16600801951 /* PerformCell.m in Sources */,
@@ -3053,6 +3112,7 @@
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */,
 				11261439216C9E06005D0B40 /* MemberManagementView.m in Sources */,
+				2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */,
 				0C5F2CCD216B349200801951 /* DailyTaskManagerCell.m in Sources */,
 				0C804A0321476E580032B57A /* CustomerInfoViewController.m in Sources */,
 				0C6B36EE2130EF030081DB1C /* FootprintView.m in Sources */,
