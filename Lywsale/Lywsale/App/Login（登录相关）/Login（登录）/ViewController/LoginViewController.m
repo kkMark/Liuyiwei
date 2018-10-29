@@ -44,7 +44,7 @@
             return [self.view makeToast:@"请输入账号"];
         }
         
-        if ([self isPhoneNum:account]) {
+        if (![self isPhoneNum:account]) {
             return [self.view makeToast:@"手机号错误，请输入正确的手机号码"];
         }
         
