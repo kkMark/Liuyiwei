@@ -63,6 +63,14 @@
         LearningTaskDeatailsView *vc = [[LearningTaskDeatailsView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) title:@"回访标题" data:@[]];
         [[UIApplication sharedApplication].keyWindow addSubview:vc];
     }
+    else {
+        
+        if (self.goViewControllerBlock) {
+            
+            NSString *vcName = @"TrainingViewController";
+            self.goViewControllerBlock([NSClassFromString(vcName) new]);
+        }
+    }
 }
 
 @end
