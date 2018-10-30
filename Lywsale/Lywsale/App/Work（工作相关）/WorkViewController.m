@@ -68,7 +68,7 @@
     .leftSpaceToView(self.view, 0)
     .rightSpaceToView(self.view, 0)
     .topSpaceToView(self.view, 10)
-    .heightRatioToView(self.view, 0.28);
+    .heightIs(ScreenWidth * 0.21 * 2 + 20);
     
     [self addChoice];
     
@@ -108,7 +108,7 @@
         [self.choiceView addSubview:view];
         
         view.sd_layout
-        .leftSpaceToView(self.choiceView, 20 + countInteger * (ScreenWidth * 0.23))
+        .leftSpaceToView(self.choiceView, ScreenWidth*0.05 + countInteger * (ScreenWidth * 0.23))
         .topSpaceToView(self.choiceView, 5 + integer * (ScreenWidth * 0.22))
         .widthIs(ScreenWidth * 0.21)
         .heightIs(ScreenWidth * 0.21);

@@ -54,7 +54,7 @@
         [self.headerView addSubview:view];
         
         view.sd_layout
-        .leftSpaceToView(self.headerView, 50 + i * ScreenWidth * 0.3)
+        .leftSpaceToView(self.headerView, ScreenWidth * 0.135 + i * ScreenWidth * 0.3)
         .centerYEqualToView(self.headerView)
         .widthEqualToHeight()
         .heightRatioToView(self.headerView, 0.8);

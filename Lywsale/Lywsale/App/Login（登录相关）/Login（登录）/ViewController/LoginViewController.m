@@ -23,6 +23,7 @@
 
     [super viewDidLoad];
     [self initLoginView];
+    
 }
 
 - (void)initLoginView {
