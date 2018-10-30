@@ -8,6 +8,7 @@
 
 #import "LearningTaskView.h"
 #import "LearningTaskCell.h"
+#import "LearningTaskDeatailsView.h"
 
 @interface LearningTaskView ()
 
@@ -51,6 +52,17 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return self.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    if ([GetUserDefault(UserType) isEqualToString:@"1"]) {
+        
+        LearningTaskDeatailsView *vc = [[LearningTaskDeatailsView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) title:@"回访标题" data:@[]];
+        [[UIApplication sharedApplication].keyWindow addSubview:vc];
+    }
 }
 
 @end

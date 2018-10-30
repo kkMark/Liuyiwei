@@ -10,4 +10,6 @@
 
 @interface DailyTaskManagerDetailsView : UIView
 
+- (instancetype)initWithFrame:(CGRect)frame title:(NSString *)title data:(NSArray *)data;
+
 @end

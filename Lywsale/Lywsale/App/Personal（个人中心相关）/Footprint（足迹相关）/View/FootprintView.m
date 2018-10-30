@@ -9,6 +9,7 @@
 #import "FootprintView.h"
 #import "StatisticsTimeCell.h"
 #import "StatisticsTaskCell.h"
+#import "FootprintCell.h"
 
 @interface FootprintView ()
 
@@ -32,7 +33,7 @@
     if (self = [super initWithFrame:frame style:style]) {
         
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
-        self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 15)];
+        self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 10)];
     }
     
     return self;
@@ -41,37 +42,64 @@
 
 #pragma mark - tableview
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    
+    if (self.currentIndex == 0) {
+        return 4;
+    }
+    
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    
+    if (self.currentIndex == 0) {
+        return 1;
+    }
+    
+    return self.dataSources.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
+    if (self.currentIndex == 0) {
         
-        StatisticsTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTimeCell"];
-        if (cell == nil) {
-            cell = [[StatisticsTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"StatisticsTimeCell"];
-            cell.backgroundColor = self.backgroundColor;
+        if (indexPath.section == 0) {
+            
+            StatisticsTimeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StatisticsTimeCell"];
+            if (cell == nil) {
+                cell = [[StatisticsTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"StatisticsTimeCell"];
+                cell.backgroundColor = self.backgroundColor;
+            }
+            
+            return cell;
         }
-        
-        return cell;
+        else {
+            
+            NSString *cellIdentifier = [NSString stringWithFormat:@"task_%zd", indexPath.section];
+            StatisticsTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+            if (cell == nil) {
+                
+                cell = [[StatisticsTaskCell alloc] initWithTask:indexPath.section - 1 reuseIdentifier:cellIdentifier];
+                cell.backgroundColor = self.backgroundColor;
+                
+                NSArray *values = @[@"dongxiaoHeight", @"dailyHeight", @"learningHeight"];
+                [self setValue:@(cell.cellHeight) forKey:values[indexPath.section - 1]];
+            }
+            
+            return cell;
+        }
     }
     else {
         
-        NSString *cellIdentifier = [NSString stringWithFormat:@"task_%zd", indexPath.section];
-        StatisticsTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        FootprintCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FootprintCell"];
         if (cell == nil) {
-            
-            cell = [[StatisticsTaskCell alloc] initWithTask:indexPath.section - 1 reuseIdentifier:cellIdentifier];
-            cell.backgroundColor = self.backgroundColor;
-            
-            NSArray *values = @[@"dongxiaoHeight", @"dailyHeight", @"learningHeight"];
-            [self setValue:@(cell.cellHeight) forKey:values[indexPath.section - 1]];
+            cell = [[FootprintCell alloc] initWithReuseIdentifier:@"FootprintCell"];
         }
+        
+        if (self.currentIndex == 1) {
+            cell.statusBtn.hidden = NO;
+        }
+        else cell.statusBtn.hidden = YES;
         
         return cell;
     }
@@ -79,20 +107,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {
-        return 90;
-    }
-    else if (indexPath.section == 1) {
-        return self.dongxiaoHeight;
-    }
-    else if (indexPath.section == 2) {
-        return self.dailyHeight;
+    if (self.currentIndex == 0) {
+        
+        if (indexPath.section == 0) {
+            return 90;
+        }
+        else if (indexPath.section == 1) {
+            return self.dongxiaoHeight;
+        }
+        else if (indexPath.section == 2) {
+            return self.dailyHeight;
+        }
+        else {
+            return self.learningHeight;
+        }
     }
     else {
-        return self.learningHeight;
+        
+        return 125;
     }
-    
-    return 80;
 }
 
 @end
