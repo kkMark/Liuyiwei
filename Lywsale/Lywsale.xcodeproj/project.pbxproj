@@ -194,6 +194,8 @@
 		11ED7D0D2158C8640032FE0B /* AnnouncementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D0C2158C8640032FE0B /* AnnouncementView.m */; };
 		11ED7D102158C88A0032FE0B /* AnnouncenmentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11ED7D0F2158C88A0032FE0B /* AnnouncenmentTableViewCell.m */; };
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
+		2A0EE174218850900058336E /* TrainingSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE173218850900058336E /* TrainingSelectionView.m */; };
+		2A0EE177218850B20058336E /* TrainingSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE176218850B20058336E /* TrainingSelectionCell.m */; };
 		2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */; };
 		2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E42186E8B00066EF28 /* TrainingView.m */; };
 /* End PBXBuildFile section */
@@ -573,6 +575,10 @@
 		11ED7D0C2158C8640032FE0B /* AnnouncementView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncementView.m; sourceTree = "<group>"; };
 		11ED7D0E2158C88A0032FE0B /* AnnouncenmentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnnouncenmentTableViewCell.h; sourceTree = "<group>"; };
 		11ED7D0F2158C88A0032FE0B /* AnnouncenmentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnnouncenmentTableViewCell.m; sourceTree = "<group>"; };
+		2A0EE172218850900058336E /* TrainingSelectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingSelectionView.h; sourceTree = "<group>"; };
+		2A0EE173218850900058336E /* TrainingSelectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionView.m; sourceTree = "<group>"; };
+		2A0EE175218850B20058336E /* TrainingSelectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingSelectionCell.h; sourceTree = "<group>"; };
+		2A0EE176218850B20058336E /* TrainingSelectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionCell.m; sourceTree = "<group>"; };
 		2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewController.h; sourceTree = "<group>"; };
 		2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewController.m; sourceTree = "<group>"; };
 		2ADBF9E32186E8B00066EF28 /* TrainingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingView.h; sourceTree = "<group>"; };
@@ -2897,6 +2903,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2A0EE17021884FDF0058336E /* TrainingSelection（选集） */ = {
+			isa = PBXGroup;
+			children = (
+				2A0EE172218850900058336E /* TrainingSelectionView.h */,
+				2A0EE173218850900058336E /* TrainingSelectionView.m */,
+				2A0EE175218850B20058336E /* TrainingSelectionCell.h */,
+				2A0EE176218850B20058336E /* TrainingSelectionCell.m */,
+			);
+			path = "TrainingSelection（选集）";
+			sourceTree = "<group>";
+		};
+		2A0EE171218850220058336E /* TrainingEvaluation（评价） */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "TrainingEvaluation（评价）";
+			sourceTree = "<group>";
+		};
 		2ADBF9DA2186E6780066EF28 /* Training（培训相关） */ = {
 			isa = PBXGroup;
 			children = (
@@ -2917,6 +2941,8 @@
 		2ADBF9DC2186E8480066EF28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A0EE171218850220058336E /* TrainingEvaluation（评价） */,
+				2A0EE17021884FDF0058336E /* TrainingSelection（选集） */,
 				2ADBF9E32186E8B00066EF28 /* TrainingView.h */,
 				2ADBF9E42186E8B00066EF28 /* TrainingView.m */,
 			);
@@ -3122,6 +3148,7 @@
 				0CAB76C52174260000B5076E /* RegisteredViewModel.m in Sources */,
 				0CEFA103213FD4940072EAB9 /* RetrieveViewModel.m in Sources */,
 				0CF0EF94215222CD00DF2DFA /* ActivityDetailsView.m in Sources */,
+				2A0EE174218850900058336E /* TrainingSelectionView.m in Sources */,
 				11AA45362150FF8F00ED7293 /* HomeMessgeModel.m in Sources */,
 				11686F6A216AFC6B0001C3F9 /* DrugTabooViewController.m in Sources */,
 				0C1F77EE21555E7F0059E915 /* ReceptionRemarkViewController.m in Sources */,
@@ -3136,6 +3163,7 @@
 				0C21960B215A1CAB00D2696D /* ResultsSettingView.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
 				0CDDB567212734DB00D42F76 /* Toast+UIView.m in Sources */,
+				2A0EE177218850B20058336E /* TrainingSelectionCell.m in Sources */,
 				0C7AEA99213E78CE00138A31 /* PersonalHeaderView.m in Sources */,
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
 				11ABF07C2170969000AEDE04 /* QRMembersViewController.m in Sources */,

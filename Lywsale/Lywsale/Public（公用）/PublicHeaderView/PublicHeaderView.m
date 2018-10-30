@@ -36,6 +36,7 @@
     if (!headerView) {
         
         headerView = [[UIView alloc] initWithFrame:self.frame];
+        headerView.y = 0;
         headerView.backgroundColor = [UIColor whiteColor];
         [self addSubview:headerView];
         
