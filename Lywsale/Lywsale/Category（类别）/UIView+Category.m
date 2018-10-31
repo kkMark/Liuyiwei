@@ -114,4 +114,13 @@
     return CGRectGetMaxX(self.frame);
 }
 
+- (CGFloat)getWidthWithView:(id)view maxWidth:(CGFloat)maxWidth {
+    
+    UIView *tempView = view;
+    CGFloat width = maxWidth - (maxWidth - tempView.x);
+    width -= self.x;
+    self.width = width;
+    return width;
+}
+
 @end

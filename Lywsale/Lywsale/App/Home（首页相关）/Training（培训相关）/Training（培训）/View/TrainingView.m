@@ -9,6 +9,7 @@
 #import "TrainingView.h"
 #import "PublicHeaderView.h"
 #import "TrainingSelectionView.h"
+#import "TrainingEvaluationView.h"
 
 @interface TrainingView() <UIScrollViewDelegate>
 
@@ -19,6 +20,7 @@
 @property (nonatomic, strong) UIScrollView *bgScrollView;
 @property (nonatomic, strong) PublicHeaderView *headerView;
 @property (nonatomic, strong) TrainingSelectionView *selectionView;
+@property (nonatomic, strong) TrainingEvaluationView *evaluationView;
 
 @end
 
@@ -27,6 +29,7 @@
 @synthesize bgScrollView;
 @synthesize vedioBgView;
 @synthesize selectionView;
+@synthesize evaluationView;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
@@ -107,6 +110,12 @@
     collectionBtn.width = titleLabel.maxX;
     [collectionBtn addSubview:titleLabel];
     
+    [[collectionBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+       
+        NSString *imgString = collectionBtn.selected ? @"training_collection_sel" : @"training_collection";
+        collectionImgView.image = [UIImage imageNamed:imgString];
+    }];
+    
     return collectionBtn;
 }
 
@@ -143,6 +152,19 @@
     return selectionView;
 }
 
+- (TrainingEvaluationView *)evaluationView {
+    
+    if (!evaluationView) {
+        
+        evaluationView = [[TrainingEvaluationView alloc] initWithFrame:self.bgScrollView.frame style:UITableViewStyleGrouped];
+        evaluationView.y = 0;
+        evaluationView.x = ScreenWidth;
+        [self.bgScrollView addSubview:evaluationView];
+    }
+    
+    return evaluationView;
+}
+
 - (UIScrollView *)bgScrollView {
     
     if (!bgScrollView) {
@@ -158,6 +180,7 @@
         [self addSubview:bgScrollView];
         
         self.selectionView.dataSources = @[@"", @"", @""];
+        self.evaluationView.dataSources = @[@"", @"", @""];
     }
     
     return bgScrollView;

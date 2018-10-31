@@ -20,4 +20,6 @@
 @property (nonatomic, assign) CGFloat maxX;
 @property (nonatomic, assign) CGFloat maxY;
 
+- (CGFloat)getWidthWithView:(id)view maxWidth:(CGFloat)maxWidth;
+
 @end

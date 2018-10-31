@@ -196,6 +196,9 @@
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
 		2A0EE174218850900058336E /* TrainingSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE173218850900058336E /* TrainingSelectionView.m */; };
 		2A0EE177218850B20058336E /* TrainingSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE176218850B20058336E /* TrainingSelectionCell.m */; };
+		2A37AC6D2189842E00821B85 /* TrainingEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */; };
+		2A37AC702189844100821B85 /* TrainingEvaluationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */; };
+		2A37AC73218995E800821B85 /* TrainingEvaluationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */; };
 		2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */; };
 		2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E42186E8B00066EF28 /* TrainingView.m */; };
 /* End PBXBuildFile section */
@@ -579,6 +582,12 @@
 		2A0EE173218850900058336E /* TrainingSelectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionView.m; sourceTree = "<group>"; };
 		2A0EE175218850B20058336E /* TrainingSelectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingSelectionCell.h; sourceTree = "<group>"; };
 		2A0EE176218850B20058336E /* TrainingSelectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionCell.m; sourceTree = "<group>"; };
+		2A37AC6B2189842E00821B85 /* TrainingEvaluationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationView.h; sourceTree = "<group>"; };
+		2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationView.m; sourceTree = "<group>"; };
+		2A37AC6E2189844100821B85 /* TrainingEvaluationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationCell.h; sourceTree = "<group>"; };
+		2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationCell.m; sourceTree = "<group>"; };
+		2A37AC71218995E800821B85 /* TrainingEvaluationHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationHeaderView.h; sourceTree = "<group>"; };
+		2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationHeaderView.m; sourceTree = "<group>"; };
 		2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewController.h; sourceTree = "<group>"; };
 		2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewController.m; sourceTree = "<group>"; };
 		2ADBF9E32186E8B00066EF28 /* TrainingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingView.h; sourceTree = "<group>"; };
@@ -2917,6 +2926,12 @@
 		2A0EE171218850220058336E /* TrainingEvaluation（评价） */ = {
 			isa = PBXGroup;
 			children = (
+				2A37AC71218995E800821B85 /* TrainingEvaluationHeaderView.h */,
+				2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */,
+				2A37AC6E2189844100821B85 /* TrainingEvaluationCell.h */,
+				2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */,
+				2A37AC6B2189842E00821B85 /* TrainingEvaluationView.h */,
+				2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */,
 			);
 			path = "TrainingEvaluation（评价）";
 			sourceTree = "<group>";
@@ -3257,6 +3272,7 @@
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
+				2A37AC6D2189842E00821B85 /* TrainingEvaluationView.m in Sources */,
 				0C5F2CC7216AF08800801951 /* PerformView.m in Sources */,
 				0C3FD1C02154DF6900534B8D /* UploadHistoryView.m in Sources */,
 				0C25101421312B9500DDF4BB /* HomePageViewController.m in Sources */,
@@ -3277,6 +3293,7 @@
 				0C8404A621354BC100305197 /* DailyTaskView.m in Sources */,
 				0C8404AF21354CCA00305197 /* SalesTaskCell.m in Sources */,
 				0C804A152147BBDE0032B57A /* MaintenanceView.m in Sources */,
+				2A37AC702189844100821B85 /* TrainingEvaluationCell.m in Sources */,
 				0CE1EC512129574B00A373D7 /* UploadInfoCell.m in Sources */,
 				0C1214682156359A0028368D /* SalesclerkView.m in Sources */,
 				0CDDB5312127338600D42F76 /* AppDelegate.m in Sources */,
@@ -3284,6 +3301,7 @@
 				0CE1EC362128F7F200A373D7 /* SelectTypeCell.m in Sources */,
 				0C219619215A208700D2696D /* ResultsHistoryView.m in Sources */,
 				11ABF070217071DE00AEDE04 /* MyAwardsView.m in Sources */,
+				2A37AC73218995E800821B85 /* TrainingEvaluationHeaderView.m in Sources */,
 				0C7AEA95213E610800138A31 /* RankingCell.m in Sources */,
 				0CC35946217AFD23000BA3B1 /* MyCardCell.m in Sources */,
 				11ABF0682170367500AEDE04 /* GradientRound.m in Sources */,
