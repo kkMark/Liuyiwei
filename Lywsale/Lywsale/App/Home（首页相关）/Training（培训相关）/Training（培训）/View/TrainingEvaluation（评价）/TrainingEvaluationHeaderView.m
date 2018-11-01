@@ -28,6 +28,8 @@
 
 - (void)setupSubviews {
     
+    self.backgroundColor = [UIColor whiteColor];
+    
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, ScreenWidth - 30, 15)];
     self.titleLabel.text = @"学员评论（329）";
     self.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -40,16 +42,16 @@
         
         scoreImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"training_score_sel"]];
         scoreImgView.size = CGSizeMake(12, 12);
-        scoreImgView.centerY = self.titleLabel.maxY + 5;
-        scoreImgView.x = 15;
+        scoreImgView.y = self.titleLabel.maxY + 5;
+        scoreImgView.x = 15 + 17 * i;
         [self addSubview:scoreImgView];
     }
     // view高度
-    self.height = scoreImgView.maxY + 15;
+    self.height = scoreImgView.maxY + 10;
 
     // 分享按钮
     UIButton *scoreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    scoreBtn.frame = CGRectMake(0, 0, 80, 23);
+    scoreBtn.frame = CGRectMake(ScreenWidth - 100, 0, 80, 23);
     scoreBtn.centerY = self.height / 2;
     scoreBtn.layer.cornerRadius = scoreBtn.height / 2;
     scoreBtn.layer.masksToBounds = YES;
@@ -60,8 +62,9 @@
     [scoreBtn setTitleColor:kMainColor forState:UIControlStateNormal];
     [self addSubview:scoreBtn];
     
-    UILabel *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.height - 0.5)];
-    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - 0.5, ScreenWidth, 0.5)];
+    lineView.backgroundColor = [UIColor colorWithHexString:@"0xEEF0F3"];
+    [self addSubview:lineView];
 }
 
 @end
