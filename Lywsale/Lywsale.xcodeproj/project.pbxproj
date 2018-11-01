@@ -196,6 +196,7 @@
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
 		2A0EE174218850900058336E /* TrainingSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE173218850900058336E /* TrainingSelectionView.m */; };
 		2A0EE177218850B20058336E /* TrainingSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE176218850B20058336E /* TrainingSelectionCell.m */; };
+		2A34BBF4218A8EB7008888F3 /* EvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34BBF3218A8EB7008888F3 /* EvaluationView.m */; };
 		2A37AC6D2189842E00821B85 /* TrainingEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */; };
 		2A37AC702189844100821B85 /* TrainingEvaluationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */; };
 		2A37AC73218995E800821B85 /* TrainingEvaluationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */; };
@@ -582,6 +583,8 @@
 		2A0EE173218850900058336E /* TrainingSelectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionView.m; sourceTree = "<group>"; };
 		2A0EE175218850B20058336E /* TrainingSelectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingSelectionCell.h; sourceTree = "<group>"; };
 		2A0EE176218850B20058336E /* TrainingSelectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionCell.m; sourceTree = "<group>"; };
+		2A34BBF2218A8EB7008888F3 /* EvaluationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvaluationView.h; sourceTree = "<group>"; };
+		2A34BBF3218A8EB7008888F3 /* EvaluationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EvaluationView.m; sourceTree = "<group>"; };
 		2A37AC6B2189842E00821B85 /* TrainingEvaluationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationView.h; sourceTree = "<group>"; };
 		2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationView.m; sourceTree = "<group>"; };
 		2A37AC6E2189844100821B85 /* TrainingEvaluationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationCell.h; sourceTree = "<group>"; };
@@ -2926,6 +2929,8 @@
 		2A0EE171218850220058336E /* TrainingEvaluation（评价） */ = {
 			isa = PBXGroup;
 			children = (
+				2A34BBF2218A8EB7008888F3 /* EvaluationView.h */,
+				2A34BBF3218A8EB7008888F3 /* EvaluationView.m */,
 				2A37AC71218995E800821B85 /* TrainingEvaluationHeaderView.h */,
 				2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */,
 				2A37AC6E2189844100821B85 /* TrainingEvaluationCell.h */,
@@ -3222,6 +3227,7 @@
 				11261422216C7C68005D0B40 /* OrderManagementViewController.m in Sources */,
 				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
 				0C121470215637E80028368D /* SignInViewController.m in Sources */,
+				2A34BBF4218A8EB7008888F3 /* EvaluationView.m in Sources */,
 				0CC8333C217B113400C1E5B9 /* AddCardViewController.m in Sources */,
 				0C1214582156157F0028368D /* DrugReviewView.m in Sources */,
 				0C37F5D8212E904700E357EB /* MyCardViewController.m in Sources */,

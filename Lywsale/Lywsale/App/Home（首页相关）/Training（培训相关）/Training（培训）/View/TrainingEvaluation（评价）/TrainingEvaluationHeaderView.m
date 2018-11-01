@@ -7,6 +7,7 @@
 //
 
 #import "TrainingEvaluationHeaderView.h"
+#import "EvaluationView.h"
 
 @interface TrainingEvaluationHeaderView ()
 
@@ -61,6 +62,12 @@
     [scoreBtn setTitle:@"我要评论" forState:UIControlStateNormal];
     [scoreBtn setTitleColor:kMainColor forState:UIControlStateNormal];
     [self addSubview:scoreBtn];
+    
+    [[scoreBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+       
+        EvaluationView *evaluationView = [[EvaluationView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+        [[UIApplication sharedApplication].keyWindow addSubview:evaluationView];
+    }];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - 0.5, ScreenWidth, 0.5)];
     lineView.backgroundColor = [UIColor colorWithHexString:@"0xEEF0F3"];
