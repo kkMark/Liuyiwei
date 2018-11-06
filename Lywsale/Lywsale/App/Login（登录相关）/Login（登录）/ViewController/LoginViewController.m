@@ -57,6 +57,8 @@
             
             if (dict != nil && ![dict isEqual:[NSNull null]]) {
                 
+                [[NSNotificationCenter defaultCenter] postNotificationName:UpdateView object:nil];
+                
                 SetUserDefault(Account, account);
                 SetUserDefault(UserName, dict[@"memberName"]);
                 SetUserDefault(UserID, dict[@"memberId"]);

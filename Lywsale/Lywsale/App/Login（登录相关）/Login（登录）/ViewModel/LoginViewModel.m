@@ -17,7 +17,7 @@
 {
     self.urlString = [self getRequestUrl:@[@"members", @"login"]];
     self.parameters = @{ @"memberMob" : account, @"memberPass" : password };
-    [self requestAFMode:PatchModel success:success failure:failure];
+    [self requestAFMode:PatchMode success:success failure:failure];
 }
 
 @end

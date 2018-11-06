@@ -11,11 +11,15 @@
 @interface ActivityDetailsView ()
 
 @property (nonatomic, strong) UIScrollView *bgScrollView;
+@property (nonatomic, strong) UILabel *contecnt;
+@property (nonatomic, strong) UIView *bonusBgview;
+@property (nonatomic, strong) UIView *remarkView;
 
 @end
 
 @implementation ActivityDetailsView
 @synthesize bgScrollView;
+@synthesize contecnt;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
@@ -34,14 +38,14 @@
     [self.bgScrollView addSubview:headerView];
     
     // 说明
-    UIView *remarkView = [self remarkViewWithFrame:CGRectMake(10, headerView.maxY, self.bgScrollView.width - 20, 0)];
-    [self.bgScrollView addSubview:remarkView];
+    self.remarkView = [self remarkViewWithFrame:CGRectMake(10, headerView.maxY, self.bgScrollView.width - 20, 0)];
+    [self.bgScrollView addSubview:self.remarkView];
     
     // 奖励
-    UIView *rewardView = [self rewardViewWithFrame:CGRectMake(10, remarkView.maxY + 15, self.bgScrollView.width - 20, 0)];
-    [self.bgScrollView addSubview:rewardView];
+    self.bonusBgview = [self rewardViewWithFrame:CGRectMake(10, self.remarkView.maxY + 15, self.bgScrollView.width - 20, 0)];
+    [self.bgScrollView addSubview:self.bonusBgview];
     
-    self.bgScrollView.contentSize = CGSizeMake(0, rewardView.maxY);
+    self.bgScrollView.contentSize = CGSizeMake(0, self.bonusBgview.maxY);
 }
 
 #pragma mark - lazy
@@ -105,6 +109,7 @@
     return titleView;
 }
 
+// 奖励
 - (UIView *)rewardViewWithFrame:(CGRect)rect {
     
     UIView *bgView = [[UIView alloc] initWithFrame:rect];
@@ -119,7 +124,7 @@
     [bgView addSubview:titleView];
     
     // 内容
-    UILabel *contecnt = [[UILabel alloc] initWithFrame:CGRectMake(10, titleView.maxY + 15, bgView.width - 20, 0)];
+    contecnt = [[UILabel alloc] initWithFrame:CGRectMake(10, titleView.maxY + 15, bgView.width - 20, 0)];
     contecnt.text = @"奖励制度亦称“奖金制度”。规定奖励权限的划分、奖励形式、奖励标准及奖金来源的准则，是工资制度的一个组成部分。我国目前实行的奖金范围是： (1) 生产 (业务) 奖。包括超产奖、质量奖、安全 (无事故) 奖、考核各项经济指标的综合奖、提前竣工奖、外轮速遣奖、年终奖 (劳动分红) 等；(2) 节约奖。包括各种动力、燃料、原材料等节约奖。";
     contecnt.font = [UIFont systemFontOfSize:14];
     contecnt.textColor = kMainTextColor;
@@ -150,6 +155,7 @@
     for (int i = 0; i < titles.count; i++) {
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, y, 0, 0)];
+        titleLabel.tag = i + 10;
         titleLabel.text = titles[i];
         titleLabel.font = [UIFont systemFontOfSize:14];
         titleLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
@@ -158,13 +164,13 @@
         [bgView addSubview:titleLabel];
         
         UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.maxX + 20, y, 0, 0)];
+        contentLabel.tag = i + 100;
         contentLabel.text = titles[i];
         contentLabel.font = [UIFont systemFontOfSize:14];
         contentLabel.textColor = kMainTextColor;
         contentLabel.numberOfLines = 0;
         
         if ([contentLabel.text isEqualToString:@"活动简介"]) {
-            
             contentLabel.text = @"活动是由共同目的联合起来并完成一定社会职能的动作的总和。活动由目的、动机和动作构成，具有完整的结构系统。苏联心理学家从20年代起就对活动进行了一系列研究。";
         }
         
@@ -178,6 +184,36 @@
     
     bgView.height = y;
     return bgView;
+}
+
+- (void)setModel:(SalesTaskModel *)model {
+    
+    _model = model;
+    
+    for (int i = 0; i < 4; i++) {
+        
+        NSString *titleString = model.producerName;
+        if (i == 1) titleString = model.strategiesModel.strategyName;
+        else if (i == 2) titleString = model.startDate;
+        else if (i == 3) titleString = model.description;
+        
+        UILabel *contentLabel = [self viewWithTag:i + 100];
+        contentLabel.text = titleString;
+        contentLabel.height = [contentLabel getTextHeight];
+        
+        if (i == 3) {
+            
+            UILabel *titleLabel = [self viewWithTag:i + 10];
+            contentLabel.textAlignment = contentLabel.height > titleLabel.height ? NSTextAlignmentLeft : NSTextAlignmentRight;
+            
+            self.remarkView.height = contentLabel.maxY + 15;
+        }
+    }
+    
+    contecnt.text = model.rewardRuleDescription;
+    contecnt.height = [contecnt getTextHeight];
+    self.bonusBgview.y = self.remarkView.maxY + 15;
+    self.bonusBgview.height = contecnt.maxY + 15;
 }
 
 @end

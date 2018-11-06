@@ -10,11 +10,21 @@
 
 @implementation LearningTaskViewModel
 
-- (void)getTask:(int)page success:(RequestSuccess)success failure:(RequestFailure)failure
+- (void)getTask:(int)page type:(LearningTaskType)type success:(RequestSuccess)success failure:(RequestFailure)failure
 {
-    NSString *urlString = [NSString stringWithFormat:@"trainTasks$inProgress?pageNum=%d&pageSize=10", page];
+    NSArray *arr = @[@"PENDING", @"FINISHED", @"EXPIRED"];
+    NSString *urlString = [NSString stringWithFormat:@"trainTasks$enterable?pageNum=%d&pageSize=10&status=%@", page, arr[type]];
     
     self.port = @"18082";
+    self.urlString = [self getRequestUrl:@[urlString]];
+    [self requestAFMode:GetMode success:success failure:failure];
+}
+
+- (void)getCountWithSuccess:(RequestSuccess)success failure:(RequestFailure)failure {
+    
+    NSString *urlString = [NSString stringWithFormat:@"trainTaskCounts$salesman"];
+    
+    self.port = @"38082";
     self.urlString = [self getRequestUrl:@[urlString]];
     [self requestAFMode:GetMode success:success failure:failure];
 }

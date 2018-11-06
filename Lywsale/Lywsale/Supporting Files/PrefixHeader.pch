@@ -29,5 +29,6 @@
 #import "AppMacro.h"
 #import "EnumMacro.h"
 #import "UserDefaultsMacro.h"
+#import "NotiMacro.h"
 
 #endif /* PrefixHeader_pch */

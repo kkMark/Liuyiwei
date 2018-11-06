@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SalesTaskModel.h"
 
 @interface ActivityDetailsView : UIView
+
+@property (nonatomic, strong) SalesTaskModel *model;
 
 @end

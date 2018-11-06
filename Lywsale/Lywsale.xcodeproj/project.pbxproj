@@ -200,6 +200,7 @@
 		2A37AC6D2189842E00821B85 /* TrainingEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */; };
 		2A37AC702189844100821B85 /* TrainingEvaluationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */; };
 		2A37AC73218995E800821B85 /* TrainingEvaluationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */; };
+		2A97A7D421916A8600CD8C24 /* MembersListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A97A7D321916A8600CD8C24 /* MembersListModel.m */; };
 		2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */; };
 		2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E42186E8B00066EF28 /* TrainingView.m */; };
 		2AEF091E2190362800ABA20F /* ActivityDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF091D2190362800ABA20F /* ActivityDetailsViewModel.m */; };
@@ -592,6 +593,9 @@
 		2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationCell.m; sourceTree = "<group>"; };
 		2A37AC71218995E800821B85 /* TrainingEvaluationHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationHeaderView.h; sourceTree = "<group>"; };
 		2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationHeaderView.m; sourceTree = "<group>"; };
+		2A97A7D0219141C300CD8C24 /* NotiMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotiMacro.h; sourceTree = "<group>"; };
+		2A97A7D221916A8600CD8C24 /* MembersListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembersListModel.h; sourceTree = "<group>"; };
+		2A97A7D321916A8600CD8C24 /* MembersListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembersListModel.m; sourceTree = "<group>"; };
 		2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewController.h; sourceTree = "<group>"; };
 		2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewController.m; sourceTree = "<group>"; };
 		2ADBF9E32186E8B00066EF28 /* TrainingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingView.h; sourceTree = "<group>"; };
@@ -2172,6 +2176,7 @@
 				0CDDB559212734A100D42F76 /* AppMacro.h */,
 				0CDDB56C212735AE00D42F76 /* EnumMacro.h */,
 				0CDDB558212734A100D42F76 /* UserDefaultsMacro.h */,
+				2A97A7D0219141C300CD8C24 /* NotiMacro.h */,
 			);
 			path = "Macro（宏）";
 			sourceTree = "<group>";
@@ -2559,6 +2564,7 @@
 			isa = PBXGroup;
 			children = (
 				2AEF091B2190361100ABA20F /* ViewModel */,
+				2A97A7D121916A6000CD8C24 /* Model */,
 				0CF0EF8C2152223C00DF2DFA /* View */,
 				0CF0EF8B2152223100DF2DFA /* ViewController */,
 			);
@@ -2945,6 +2951,15 @@
 			path = "TrainingEvaluation（评价）";
 			sourceTree = "<group>";
 		};
+		2A97A7D121916A6000CD8C24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A97A7D221916A8600CD8C24 /* MembersListModel.h */,
+				2A97A7D321916A8600CD8C24 /* MembersListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2ADBF9DA2186E6780066EF28 /* Training（培训相关） */ = {
 			isa = PBXGroup;
 			children = (
@@ -3239,6 +3254,7 @@
 				11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */,
 				0C121473215638170028368D /* SignInView.m in Sources */,
 				11261422216C7C68005D0B40 /* OrderManagementViewController.m in Sources */,
+				2A97A7D421916A8600CD8C24 /* MembersListModel.m in Sources */,
 				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
 				0C121470215637E80028368D /* SignInViewController.m in Sources */,
 				2A34BBF4218A8EB7008888F3 /* EvaluationView.m in Sources */,

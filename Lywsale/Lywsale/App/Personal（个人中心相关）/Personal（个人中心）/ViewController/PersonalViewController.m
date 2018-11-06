@@ -27,13 +27,17 @@
     
     self.navigationItem.title = @"个人中心";
     self.view.backgroundColor = [UIColor whiteColor];
-    self.personalView.dataSources = @[@"我的足迹", @"我的银行卡", @"我的档案", @"帮助反馈", @"切换为店员", @"更多"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+    
+    self.personalView.dataSources = @[@"我的足迹", @"我的银行卡", @"我的档案", @"帮助反馈", @"切换为店员", @"更多"];
+    if ([GetUserDefault(UserType) isEqualToString:@"0"]) {
+        self.personalView.dataSources = @[@"我的足迹", @"我的银行卡", @"我的档案", @"帮助反馈", @"更多"];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -66,7 +70,13 @@
         [personalView setConversionBlock:^{
            
             @strongify(self);
-            [self alertWithTitle:@"温馨提示" msg:@"确定后，由药店模式切换为店员模式" isShowCancel:YES complete:nil];
+            [self alertWithTitle:@"温馨提示" msg:@"确定后，由药店模式切换为店员模式" isShowCancel:YES complete:^{
+                
+                SetUserDefault(UserType, @"0");
+                [[NSNotificationCenter defaultCenter] postNotificationName:UpdateView object:nil];
+                
+                [self.tabBarController setSelectedIndex:0];
+            }];
         }];
     }
     

@@ -27,6 +27,11 @@ typedef enum : NSUInteger {
  */
 - (void)getSalesTask:(int)page type:(TaskType)type success:(RequestSuccess)success failure:(RequestFailure)failure;;
 
+/**
+     获取动销任务数量
+ */
+- (void)getCountWithSuccess:(RequestSuccess)success failure:(RequestFailure)failure;
+
 @end
 
 NS_ASSUME_NONNULL_END

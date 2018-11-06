@@ -57,7 +57,7 @@
         headerLine.centerX = ScreenWidth / 3 / 2;
         [headerView addSubview:headerLine];
         
-        NSArray *titles = @[@"待处理 (10)", @"已完成 (10)", @"已过期 (10)"];
+        NSArray *titles = @[@"待处理 (0)", @"已完成 (0)", @"已过期 (0)"];
         for (int i = 0; i < 3; i++) {
             
             UIButton *titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -121,17 +121,44 @@
 #pragma mark - request
 - (void)request {
     
-    [[SalesTaskViewModel new] getSalesTask:self.page type:0 success:^(NSDictionary *dict) {
+    [self getDataSource];
+}
+
+- (void)getCount {
+    
+    [[SalesTaskViewModel new] getCountWithSuccess:^(NSDictionary *dict) {
+        
+        NSArray *count = @[dict[@"totalPending"], dict[@"totalFinished"], dict[@"totalExpired"]];
+        NSArray *titles = @[@"待处理 (%@)", @"已完成 (%@)", @"已过期 (%@)"];
+        for (int i = 0; i < 3; i++) {
+            
+            NSString *title = [NSString stringWithFormat:titles[i], count[i]];
+            UIButton *titleBtn = [self.view viewWithTag:i + 10];
+            [titleBtn setTitle:title forState:UIControlStateNormal];
+        }
+        
+    } failure:^(NSError *error) {
+    
+    }];
+}
+
+- (void)getDataSource {
+    
+    [[SalesTaskViewModel new] getSalesTask:self.page type:self.type success:^(NSDictionary *dict) {
         
         NSMutableArray *arr = [NSMutableArray array];
         for (NSDictionary *tempDict in dict[@"list"]) {
             
             SalesTaskModel *model = [SalesTaskModel new];
             [model setValuesForKeysWithDictionary:tempDict];
+            
+            model.taskType = self.type;
             [arr addObject:model];
         }
         
         self.salesTaskView.dataSources = arr;
+        
+        [self getCount];
         
     } failure:^(NSError *error) {
         

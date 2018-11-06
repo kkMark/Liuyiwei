@@ -21,4 +21,14 @@
     [self requestAFMode:GetMode success:success failure:failure];
 }
 
+
+- (void)getCountWithSuccess:(RequestSuccess)success failure:(RequestFailure)failure {
+    
+    NSString *urlString = [NSString stringWithFormat:@"dongxiaoStrategyCounts$salesman"];
+    
+    self.port = @"38082";
+    self.urlString = [self getRequestUrl:@[urlString]];
+    [self requestAFMode:GetMode success:success failure:failure];
+}
+
 @end

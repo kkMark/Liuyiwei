@@ -27,7 +27,7 @@
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"UpdateView" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UpdateView object:nil] subscribeNext:^(NSNotification * _Nullable x) {
         [self updateView];
     }];
 }

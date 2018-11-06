@@ -91,7 +91,7 @@
     }
     
     if ([GetUserDefault(Access_Token) length] != 0) {
-        NSString *token = [NSString stringWithFormat:@"bearer%@",GetUserDefault(Access_Token)];
+        NSString *token = [NSString stringWithFormat:@"bearer %@",GetUserDefault(Access_Token)];
         [request setValue:token forHTTPHeaderField:@"authorization"];
     }
     
@@ -135,8 +135,8 @@
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     manager.requestSerializer = [[AFJSONRequestSerializer alloc]init];
     
-    if (GetUserDefault(Access_Token) != nil && ![GetUserDefault(Access_Token) isEqualToString:@"nil"]) {
-        [manager.requestSerializer setValue:[NSString stringWithFormat:@"bearer%@",GetUserDefault(Access_Token)] forHTTPHeaderField:@"authorization"];
+    if ([GetUserDefault(Access_Token) length] != 0) {
+        [manager.requestSerializer setValue:[NSString stringWithFormat:@"bearer %@",GetUserDefault(Access_Token)] forHTTPHeaderField:@"authorization"];
     }
     
     DebugLog(@"================ requestURL =====================\n %@\n%@", self.urlString, self.parameters);
@@ -145,7 +145,7 @@
         
         [manager GET:self.urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject, task.response.URL);
+            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n", self.parameters, responseObject);
             
             if (success){
                 success(responseObject);
@@ -170,8 +170,8 @@
         
         [manager POST:self.urlString parameters:self.parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject, task.response.URL);
-            
+            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n", self.parameters, responseObject);
+
             if (success){
                 success(responseObject);
             };
@@ -190,7 +190,7 @@
         }];
     }
     
-    if (mode == PatchModel) {
+    if (mode == PatchMode) {
 
         [manager PATCH:self.urlString parameters:self.parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             

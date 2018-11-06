@@ -7,9 +7,12 @@
 //
 
 #import "BaseHttpRequest.h"
+#import "SalesTaskModel.h"
 
 @interface ActivityDetailsViewModel : BaseHttpRequest
 
 - (void)getDataSourceWithId:(NSString *)idString success:(RequestSuccess)success failure:(RequestFailure)failure;
+
+- (void)getMembersListWithSuccess:(RequestSuccess)success failure:(RequestFailure)failure;
 
 @end

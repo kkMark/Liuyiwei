@@ -11,6 +11,7 @@
 #import "ActivityDetailsView.h"
 #import "SalesSendView.h"
 #import "PerformView.h"
+#import "ActivityDetailsViewModel.h"
 
 @interface ActivityDetailsViewController () <UIScrollViewDelegate>
 
@@ -35,6 +36,7 @@
     [self setTitle:@"活动详情"];
     [self addNavRight];
     [self uploadBtn];
+    [self getMembersList];
 }
 
 - (void)addNavRight {
@@ -76,7 +78,7 @@
         }
         else if ([title isEqualToString:@"分发给店员"]) {
             
-            [self.bgScrollView setContentOffset:CGPointMake(ScreenWidth, 0) animated:YES];
+            self.headerView.index = 1;
         }
     }];
 }
@@ -109,6 +111,7 @@
     if (!detailsView) {
         
         detailsView = [[ActivityDetailsView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, self.bgScrollView.height - 45)];
+        detailsView.model = self.model;
         [self.bgScrollView addSubview:detailsView];
     }
     
@@ -141,6 +144,7 @@
         bgScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - self.navHeight)];
         bgScrollView.pagingEnabled = YES;
         bgScrollView.delegate = self;
+        bgScrollView.backgroundColor = kPageBgColor;
         [self.view addSubview:bgScrollView];
         
         if ([GetUserDefault(UserType) isEqualToString:@"1"]) {
@@ -161,6 +165,24 @@
     
     NSInteger index = scrollView.contentOffset.x / scrollView.width;    
     self.headerView.index = index;
+}
+
+- (void)getDataSource {
+    
+    [[ActivityDetailsViewModel new] getDataSourceWithId:self.model.id success:^(NSDictionary *dict) {
+        
+        NSLog(@"%@", dict);
+        
+    } failure:nil];
+}
+
+- (void)getMembersList {
+    
+    [[ActivityDetailsViewModel new] getMembersListWithSuccess:^(NSDictionary *dict) {
+    
+        NSLog(@"%@", dict);
+        
+    } failure:nil];
 }
 
 @end

@@ -8,15 +8,27 @@
 
 #import "BaseHttpRequest.h"
 
+typedef enum : NSUInteger {
+    
+    PENDING = 0,
+    FINISHED,
+    EXPIRED,
+    
+} LearningTaskType;
+
 @interface LearningTaskViewModel : BaseHttpRequest
 
-
 /**
-     获取动销任务
+     获取学习任务
  
      @param page 页数
  */
-- (void)getTask:(int)page success:(RequestSuccess)success failure:(RequestFailure)failure;
+- (void)getTask:(int)page type:(LearningTaskType)type success:(RequestSuccess)success failure:(RequestFailure)failure;
 
+
+/**
+     获取任务数量
+ */
+- (void)getCountWithSuccess:(RequestSuccess)success failure:(RequestFailure)failure;
 
 @end

@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) LearningTaskView *learningTaskView;
 @property (nonatomic, strong) UIView *headerView;
+@property (nonatomic, assign) int page;
+@property (nonatomic, assign) int type;
 
 @end
 
@@ -26,9 +28,11 @@
     [super viewDidLoad];
     
     self.title = @"学习任务";
+    self.page = 1;
+    self.type = 0;
     self.learningTaskView.dataSources = @[@"", @"", @""];
     
-    [self getTask];
+    [self request];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -42,7 +46,7 @@
     
     if (!headerView) {
         
-        NSArray *titles = @[@"未学习 (10)", @"已学习 (10)"];
+        NSArray *titles = @[@"未学习 (0)", @"已学习 (0)"];
         
         headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 45)];
         headerView.backgroundColor = [UIColor whiteColor];
@@ -67,6 +71,8 @@
             
             [[titleBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
                 
+                self.page = 0;
+                self.type = i;
                 [UIView animateWithDuration:0.25 animations:^{
                     
                     for (int index = 0; index < titles.count; index++) {
@@ -106,13 +112,43 @@
     return learningTaskView;
 }
 
-- (void)getTask {
+
+#pragma mark - request
+- (void)request {
     
-    [[LearningTaskViewModel new] getTask:1 success:^(NSDictionary *dict) {
+    [self getTask];
+}
+
+- (void)getCount {
+    
+    [[LearningTaskViewModel new] getCountWithSuccess:^(NSDictionary *dict) {
+        
+        NSArray *count = @[dict[@"totalPending"], dict[@"totalStudied"]];
+        NSArray *titles = @[@"未学习 (%@)", @"已学习 (%@)"];
+        for (int i = 0; i < 3; i++) {
+            
+            NSString *title = [NSString stringWithFormat:titles[i], count[i]];
+            UIButton *titleBtn = [self.view viewWithTag:i + 10];
+            [titleBtn setTitle:title forState:UIControlStateNormal];
+        }
         
     } failure:^(NSError *error) {
         
     }];
 }
+
+
+- (void)getTask {
+    
+    [[LearningTaskViewModel new] getTask:self.page type:self.type success:^(NSDictionary *dict) {
+        
+        [self getCount];
+        
+    } failure:^(NSError *error) {
+        
+    }];
+}
+
+
 
 @end

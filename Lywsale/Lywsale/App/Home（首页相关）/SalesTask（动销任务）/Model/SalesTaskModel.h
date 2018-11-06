@@ -58,4 +58,6 @@
 /// 奖励规则描述
 @property (nonatomic, copy) NSString *rewardRuleDescription;
 
+@property (nonatomic, assign) int taskType;
+
 @end

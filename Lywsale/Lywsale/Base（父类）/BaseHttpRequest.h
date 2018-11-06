@@ -15,7 +15,7 @@ typedef enum : NSUInteger {
 
     GetMode = 0,
     PostMode,
-    PatchModel
+    PatchMode
     
 } RequestMode;
 
