@@ -17,11 +17,11 @@
     [dateFormatter setDateFormat:@"yyyyMM"];
     
     NSString *currentDate = [dateFormatter stringFromDate:[NSDate date]];
+    NSString *urlString = [NSString stringWithFormat:@"shoppingGuide/getSalesSituation?shoppingGuideId=%@&yearMonth=%@&shoporgId=%@", GetUserDefault(UserID), currentDate, GetUserDefault(ShoporgId)];
     
     self.port = @"18082";
-    self.urlString = [self getRequestUrl:@[@"shoppingGuide", @"getSalesSituation"]];
-    self.parameters = @{ @"shoppingGuideId" : GetUserDefault(UserID), @"month" : currentDate };
-    [self requestMode:PostMode success:success failure:failure];
+    self.urlString = [self getRequestUrl:@[urlString]];
+    [self requestAFMode:GetMode success:success failure:failure];
 }
 
 @end

@@ -22,6 +22,10 @@
 @property (nonatomic, strong) UILabel *stopTImeLabel;
 /// 状态图标
 @property (nonatomic, strong) UIImageView *stateImgView;
+/// 新任务
+@property (nonatomic, strong) UIImageView *taskNewBgImgView;
+/// 任务标题
+@property (nonatomic, strong) UILabel *taskLabel;
 
 @end
 
@@ -62,19 +66,21 @@
     taskLabel.textColor = [UIColor whiteColor];
     taskLabel.textAlignment = NSTextAlignmentCenter;
     [taskBgImgView addSubview:taskLabel];
+    self.taskLabel = taskLabel;
     
     UIImage *newTaskBgImg = [UIImage imageNamed:@"taskBgImg_2"];
-    UIImageView *newTaskBgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(taskBgImgView.maxX + 10, 0, 0, 0)];
-    newTaskBgImgView.image = newTaskBgImg;
-    newTaskBgImgView.size = newTaskBgImg.size;
-    [bgView addSubview:newTaskBgImgView];
-    
-    UILabel *newTaskLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, newTaskBgImgView.width, newTaskBgImgView.height)];
+    self.taskNewBgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(taskBgImgView.maxX + 10, 0, 0, 0)];
+    self.taskNewBgImgView.hidden = YES;
+    self.taskNewBgImgView.image = newTaskBgImg;
+    self.taskNewBgImgView.size = newTaskBgImg.size;
+    [bgView addSubview:self.taskNewBgImgView];
+
+    UILabel *newTaskLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.taskNewBgImgView.width, self.taskNewBgImgView.height)];
     newTaskLabel.text = @"新任务";
     newTaskLabel.font = [UIFont systemFontOfSize:12];
     newTaskLabel.textColor = [UIColor whiteColor];
     newTaskLabel.textAlignment = NSTextAlignmentCenter;
-    [newTaskBgImgView addSubview:newTaskLabel];
+    [self.taskNewBgImgView addSubview:newTaskLabel];
     
     // 标题
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(spacing, taskBgImgView.maxY + 10, 0, 20)];
@@ -90,7 +96,8 @@
     self.timeLabel.text = @"2018-05-18 18:11";
     self.timeLabel.font = [UIFont systemFontOfSize:12];
     self.timeLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
-    self.timeLabel.width = [self.timeLabel getTextWidth];
+    self.timeLabel.width = [self.timeLabel getTextWidth] + 50;
+    self.timeLabel.textAlignment = NSTextAlignmentRight;
     self.timeLabel.x = bgView.width - self.timeLabel.width - 10;
     [bgView addSubview:self.timeLabel];
     
@@ -118,6 +125,7 @@
         [bgView addSubview:titleLabel];
         
         UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleLabel.maxX, titleLabel.y, 0, 15)];
+        contentLabel.tag = i + 500;
         contentLabel.text = contents[i];
         contentLabel.font = [UIFont systemFontOfSize:14];
         contentLabel.textColor = kMainTextColor;
@@ -132,6 +140,27 @@
     }
     
     self.cellHeight = bgView.height;
+}
+
+- (void)setModel:(SalesTaskModel *)model {
+    
+    _model = model;
+    self.titleLabel.text = model.name;
+    self.timeLabel.text = model.startDate;
+    
+    for (int i = 0; i < 3; i++) {
+
+        NSString *titleString = model.strategiesModel.reward;
+        if (i == 1) titleString = model.strategiesModel.strategyName;
+        else if (i == 2) titleString = model.endDate;
+
+        UILabel *contentLabel = [self viewWithTag:i + 500];
+        contentLabel.text = titleString;
+        contentLabel.width = [contentLabel getTextWidth];
+    }
+    
+    NSString *title = [model.internal boolValue] ? @"内部任务" : @"平台任务";
+    self.taskLabel.text = title;
 }
 
 @end

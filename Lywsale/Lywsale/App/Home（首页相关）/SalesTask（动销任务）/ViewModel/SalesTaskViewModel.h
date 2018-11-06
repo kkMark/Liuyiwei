@@ -10,6 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef enum : NSUInteger {
+    
+    PENDING = 0,
+    FINISHED,
+    EXPIRED,
+    
+} TaskType;
+
 @interface SalesTaskViewModel : BaseHttpRequest
 
 /**
@@ -17,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
      @param page 页数
  */
-- (void)getSalesTask:(int)page success:(RequestSuccess)success failure:(RequestFailure)failure;;
+- (void)getSalesTask:(int)page type:(TaskType)type success:(RequestSuccess)success failure:(RequestFailure)failure;;
 
 @end
 

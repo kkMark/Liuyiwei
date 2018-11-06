@@ -60,6 +60,8 @@
                 SetUserDefault(Account, account);
                 SetUserDefault(UserName, dict[@"memberName"]);
                 SetUserDefault(UserID, dict[@"memberId"]);
+                SetUserDefault(ShoporgId, dict[@"shoporgId"]);
+                SetUserDefault(OrgId, dict[@"orgId"]);
                 SetUserDefault(Token_Type, dict[@"tokenMsg"][@"token_type"]);
                 SetUserDefault(Access_Token, dict[@"tokenMsg"][@"access_token"]);
                 SetUserDefault(Refresh_Token, dict[@"tokenMsg"][@"refresh_token"]);

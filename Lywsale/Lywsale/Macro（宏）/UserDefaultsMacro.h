@@ -17,6 +17,10 @@
 #define UserID          @"userId"
 // 用户类型 0 - 店员， 1 - 店长
 #define UserType        @"userType"
+// 门店id
+#define ShoporgId       @"shoporgId"
+// 连锁机构id
+#define OrgId           @"orgId"
 // token类型
 #define Token_Type      @"token_type"
 // 访问token

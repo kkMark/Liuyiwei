@@ -45,6 +45,7 @@
         cell.backgroundColor = self.backgroundColor;
     }
     
+    cell.model = self.dataSources[indexPath.section];
     self.cellHeight = cell.cellHeight;
     return cell;
 }
@@ -58,6 +59,7 @@
     if (self.goViewControllerBlock) {
         
         UIViewController *vc = [NSClassFromString(@"ActivityDetailsViewController") new];
+        [vc setValue:self.dataSources[indexPath.section] forKey:@"model"];
         self.goViewControllerBlock(vc);
     }
 }

@@ -159,9 +159,7 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     
-    NSInteger index = scrollView.contentOffset.x / scrollView.width;
-    NSLog(@"scrollViewDidEndDecelerating = %zd", index);
-    
+    NSInteger index = scrollView.contentOffset.x / scrollView.width;    
     self.headerView.index = index;
 }
 

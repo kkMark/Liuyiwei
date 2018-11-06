@@ -11,13 +11,14 @@
 
 @implementation SalesTaskViewModel
 
-- (void)getSalesTask:(int)page success:(RequestSuccess)success failure:(RequestFailure)failure {
+- (void)getSalesTask:(int)page type:(TaskType)type success:(nonnull RequestSuccess)success failure:(nonnull RequestFailure)failure {
     
-    NSString *urlString = [NSString stringWithFormat:@"dongxiaoActivities$enterable?pageNumber=%d&pageSize=10", page];
+    NSArray *arr = @[@"PENDING", @"FINISHED", @"EXPIRED"];
+    NSString *urlString = [NSString stringWithFormat:@"dongxiaoActivities$enterable?status=%@&pageNumber=%d&pageSize=10", arr[type], page];
     
-    self.port = @"18082";
+    self.port = @"38082";
     self.urlString = [self getRequestUrl:@[urlString]];
-    [self requestMode:GetMode success:success failure:failure];
+    [self requestAFMode:GetMode success:success failure:failure];
 }
 
 @end

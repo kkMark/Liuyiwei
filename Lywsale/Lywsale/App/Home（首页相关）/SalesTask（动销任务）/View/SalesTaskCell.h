@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SalesTaskModel.h"
 
 @interface SalesTaskCell : UITableViewCell
 
 @property (nonatomic, assign) float cellHeight;
+@property (nonatomic, strong) SalesTaskModel *model;
 
 @end

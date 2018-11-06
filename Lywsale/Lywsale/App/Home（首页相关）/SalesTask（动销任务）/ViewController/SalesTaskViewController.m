@@ -9,12 +9,14 @@
 #import "SalesTaskViewController.h"
 #import "SalesTaskViewModel.h"
 #import "SalesTaskView.h"
+#import "SalesTaskModel.h"
 
 @interface SalesTaskViewController ()
 
 @property (nonatomic, strong) SalesTaskView *salesTaskView;
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, assign) int page;
+@property (nonatomic, assign) int type;
 
 @end
 
@@ -28,7 +30,7 @@
     
     self.title = @"动销任务";
     self.page = 1;
-    self.salesTaskView.dataSources = @[@"", @"", @""];
+    self.type = 0;
 
     [self initNavRight];
     [self request];
@@ -68,7 +70,13 @@
             [titleBtn setTitleColor:kMainColor forState:UIControlStateSelected];
             [headerView addSubview:titleBtn];
             
+            @weakify(self);
             [[titleBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+             
+                @strongify(self);
+                self.type = i;
+                self.page = 1;
+                [self request];
                 
                 [UIView animateWithDuration:0.25 animations:^{
                    
@@ -94,7 +102,7 @@
         
         salesTaskView = [[SalesTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         salesTaskView.y = self.headerView.height;
-        salesTaskView.height = self.view.height - self.headerView.height - self.navHeight;
+        salesTaskView.height = ScreenHeight - self.headerView.height - self.navHeight;
         salesTaskView.backgroundColor = kPageBgColor;
         [self.view addSubview:salesTaskView];
         
@@ -113,12 +121,19 @@
 #pragma mark - request
 - (void)request {
     
-    [[SalesTaskViewModel new] getSalesTask:self.page success:^(NSDictionary *dict) {
+    [[SalesTaskViewModel new] getSalesTask:self.page type:0 success:^(NSDictionary *dict) {
         
+        NSMutableArray *arr = [NSMutableArray array];
+        for (NSDictionary *tempDict in dict[@"list"]) {
+            
+            SalesTaskModel *model = [SalesTaskModel new];
+            [model setValuesForKeysWithDictionary:tempDict];
+            [arr addObject:model];
+        }
         
+        self.salesTaskView.dataSources = arr;
         
     } failure:^(NSError *error) {
-        
         
     }];
 }

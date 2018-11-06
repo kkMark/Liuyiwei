@@ -16,7 +16,7 @@
     
     self.port = @"18082";
     self.urlString = [self getRequestUrl:@[urlString]];
-    [self requestMode:GetMode success:success failure:failure];
+    [self requestAFMode:GetMode success:success failure:failure];
 }
 
 @end

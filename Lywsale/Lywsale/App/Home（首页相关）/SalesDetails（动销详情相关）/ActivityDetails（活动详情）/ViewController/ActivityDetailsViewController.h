@@ -7,7 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "SalesTaskModel.h"
 
 @interface ActivityDetailsViewController : BaseViewController
+
+@property (nonatomic, strong) SalesTaskModel *model;
 
 @end

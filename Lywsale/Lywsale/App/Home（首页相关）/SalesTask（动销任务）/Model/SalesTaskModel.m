@@ -9,5 +9,23 @@
 #import "SalesTaskModel.h"
 
 @implementation SalesTaskModel
+@synthesize description;
+
+- (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *,id> *)keyedValues {
+    
+    [super setValuesForKeysWithDictionary:keyedValues];
+    
+    self.strategiesModel = [StrategiesModel new];
+    
+    NSArray *arr = keyedValues[@"strategies"];
+    if (arr.count > 0) {
+        [self.strategiesModel setValuesForKeysWithDictionary:arr[0]];
+    }
+}
+
+@end
+
+@implementation StrategiesModel
+
 
 @end
