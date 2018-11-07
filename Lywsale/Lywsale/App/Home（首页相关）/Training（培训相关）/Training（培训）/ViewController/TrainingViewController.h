@@ -7,7 +7,17 @@
 //
 
 #import "BaseViewController.h"
+#import "LearningTaskModel.h"
+#import "EvaluationModel.h"
+#import "TrainingViewModel.h"
 
 @interface TrainingViewController : BaseViewController
+
+@property (nonatomic, copy) NSString *idString;
+@property (nonatomic, assign) BOOL isCollection;
+@property (nonatomic, strong) LearningTaskModel *model;
+
+/// 提交评分
+- (void)submitEvaluation:(EvaluationModel *)model;
 
 @end

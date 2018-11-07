@@ -145,7 +145,7 @@
         
         [manager GET:self.urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n", self.parameters, responseObject);
+            DebugLog(@"\n=========== response ===========\n%@\n", responseObject);
             
             if (success){
                 success(responseObject);
@@ -155,8 +155,8 @@
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
-            NSLog(@"%@", error);
-            
+            NSLog(@"请求错误: 状态码 = %zd", error.code);
+
             if (failure) {
                 failure(error);
             }
@@ -180,8 +180,8 @@
 
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
-            NSLog(@"%@", error);
-            
+            NSLog(@"请求错误: 状态码 = %zd", error.code);
+
             if (failure) {
                 failure(error);
             }
@@ -204,13 +204,37 @@
 
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
-            NSLog(@"%@", error);
-            
+            NSLog(@"请求错误: 状态码 = %zd", error.code);
+
             if (failure) {
                 failure(error);
             }
             
             [viewController hideHudAnimated];
+        }];
+    }
+    
+    if (mode == DeleteMode) {
+        
+        [manager DELETE:self.urlString parameters:self.parameters success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+           
+            DebugLog(@"\n=========== response ===========\n%@:\n\n%@\n%@\n", self.parameters, responseObject, task.response.URL);
+            
+            if (success){
+                success(responseObject);
+            };
+            
+            [viewController hideHudAnimated];
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            
+            NSLog(@"请求错误: 状态码 = %zd", error.code);
+            
+            if (failure) {
+                failure(error);
+            }
+            
+            [viewController hideHudAnimated];            
         }];
     }
 }

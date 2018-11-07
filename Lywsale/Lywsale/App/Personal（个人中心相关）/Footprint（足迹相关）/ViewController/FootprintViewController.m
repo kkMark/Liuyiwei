@@ -9,11 +9,13 @@
 #import "FootprintViewController.h"
 #import "FootprintView.h"
 #import "PublicHeaderView.h"
+#import "FootprintViewModel.h"
 
 @interface FootprintViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) FootprintView *footprintView;
 @property (nonatomic, strong) PublicHeaderView *headerView;
+@property (nonatomic, assign) int page;
 
 @end
 
@@ -41,6 +43,16 @@
         [headerView setSelectIndexBlock:^(NSInteger index) {
             
             @strongify(self);
+            if (index == 0) {
+                
+            }
+            else if (index == 1) {
+                [self getLearing];
+            }
+            else {
+                [self getCollection];
+            }
+            
             self.footprintView.currentIndex = index;
         }];
     }
@@ -57,6 +69,31 @@
     }
     
     return footprintView;
+}
+
+
+#pragma mark - request
+- (void)getCollection {
+    
+    [[FootprintViewModel new] getCollectionWithPage:self.page success:^(NSDictionary *dict) {
+        
+        
+        
+    } failure:^(NSError *error) {
+        
+        
+    }];
+}
+
+- (void)getLearing {
+    
+    [[FootprintViewModel new] getLerrningWithPage:self.page success:^(NSDictionary *dict) {
+        
+        
+        
+    } failure:^(NSError *error) {
+    
+    }];
 }
 
 @end

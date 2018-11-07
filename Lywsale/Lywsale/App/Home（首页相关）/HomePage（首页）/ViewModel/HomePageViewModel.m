@@ -19,7 +19,7 @@
     NSString *currentDate = [dateFormatter stringFromDate:[NSDate date]];
     NSString *urlString = [NSString stringWithFormat:@"shoppingGuide/getSalesSituation?shoppingGuideId=%@&yearMonth=%@&shoporgId=%@", GetUserDefault(UserID), currentDate, GetUserDefault(ShoporgId)];
     
-    self.port = @"18082";
+    self.port = @"38082";
     self.urlString = [self getRequestUrl:@[urlString]];
     [self requestAFMode:GetMode success:success failure:failure];
 }

@@ -18,6 +18,7 @@
 @property (nonatomic, strong) UILabel *vedioName;
 @property (nonatomic, strong) UILabel *vedioRemark;
 @property (nonatomic, strong) UIScrollView *bgScrollView;
+@property (nonatomic, strong) UIButton *collectionBtn;
 @property (nonatomic, strong) PublicHeaderView *headerView;
 @property (nonatomic, strong) TrainingSelectionView *selectionView;
 @property (nonatomic, strong) TrainingEvaluationView *evaluationView;
@@ -31,6 +32,7 @@
 @synthesize selectionView;
 @synthesize evaluationView;
 
+
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
@@ -41,6 +43,28 @@
     return self;
 }
 
+
+#pragma mark - set
+- (void)setModel:(TrainingModel *)model {
+    
+    _model = model;
+    self.vedioName.text = model.name;
+    self.collectionBtn.selected = [model.collected boolValue];
+    
+    self.vedioRemark.text = model.description;
+    self.vedioRemark.height = [self.vedioRemark getTextHeight];
+    self.vedioBgView.height = self.vedioRemark.maxY + 40;
+    self.bgScrollView.backgroundColor = kPageBgColor;
+}
+
+- (void)setEvaluations:(NSArray *)evaluations {
+    
+    _evaluations = evaluations;
+    self.evaluationView.evaluations = evaluations;
+}
+
+
+#pragma mark - UI
 - (void)setupSubviews {
     
     self.backgroundColor = kPageBgColor;
@@ -52,25 +76,25 @@
     self.vedioView.backgroundColor = [UIColor blackColor];
     [vedioBgView addSubview:self.vedioView];
     
-    UIButton *collectionBtn = [self collectionBtnWithFrame:CGRectMake(0, self.vedioView.maxY + 10, 0, 35)];
-    collectionBtn.x = vedioBgView.width - collectionBtn.width - 15;
-    [vedioBgView addSubview:collectionBtn];
+    self.collectionBtn = [self collectionBtnWithFrame:CGRectMake(0, self.vedioView.maxY + 10, 0, 35)];
+    self.collectionBtn.x = vedioBgView.width - self.collectionBtn.width - 15;
+    [vedioBgView addSubview:self.collectionBtn];
     
     self.vedioName = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 0, 20)];
-    self.vedioName.centerY = collectionBtn.centerY;
-    self.vedioName.width = vedioBgView.width - collectionBtn.width - 30;
+    self.vedioName.centerY = self.collectionBtn.centerY;
+    self.vedioName.width = vedioBgView.width - self.collectionBtn.width - 30;
     self.vedioName.text = @"博路定用药培训";
     self.vedioName.font = [UIFont systemFontOfSize:16];
     self.vedioName.textColor = kMainTextColor;
     [vedioBgView addSubview:self.vedioName];
     
-    UILabel *remarkTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, collectionBtn.maxY + 10, vedioBgView.width, 15)];
+    UILabel *remarkTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, self.collectionBtn.maxY + 10, vedioBgView.width, 15)];
     remarkTitleLabel.text = @"课程简介";
     remarkTitleLabel.font = [UIFont systemFontOfSize:14];
     remarkTitleLabel.textColor = kMainTextColor;
     [vedioBgView addSubview:remarkTitleLabel];
     
-    self.vedioRemark = [[UILabel alloc] initWithFrame:CGRectMake(15, remarkTitleLabel.maxY + 3, vedioBgView.width - 30, 60)];
+    self.vedioRemark = [[UILabel alloc] initWithFrame:CGRectMake(15, remarkTitleLabel.maxY + 7, vedioBgView.width - 30, 60)];
     self.vedioRemark.text = @"心理学家唐纳德·达顿和亚瑟·阿伦设计了一场经典的实验：吸引力测试，他们把男士分为两组放到不同的桥上，一座桥不但高而且";
     self.vedioRemark.font = [UIFont systemFontOfSize:12];
     self.vedioRemark.textColor = [UIColor colorWithHexString:@"0x666666"];
@@ -80,15 +104,19 @@
     [vedioBgView addSubview:self.vedioRemark];
     
     UIButton *lookBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    lookBtn.frame = CGRectMake(0, self.vedioRemark.maxY, vedioBgView.width, 40);
     lookBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     [lookBtn setImage:[UIImage imageNamed:@"training_more"] forState:UIControlStateNormal];
     [lookBtn setTitle:@"查看全文" forState:UIControlStateNormal];
     [lookBtn setTitleColor:[UIColor colorWithHexString:@"0x666666"] forState:UIControlStateNormal];
     [vedioBgView addSubview:lookBtn];
     
+    [lookBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.vedioRemark.mas_bottom);
+        make.left.right.equalTo(self.vedioBgView);
+        make.height.equalTo(@40);
+    }];
+    
     self.vedioBgView.height = lookBtn.maxY;
-    self.bgScrollView.backgroundColor = kPageBgColor;
 }
     
 - (UIButton *)collectionBtnWithFrame:(CGRect)rect {
@@ -110,8 +138,18 @@
     collectionBtn.width = titleLabel.maxX;
     [collectionBtn addSubview:titleLabel];
     
+    @weakify(self);
     [[collectionBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-       
+        
+        @strongify(self);
+        collectionBtn.selected = !collectionBtn.selected;
+        if (self.collectionBlock) {
+            self.collectionBlock(collectionBtn.selected);
+        }
+    }];
+    
+    [RACObserve(collectionBtn, selected) subscribeNext:^(id  _Nullable x) {
+        
         NSString *imgString = collectionBtn.selected ? @"training_collection_sel" : @"training_collection";
         collectionImgView.image = [UIImage imageNamed:imgString];
     }];
@@ -179,8 +217,8 @@
         bgScrollView.showsHorizontalScrollIndicator = NO;
         [self addSubview:bgScrollView];
         
-        self.selectionView.dataSources = @[@"", @"", @""];
-        self.evaluationView.dataSources = @[@"", @"", @""];
+        self.selectionView.dataSources = @[];
+        self.evaluationView.dataSources = @[];
     }
     
     return bgScrollView;

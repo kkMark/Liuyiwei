@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EvaluationModel.h"
 
 @interface TrainingEvaluationHeaderView : UIView
 
-@property (nonatomic, copy) NSString *number;
+@property (nonatomic, strong) EvaluationModel *model;
 
 @end

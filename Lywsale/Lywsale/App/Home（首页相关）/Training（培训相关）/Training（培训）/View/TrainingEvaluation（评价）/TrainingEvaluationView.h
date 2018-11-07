@@ -10,4 +10,7 @@
 
 @interface TrainingEvaluationView : BaseTableView
 
+/// 评论
+@property (nonatomic, strong) NSArray *evaluations;
+
 @end

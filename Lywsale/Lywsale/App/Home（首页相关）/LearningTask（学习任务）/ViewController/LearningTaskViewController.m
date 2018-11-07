@@ -9,6 +9,7 @@
 #import "LearningTaskViewController.h"
 #import "LearningTaskView.h"
 #import "LearningTaskViewModel.h"
+#import "LearningTaskModel.h"
 
 @interface LearningTaskViewController ()
 
@@ -30,7 +31,6 @@
     self.title = @"学习任务";
     self.page = 1;
     self.type = 0;
-    self.learningTaskView.dataSources = @[@"", @"", @""];
     
     [self request];
 }
@@ -38,7 +38,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    self.learningTaskView.height = self.view.height;
 }
 
 #pragma mark - lazy
@@ -73,6 +72,8 @@
                 
                 self.page = 0;
                 self.type = i;
+                [self request];
+                
                 [UIView animateWithDuration:0.25 animations:^{
                     
                     for (int index = 0; index < titles.count; index++) {
@@ -97,7 +98,7 @@
         
         learningTaskView = [[LearningTaskView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         learningTaskView.y = self.headerView.maxY;
-        learningTaskView.height = ScreenHeight - self.headerView.height - self.navHeight;
+        learningTaskView.height = ScreenHeight - self.headerView.maxY - self.navHeight;
         learningTaskView.backgroundColor = kPageBgColor;
         [self.view addSubview:learningTaskView];
         
@@ -125,7 +126,7 @@
         
         NSArray *count = @[dict[@"totalPending"], dict[@"totalStudied"]];
         NSArray *titles = @[@"未学习 (%@)", @"已学习 (%@)"];
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < titles.count; i++) {
             
             NSString *title = [NSString stringWithFormat:titles[i], count[i]];
             UIButton *titleBtn = [self.view viewWithTag:i + 10];
@@ -141,6 +142,18 @@
 - (void)getTask {
     
     [[LearningTaskViewModel new] getTask:self.page type:self.type success:^(NSDictionary *dict) {
+        
+        NSMutableArray *arr = [NSMutableArray array];
+        for (NSDictionary *tempDict in dict[@"list"]) {
+            
+            LearningTaskModel *model = [LearningTaskModel new];
+            [model setValuesForKeysWithDictionary:tempDict];
+            
+            model.taskType = self.type;
+            [arr addObject:model];
+        }
+        
+        self.learningTaskView.dataSources = arr;
         
         [self getCount];
         

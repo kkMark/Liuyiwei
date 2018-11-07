@@ -31,4 +31,7 @@
 #import "UserDefaultsMacro.h"
 #import "NotiMacro.h"
 
+// Tool
+#import "AppTool.h"
+
 #endif /* PrefixHeader_pch */

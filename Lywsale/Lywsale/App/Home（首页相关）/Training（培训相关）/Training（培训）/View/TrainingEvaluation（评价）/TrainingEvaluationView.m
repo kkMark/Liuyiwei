@@ -21,12 +21,27 @@
 @implementation TrainingEvaluationView
 @synthesize headerView;
 
+#pragma mark - set
+- (void)setEvaluations:(NSArray *)evaluations {
+    
+    _evaluations = evaluations;
+    if (evaluations.count > 0) {
+        self.headerView.model = evaluations[0];
+        self.headerView.hidden = NO;
+    }
+    else self.headerView.hidden = YES;
+    
+    self.dataSources = evaluations;
+}
+
+
 #pragma mark - lazy
 - (TrainingEvaluationHeaderView *)headerView {
     
     if (!headerView) {
         
         headerView = [[TrainingEvaluationHeaderView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0)];
+        headerView.hidden = YES;
     }
     
     return headerView;
@@ -50,6 +65,7 @@
         cell = [[TrainingEvaluationCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
+    cell.model = self.dataSources[indexPath.row];
     self.cellHeight = cell.cellHeight;
     return cell;
 }

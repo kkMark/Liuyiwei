@@ -10,4 +10,6 @@
 
 @interface EvaluationView : UIView
 
+@property (nonatomic, copy) void (^evaluationBlock)(NSString *content, int scoce);
+
 @end

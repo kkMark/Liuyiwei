@@ -12,10 +12,10 @@
 
 - (void)getTask:(int)page type:(LearningTaskType)type success:(RequestSuccess)success failure:(RequestFailure)failure
 {
-    NSArray *arr = @[@"PENDING", @"FINISHED", @"EXPIRED"];
+    NSArray *arr = @[@"IN_PROGRESS", @"ENDED"];
     NSString *urlString = [NSString stringWithFormat:@"trainTasks$enterable?pageNum=%d&pageSize=10&status=%@", page, arr[type]];
     
-    self.port = @"18082";
+    self.port = @"38082";
     self.urlString = [self getRequestUrl:@[urlString]];
     [self requestAFMode:GetMode success:success failure:failure];
 }

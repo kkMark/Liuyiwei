@@ -24,10 +24,13 @@
 @property (nonatomic, strong) UIImageView *learningBgImgView;
 /// 状态图标
 @property (nonatomic, strong) UIImageView *stateImgView;
+/// 背景
+@property (nonatomic, strong) UIView *bgView;
 
 @end
 
 @implementation LearningTaskCell
+@synthesize bgView;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
@@ -44,7 +47,7 @@
     
     float spacing = 15;
     
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 0)];
+    bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 0, ScreenWidth - 30, 0)];
     bgView.backgroundColor = [UIColor whiteColor];
     bgView.layer.cornerRadius = 2;
     bgView.layer.shadowColor = [UIColor grayColor].CGColor;
@@ -80,7 +83,8 @@
     self.timeLabel.text = @"2018-05-18 18:11";
     self.timeLabel.font = [UIFont systemFontOfSize:12];
     self.timeLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
-    self.timeLabel.width = [self.timeLabel getTextWidth];
+    self.timeLabel.width = [self.timeLabel getTextWidth] + 30;
+    self.timeLabel.textAlignment = NSTextAlignmentRight;
     self.timeLabel.x = bgView.width - self.timeLabel.width - 10;
     [bgView addSubview:self.timeLabel];
     
@@ -103,13 +107,12 @@
     self.dayLabel.attributedText = attStr;
     
     // 备注
-    self.remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(spacing, lineView.maxY + spacing, 0, 0)];
+    self.remarkLabel = [[UILabel alloc] initWithFrame:CGRectMake(spacing, lineView.maxY + spacing, 0, 35)];
     self.remarkLabel.text = @"完成博路定知识培训，即可参与博路定动销活动！";
     self.remarkLabel.font = [UIFont systemFontOfSize:13];
     self.remarkLabel.textColor = kMainTextColor;
     self.remarkLabel.numberOfLines = 0;
     self.remarkLabel.width = bgView.width - self.dayLabel.width - spacing * 2;
-    self.remarkLabel.height = [self.remarkLabel getTextHeight];
     self.dayLabel.centerY = self.remarkLabel.centerY;
     [bgView addSubview:self.remarkLabel];
     
@@ -128,6 +131,26 @@
     self.cellHeight = bgView.height;
     
     self.dayLabel.hidden = arc4random() % 2;
+    self.stateImgView.hidden = !self.dayLabel.hidden;
+}
+
+- (void)setModel:(LearningTaskModel *)model {
+    
+    _model = model;
+    
+    self.titleLabel.text = model.trainName;
+    self.timeLabel.text = model.startDate;
+    self.remarkLabel.text = model.description;
+    
+    float height = [self.remarkLabel getTextHeight];
+    self.remarkLabel.height = height > 35 ? height : 35;
+    
+    self.dayLabel.centerY = self.remarkLabel.centerY;
+    self.bgView.height = self.remarkLabel.maxY + 15;
+    self.cellHeight = bgView.height;
+    self.stateImgView.centerY = self.cellHeight / 2;
+    
+    self.dayLabel.hidden = model.taskType;
     self.stateImgView.hidden = !self.dayLabel.hidden;
 }
 

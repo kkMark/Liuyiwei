@@ -34,6 +34,9 @@
     // 头像
     self.headerImgView = [[UIImageView alloc] initWithFrame:CGRectMake(15, 15, 30, 30)];
     self.headerImgView.image = [UIImage imageNamed:@"TestHeadImg"];
+    self.headerImgView.contentMode = UIViewContentModeScaleAspectFit;
+    self.headerImgView.layer.cornerRadius = self.headerImgView.height / 2;
+    self.headerImgView.layer.masksToBounds = YES;
     [self.contentView addSubview:self.headerImgView];
     
     // 评分
@@ -41,6 +44,7 @@
     for (int i = 0; i < 5; i++) {
         
         scoreImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"training_score_sel"]];
+        scoreImgView.tag = i + 2000;
         scoreImgView.size = CGSizeMake(12, 12);
         scoreImgView.centerY = self.headerImgView.centerY;
         scoreImgView.x = ScreenWidth - 20 - 15 * i;
@@ -73,6 +77,32 @@
     [self.contentView addSubview:self.contentLabel];
 
     self.cellHeight = self.contentLabel.maxY + 15;
+}
+
+- (void)setModel:(EvaluationModel *)model {
+    
+    _model = model;
+    
+    self.nameLabel.text = model.evaluationUserName;
+    self.dateLabel.text = model.creationTime;
+    self.contentLabel.text = model.content;
+    self.cellHeight = self.contentLabel.maxY + 15;
+    
+    for (int i = 0; i < 5; i++) {
+        
+        NSString *imgString = @"training_score";
+        if (i < [model.score intValue]) {
+            imgString = @"training_score_sel";
+        }
+        else {
+            imgString = @"training_score";
+        }
+        
+        UIImageView *scoreImgView = [self viewWithTag:2004 - i];
+        scoreImgView.image = [UIImage imageNamed:imgString];
+    }
+    
+    [self.headerImgView sd_setImageWithURL:[NSURL URLWithString:model.headPortrait] placeholderImage:[UIImage imageNamed:@"AppLogo"]];
 }
 
 @end

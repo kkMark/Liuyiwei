@@ -46,6 +46,7 @@
         cell.backgroundColor = self.backgroundColor;
     }
     
+    cell.model = self.dataSources[indexPath.section];
     self.cellHeight = cell.cellHeight;
     return cell;
 }
@@ -68,7 +69,11 @@
         if (self.goViewControllerBlock) {
             
             NSString *vcName = @"TrainingViewController";
-            self.goViewControllerBlock([NSClassFromString(vcName) new]);
+            UIViewController *vc = [NSClassFromString(vcName) new];
+            
+            LearningTaskModel *model = self.dataSources[indexPath.section];
+            [vc setValue:model.trainId forKey:@"idString"];
+            self.goViewControllerBlock(vc);
         }
     }
 }

@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TrainingModel.h"
 
 @interface TrainingView : UIView
+
+/// 是否收藏
+@property (nonatomic, copy) void (^collectionBlock)(BOOL isCollection);
+
+/// 培训信息
+@property (nonatomic, strong) TrainingModel *model;
+/// 评论
+@property (nonatomic, strong) NSArray *evaluations;
 
 @end

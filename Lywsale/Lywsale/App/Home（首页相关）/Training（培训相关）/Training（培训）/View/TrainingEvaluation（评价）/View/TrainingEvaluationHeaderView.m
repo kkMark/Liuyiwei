@@ -8,6 +8,7 @@
 
 #import "TrainingEvaluationHeaderView.h"
 #import "EvaluationView.h"
+#import "TrainingViewController.h"
 
 @interface TrainingEvaluationHeaderView ()
 
@@ -27,6 +28,29 @@
     return self;
 }
 
+#pragma mark - set
+- (void)setModel:(EvaluationModel *)model {
+    
+    _model = model;
+    self.titleLabel.text = [NSString stringWithFormat:@"学员评论（%@）", model.evaluationCount];
+    
+    for (int i = 0; i < 5; i++) {
+        
+        NSString *imgString = @"training_score";
+        if (i < [model.avgScore intValue]) {
+            imgString = @"training_score_sel";
+        }
+        else {
+            imgString = @"training_score";
+        }
+        
+        UIImageView *scoreImgView = [self viewWithTag:i + 1000];
+        scoreImgView.image = [UIImage imageNamed:imgString];
+    }
+}
+
+
+#pragma mark - UI
 - (void)setupSubviews {
     
     self.backgroundColor = [UIColor whiteColor];
@@ -41,7 +65,8 @@
     UIImageView *scoreImgView;
     for (int i = 0; i < 5; i++) {
         
-        scoreImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"training_score_sel"]];
+        scoreImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"training_score"]];
+        scoreImgView.tag = i + 1000;
         scoreImgView.size = CGSizeMake(12, 12);
         scoreImgView.y = self.titleLabel.maxY + 5;
         scoreImgView.x = 15 + 17 * i;
@@ -65,8 +90,18 @@
     
     [[scoreBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
        
+        TrainingViewController *vc = (TrainingViewController *)[AppTool getCurrentViewController];
+        
         EvaluationView *evaluationView = [[EvaluationView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
-        [[UIApplication sharedApplication].keyWindow addSubview:evaluationView];
+        [evaluationView setEvaluationBlock:^(NSString *content, int score) {
+            
+            EvaluationModel *model = [EvaluationModel new];
+            model.score = [NSString stringWithFormat:@"%d", score];
+            model.content = content;
+            model.unnamed = @"0";
+            [vc submitEvaluation:model];
+        }];
+        [vc.view addSubview:evaluationView];
     }];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - 0.5, ScreenWidth, 0.5)];

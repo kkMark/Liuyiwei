@@ -11,6 +11,8 @@
 @interface EvaluationView ()
 
 @property (nonatomic, strong) UIView *bgView;
+@property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, assign) int score;
 
 @end
 
@@ -68,15 +70,17 @@
                 
                 [tempBtn setBackgroundImage:[UIImage imageNamed:imgString] forState:UIControlStateNormal];
             }
+            
+            self.score = i;
         }];
         
         scoreBtnY = scoreBtn.maxY;
     }
     
     // 文本框
-    UITextView *textView = [self textViewWithFrame:CGRectMake(titleLabel.x, scoreBtnY + 20, self.width, 0)];
-    textView.height = bgView.height - textView.y - 45;
-    [bgView addSubview:textView];
+    self.textView = [self textViewWithFrame:CGRectMake(titleLabel.x, scoreBtnY + 20, self.width, 0)];
+    self.textView.height = bgView.height - self.textView.y - 45;
+    [bgView addSubview:self.textView];
     
     @weakify(self);
     [UIView animateWithDuration:0.25 animations:^{
@@ -94,6 +98,24 @@
     [bottomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [bottomBtn setTitle:@"发  送" forState:UIControlStateNormal];
     [bgView addSubview:bottomBtn];
+    
+    [[bottomBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+        if (self.evaluationBlock) {
+            
+            if (self.textView.text.length == 0) {
+                return [self makeToast:@"评论不可为空~"];
+            }
+            
+            if (self.score == 0) {
+                return [self makeToast:@"请为该视频进行评分"];
+            }
+            
+            self.evaluationBlock(self.textView.text, self.score);
+            
+            [self close];
+        }
+    }];
 }
 
 - (UITextView *)textViewWithFrame:(CGRect)frame {
@@ -123,7 +145,10 @@
 - (void)close {
     
     [UIView animateWithDuration:0.25 animations:^{
+        
         self.alpha = 0;
+        self.bgView.y = self.height;
+        
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];

@@ -200,7 +200,18 @@
 		2A37AC6D2189842E00821B85 /* TrainingEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */; };
 		2A37AC702189844100821B85 /* TrainingEvaluationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */; };
 		2A37AC73218995E800821B85 /* TrainingEvaluationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */; };
+		2A4A5DBA2191B0F70035E712 /* LearingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A5DB92191B0F70035E712 /* LearingModel.m */; };
+		2A4A5DBD2191BA980035E712 /* EvaluationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A5DBC2191BA980035E712 /* EvaluationModel.m */; };
+		2A4A5DC12191C74D0035E712 /* AppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A5DC02191C74D0035E712 /* AppTool.m */; };
 		2A97A7D421916A8600CD8C24 /* MembersListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A97A7D321916A8600CD8C24 /* MembersListModel.m */; };
+		2A97A7D8219176DE00CD8C24 /* LearningTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A97A7D7219176DE00CD8C24 /* LearningTaskModel.m */; };
+		2A97A7DD21917D8900CD8C24 /* FootprintViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A97A7DC21917D8900CD8C24 /* FootprintViewModel.m */; };
+		2A97A7E0219194D700CD8C24 /* TrainingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A97A7DF219194D700CD8C24 /* TrainingViewModel.m */; };
+		2A97A7E32191978700CD8C24 /* TrainingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A97A7E22191978700CD8C24 /* TrainingModel.m */; };
+		2AC2D66621927C7D00B27CF5 /* ExamHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D66521927C7D00B27CF5 /* ExamHomeViewController.m */; };
+		2AC2D66921927C9000B27CF5 /* ExamHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D66821927C9000B27CF5 /* ExamHomeView.m */; };
+		2AC2D66C21927C9A00B27CF5 /* ExamHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D66B21927C9A00B27CF5 /* ExamHomeViewModel.m */; };
+		2AC2D66F21927CA200B27CF5 /* ExamHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D66E21927CA200B27CF5 /* ExamHomeModel.m */; };
 		2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */; };
 		2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E42186E8B00066EF28 /* TrainingView.m */; };
 		2AEF091E2190362800ABA20F /* ActivityDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF091D2190362800ABA20F /* ActivityDetailsViewModel.m */; };
@@ -593,9 +604,31 @@
 		2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationCell.m; sourceTree = "<group>"; };
 		2A37AC71218995E800821B85 /* TrainingEvaluationHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationHeaderView.h; sourceTree = "<group>"; };
 		2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationHeaderView.m; sourceTree = "<group>"; };
+		2A4A5DB82191B0F70035E712 /* LearingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearingModel.h; sourceTree = "<group>"; };
+		2A4A5DB92191B0F70035E712 /* LearingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearingModel.m; sourceTree = "<group>"; };
+		2A4A5DBB2191BA980035E712 /* EvaluationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvaluationModel.h; sourceTree = "<group>"; };
+		2A4A5DBC2191BA980035E712 /* EvaluationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EvaluationModel.m; sourceTree = "<group>"; };
+		2A4A5DBF2191C74D0035E712 /* AppTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppTool.h; sourceTree = "<group>"; };
+		2A4A5DC02191C74D0035E712 /* AppTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTool.m; sourceTree = "<group>"; };
 		2A97A7D0219141C300CD8C24 /* NotiMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotiMacro.h; sourceTree = "<group>"; };
 		2A97A7D221916A8600CD8C24 /* MembersListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembersListModel.h; sourceTree = "<group>"; };
 		2A97A7D321916A8600CD8C24 /* MembersListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembersListModel.m; sourceTree = "<group>"; };
+		2A97A7D6219176DE00CD8C24 /* LearningTaskModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearningTaskModel.h; sourceTree = "<group>"; };
+		2A97A7D7219176DE00CD8C24 /* LearningTaskModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearningTaskModel.m; sourceTree = "<group>"; };
+		2A97A7DB21917D8900CD8C24 /* FootprintViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FootprintViewModel.h; sourceTree = "<group>"; };
+		2A97A7DC21917D8900CD8C24 /* FootprintViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FootprintViewModel.m; sourceTree = "<group>"; };
+		2A97A7DE219194D700CD8C24 /* TrainingViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewModel.h; sourceTree = "<group>"; };
+		2A97A7DF219194D700CD8C24 /* TrainingViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewModel.m; sourceTree = "<group>"; };
+		2A97A7E12191978700CD8C24 /* TrainingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingModel.h; sourceTree = "<group>"; };
+		2A97A7E22191978700CD8C24 /* TrainingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingModel.m; sourceTree = "<group>"; };
+		2AC2D66421927C7D00B27CF5 /* ExamHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamHomeViewController.h; sourceTree = "<group>"; };
+		2AC2D66521927C7D00B27CF5 /* ExamHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamHomeViewController.m; sourceTree = "<group>"; };
+		2AC2D66721927C9000B27CF5 /* ExamHomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamHomeView.h; sourceTree = "<group>"; };
+		2AC2D66821927C9000B27CF5 /* ExamHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamHomeView.m; sourceTree = "<group>"; };
+		2AC2D66A21927C9A00B27CF5 /* ExamHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamHomeViewModel.h; sourceTree = "<group>"; };
+		2AC2D66B21927C9A00B27CF5 /* ExamHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamHomeViewModel.m; sourceTree = "<group>"; };
+		2AC2D66D21927CA200B27CF5 /* ExamHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamHomeModel.h; sourceTree = "<group>"; };
+		2AC2D66E21927CA200B27CF5 /* ExamHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamHomeModel.m; sourceTree = "<group>"; };
 		2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewController.h; sourceTree = "<group>"; };
 		2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewController.m; sourceTree = "<group>"; };
 		2ADBF9E32186E8B00066EF28 /* TrainingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingView.h; sourceTree = "<group>"; };
@@ -931,26 +964,12 @@
 		0C37F560212D526800E357EB /* Footprint（足迹相关） */ = {
 			isa = PBXGroup;
 			children = (
-				0C37F561212D526800E357EB /* ViewModel */,
-				0C37F562212D526800E357EB /* Model */,
+				2A97A7DA21917D7600CD8C24 /* ViewModel */,
+				2A97A7D921917D7600CD8C24 /* Model */,
 				0C37F563212D526800E357EB /* View */,
 				0C37F564212D526800E357EB /* ViewController */,
 			);
 			path = "Footprint（足迹相关）";
-			sourceTree = "<group>";
-		};
-		0C37F561212D526800E357EB /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		0C37F562212D526800E357EB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0C37F563212D526800E357EB /* View */ = {
@@ -1850,18 +1869,11 @@
 			isa = PBXGroup;
 			children = (
 				0C5E026C2179BEBC008B3D91 /* ViewModel */,
-				0C84049821354B7D00305197 /* Model */,
+				2A97A7D5219176D500CD8C24 /* Model */,
 				0C84049921354B7D00305197 /* View */,
 				0C84049A21354B7D00305197 /* ViewController */,
 			);
 			path = "LearningTask（学习任务）";
-			sourceTree = "<group>";
-		};
-		0C84049821354B7D00305197 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		0C84049921354B7D00305197 /* View */ = {
@@ -1924,6 +1936,7 @@
 				0C8049E921476E320032B57A /* Reception（接待相关） */,
 				0C84049621354B7D00305197 /* LearningTask（学习任务） */,
 				2ADBF9DA2186E6780066EF28 /* Training（培训相关） */,
+				2AC2D64F21927C5900B27CF5 /* Exam（考试相关） */,
 				0C219601215A1C2C00D2696D /* ResultsSetting（业绩设置） */,
 				0C21960F215A203B00D2696D /* ResultsHistory（历史业绩） */,
 			);
@@ -2445,6 +2458,7 @@
 		0CE1EC3A212901D400A373D7 /* Public（公用） */ = {
 			isa = PBXGroup;
 			children = (
+				2A4A5DC22191C74F0035E712 /* Tool */,
 				11ABF0652170360F00AEDE04 /* GradientRound（渐变圆） */,
 				0C6A9EFF215B2E6800CFB389 /* PublicHeaderView */,
 				0CE1EC482129143100A373D7 /* CustomTextField */,
@@ -2939,16 +2953,33 @@
 		2A0EE171218850220058336E /* TrainingEvaluation（评价） */ = {
 			isa = PBXGroup;
 			children = (
+				2A4A5DBE2191BFD00035E712 /* View */,
+				2A37AC6B2189842E00821B85 /* TrainingEvaluationView.h */,
+				2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */,
+			);
+			path = "TrainingEvaluation（评价）";
+			sourceTree = "<group>";
+		};
+		2A4A5DBE2191BFD00035E712 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				2A34BBF2218A8EB7008888F3 /* EvaluationView.h */,
 				2A34BBF3218A8EB7008888F3 /* EvaluationView.m */,
 				2A37AC71218995E800821B85 /* TrainingEvaluationHeaderView.h */,
 				2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */,
 				2A37AC6E2189844100821B85 /* TrainingEvaluationCell.h */,
 				2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */,
-				2A37AC6B2189842E00821B85 /* TrainingEvaluationView.h */,
-				2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */,
 			);
-			path = "TrainingEvaluation（评价）";
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A4A5DC22191C74F0035E712 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				2A4A5DBF2191C74D0035E712 /* AppTool.h */,
+				2A4A5DC02191C74D0035E712 /* AppTool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		2A97A7D121916A6000CD8C24 /* Model */ = {
@@ -2958,6 +2989,208 @@
 				2A97A7D321916A8600CD8C24 /* MembersListModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2A97A7D5219176D500CD8C24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A97A7D6219176DE00CD8C24 /* LearningTaskModel.h */,
+				2A97A7D7219176DE00CD8C24 /* LearningTaskModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A97A7D921917D7600CD8C24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A4A5DB82191B0F70035E712 /* LearingModel.h */,
+				2A4A5DB92191B0F70035E712 /* LearingModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2A97A7DA21917D7600CD8C24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2A97A7DB21917D8900CD8C24 /* FootprintViewModel.h */,
+				2A97A7DC21917D8900CD8C24 /* FootprintViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AC2D64F21927C5900B27CF5 /* Exam（考试相关） */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D65A21927C5900B27CF5 /* ExamHome（考试首页） */,
+				2AC2D65021927C5900B27CF5 /* ExamContent（考试内容） */,
+				2AC2D65521927C5900B27CF5 /* ExamDetails（考试详情） */,
+				2AC2D65F21927C5900B27CF5 /* ExamResults（考试成绩） */,
+			);
+			path = "Exam（考试相关）";
+			sourceTree = "<group>";
+		};
+		2AC2D65021927C5900B27CF5 /* ExamContent（考试内容） */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D65121927C5900B27CF5 /* Model */,
+				2AC2D65221927C5900B27CF5 /* View */,
+				2AC2D65321927C5900B27CF5 /* ViewController */,
+				2AC2D65421927C5900B27CF5 /* ViewModel */,
+			);
+			path = "ExamContent（考试内容）";
+			sourceTree = "<group>";
+		};
+		2AC2D65121927C5900B27CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AC2D65221927C5900B27CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2AC2D65321927C5900B27CF5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2AC2D65421927C5900B27CF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AC2D65521927C5900B27CF5 /* ExamDetails（考试详情） */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D65621927C5900B27CF5 /* Model */,
+				2AC2D65721927C5900B27CF5 /* View */,
+				2AC2D65821927C5900B27CF5 /* ViewController */,
+				2AC2D65921927C5900B27CF5 /* ViewModel */,
+			);
+			path = "ExamDetails（考试详情）";
+			sourceTree = "<group>";
+		};
+		2AC2D65621927C5900B27CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AC2D65721927C5900B27CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2AC2D65821927C5900B27CF5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2AC2D65921927C5900B27CF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AC2D65A21927C5900B27CF5 /* ExamHome（考试首页） */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D65E21927C5900B27CF5 /* ViewModel */,
+				2AC2D65B21927C5900B27CF5 /* Model */,
+				2AC2D65C21927C5900B27CF5 /* View */,
+				2AC2D65D21927C5900B27CF5 /* ViewController */,
+			);
+			path = "ExamHome（考试首页）";
+			sourceTree = "<group>";
+		};
+		2AC2D65B21927C5900B27CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D66D21927CA200B27CF5 /* ExamHomeModel.h */,
+				2AC2D66E21927CA200B27CF5 /* ExamHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AC2D65C21927C5900B27CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D66721927C9000B27CF5 /* ExamHomeView.h */,
+				2AC2D66821927C9000B27CF5 /* ExamHomeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2AC2D65D21927C5900B27CF5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D66421927C7D00B27CF5 /* ExamHomeViewController.h */,
+				2AC2D66521927C7D00B27CF5 /* ExamHomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2AC2D65E21927C5900B27CF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D66A21927C9A00B27CF5 /* ExamHomeViewModel.h */,
+				2AC2D66B21927C9A00B27CF5 /* ExamHomeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2AC2D65F21927C5900B27CF5 /* ExamResults（考试成绩） */ = {
+			isa = PBXGroup;
+			children = (
+				2AC2D66021927C5900B27CF5 /* Model */,
+				2AC2D66121927C5900B27CF5 /* View */,
+				2AC2D66221927C5900B27CF5 /* ViewController */,
+				2AC2D66321927C5900B27CF5 /* ViewModel */,
+			);
+			path = "ExamResults（考试成绩）";
+			sourceTree = "<group>";
+		};
+		2AC2D66021927C5900B27CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2AC2D66121927C5900B27CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2AC2D66221927C5900B27CF5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2AC2D66321927C5900B27CF5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2ADBF9DA2186E6780066EF28 /* Training（培训相关） */ = {
@@ -2991,6 +3224,10 @@
 		2ADBF9DD2186E84E0066EF28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A97A7E12191978700CD8C24 /* TrainingModel.h */,
+				2A97A7E22191978700CD8C24 /* TrainingModel.m */,
+				2A4A5DBB2191BA980035E712 /* EvaluationModel.h */,
+				2A4A5DBC2191BA980035E712 /* EvaluationModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2998,6 +3235,8 @@
 		2ADBF9DE2186E84F0066EF28 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2A97A7DE219194D700CD8C24 /* TrainingViewModel.h */,
+				2A97A7DF219194D700CD8C24 /* TrainingViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3173,6 +3412,7 @@
 				0C1F77F121555E9A0059E915 /* ReceptionRemarkView.m in Sources */,
 				1126142A216C8185005D0B40 /* OrderManageView.m in Sources */,
 				0C5F2CCA216AF16600801951 /* PerformCell.m in Sources */,
+				2A97A7E0219194D700CD8C24 /* TrainingViewModel.m in Sources */,
 				0CC6B12921281DED004EC6FC /* BaseView.m in Sources */,
 				0CC6B12621281CAB004EC6FC /* LoginViewModel.m in Sources */,
 				2AEF091E2190362800ABA20F /* ActivityDetailsViewModel.m in Sources */,
@@ -3184,6 +3424,7 @@
 				0C399F412137D57C00B5DA6D /* LearningTaskCell.m in Sources */,
 				114A0536214A43FE0021E8ED /* KnowledgeViewController.m in Sources */,
 				0C804A182147BC360032B57A /* MaintenanceCell.m in Sources */,
+				2A4A5DBD2191BA980035E712 /* EvaluationModel.m in Sources */,
 				0CDDB569212734DB00D42F76 /* NSString+ToJSON.m in Sources */,
 				11686F62216AEF670001C3F9 /* CourseSortTableViewCell.m in Sources */,
 				11261439216C9E06005D0B40 /* MemberManagementView.m in Sources */,
@@ -3207,6 +3448,7 @@
 				0C37F5F8212E9C0200E357EB /* FeedbackView.m in Sources */,
 				0C3D8974212AB52C00D02FE0 /* WriteInfoModel.m in Sources */,
 				11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */,
+				2AC2D66921927C9000B27CF5 /* ExamHomeView.m in Sources */,
 				0C5E026B2179BB9C008B3D91 /* DailyTaskViewModel.m in Sources */,
 				0C93B8332182BCD100B8ACBE /* FootprintCell.m in Sources */,
 				0C21960B215A1CAB00D2696D /* ResultsSettingView.m in Sources */,
@@ -3217,6 +3459,7 @@
 				0CDDB5542127342800D42F76 /* BaseModel.m in Sources */,
 				11ABF07C2170969000AEDE04 /* QRMembersViewController.m in Sources */,
 				0CC3FD25216CD9C6001848BE /* AmountCell.m in Sources */,
+				2A97A7D8219176DE00CD8C24 /* LearningTaskModel.m in Sources */,
 				0C3D896E212AB51600D02FE0 /* WriteInfoView.m in Sources */,
 				1141FD122152524500FAF01F /* AnnouncementViewController.m in Sources */,
 				11686F6E216B02640001C3F9 /* DrugSortView.m in Sources */,
@@ -3228,6 +3471,7 @@
 				0C37F5F5212E9BB200E357EB /* FeedbackViewController.m in Sources */,
 				0C804A0C214796040032B57A /* CustomerInfoView.m in Sources */,
 				0CE1EC2A2128F3D700A373D7 /* SelectTypeViewModel.m in Sources */,
+				2A97A7DD21917D8900CD8C24 /* FootprintViewModel.m in Sources */,
 				0C3FD1BD2154DF5200534B8D /* UploadHistoryViewController.m in Sources */,
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
 				0C804A122147A1670032B57A /* BuyCell.m in Sources */,
@@ -3253,6 +3497,7 @@
 				11686F72216B28830001C3F9 /* AnnouncementModel.m in Sources */,
 				11AA45322150FF5600ED7293 /* HomeMessgeView.m in Sources */,
 				0C121473215638170028368D /* SignInView.m in Sources */,
+				2AC2D66F21927CA200B27CF5 /* ExamHomeModel.m in Sources */,
 				11261422216C7C68005D0B40 /* OrderManagementViewController.m in Sources */,
 				2A97A7D421916A8600CD8C24 /* MembersListModel.m in Sources */,
 				0C29CA40212FFD23001A78A0 /* MoreViewController.m in Sources */,
@@ -3273,7 +3518,10 @@
 				0C8404A021354BA200305197 /* SalesTaskView.m in Sources */,
 				11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */,
 				0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */,
+				2AC2D66621927C7D00B27CF5 /* ExamHomeViewController.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
+				2A4A5DC12191C74D0035E712 /* AppTool.m in Sources */,
+				2A4A5DBA2191B0F70035E712 /* LearingModel.m in Sources */,
 				0CF519832160BF390015B16D /* SalesSendListCell.m in Sources */,
 				0CF519802160B9170015B16D /* SalesSendListView.m in Sources */,
 				0CDDB568212734DB00D42F76 /* UILabel+Category.m in Sources */,
@@ -3286,11 +3534,13 @@
 				0C37F5A6212E60D700E357EB /* ArchivesViewController.m in Sources */,
 				0C1F77F4215561C80059E915 /* ReceptionRemarkCell.m in Sources */,
 				0C37F588212D528E00E357EB /* PersonalView.m in Sources */,
+				2AC2D66C21927C9A00B27CF5 /* ExamHomeViewModel.m in Sources */,
 				1160E791217438420040FA6F /* OrderManagementRequest.m in Sources */,
 				0C3FD1C62154E86300534B8D /* UploadImgCell.m in Sources */,
 				0C84047D213528CC00305197 /* DataPanelView.m in Sources */,
 				11261435216C9CDF005D0B40 /* MemberManagementViewController.m in Sources */,
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
+				2A97A7E32191978700CD8C24 /* TrainingModel.m in Sources */,
 				0C7D3C70217485150075427E /* RegisteredModel.m in Sources */,
 				1160E79521743A280040FA6F /* MyAwardsRequest.m in Sources */,
 				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,

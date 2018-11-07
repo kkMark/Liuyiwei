@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EvaluationModel.h"
 
 @interface TrainingEvaluationCell : UITableViewCell
 
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, assign) CGFloat cellHeight;
+
+@property (nonatomic, strong) EvaluationModel *model;
 
 @end

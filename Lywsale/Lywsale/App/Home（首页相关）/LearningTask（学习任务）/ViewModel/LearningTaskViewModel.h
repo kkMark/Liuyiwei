@@ -10,9 +10,8 @@
 
 typedef enum : NSUInteger {
     
-    PENDING = 0,
-    FINISHED,
-    EXPIRED,
+    IN_PROGRESS = 0,
+    ENDED,
     
 } LearningTaskType;
 
