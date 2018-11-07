@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) ExamContentView *contentView;
 @property (nonatomic, assign) int index;
+@property (nonatomic, strong) NSMutableArray *sels;
 
 @end
 
@@ -24,6 +25,11 @@
     [super viewDidLoad];
     
     self.index = 0;
+    self.sels = [NSMutableArray array];
+    for (int i = 0; i < self.contents.count; i++) {
+        [self.sels addObject:@(0)];
+    }
+    
     [self setTitle:@"考试内容"];
     [self initNavRight];
     [self initExamContentView];
@@ -45,6 +51,13 @@
     self.contentView.backgroundColor = kPageBgColor;
     [self.contentView setTitle:model.question content:model.options];
     [self.view addSubview:self.contentView];
+    
+    @weakify(self);
+    [self.contentView setSelIndex:^(int index) {
+
+        @strongify(self);
+        [self.sels replaceObjectAtIndex:self.index withObject:@(index + 1)];
+    }];
 }
 
 - (void)initBottomBtn {
@@ -60,7 +73,7 @@
         [self.view addSubview:button];
         
         [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-           
+            
             if (i == 0) {
                 
                 if (self.index == 0) {
@@ -72,9 +85,14 @@
                 self.index -= 1;
                 ExamContentModel *model = self.contents[self.index];
                 [self.contentView setTitle:model.question content:model.options];
-
+                
+                self.contentView.index = [self.sels[self.index] intValue] - 1;
             }
             else {
+                
+                if ([self.sels[self.index] intValue] == 0) {
+                    return [self.view makeToast:@"请选择答案"];
+                }
                 
                 if (self.index == self.contents.count - 1) {
                     
@@ -85,6 +103,8 @@
                 self.index += 1;
                 ExamContentModel *model = self.contents[self.index];
                 [self.contentView setTitle:model.question content:model.options];
+                
+                self.contentView.index = [self.sels[self.index] intValue] - 1;
             }
         }];
     }

@@ -14,13 +14,31 @@
 @property (nonatomic, strong) UIView *timeView;
 @property (nonatomic, strong) UIView *progressView;
 @property (nonatomic, strong) UILabel *numberLabel;
+@property (nonatomic, strong) NSArray *contents;
 
 @end
 
 @implementation ExamContentView
 
+- (void)setIndex:(int)index {
+    
+    _index = index;
+    
+    for (int i = 0; i < self.contents.count; i++) {
+        
+        UIImageView *tempImgView = [self viewWithTag:i + 20];
+        tempImgView.image = [UIImage imageNamed:@"checkbox_nor"];
+        
+        if (index == i) {
+            tempImgView.image = [UIImage imageNamed:@"checkbox_sel"];
+            
+        }
+    }
+}
+
 - (void)setTitle:(NSString *)title content:(NSArray *)content {
     
+    self.contents = content;
     [self.bgView removeFromSuperview];
     
     // 背景
@@ -102,12 +120,32 @@
 - (void)initTimeViewWithFrame:(CGRect)frame {
     
     self.timeView = [[UIView alloc] initWithFrame:frame];
+    self.timeView.height = 15;
     [self addSubview:self.timeView];
     
     self.numberLabel = [[UILabel alloc] init];
     self.numberLabel.text = @"2/8";
     self.numberLabel.font = [UIFont systemFontOfSize:10];
     self.numberLabel.textColor = [UIColor colorWithHexString:@"0x999999"];
+    self.numberLabel.textAlignment = NSTextAlignmentRight;
+    self.numberLabel.height = 15;
+    self.numberLabel.width = [self.numberLabel getTextWidth] + 10;
+    self.numberLabel.x = self.timeView.width - self.numberLabel.width;
+    
+    UIView *progressBgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.timeView.width - self.numberLabel.width - 5, 5)];
+    progressBgView.centerY = self.timeView.height / 2;
+    progressBgView.layer.cornerRadius = 2.5;
+    progressBgView.layer.masksToBounds = YES;
+    progressBgView.backgroundColor = [UIColor colorWithHexString:@"0xe8e8ee"];
+    [self.timeView addSubview:progressBgView];
+    
+    self.progressView = [[UIView alloc] initWithFrame:progressBgView.frame];
+    self.progressView.y = 0;
+    self.progressView.layer.cornerRadius = 2.5;
+    self.progressView.layer.masksToBounds = YES;
+    self.progressView.backgroundColor = kMainColor;
+    [progressBgView addSubview:self.progressView];
+    
     [self.timeView addSubview:self.numberLabel];
 }
 

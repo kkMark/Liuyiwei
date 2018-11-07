@@ -12,6 +12,7 @@
 
 - (void)setTitle:(NSString *)title content:(NSArray *)content;
 
+@property (nonatomic, assign) int index;
 @property (nonatomic, copy) void (^selIndex)(int index);
 
 @end
