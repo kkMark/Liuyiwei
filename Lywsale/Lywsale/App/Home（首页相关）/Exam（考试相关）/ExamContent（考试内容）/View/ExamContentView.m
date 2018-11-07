@@ -11,6 +11,9 @@
 @interface ExamContentView ()
 
 @property (nonatomic, strong) UIView *bgView;
+@property (nonatomic, strong) UIView *timeView;
+@property (nonatomic, strong) UIView *progressView;
+@property (nonatomic, strong) UILabel *numberLabel;
 
 @end
 
@@ -41,30 +44,43 @@
     float maxY = titleLabel.maxY + 15;
     for (int i = 0; i < content.count; i++) {
         
-        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(15, maxY, titleLabel.width, 1)];
+        NSDictionary *contentDict = content[i];
+        NSString *contentString = [NSString stringWithFormat:@"%@.%@", contentDict[@"key"], contentDict[@"value"]];
+        
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(15, maxY, titleLabel.width, 0.3)];
         lineView.backgroundColor = [UIColor colorWithHexString:@"0xC8CEE9"];
         [self.bgView addSubview:lineView];
         
         UIButton *selBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        selBtn.tag = i + 10;
         selBtn.frame = CGRectMake(20, lineView.maxY, width - 40, 0);
         [self.bgView addSubview:selBtn];
         
         UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(selBtn.width - 20, 0, 18, 18)];
+        imgView.tag = i + 20;
         imgView.image = [UIImage imageNamed:@"checkbox_nor"];
         [selBtn addSubview:imgView];
         
         UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 15, selBtn.width - 20, 0)];
-        contentLabel.text = content[i];
+        contentLabel.text = contentString;
         contentLabel.font = [UIFont systemFontOfSize:14];
         contentLabel.textColor = [UIColor colorWithHexString:@"0x666666"];
         contentLabel.numberOfLines = 0;
+        contentLabel.height = [contentLabel getTextHeight];
         [selBtn addSubview:contentLabel];
         
         [[selBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
             
-            selBtn.selected = !selBtn.selected;
-            NSString *imgString = selBtn.selected ? @"checkbox_sel" : @"checkbox_nor";
-            imgView.image = [UIImage imageNamed:imgString];
+            for (int index = 0; index < content.count; index++) {
+                
+                UIImageView *tempImgView = [self viewWithTag:index + 20];
+                tempImgView.image = [UIImage imageNamed:@"checkbox_nor"];
+                
+                if (index == i) {
+                    tempImgView.image = [UIImage imageNamed:@"checkbox_sel"];
+
+                }
+            }
             
             if (self.selIndex) {
                 self.selIndex(i);
@@ -75,6 +91,24 @@
         imgView.centerY = selBtn.height / 2;
         maxY = selBtn.maxY;
     }
+    
+    self.bgView.height = maxY;
+    
+    CGRect frame = self.bgView.frame;
+    frame.origin.y = self.bgView.maxY + 15;
+    [self initTimeViewWithFrame:frame];
+}
+
+- (void)initTimeViewWithFrame:(CGRect)frame {
+    
+    self.timeView = [[UIView alloc] initWithFrame:frame];
+    [self addSubview:self.timeView];
+    
+    self.numberLabel = [[UILabel alloc] init];
+    self.numberLabel.text = @"2/8";
+    self.numberLabel.font = [UIFont systemFontOfSize:10];
+    self.numberLabel.textColor = [UIColor colorWithHexString:@"0x999999"];
+    [self.timeView addSubview:self.numberLabel];
 }
 
 @end

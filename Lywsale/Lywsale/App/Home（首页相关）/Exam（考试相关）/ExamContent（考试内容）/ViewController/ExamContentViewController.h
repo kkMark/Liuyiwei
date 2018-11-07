@@ -10,4 +10,6 @@
 
 @interface ExamContentViewController : BaseViewController
 
+@property (nonatomic, copy) NSArray *contents;
+
 @end

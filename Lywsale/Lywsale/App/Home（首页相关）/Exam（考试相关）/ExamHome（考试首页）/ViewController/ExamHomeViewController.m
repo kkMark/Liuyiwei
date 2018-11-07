@@ -10,11 +10,13 @@
 #import "ExamHomeViewModel.h"
 #import "ExamHomeView.h"
 #import "ExamContentViewController.h"
+#import "ExamContentModel.h"
 
 @interface ExamHomeViewController ()
 
 @property (nonatomic, strong) ExamHomeView *examHomeView;
 @property (nonatomic, strong) UIButton *bottomBtn;
+@property (nonatomic, copy) NSArray *contents;
 
 @end
 
@@ -61,6 +63,7 @@
          
             @strongify(self);
             ExamContentViewController *vc = [ExamContentViewController new];
+            vc.contents = self.contents;
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }
@@ -74,7 +77,15 @@
     
     [[ExamHomeViewModel new] getExamInfoWithIdString:self.model.examPaperId success:^(NSDictionary *dict) {
        
+        NSMutableArray *arr = [NSMutableArray array];
+        for (NSDictionary *questionDict in dict[@"questions"]) {
+            
+            ExamContentModel *model = [ExamContentModel new];
+            [model setValuesForKeysWithDictionary:questionDict];
+            [arr addObject:model];
+        }
         
+        self.contents = arr;
         
     } failure:^(NSError *error) {
         

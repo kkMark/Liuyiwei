@@ -215,6 +215,7 @@
 		2AC2D67221928B3700B27CF5 /* ExamContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D67121928B3700B27CF5 /* ExamContentViewController.m */; };
 		2AC2D67521928BB500B27CF5 /* ExamDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D67421928BB500B27CF5 /* ExamDetailsViewController.m */; };
 		2AC2D67821928F7C00B27CF5 /* ExamContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D67721928F7C00B27CF5 /* ExamContentView.m */; };
+		2AC2D6FA2192DF7F00B27CF5 /* ExamContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D6F92192DF7F00B27CF5 /* ExamContentModel.m */; };
 		2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */; };
 		2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E42186E8B00066EF28 /* TrainingView.m */; };
 		2AEF091E2190362800ABA20F /* ActivityDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF091D2190362800ABA20F /* ActivityDetailsViewModel.m */; };
@@ -638,6 +639,8 @@
 		2AC2D67421928BB500B27CF5 /* ExamDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamDetailsViewController.m; sourceTree = "<group>"; };
 		2AC2D67621928F7C00B27CF5 /* ExamContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamContentView.h; sourceTree = "<group>"; };
 		2AC2D67721928F7C00B27CF5 /* ExamContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamContentView.m; sourceTree = "<group>"; };
+		2AC2D6F82192DF7F00B27CF5 /* ExamContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamContentModel.h; sourceTree = "<group>"; };
+		2AC2D6F92192DF7F00B27CF5 /* ExamContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamContentModel.m; sourceTree = "<group>"; };
 		2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewController.h; sourceTree = "<group>"; };
 		2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewController.m; sourceTree = "<group>"; };
 		2ADBF9E32186E8B00066EF28 /* TrainingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingView.h; sourceTree = "<group>"; };
@@ -3052,6 +3055,8 @@
 		2AC2D65121927C5900B27CF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2AC2D6F82192DF7F00B27CF5 /* ExamContentModel.h */,
+				2AC2D6F92192DF7F00B27CF5 /* ExamContentModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3573,6 +3578,7 @@
 				1179BAAD217D639300BF97CF /* AddMembersViewController.m in Sources */,
 				0C1214552156152C0028368D /* DrugReviewViewController.m in Sources */,
 				0C2E77B82159C395008DEB3A /* SignInRulesView.m in Sources */,
+				2AC2D6FA2192DF7F00B27CF5 /* ExamContentModel.m in Sources */,
 				0CC6B11D212818DE004EC6FC /* LoginView.m in Sources */,
 				11D1DFCA215A2E6500FF7045 /* KnowledgeRequest.m in Sources */,
 				0CE1EC472129139500A373D7 /* ApplyCell.m in Sources */,
