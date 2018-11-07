@@ -74,6 +74,15 @@
         [bottomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [bottomBtn setTitle:@"考  试" forState:UIControlStateNormal];
         [self.view addSubview:bottomBtn];
+        
+        @weakify(self);
+        [[bottomBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+         
+            @strongify(self);
+            UIViewController *vc = [NSClassFromString(@"ExamHomeViewController") new];
+            [vc setValue:self.model.examTaskModel forKey:@"model"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }
     
     return bottomBtn;

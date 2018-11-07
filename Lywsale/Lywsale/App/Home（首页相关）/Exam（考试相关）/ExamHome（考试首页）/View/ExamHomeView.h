@@ -7,10 +7,10 @@
 //
 
 #import "BaseTableView.h"
-#import "ExamHomeModel.h"
+#import "LearningTaskModel.h"
 
 @interface ExamHomeView : BaseTableView
 
-@property (nonatomic, strong) ExamHomeModel *model;
+@property (nonatomic, strong) ExamTaskModel *model;
 
 @end

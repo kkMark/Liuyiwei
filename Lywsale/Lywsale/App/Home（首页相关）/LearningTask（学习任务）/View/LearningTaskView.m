@@ -72,6 +72,7 @@
             UIViewController *vc = [NSClassFromString(vcName) new];
             
             LearningTaskModel *model = self.dataSources[indexPath.section];
+            [vc setValue:model forKey:@"model"];
             [vc setValue:model.trainId forKey:@"idString"];
             self.goViewControllerBlock(vc);
         }

@@ -9,21 +9,26 @@
 #import "ExamHomeViewController.h"
 #import "ExamHomeViewModel.h"
 #import "ExamHomeView.h"
+#import "ExamContentViewController.h"
 
 @interface ExamHomeViewController ()
 
 @property (nonatomic, strong) ExamHomeView *examHomeView;
+@property (nonatomic, strong) UIButton *bottomBtn;
 
 @end
 
 @implementation ExamHomeViewController
 @synthesize examHomeView;
+@synthesize bottomBtn;
 
 - (void)viewDidLoad {
 
     [super viewDidLoad];
 
-    
+    [self setTitle:@"考试简介"];
+    [self.examHomeView setModel:self.model];
+    [self getExamInfo];
 }
 
 - (ExamHomeView *)examHomeView {
@@ -31,7 +36,7 @@
     if (!examHomeView) {
         
         examHomeView = [[ExamHomeView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
-        examHomeView.height = ScreenHeight - self.navHeight;
+        examHomeView.height = ScreenHeight - self.navHeight - self.bottomBtn.height;
         examHomeView.dataSources = @[@"试卷名称", @"试卷题数", @"考试时间", @"合格标准", @"限制次数"];
         [self.view addSubview:examHomeView];
     }
@@ -39,11 +44,35 @@
     return examHomeView;
 }
 
+- (UIButton *)bottomBtn {
+    
+    if (!bottomBtn) {
+        
+        bottomBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        bottomBtn.backgroundColor = kMainColor;
+        bottomBtn.frame = CGRectMake(0, ScreenHeight - self.navHeight - 45, ScreenWidth, 45);
+        bottomBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+        [bottomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [bottomBtn setTitle:@"开始答题" forState:UIControlStateNormal];
+        [self.view addSubview:bottomBtn];
+        
+        @weakify(self);
+        [[bottomBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+         
+            @strongify(self);
+            ExamContentViewController *vc = [ExamContentViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
+    }
+    
+    return bottomBtn;
+}
+
 
 #pragma mark - request
 - (void)getExamInfo {
     
-    [[ExamHomeViewModel new] getExamInfoWithIdString:self.idString success:^(NSDictionary *dict) {
+    [[ExamHomeViewModel new] getExamInfoWithIdString:self.model.examPaperId success:^(NSDictionary *dict) {
        
         
         

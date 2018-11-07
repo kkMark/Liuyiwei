@@ -136,7 +136,11 @@
     manager.requestSerializer = [[AFJSONRequestSerializer alloc]init];
     
     if ([GetUserDefault(Access_Token) length] != 0) {
-        [manager.requestSerializer setValue:[NSString stringWithFormat:@"bearer %@",GetUserDefault(Access_Token)] forHTTPHeaderField:@"authorization"];
+        
+        NSString *token = [NSString stringWithFormat:@"bearer %@",GetUserDefault(Access_Token)];
+        [manager.requestSerializer setValue:token forHTTPHeaderField:@"authorization"];
+        
+        NSLog(@"%@", token);
     }
     
     DebugLog(@"================ requestURL =====================\n %@\n%@", self.urlString, self.parameters);

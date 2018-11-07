@@ -13,8 +13,11 @@
 
 @interface TrainingViewController : BaseViewController
 
+/// 视频ID
 @property (nonatomic, copy) NSString *idString;
+/// 是否收藏进来的
 @property (nonatomic, assign) BOOL isCollection;
+/// 学习模型
 @property (nonatomic, strong) LearningTaskModel *model;
 
 /// 提交评分

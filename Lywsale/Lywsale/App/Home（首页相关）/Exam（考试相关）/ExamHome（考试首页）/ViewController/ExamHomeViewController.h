@@ -7,9 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "LearningTaskModel.h"
 
 @interface ExamHomeViewController : BaseViewController
 
-@property (nonatomic, copy) NSString *idString;
+@property (nonatomic, strong) ExamTaskModel *model;
 
 @end

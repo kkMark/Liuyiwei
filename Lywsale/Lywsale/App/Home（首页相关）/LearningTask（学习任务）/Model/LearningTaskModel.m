@@ -23,6 +23,17 @@
         NSArray *arr = [date componentsSeparatedByString:@"."];
         [self setValue:arr[0] forKey:titles[i]];
     }
+    
+    if (![keyedValues[@"examTask"] isKindOfClass:[NSNull class]]) {
+        
+        ExamTaskModel *model = [ExamTaskModel new];
+        [model setValuesForKeysWithDictionary:keyedValues[@"examTask"]];
+        self.examTaskModel = model;
+    }
 }
+
+@end
+
+@implementation ExamTaskModel
 
 @end

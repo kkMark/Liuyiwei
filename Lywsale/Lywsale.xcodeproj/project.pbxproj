@@ -212,6 +212,9 @@
 		2AC2D66921927C9000B27CF5 /* ExamHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D66821927C9000B27CF5 /* ExamHomeView.m */; };
 		2AC2D66C21927C9A00B27CF5 /* ExamHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D66B21927C9A00B27CF5 /* ExamHomeViewModel.m */; };
 		2AC2D66F21927CA200B27CF5 /* ExamHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D66E21927CA200B27CF5 /* ExamHomeModel.m */; };
+		2AC2D67221928B3700B27CF5 /* ExamContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D67121928B3700B27CF5 /* ExamContentViewController.m */; };
+		2AC2D67521928BB500B27CF5 /* ExamDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D67421928BB500B27CF5 /* ExamDetailsViewController.m */; };
+		2AC2D67821928F7C00B27CF5 /* ExamContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2D67721928F7C00B27CF5 /* ExamContentView.m */; };
 		2ADBF9E22186E88B0066EF28 /* TrainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */; };
 		2ADBF9E52186E8B00066EF28 /* TrainingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADBF9E42186E8B00066EF28 /* TrainingView.m */; };
 		2AEF091E2190362800ABA20F /* ActivityDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF091D2190362800ABA20F /* ActivityDetailsViewModel.m */; };
@@ -629,6 +632,12 @@
 		2AC2D66B21927C9A00B27CF5 /* ExamHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamHomeViewModel.m; sourceTree = "<group>"; };
 		2AC2D66D21927CA200B27CF5 /* ExamHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamHomeModel.h; sourceTree = "<group>"; };
 		2AC2D66E21927CA200B27CF5 /* ExamHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamHomeModel.m; sourceTree = "<group>"; };
+		2AC2D67021928B3700B27CF5 /* ExamContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamContentViewController.h; sourceTree = "<group>"; };
+		2AC2D67121928B3700B27CF5 /* ExamContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamContentViewController.m; sourceTree = "<group>"; };
+		2AC2D67321928BB500B27CF5 /* ExamDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamDetailsViewController.h; sourceTree = "<group>"; };
+		2AC2D67421928BB500B27CF5 /* ExamDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamDetailsViewController.m; sourceTree = "<group>"; };
+		2AC2D67621928F7C00B27CF5 /* ExamContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamContentView.h; sourceTree = "<group>"; };
+		2AC2D67721928F7C00B27CF5 /* ExamContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamContentView.m; sourceTree = "<group>"; };
 		2ADBF9E02186E88B0066EF28 /* TrainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingViewController.h; sourceTree = "<group>"; };
 		2ADBF9E12186E88B0066EF28 /* TrainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingViewController.m; sourceTree = "<group>"; };
 		2ADBF9E32186E8B00066EF28 /* TrainingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingView.h; sourceTree = "<group>"; };
@@ -3032,10 +3041,10 @@
 		2AC2D65021927C5900B27CF5 /* ExamContent（考试内容） */ = {
 			isa = PBXGroup;
 			children = (
+				2AC2D65421927C5900B27CF5 /* ViewModel */,
 				2AC2D65121927C5900B27CF5 /* Model */,
 				2AC2D65221927C5900B27CF5 /* View */,
 				2AC2D65321927C5900B27CF5 /* ViewController */,
-				2AC2D65421927C5900B27CF5 /* ViewModel */,
 			);
 			path = "ExamContent（考试内容）";
 			sourceTree = "<group>";
@@ -3050,6 +3059,8 @@
 		2AC2D65221927C5900B27CF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2AC2D67621928F7C00B27CF5 /* ExamContentView.h */,
+				2AC2D67721928F7C00B27CF5 /* ExamContentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3057,6 +3068,8 @@
 		2AC2D65321927C5900B27CF5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2AC2D67021928B3700B27CF5 /* ExamContentViewController.h */,
+				2AC2D67121928B3700B27CF5 /* ExamContentViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3071,10 +3084,10 @@
 		2AC2D65521927C5900B27CF5 /* ExamDetails（考试详情） */ = {
 			isa = PBXGroup;
 			children = (
+				2AC2D65921927C5900B27CF5 /* ViewModel */,
 				2AC2D65621927C5900B27CF5 /* Model */,
 				2AC2D65721927C5900B27CF5 /* View */,
 				2AC2D65821927C5900B27CF5 /* ViewController */,
-				2AC2D65921927C5900B27CF5 /* ViewModel */,
 			);
 			path = "ExamDetails（考试详情）";
 			sourceTree = "<group>";
@@ -3096,6 +3109,8 @@
 		2AC2D65821927C5900B27CF5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2AC2D67321928BB500B27CF5 /* ExamDetailsViewController.h */,
+				2AC2D67421928BB500B27CF5 /* ExamDetailsViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3450,6 +3465,7 @@
 				11D1DFD2215A3F5C00FF7045 /* KnowledgeView.m in Sources */,
 				2AC2D66921927C9000B27CF5 /* ExamHomeView.m in Sources */,
 				0C5E026B2179BB9C008B3D91 /* DailyTaskViewModel.m in Sources */,
+				2AC2D67521928BB500B27CF5 /* ExamDetailsViewController.m in Sources */,
 				0C93B8332182BCD100B8ACBE /* FootprintCell.m in Sources */,
 				0C21960B215A1CAB00D2696D /* ResultsSettingView.m in Sources */,
 				0CC6B1232128192A004EC6FC /* BaseHttpRequest.m in Sources */,
@@ -3475,6 +3491,7 @@
 				0C3FD1BD2154DF5200534B8D /* UploadHistoryViewController.m in Sources */,
 				0CDDB53F2127338700D42F76 /* main.m in Sources */,
 				0C804A122147A1670032B57A /* BuyCell.m in Sources */,
+				2AC2D67821928F7C00B27CF5 /* ExamContentView.m in Sources */,
 				0CE1EC442129100400A373D7 /* ApplyView.m in Sources */,
 				11ABF074217089E100AEDE04 /* OrderViewController.m in Sources */,
 				0C25101721312C7600DDF4BB /* HomePageMenuView.m in Sources */,
@@ -3550,6 +3567,7 @@
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
 				0C523978213E37E30083260A /* TaskTypeCell.m in Sources */,
 				11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */,
+				2AC2D67221928B3700B27CF5 /* ExamContentViewController.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
 				0CEFA100213FD1CD0072EAB9 /* RetrieveViewController.m in Sources */,
 				1179BAAD217D639300BF97CF /* AddMembersViewController.m in Sources */,
