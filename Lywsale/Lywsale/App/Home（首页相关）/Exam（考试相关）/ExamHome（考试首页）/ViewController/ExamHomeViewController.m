@@ -64,6 +64,7 @@
             @strongify(self);
             ExamContentViewController *vc = [ExamContentViewController new];
             vc.contents = self.contents;
+            vc.trainId = self.trainId;
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }
@@ -82,6 +83,8 @@
             
             ExamContentModel *model = [ExamContentModel new];
             [model setValuesForKeysWithDictionary:questionDict];
+            
+            model.examPaperId = dict[@"id"];
             [arr addObject:model];
         }
         

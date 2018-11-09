@@ -12,7 +12,13 @@
 
 - (void)setTitle:(NSString *)title content:(NSArray *)content;
 
-@property (nonatomic, assign) int index;
-@property (nonatomic, copy) void (^selIndex)(int index);
+@property (nonatomic, assign) int maxCount;
+@property (nonatomic, assign) int currentIndex;
+@property (nonatomic, assign) int selIndex;
+
+@property (nonatomic, strong) NSArray *answers;
+@property (nonatomic, strong) NSString *analysis;
+
+@property (nonatomic, copy) void (^selIndexBlock)(int index);
 
 @end

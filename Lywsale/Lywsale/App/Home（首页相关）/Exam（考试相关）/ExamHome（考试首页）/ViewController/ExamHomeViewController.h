@@ -12,5 +12,6 @@
 @interface ExamHomeViewController : BaseViewController
 
 @property (nonatomic, strong) ExamTaskModel *model;
+@property (nonatomic, copy) NSString *trainId;
 
 @end

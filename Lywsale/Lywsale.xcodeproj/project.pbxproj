@@ -196,10 +196,15 @@
 		28F25454901BE7AF808D8134 /* libPods-Lywsale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDE24F252713F31DF6BF3D /* libPods-Lywsale.a */; };
 		2A0EE174218850900058336E /* TrainingSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE173218850900058336E /* TrainingSelectionView.m */; };
 		2A0EE177218850B20058336E /* TrainingSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EE176218850B20058336E /* TrainingSelectionCell.m */; };
+		2A2E584A21932F130034B8B2 /* ExamContentViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2E584921932F130034B8B2 /* ExamContentViewModel.m */; };
 		2A34BBF4218A8EB7008888F3 /* EvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34BBF3218A8EB7008888F3 /* EvaluationView.m */; };
 		2A37AC6D2189842E00821B85 /* TrainingEvaluationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6C2189842E00821B85 /* TrainingEvaluationView.m */; };
 		2A37AC702189844100821B85 /* TrainingEvaluationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */; };
 		2A37AC73218995E800821B85 /* TrainingEvaluationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */; };
+		2A3B29F521947439006544C5 /* ExamResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B29F421947439006544C5 /* ExamResultsViewController.m */; };
+		2A3B29F821947450006544C5 /* ExamResultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B29F721947450006544C5 /* ExamResultsView.m */; };
+		2A3B29FB2194745A006544C5 /* ExamResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B29FA2194745A006544C5 /* ExamResultsModel.m */; };
+		2A3B29FE21947461006544C5 /* ExamResultsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3B29FD21947461006544C5 /* ExamResultsViewModel.m */; };
 		2A4A5DBA2191B0F70035E712 /* LearingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A5DB92191B0F70035E712 /* LearingModel.m */; };
 		2A4A5DBD2191BA980035E712 /* EvaluationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A5DBC2191BA980035E712 /* EvaluationModel.m */; };
 		2A4A5DC12191C74D0035E712 /* AppTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A5DC02191C74D0035E712 /* AppTool.m */; };
@@ -600,6 +605,8 @@
 		2A0EE173218850900058336E /* TrainingSelectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionView.m; sourceTree = "<group>"; };
 		2A0EE175218850B20058336E /* TrainingSelectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingSelectionCell.h; sourceTree = "<group>"; };
 		2A0EE176218850B20058336E /* TrainingSelectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingSelectionCell.m; sourceTree = "<group>"; };
+		2A2E584821932F130034B8B2 /* ExamContentViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamContentViewModel.h; sourceTree = "<group>"; };
+		2A2E584921932F130034B8B2 /* ExamContentViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamContentViewModel.m; sourceTree = "<group>"; };
 		2A34BBF2218A8EB7008888F3 /* EvaluationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvaluationView.h; sourceTree = "<group>"; };
 		2A34BBF3218A8EB7008888F3 /* EvaluationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EvaluationView.m; sourceTree = "<group>"; };
 		2A37AC6B2189842E00821B85 /* TrainingEvaluationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationView.h; sourceTree = "<group>"; };
@@ -608,6 +615,14 @@
 		2A37AC6F2189844100821B85 /* TrainingEvaluationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationCell.m; sourceTree = "<group>"; };
 		2A37AC71218995E800821B85 /* TrainingEvaluationHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrainingEvaluationHeaderView.h; sourceTree = "<group>"; };
 		2A37AC72218995E800821B85 /* TrainingEvaluationHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingEvaluationHeaderView.m; sourceTree = "<group>"; };
+		2A3B29F321947439006544C5 /* ExamResultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamResultsViewController.h; sourceTree = "<group>"; };
+		2A3B29F421947439006544C5 /* ExamResultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamResultsViewController.m; sourceTree = "<group>"; };
+		2A3B29F621947450006544C5 /* ExamResultsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamResultsView.h; sourceTree = "<group>"; };
+		2A3B29F721947450006544C5 /* ExamResultsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamResultsView.m; sourceTree = "<group>"; };
+		2A3B29F92194745A006544C5 /* ExamResultsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamResultsModel.h; sourceTree = "<group>"; };
+		2A3B29FA2194745A006544C5 /* ExamResultsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamResultsModel.m; sourceTree = "<group>"; };
+		2A3B29FC21947461006544C5 /* ExamResultsViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamResultsViewModel.h; sourceTree = "<group>"; };
+		2A3B29FD21947461006544C5 /* ExamResultsViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExamResultsViewModel.m; sourceTree = "<group>"; };
 		2A4A5DB82191B0F70035E712 /* LearingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearingModel.h; sourceTree = "<group>"; };
 		2A4A5DB92191B0F70035E712 /* LearingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearingModel.m; sourceTree = "<group>"; };
 		2A4A5DBB2191BA980035E712 /* EvaluationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EvaluationModel.h; sourceTree = "<group>"; };
@@ -3035,8 +3050,8 @@
 			children = (
 				2AC2D65A21927C5900B27CF5 /* ExamHome（考试首页） */,
 				2AC2D65021927C5900B27CF5 /* ExamContent（考试内容） */,
-				2AC2D65521927C5900B27CF5 /* ExamDetails（考试详情） */,
 				2AC2D65F21927C5900B27CF5 /* ExamResults（考试成绩） */,
+				2AC2D65521927C5900B27CF5 /* ExamDetails（考试详情） */,
 			);
 			path = "Exam（考试相关）";
 			sourceTree = "<group>";
@@ -3082,6 +3097,8 @@
 		2AC2D65421927C5900B27CF5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2A2E584821932F130034B8B2 /* ExamContentViewModel.h */,
+				2A2E584921932F130034B8B2 /* ExamContentViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3177,10 +3194,10 @@
 		2AC2D65F21927C5900B27CF5 /* ExamResults（考试成绩） */ = {
 			isa = PBXGroup;
 			children = (
+				2AC2D66321927C5900B27CF5 /* ViewModel */,
 				2AC2D66021927C5900B27CF5 /* Model */,
 				2AC2D66121927C5900B27CF5 /* View */,
 				2AC2D66221927C5900B27CF5 /* ViewController */,
-				2AC2D66321927C5900B27CF5 /* ViewModel */,
 			);
 			path = "ExamResults（考试成绩）";
 			sourceTree = "<group>";
@@ -3188,6 +3205,8 @@
 		2AC2D66021927C5900B27CF5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A3B29F92194745A006544C5 /* ExamResultsModel.h */,
+				2A3B29FA2194745A006544C5 /* ExamResultsModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3195,6 +3214,8 @@
 		2AC2D66121927C5900B27CF5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2A3B29F621947450006544C5 /* ExamResultsView.h */,
+				2A3B29F721947450006544C5 /* ExamResultsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3202,6 +3223,8 @@
 		2AC2D66221927C5900B27CF5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2A3B29F321947439006544C5 /* ExamResultsViewController.h */,
+				2A3B29F421947439006544C5 /* ExamResultsViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3209,6 +3232,8 @@
 		2AC2D66321927C5900B27CF5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2A3B29FC21947461006544C5 /* ExamResultsViewModel.h */,
+				2A3B29FD21947461006544C5 /* ExamResultsViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -3541,6 +3566,7 @@
 				11ED7D062158C5E10032FE0B /* BaseTabelListView.m in Sources */,
 				0C804A0921476E6B0032B57A /* MaintenanceViewController.m in Sources */,
 				2AC2D66621927C7D00B27CF5 /* ExamHomeViewController.m in Sources */,
+				2A3B29FE21947461006544C5 /* ExamResultsViewModel.m in Sources */,
 				0CE1EC332128F3F500A373D7 /* SelectTypeViewController.m in Sources */,
 				2A4A5DC12191C74D0035E712 /* AppTool.m in Sources */,
 				2A4A5DBA2191B0F70035E712 /* LearingModel.m in Sources */,
@@ -3564,13 +3590,16 @@
 				0C6B36EB21300B0E0081DB1C /* WebHelpViewController.m in Sources */,
 				2A97A7E32191978700CD8C24 /* TrainingModel.m in Sources */,
 				0C7D3C70217485150075427E /* RegisteredModel.m in Sources */,
+				2A3B29F821947450006544C5 /* ExamResultsView.m in Sources */,
 				1160E79521743A280040FA6F /* MyAwardsRequest.m in Sources */,
 				114A0533214A43EC0021E8ED /* WorkViewController.m in Sources */,
 				0CEFA0FA213FC5080072EAB9 /* RegisteredView.m in Sources */,
 				0CE1EC572129AC5200A373D7 /* WriteInfoViewController.m in Sources */,
 				0C6A9EFE215B1A4800CFB389 /* SalesTaskViewModel.m in Sources */,
 				0CE1EC212128893200A373D7 /* AddTypeViewController.m in Sources */,
+				2A3B29F521947439006544C5 /* ExamResultsViewController.m in Sources */,
 				0C523978213E37E30083260A /* TaskTypeCell.m in Sources */,
+				2A3B29FB2194745A006544C5 /* ExamResultsModel.m in Sources */,
 				11ABF06C2170703C00AEDE04 /* MyAwardsViewController.m in Sources */,
 				2AC2D67221928B3700B27CF5 /* ExamContentViewController.m in Sources */,
 				0CDDB56A212734DB00D42F76 /* UIColor+category.m in Sources */,
@@ -3620,6 +3649,7 @@
 				0CC3FD1F216CCF46001848BE /* WithdrawalViewController.m in Sources */,
 				0CC6B120212818EE004EC6FC /* LoginModel.m in Sources */,
 				0C37F557212D3F1500E357EB /* WriteInfoTypeCell.m in Sources */,
+				2A2E584A21932F130034B8B2 /* ExamContentViewModel.m in Sources */,
 				0C804A0021476E4F0032B57A /* ReceptionViewController.m in Sources */,
 				0CC35943217AFD10000BA3B1 /* MyCardView.m in Sources */,
 			);

@@ -27,7 +27,7 @@
         
         self.urlString = [self getRequestUrl:@[@"favorites$train"]];
         self.parameters = @{@"trainId" : idString};
-        [self requestMode:PostMode success:success failure:failure];
+        [self requestAFMode:PostMode success:success failure:failure];
     }
     else {
         

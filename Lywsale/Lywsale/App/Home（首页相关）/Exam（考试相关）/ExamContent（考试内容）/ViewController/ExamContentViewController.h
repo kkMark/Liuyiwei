@@ -11,5 +11,6 @@
 @interface ExamContentViewController : BaseViewController
 
 @property (nonatomic, copy) NSArray *contents;
+@property (nonatomic, copy) NSString *trainId;
 
 @end

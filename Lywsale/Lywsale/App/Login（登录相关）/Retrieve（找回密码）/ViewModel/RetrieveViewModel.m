@@ -14,7 +14,7 @@
     
     self.urlString = [self getRequestUrl:@[@"members", @"verificationCode"]];
     self.parameters = @{ @"mobile" : phone, @"type" : @"2" };
-    [self requestMode:PostMode success:success failure:failure];    
+    [self requestAFMode:PostMode success:success failure:failure];    
 }
 
 - (void)forgetPasswordAccount:(NSString *)account
@@ -25,7 +25,7 @@
 {
     self.urlString = [self getRequestUrl:@[@"members", @"forgetPassword"]];
     self.parameters = @{ @"mobile" : account, @"newPassword" : password, @"code" : code };
-    [self requestMode:PostMode success:success failure:failure];
+    [self requestAFMode:PostMode success:success failure:failure];
 }
 
 @end

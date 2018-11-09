@@ -81,6 +81,7 @@
             @strongify(self);
             UIViewController *vc = [NSClassFromString(@"ExamHomeViewController") new];
             [vc setValue:self.model.examTaskModel forKey:@"model"];
+            [vc setValue:self.model.id forKey:@"trainId"];
             [self.navigationController pushViewController:vc animated:YES];
         }];
     }

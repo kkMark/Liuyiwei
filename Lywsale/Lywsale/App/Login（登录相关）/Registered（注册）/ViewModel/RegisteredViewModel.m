@@ -14,7 +14,7 @@
     
     self.urlString = [self getRequestUrl:@[@"members", @"verificationCode"]];
     self.parameters = @{ @"mobile" : phone, @"type" : @"1" };
-    [self requestMode:PostMode success:success failure:failure];
+    [self requestAFMode:PostMode success:success failure:failure];
 }
 
 - (void)registered:(RegisteredModel *)model success:(RequestSuccess)success failure:(RequestFailure)failure {
